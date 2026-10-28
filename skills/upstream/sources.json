@@ -1,0 +1,73 @@
+{
+  "vendoredOn": "2026-10-28",
+  "note": "Reviewed snapshots of upstream skill folders. Each folder keeps its own SKILL.md unchanged except for the added LICENSE/NOTICE files. Re-run the installer after refreshing snapshots.",
+  "skills": [
+    {
+      "name": "finesse-term",
+      "path": "finesse-term",
+      "upstreamPath": "skills/finesse-term",
+      "repo": "https://github.com/mouse-lin/finesse-term",
+      "commit": "e5abc56382ab0c393aa11f9d877c6db91d9956c0",
+      "version": "0.3.0",
+      "license": "MIT",
+      "runtime": "Node 20+ optional; falls back to reading data/*.json",
+      "role": "Vocabulary layer: turn symptom descriptions into precise UI terms"
+    },
+    {
+      "name": "finesse-ui",
+      "path": "finesse-ui",
+      "upstreamPath": "skills/finesse-ui",
+      "repo": "https://github.com/mouse-lin/finesse-skill",
+      "commit": "c7a91448baf6e98fecf542915cdb7e3155bddc45",
+      "version": "0.22.0",
+      "license": "MIT",
+      "runtime": "Node optional (detect.mjs); examples are static HTML",
+      "role": "Primary UI craft: brand, product, commerce and H5 registers"
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "path": "ui-ux-pro-max",
+      "upstreamPath": ".claude/skills/ui-ux-pro-max",
+      "repo": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "commit": "28b3b8dee8c976df4fa3e94aed4e092ad43fcb03",
+      "version": "2.15.0",
+      "license": "MIT",
+      "runtime": "Python 3.x standard library only",
+      "role": "Searchable design database: styles, palettes, type, UX rules, stacks"
+    },
+    {
+      "name": "design-taste-frontend",
+      "path": "design-taste-frontend",
+      "upstreamPath": "skills/taste-skill",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "version": "2.1.5",
+      "license": "MIT",
+      "runtime": "Node 22+ and an installed Chrome/Edge/Chromium; network for image search",
+      "role": "Art direction and anti-slop look-and-fix loop for public pages and app screens"
+    },
+    {
+      "name": "interface-design",
+      "path": "interface-design",
+      "upstreamPath": ".claude/skills/interface-design",
+      "repo": "https://github.com/Dammyjay93/interface-design",
+      "commit": "2f9be3206855bcb2d1d0af262c8bae25cba6658d",
+      "version": "2026.6.20.1332",
+      "license": "MIT",
+      "runtime": "None",
+      "role": "Focused product-UI craft and review: dashboards, admin, SaaS, settings"
+    },
+    {
+      "name": "impeccable",
+      "path": "impeccable",
+      "upstreamPath": "plugin/skills/impeccable",
+      "repo": "https://github.com/pbakaus/impeccable",
+      "commit": "8409a564d1baee90b2dde4f7a8f06288838e3921",
+      "version": "4.8.0",
+      "license": "Apache-2.0",
+      "runtime": "Self-contained launcher; downloads a checksum-verified engine binary on first run",
+      "role": "Audit, critique and polish; 24 sub-commands and platform references",
+      "notice": "NOTICE.md"
+    }
+  ]
+}

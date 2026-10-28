@@ -1,6 +1,19 @@
 # UI/UX Skills 选型目录
 
-核对日期：2026-10-28。本目录收集上游项目链接与用途，不打包第三方 Skill 源文件，不代表安装或运行过全部项目。许可证记录仅用于说明核对结果，复用时仍应阅读具体文件及随附条款。
+核对日期：2026-10-28。本目录收集上游项目链接与用途。其中六个 Skill 已作为带许可证的快照收录在 [`skills/upstream/`](skills/upstream/README.md)，可通过 `scripts/install-skills.cjs` 安装；其余项目只记录链接，未打包。收录快照均完成源码与依赖审查，但尚未在本项目的演示页面中逐项运行验证。许可证记录仅用于说明核对结果，复用时仍应阅读具体文件及随附条款。
+
+## 已收录快照
+
+| Skill | 本地目录 | 版本 / commit | 许可证 | 运行时 | 职责 |
+| --- | --- | --- | --- | --- | --- |
+| finesse-term | [skills/upstream/finesse-term](skills/upstream/finesse-term/SKILL.md) | 0.3.0 · `e5abc56` | MIT | Node 20+（可选） | 把用户的大白话翻译成准确术语 |
+| finesse-ui | [skills/upstream/finesse-ui](skills/upstream/finesse-ui/SKILL.md) | 0.22.0 · `c7a9144` | MIT | Node 可选 | 主力 UI 构建，覆盖 brand / product / commerce / h5 |
+| ui-ux-pro-max | [skills/upstream/ui-ux-pro-max](skills/upstream/ui-ux-pro-max/SKILL.md) | 2.15.0 · `28b3b8d` | MIT | Python 3 | 风格、配色、字体、UX 规则与技术栈资料库 |
+| design-taste-frontend | [skills/upstream/design-taste-frontend](skills/upstream/design-taste-frontend/SKILL.md) | 2.1.5 · `12af471` | MIT | Node 22+ 与 Chromium | 艺术方向、反模板化与真实浏览器检查 |
+| interface-design | [skills/upstream/interface-design](skills/upstream/interface-design/SKILL.md) | 2026.6.20 · `2f9be32` | MIT | 无 | 纯产品 UI：Dashboard、后台、SaaS、设置页 |
+| impeccable | [skills/upstream/impeccable](skills/upstream/impeccable/SKILL.md) | 4.8.0 · `8409a56` | Apache-2.0 | 自带启动器（首次运行下载引擎） | 审查、批评、打磨与修复 |
+
+安装与职责分工见 [skills/upstream/README.md](skills/upstream/README.md)。关键约束：同一任务只选一个主导构建者（`finesse-ui` 或 `interface-design`），艺术方向最多一个，`impeccable` 放在构建之后。`ui-ux-pro-max` 是资料库，`finesse-term` 是词汇层，这两者可以安全叠加。
 
 ## 上游 Skills
 
@@ -15,9 +28,12 @@
 | vercel-composition-patterns | [Vercel](https://github.com/vercel-labs/agent-skills/tree/main/skills/composition-patterns) | React 组件组合、状态归属和 API；注意 React 版本 | Skill frontmatter：MIT |
 | vercel-react-native-skills | [Vercel](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-native-skills) | React Native / Expo 平台实现，不能直接套入网页 | Skill frontmatter：MIT |
 | web-design-guidelines | [Vercel](https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines) | 按上游最新规则审查 Web UI | 当前读取的 Skill 未声明许可证，仓库 API 也未给出许可证；复用前核对 |
-| impeccable | [官方仓库](https://github.com/pbakaus/impeccable) | 界面规划、视觉调整、审查与打磨 | 仓库 Apache-2.0 |
-| UI UX Pro Max | [官方仓库](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 风格、配色、字体和 UX 资料检索 | 仓库 MIT |
-| Taste Skill | [官方仓库](https://github.com/Leonxlnx/taste-skill) | 艺术方向和渲染检查；需要判断其风格约束是否适合产品 | 仓库 MIT |
+| finesse-term | [mouse-lin](https://github.com/mouse-lin/finesse-term) | 术语对齐与需求翻译；已收录 | 仓库 MIT |
+| finesse-ui | [mouse-lin](https://github.com/mouse-lin/finesse-skill) | 全场景 UI 构建；已收录，作为主导构建者之一 | 仓库 MIT |
+| interface-design | [Dammyjay93](https://github.com/Dammyjay93/interface-design) | 纯产品 UI 的层级、token 与审查；已收录 | 仓库 MIT |
+| impeccable | [官方仓库](https://github.com/pbakaus/impeccable) | 界面规划、视觉调整、审查与打磨；已收录 | 仓库 Apache-2.0 |
+| UI UX Pro Max | [官方仓库](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 风格、配色、字体和 UX 资料检索；已收录核心 Skill | 仓库 MIT |
+| Taste Skill | [官方仓库](https://github.com/Leonxlnx/taste-skill) | 艺术方向和渲染检查；已收录为 `design-taste-frontend` | 仓库 MIT |
 
 Vercel 的[官方 Skills 目录](https://vercel.com/docs/agent-resources/skills)可作为继续发现组件和框架工具的入口。聚合站的安装量或星标不能代替源文件审查。
 
@@ -43,6 +59,17 @@ Vercel 的[官方 Skills 目录](https://vercel.com/docs/agent-resources/skills)
 - 手机 App：规划 → 手机模式 → 组件工程；明确浏览器原型、原生或小程序平台，再处理导航、输入和动效。
 - 只问动效名称：交互规格。要求实现：动效工程。出现掉帧：先测量再诊断，不能用截图宣称性能良好。
 - 交付审查：对实际任务做无障碍审查与浏览器验证；原生设备和辅助技术未测试时明确说明。
+
+## 安装与叠加
+
+```bash
+node scripts/install-skills.cjs --list          # 查看十四份 Skill
+node scripts/install-skills.cjs                 # 全部安装到 ./.claude/skills
+node scripts/install-skills.cjs --set upstream  # 只安装六个上游快照
+node scripts/install-skills.cjs --global        # 安装到 ~/.claude/skills
+```
+
+上游 Skill 与本地八个模块可以按阶段组合，但同一任务不要同时启用两个“主导构建者”。具体路由、运行时依赖和已知限制见 [skills/upstream/README.md](skills/upstream/README.md)。
 
 ## 设计判断
 

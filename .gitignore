@@ -3,6 +3,10 @@
 node_modules/
 .taste-skill/
 **/.taste-skill/
+.finesse/
+**/.finesse/
+.claude/skills/
+.codex/skills/
 __pycache__/
 *.log
 **/.inspect/

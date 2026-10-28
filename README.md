@@ -1,6 +1,6 @@
 # Intent / Form / Motion
 
-八个可复用的 UI/UX Skill，以及官网、Dashboard、手机 App、组合工作台、组件动效五组浏览器演示。工作流：**明确页面目标 → 提炼视觉方向 → 定义交互与动效**。
+本项目提供八个可复用的 UI/UX 模块与六个上游 Skill 快照，以及官网、Dashboard、手机 App、组合工作台、组件动效五组浏览器演示。工作流：**明确页面目标 → 提炼视觉方向 → 定义交互与动效**。
 
 [在线演示](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/) · [设计指南](DESIGN-GUIDE.md) · [验证记录](REVIEW.md)
 
@@ -65,7 +65,9 @@ App 是可交互的浏览器原型，没有后端或真实账户服务。演示�
 
 </details>
 
-## 八个 Skill
+## Skills
+
+### 本项目八个模块
 
 | Skill | 职责 |
 | --- | --- |
@@ -78,11 +80,31 @@ App 是可交互的浏览器原型，没有后端或真实账户服务。演示�
 | [uiux-accessibility-review](skills/uiux-accessibility-review/SKILL.md) | 键盘、焦点、表单和无障碍证据审查 |
 | [uiux-mobile-patterns](skills/uiux-mobile-patterns/SKILL.md) | 手机导航、触摸、键盘与编辑面板 |
 
+### 六个上游快照
+
+[`skills/upstream/`](skills/upstream/README.md) 收录了六个开源 Skill 的可运行快照，保留原 `SKILL.md`、参考资料、脚本和许可证：
+
+| Skill | 用途 |
+| --- | --- |
+| finesse-term | 把大白话描述翻译成准确术语 |
+| finesse-ui | 主力 UI 构建，覆盖品牌页、产品界面与 H5 |
+| ui-ux-pro-max | 风格、配色、字体、UX 规则与技术栈资料库 |
+| design-taste-frontend | 艺术方向、反模板化与真实浏览器检查 |
+| interface-design | 纯产品 UI 的层级、token 与审查 |
+| impeccable | 审查、批评、打磨与修复 |
+
 ### 安装
 
-克隆此仓库后，将 `skills/` 内所需文件夹复制到你的 Codex skills 目录（通常为 `~/.codex/skills/`），保留 `SKILL.md`、`agents/openai.yaml` 和 `references/`。重启或刷新 Codex 后，可分别调用 `$uiux-page-planning`、`$uiux-style-direction`、`$uiux-interaction-spec`。
+```bash
+node scripts/install-skills.cjs --list          # 列出十四份 Skill
+node scripts/install-skills.cjs                 # 安装到本项目的 .claude/skills
+node scripts/install-skills.cjs --global        # 安装到 ~/.claude/skills
+node scripts/install-skills.cjs --target codex --global
+```
 
-示例：先用 `$uiux-page-planning` 规划互动场馆官网，再用 `$uiux-style-direction` 确定视觉语言，最后用 `$uiux-interaction-spec` 描述官网 FAQ 展开，或手机 App 详情与新增面板的状态。它们可以独立使用，优先遵守用户需求和既有品牌。
+安装脚本只复制或链接目录，不执行上游脚本；已有同名 Skill 默认跳过，加 `--force` 覆盖。也可以手动把 `skills/` 内所需文件夹复制到 Codex 的 `~/.codex/skills/`，保留 `SKILL.md`、`agents/openai.yaml` 和 `references/`。重启或刷新后，可分别调用 `$uiux-page-planning`、`$finesse-ui` 等。
+
+示例：先用 `$uiux-page-planning` 规划互动场馆官网，再用 `$uiux-style-direction` 确定视觉语言，最后用 `$uiux-interaction-spec` 描述官网 FAQ 展开，或手机 App 详情与新增面板的状态。需要更强构建能力时，用 `$finesse-ui` 作为主导，`$impeccable` 放在交付前审查。它们可以独立使用，优先遵守用户需求和既有品牌。
 
 ## 分类与使用范围
 
@@ -92,7 +114,7 @@ App 是可交互的浏览器原型，没有后端或真实账户服务。演示�
 
 ## 外部 Skills 与组合
 
-[Skills 选型目录](SKILL-CATALOG.md)收集了 12 个相关 Skill / 项目的一手链接、许可证核对、适用范围及八个本地模块的组合方式。外部项目未自动安装，本项目提供独立工作流。
+[Skills 选型目录](SKILL-CATALOG.md)收集了相关上游项目的一手链接、许可证核对、适用范围及八个本地模块的组合方式。其中六个已收录为快照并可通过安装脚本部署，其余只记录链接；收录不等于逐项验证，实际使用前应阅读各 Skill 的边界与限制。[上游收录说明](skills/upstream/README.md)给出主导 Skill 的选择、可安全叠加的组合与运行时依赖。
 
 ## 项目范围
 

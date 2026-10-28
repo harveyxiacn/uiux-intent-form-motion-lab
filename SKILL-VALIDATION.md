@@ -2,6 +2,8 @@
 
 日期：2026-10-28。运行环境为 Windows / Edge / Playwright，桌面 1440×1000、手机仿真 390×844。入口：[五组在线演示](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/)。此表以实际源码、交互及截图证据为依据，不把格式通过等同于实例验收。
 
+本表只覆盖本项目的八个模块。[`skills/upstream/`](skills/upstream/README.md) 收录的六个上游快照完成了源码、许可证与依赖审查，但未纳入这轮实例验收。
+
 | Skill | 具体实例与产出 | 实际验收与结果 | 边界 |
 | --- | --- | --- | --- |
 | [page-planning](skills/uiux-page-planning/SKILL.md) | 官网按定位→展览→参观信息→FAQ；光谱工作台按概况→项目→详情编辑组织任务 | 官网参观CTA定位正确；工作台搜索/筛选→详情→修改→返回全流程通过；空态和本地loading可恢复 | 两个具体任务，未做目标用户访谈或转化实验 |
