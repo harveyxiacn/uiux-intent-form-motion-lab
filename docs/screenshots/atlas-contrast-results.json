@@ -1,0 +1,204 @@
+[
+  {
+    "label": "atlas light",
+    "rows": [
+      {
+        "selector": ".lede",
+        "text": "八个本项目模块把问题拆成阶段；六个上游 Skill 补上构建、检索与审查的手感。这里不是名词表——每个方法都有一处可以亲",
+        "foreground": [
+          23,
+          24,
+          20
+        ],
+        "background": [
+          239,
+          236,
+          227
+        ],
+        "ratio": 15.1,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".station-lede",
+        "text": "输入用户的原话，得到一句能直接发给 Agent 的准确描述，以及这个词最常见的坑。",
+        "foreground": [
+          85,
+          87,
+          76
+        ],
+        "background": [
+          248,
+          245,
+          236
+        ],
+        "ratio": 6.75,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".search-card p",
+        "text": "Sans + Sans",
+        "foreground": [
+          85,
+          87,
+          76
+        ],
+        "background": [
+          239,
+          236,
+          227
+        ],
+        "ratio": 6.23,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".skill-card .effect",
+        "text": "先把受众、目标和信息层级排清楚，再谈布局。",
+        "foreground": [
+          85,
+          87,
+          76
+        ],
+        "background": [
+          248,
+          245,
+          236
+        ],
+        "ratio": 6.75,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".method-list p",
+        "text": "先决定这是一张“可操作的方法地图”，不是作品集：首屏给主张与数量，第二屏给六个展台，第三屏给完整索引。",
+        "foreground": [
+          85,
+          87,
+          76
+        ],
+        "background": [
+          239,
+          236,
+          227
+        ],
+        "ratio": 6.23,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".site-footer p",
+        "text": "Skill Atlas · 14 个方法 · 6 个实时展台",
+        "foreground": [
+          85,
+          87,
+          76
+        ],
+        "background": [
+          239,
+          236,
+          227
+        ],
+        "ratio": 6.23,
+        "backgroundImage": "none"
+      }
+    ]
+  },
+  {
+    "label": "atlas dark",
+    "rows": [
+      {
+        "selector": ".lede",
+        "text": "八个本项目模块把问题拆成阶段；六个上游 Skill 补上构建、检索与审查的手感。这里不是名词表——每个方法都有一处可以亲",
+        "foreground": [
+          241,
+          237,
+          225
+        ],
+        "background": [
+          25,
+          27,
+          23
+        ],
+        "ratio": 14.82,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".station-lede",
+        "text": "输入用户的原话，得到一句能直接发给 Agent 的准确描述，以及这个词最常见的坑。",
+        "foreground": [
+          185,
+          183,
+          168
+        ],
+        "background": [
+          33,
+          36,
+          31
+        ],
+        "ratio": 7.78,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".search-card p",
+        "text": "Sans + Sans",
+        "foreground": [
+          185,
+          183,
+          168
+        ],
+        "background": [
+          25,
+          27,
+          23
+        ],
+        "ratio": 8.59,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".skill-card .effect",
+        "text": "先把受众、目标和信息层级排清楚，再谈布局。",
+        "foreground": [
+          185,
+          183,
+          168
+        ],
+        "background": [
+          33,
+          36,
+          31
+        ],
+        "ratio": 7.78,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".method-list p",
+        "text": "先决定这是一张“可操作的方法地图”，不是作品集：首屏给主张与数量，第二屏给六个展台，第三屏给完整索引。",
+        "foreground": [
+          185,
+          183,
+          168
+        ],
+        "background": [
+          25,
+          27,
+          23
+        ],
+        "ratio": 8.59,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".site-footer p",
+        "text": "Skill Atlas · 14 个方法 · 6 个实时展台",
+        "foreground": [
+          185,
+          183,
+          168
+        ],
+        "background": [
+          25,
+          27,
+          23
+        ],
+        "ratio": 8.59,
+        "backgroundImage": "none"
+      }
+    ]
+  }
+]

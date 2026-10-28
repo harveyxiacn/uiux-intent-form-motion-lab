@@ -20,7 +20,7 @@
       },
       {
         "selector": ".intro-row p",
-        "text": "五组真实可操作的界面，八种把想法做好的设计方法。",
+        "text": "六组真实可操作的界面，十四个可复用的设计方法。",
         "foreground": [
           25,
           26,
@@ -49,6 +49,38 @@
         ],
         "ratio": 7.41,
         "backgroundImage": "none"
+      },
+      {
+        "selector": ".atlas-kicker",
+        "text": "SKILL ATLAS / 14 SKILLS / 6 LIVE STATIONS",
+        "foreground": [
+          255,
+          113,
+          60
+        ],
+        "background": [
+          25,
+          26,
+          24
+        ],
+        "ratio": 6.39,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".atlas-copy",
+        "text": "输入「按钮被黑杠挡住了」看术语如何落成安全区；切换 brand / product / H5 看同一任务改口；运行审查，",
+        "foreground": [
+          244,
+          242,
+          236
+        ],
+        "background": [
+          25,
+          26,
+          24
+        ],
+        "ratio": 15.6,
+        "backgroundImage": "none"
       }
     ]
   },
@@ -73,7 +105,7 @@
       },
       {
         "selector": ".intro-row p",
-        "text": "五组真实可操作的界面，八种把想法做好的设计方法。",
+        "text": "六组真实可操作的界面，十四个可复用的设计方法。",
         "foreground": [
           244,
           242,
@@ -101,6 +133,38 @@
           250
         ],
         "ratio": 7.41,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".atlas-kicker",
+        "text": "SKILL ATLAS / 14 SKILLS / 6 LIVE STATIONS",
+        "foreground": [
+          154,
+          52,
+          18
+        ],
+        "background": [
+          244,
+          242,
+          236
+        ],
+        "ratio": 6.53,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".atlas-copy",
+        "text": "输入「按钮被黑杠挡住了」看术语如何落成安全区；切换 brand / product / H5 看同一任务改口；运行审查，",
+        "foreground": [
+          32,
+          34,
+          31
+        ],
+        "background": [
+          244,
+          242,
+          236
+        ],
+        "ratio": 14.32,
         "backgroundImage": "none"
       }
     ]

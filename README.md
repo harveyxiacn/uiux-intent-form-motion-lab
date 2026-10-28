@@ -1,12 +1,12 @@
 # Intent / Form / Motion
 
-本项目提供八个可复用的 UI/UX 模块与六个上游 Skill 快照，以及官网、Dashboard、手机 App、组合工作台、组件动效五组浏览器演示。工作流：**明确页面目标 → 提炼视觉方向 → 定义交互与动效**。
+本项目提供八个可复用的 UI/UX 模块与六个上游 Skill 快照，以及官网、Dashboard、手机 App、组合工作台、组件动效、技能地图六组浏览器演示。工作流：**明确页面目标 → 提炼视觉方向 → 定义交互与动效**。
 
 [在线演示](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/) · [设计指南](DESIGN-GUIDE.md) · [验证记录](REVIEW.md)
 
 展台本身也是一个设计实例：巨幅排版、错落的真实项目截图与可揭开的贴纸组成作品入口，下方提供可直接操作的演示。
 
-展台提供「官网网页」「Dashboard Web UI」「手机 App」「组合工作台」「组件动效」五个标签，默认显示官网；支持键盘左右方向键、Home / End，并可独立打开每个演示。
+展台提供「官网网页」「Dashboard Web UI」「手机 App」「组合工作台」「组件动效」「技能地图」六个标签，默认显示官网；支持键盘左右方向键、Home / End，并可独立打开每个演示。
 
 ## 作品展台
 
@@ -24,7 +24,26 @@
 
 ![组件动效实验室](docs/screenshots/components-desktop.png)
 
-[八项 Skill 实例验收](SKILL-VALIDATION.md)逐一列出它们在哪个界面产生作用、具体检查及限制。验证涵盖运行行为，不以格式检查代替实例测试；无障碍检查不等于 WCAG 认证。
+[十四项 Skill 的实例与展台验收](SKILL-VALIDATION.md)逐一列出它们在哪个界面产生作用、具体检查及限制。验证涵盖运行行为，不以格式检查代替实例测试；无障碍检查不等于 WCAG 认证。
+
+## 技能地图
+
+[技能地图](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/demos/skills/)是第六组实例，也是十四个 Skill 的可操作索引。六个上游 Skill 各有一个实时展台：
+
+- **finesse-term**：把「按钮被黑杠挡住了」翻译成安全区、视口设置与吸底操作栏。
+- **finesse-ui**：同一任务在 brand / product / H5 三种 register 下改变构图、密度与文案。
+- **ui-ux-pro-max**：按产品语境检索风格、配色与字体候选，并显示风险。
+- **design-taste-frontend**：从六个方向中抽三张结构不同的牌，选择后改变预览。
+- **interface-design**：同一条产品工作台，在默认生成与设计后之间切换层级、间距、状态和焦点。
+- **impeccable**：运行审查、逐条修复对比度/热区/焦点/错误播报，再重置。
+
+下方还有 14 条技能索引（8 个本地模块 + 6 个上游快照）、来源筛选和八个本地模块的自我说明。
+
+![技能地图首屏](docs/screenshots/skills-fold.png)
+
+![技能地图手机首屏](docs/screenshots/skills-mobile.png)
+
+完整契约、数据边界与逐项验收见 [ACCEPTANCE.md](docs/demos/skills/ACCEPTANCE.md)。这六个展台是 Skill 效果的展示，不执行上游脚本，也不等于完整 Skill 回归或模型行为评测。
 
 ## 演示
 
@@ -60,6 +79,12 @@ App 是可交互的浏览器原型，没有后端或真实账户服务。演示�
 ![组合工作台深色](docs/screenshots/studio-dark.png)
 
 ![组件动效深色](docs/screenshots/components-dark.png)
+
+![技能地图桌面整页](docs/screenshots/skills-desktop.png)
+
+![技能地图深色首屏](docs/screenshots/skills-dark.png)
+
+![展台内嵌技能地图](docs/screenshots/showcase-atlas.png)
 
 ![展台手机截图](docs/screenshots/showcase-mobile.png)
 
@@ -122,7 +147,7 @@ node scripts/install-skills.cjs --target codex --global
 
 ## 本地运行与验证
 
-无需构建：在仓库根目录运行 `python -m http.server 4173`，打开 `http://localhost:4173/docs/`。浏览器验证脚本为 [scripts/verify.cjs](scripts/verify.cjs)，需要 Node.js、Playwright 和可用的 Chromium / Edge。将 `PLAYWRIGHT_MODULE` 指向已安装的 Playwright 模块路径后执行 `node scripts/verify.cjs`。
+无需构建：在仓库根目录运行 `python -m http.server 4173`，打开 `http://localhost:4173/docs/`。浏览器验证脚本为 [scripts/verify.cjs](scripts/verify.cjs)，会调用六个 Demo、展台、技能地图和对比度检查；需要 Node.js、Playwright 和可用的 Chromium / Edge。将 `PLAYWRIGHT_MODULE` 指向已安装的 Playwright 模块路径后执行 `node scripts/verify.cjs`。
 
 GitHub Pages 从 `main` 分支的 `docs/` 目录发布。
 

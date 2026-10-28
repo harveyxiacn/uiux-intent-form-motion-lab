@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#efece3">
+  <title>技能地图 — 十四个 UI/UX Skill 的现场</title>
+  <meta name="description" content="十四个 UI/UX Skill 的可操作地图：术语翻译、register 切换、设计资料检索、方向抽样、产品层级与审查修复。">
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#stations">跳到实时展台</a>
+
+<header class="topbar">
+  <a class="brand" href="../../#atlas"><span>界面有意思</span><small>SKILL ATLAS</small></a>
+  <nav aria-label="页面导航">
+    <a href="#stations">实时展台</a>
+    <a href="#index">全部 14</a>
+    <a href="#method">这页怎么做</a>
+    <a href="../../#experience" target="_top">返回展台 ↗</a>
+  </nav>
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">深色</button>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-top">
+      <p class="eyebrow">技能地图 / SKILL ATLAS / 2026.10</p>
+      <p class="hero-index">14 / 14</p>
+    </div>
+    <h1 id="hero-title">十四个方法，<br>一张可验证的地图。</h1>
+    <div class="hero-bottom">
+      <p class="lede">八个本项目模块把问题拆成阶段；六个上游 Skill 补上构建、检索与审查的手感。这里不是名词表——每个方法都有一处可以亲手验证的效果。</p>
+      <dl class="counts" aria-label="技能与展台数量">
+        <div><dt>14</dt><dd>Skills</dd></div>
+        <div><dt>6</dt><dd>实时展台</dd></div>
+        <div><dt>8</dt><dd>实例入口</dd></div>
+      </dl>
+    </div>
+    <div class="rail" aria-label="技能阶段">
+      <a href="#index" data-stage-link="定义"><span>01</span><strong>定义</strong><small>3 个 Skill</small></a>
+      <a href="#index" data-stage-link="造型"><span>02</span><strong>造型</strong><small>6 个 Skill</small></a>
+      <a href="#index" data-stage-link="行动"><span>03</span><strong>行动</strong><small>3 个 Skill</small></a>
+      <a href="#index" data-stage-link="验证"><span>04</span><strong>验证</strong><small>2 个 Skill</small></a>
+    </div>
+  </section>
+
+  <section class="stations" id="stations" aria-labelledby="stations-title">
+    <div class="section-head">
+      <p class="eyebrow">实时展台 / LIVE STATIONS</p>
+      <h2 id="stations-title">六个上游 Skill，<br>六种看得见的作用。</h2>
+      <p class="section-lede">不是截图，也不是流程图。下面每一块都在这一页里运行：输入、切换、检索、审查，结果会立即反馈。</p>
+    </div>
+
+    <div class="station-grid">
+      <article class="station" id="station-term" aria-labelledby="station-term-title">
+        <header class="station-head">
+          <span class="station-no" aria-hidden="true">01</span>
+          <div>
+            <p class="station-kicker">finesse-term · 说法层</p>
+            <h3 id="station-term-title">把「说不清」<br>翻译成术语。</h3>
+          </div>
+          <span class="badge">上游 · MIT</span>
+        </header>
+        <p class="station-lede">输入用户的原话，得到一句能直接发给 Agent 的准确描述，以及这个词最常见的坑。</p>
+        <form class="term-form" id="term-form">
+          <label for="term-input">用户原话</label>
+          <div class="field-row">
+            <input id="term-input" name="q" type="text" autocomplete="off" placeholder="例如：按钮被黑杠挡住了">
+            <button class="btn primary" type="submit">翻译 ↗</button>
+          </div>
+        </form>
+        <div class="chips" id="term-chips" role="group" aria-label="示例症状">
+          <button type="button" data-term="按钮被黑杠挡住了">按钮被黑杠挡住</button>
+          <button type="button" data-term="鼠标放上去变个色">鼠标放上去变个色</button>
+          <button type="button" data-term="弹窗底下还能滑">弹窗底下还能滑</button>
+          <button type="button" data-term="图片加载完页面往下跳">图片加载完页面往下跳</button>
+          <button type="button" data-term="点不准老是点错">点不准老是点错</button>
+        </div>
+        <div class="term-result" id="term-result">
+          <p class="hint">试试上面的例子，或直接输入你看到的症状。</p>
+        </div>
+        <footer class="station-foot">
+          <span>词库节选 10 / 142 条 · 零网络依赖</span>
+          <a href="https://github.com/harveyxiacn/uiux-intent-form-motion-lab/blob/main/skills/upstream/finesse-term/SKILL.md" target="_blank" rel="noopener">查看 Skill ↗</a>
+        </footer>
+      </article>
+
+      <article class="station station-wide" id="station-register" aria-labelledby="station-register-title">
+        <header class="station-head">
+          <span class="station-no" aria-hidden="true">02</span>
+          <div>
+            <p class="station-kicker">finesse-ui · 主导构建</p>
+            <h3 id="station-register-title">同一任务，<br>三种 register。</h3>
+          </div>
+          <span class="badge">上游 · MIT</span>
+        </header>
+        <p class="station-lede">官网、产品工作台和手机 H5 不是同一套语法的缩放。切换 register，看类型、密度和动效如何一起改口。</p>
+        <div class="register-tabs" role="tablist" aria-label="选择界面 register">
+          <button role="tab" id="reg-brand" aria-selected="true" aria-controls="register-panel" tabindex="0" data-register="brand">Brand</button>
+          <button role="tab" id="reg-product" aria-selected="false" aria-controls="register-panel" tabindex="-1" data-register="product">Product</button>
+          <button role="tab" id="reg-h5" aria-selected="false" aria-controls="register-panel" tabindex="-1" data-register="h5">H5</button>
+        </div>
+        <div class="register-panel" id="register-panel" role="tabpanel" aria-labelledby="reg-brand" data-register="brand">
+          <div class="register-frame" id="register-frame">
+            <img id="register-image" src="../../screenshots/web-desktop.png" alt="慢半拍展览官网的桌面首屏，超大中文标题、橙色丝带与展览插画" width="1440" height="1000">
+            <span class="frame-tag" id="register-frame-tag">BRAND / DESKTOP</span>
+          </div>
+          <div class="register-read">
+            <p class="register-caption" id="register-caption">设计就是产品：先用一个明确的视觉引擎建立第一印象，再把阅读路线收进安静的版面。</p>
+            <dl class="meters">
+              <div><dt>视觉强度</dt><dd><span class="meter"><i id="spectacle-meter" style="--v:8"></i></span><b id="spectacle-value">8</b></dd></div>
+              <div><dt>信息密度</dt><dd><span class="meter"><i id="density-meter" style="--v:3"></i></span><b id="density-value">3</b></dd></div>
+            </dl>
+            <ul class="register-changes" id="register-changes">
+              <li><span>构图</span>巨幅标题、斜向丝带、错落截图</li>
+              <li><span>字体</span>中文粗体承担情绪，正文保持克制</li>
+              <li><span>动效</span>只给有意义的反馈，不做持续噪声</li>
+            </ul>
+          </div>
+        </div>
+        <footer class="station-foot">
+          <span>brand / product / commerce / h5 四种 register · 苹果风格模式</span>
+          <a href="https://github.com/harveyxiacn/uiux-intent-form-motion-lab/blob/main/skills/upstream/finesse-ui/SKILL.md" target="_blank" rel="noopener">查看 Skill ↗</a>
+        </footer>
+      </article>
+
+      <article class="station" id="station-search" aria-labelledby="station-search-title">
+        <header class="station-head">
+          <span class="station-no" aria-hidden="true">03</span>
+          <div>
+            <p class="station-kicker">ui-ux-pro-max · 资料库</p>
+            <h3 id="station-search-title">先查资料，<br>再做决定。</h3>
+          </div>
+          <span class="badge">上游 · MIT</span>
+        </header>
+        <p class="station-lede">风格、配色和字体不是凭感觉挑的。检索一个产品语境，看看资料库给出的候选与风险。</p>
+        <form class="search-form" id="search-form">
+          <label for="search-input">产品语境</label>
+          <div class="field-row">
+            <input id="search-input" name="q" type="search" autocomplete="off" placeholder="例如：fintech dashboard">
+            <button class="btn primary" type="submit">检索 ↗</button>
+          </div>
+        </form>
+        <div class="chips" id="search-chips" role="group" aria-label="示例检索">
+          <button type="button" data-query="fintech dashboard">fintech dashboard</button>
+          <button type="button" data-query="editorial portfolio">editorial portfolio</button>
+          <button type="button" data-query="health app">health app</button>
+          <button type="button" data-query="developer tool">developer tool</button>
+        </div>
+        <div class="segmented" id="search-domains" role="tablist" aria-label="选择资料类型">
+          <button role="tab" id="domain-style" aria-selected="true" aria-controls="search-results" tabindex="0" data-domain="style">风格</button>
+          <button role="tab" id="domain-palette" aria-selected="false" aria-controls="search-results" tabindex="-1" data-domain="palette">配色</button>
+          <button role="tab" id="domain-font" aria-selected="false" aria-controls="search-results" tabindex="-1" data-domain="font">字体</button>
+        </div>
+        <p class="search-note" id="search-note">显示 3 条资料节选。输入语境可按关键词收窄。</p>
+        <div class="search-results" id="search-results" role="tabpanel" aria-labelledby="domain-style" tabindex="0"></div>
+        <footer class="station-foot">
+          <span>从 79 种风格、192 组配色、74 组字体中节选</span>
+          <a href="https://github.com/harveyxiacn/uiux-intent-form-motion-lab/blob/main/skills/upstream/ui-ux-pro-max/SKILL.md" target="_blank" rel="noopener">查看 Skill ↗</a>
+        </footer>
+      </article>
+
+      <article class="station" id="station-taste" aria-labelledby="station-taste-title">
+        <header class="station-head">
+          <span class="station-no" aria-hidden="true">04</span>
+          <div>
+            <p class="station-kicker">design-taste-frontend · 艺术方向</p>
+            <h3 id="station-taste-title">不要默认答案，<br>抽三个方向。</h3>
+          </div>
+          <span class="badge">上游 · MIT</span>
+        </header>
+        <p class="station-lede">模型最容易给出平均值。这个展台从研究过的方向里抽三张结构不同的牌，选一张看它如何改变同一条内容。</p>
+        <div class="deal-bar">
+          <button class="btn secondary" id="deal-button" type="button">换一组方向 ↻</button>
+          <span id="deal-count">6 个方向中抽取 3 个</span>
+        </div>
+        <div class="direction-cards" id="direction-cards" role="group" aria-label="抽到的三个方向"></div>
+        <div class="direction-preview" id="direction-preview"></div>
+        <footer class="station-foot">
+          <span>来自 247 个画廊站点的方向研究 · 方向名保留英文原名</span>
+          <a href="https://github.com/harveyxiacn/uiux-intent-form-motion-lab/blob/main/skills/upstream/design-taste-frontend/SKILL.md" target="_blank" rel="noopener">查看 Skill ↗</a>
+        </footer>
+      </article>
+
+      <article class="station station-wide" id="station-interface" aria-labelledby="station-interface-title">
+        <header class="station-head">
+          <span class="station-no" aria-hidden="true">05</span>
+          <div>
+            <p class="station-kicker">interface-design · 产品界面</p>
+            <h3 id="station-interface-title">产品界面的差别，<br>在层级。</h3>
+          </div>
+          <span class="badge">上游 · MIT</span>
+        </header>
+        <p class="station-lede">同一块工作台，默认输出和设计后的输出差在哪里？切换看看：不是换颜色，是让大小、间距、状态和对齐各自有理由。</p>
+        <div class="craft-bar">
+          <button class="btn" id="craft-toggle" type="button" aria-pressed="false">显示：默认生成</button>
+          <span class="hint">切换看层级、间距与状态</span>
+        </div>
+        <div class="interface-grid">
+          <div class="product-panel" id="product-panel" data-crafted="false">
+            <div class="pp-head">
+              <div><span class="pp-kicker">团队工作台</span><h4>本周交付</h4></div>
+              <button class="pp-action" type="button">新建项目</button>
+            </div>
+            <div class="pp-stats">
+              <div><span>进行中</span><strong>8</strong></div>
+              <div><span>待评审</span><strong>3</strong></div>
+              <div><span>本周完成</span><strong>12</strong></div>
+            </div>
+            <ul class="pp-list">
+              <li><span class="pp-name">移动端导航改版</span><span class="pp-owner">林岚</span><span class="pp-status" data-status="active">进行中</span><span class="pp-due">周五</span></li>
+              <li><span class="pp-name">设计系统 token 第 2 批</span><span class="pp-owner">周野</span><span class="pp-status" data-status="review">待评审</span><span class="pp-due">周四</span></li>
+              <li><span class="pp-name">空状态插画与文案</span><span class="pp-owner">陈默</span><span class="pp-status" data-status="done">已完成</span><span class="pp-due">周三</span></li>
+            </ul>
+            <p class="pp-foot">最后更新 12 分钟前 · 仅演示数据</p>
+          </div>
+          <ul class="craft-decisions" id="craft-decisions" aria-label="设计后的四个决定">
+            <li data-decision="hierarchy"><span>01</span><div><strong>层级</strong><p>标题、数字、行内容各自有字号和字重，眼睛知道先看哪里。</p></div></li>
+            <li data-decision="spacing"><span>02</span><div><strong>间距</strong><p>行高与分组用 4px 基准，不再靠平均分配把信息摊平。</p></div></li>
+            <li data-decision="states"><span>03</span><div><strong>状态</strong><p>进行中、待评审、已完成用文字和语义色区分，不只靠颜色。</p></div></li>
+            <li data-decision="focus"><span>04</span><div><strong>焦点</strong><p>键盘用户能看见当前位置，按钮有 hover、active 与 focus。</p></div></li>
+          </ul>
+        </div>
+        <footer class="station-foot">
+          <span>纯产品 UI：Dashboard、后台、SaaS、设置页</span>
+          <a href="https://github.com/harveyxiacn/uiux-intent-form-motion-lab/blob/main/skills/upstream/interface-design/SKILL.md" target="_blank" rel="noopener">查看 Skill ↗</a>
+        </footer>
+      </article>
+
+      <article class="station" id="station-impeccable" aria-labelledby="station-impeccable-title">
+        <header class="station-head">
+          <span class="station-no" aria-hidden="true">06</span>
+          <div>
+            <p class="station-kicker">impeccable · 审查与打磨</p>
+            <h3 id="station-impeccable-title">审查不是打分，<br>是定位。</h3>
+          </div>
+          <span class="badge">上游 · Apache-2.0</span>
+        </header>
+        <p class="station-lede">一组真实存在的小问题，藏在控件、对比度、焦点和提示里。运行审查，再应用修复，看问题如何被逐条关掉。</p>
+        <div class="audit-card" id="audit-form" data-fixed="false">
+          <div class="audit-head">
+            <div><span class="audit-kicker">设置 / 通知</span><h4>每周设计摘要</h4></div>
+            <button class="icon-btn" id="audit-close" type="button" aria-label="关闭通知设置">×</button>
+          </div>
+          <p class="audit-copy">每周一发送一次，包含本周的项目更新与方法笔记。</p>
+          <div class="audit-row">
+            <span id="audit-toggle-label">已开启</span>
+            <button class="switch" id="audit-switch" type="button" role="switch" aria-checked="true" aria-label="每周设计摘要"><span></span></button>
+          </div>
+          <p class="audit-error" id="audit-error">上次保存失败，请重试。</p>
+          <button class="btn audit-submit" id="audit-submit" type="button">保存更改</button>
+        </div>
+        <div class="audit-actions">
+          <button class="btn primary" id="audit-button" type="button">运行审查 ↗</button>
+          <button class="btn secondary" id="fix-button" type="button" disabled>应用修复</button>
+          <button class="btn ghost" id="reset-button" type="button" disabled>重置</button>
+        </div>
+        <ul class="audit-findings" id="audit-findings">
+          <li class="hint">审查结果会在这里逐条列出，并指向具体元素。</li>
+        </ul>
+        <footer class="station-foot">
+          <span>24 个子命令 · 代码、对比度、响应式与原生平台</span>
+          <a href="https://github.com/harveyxiacn/uiux-intent-form-motion-lab/blob/main/skills/upstream/impeccable/SKILL.md" target="_blank" rel="noopener">查看 Skill ↗</a>
+        </footer>
+      </article>
+    </div>
+  </section>
+
+  <section class="index-section" id="index" aria-labelledby="index-title">
+    <div class="section-head">
+      <p class="eyebrow">全部技能 / INDEX</p>
+      <h2 id="index-title">十四个 Skill，<br>各自负责什么。</h2>
+      <p class="section-lede">按阶段筛选，或按来源看。每个条目都指向一处真实实例；上游条目指向上面的展台。</p>
+    </div>
+    <div class="index-controls">
+      <div class="filters" role="group" aria-label="按来源筛选">
+        <button type="button" class="filter" data-filter="all" aria-pressed="true">全部 <span>14</span></button>
+        <button type="button" class="filter" data-filter="local" aria-pressed="false">本项目 <span>8</span></button>
+        <button type="button" class="filter" data-filter="upstream" aria-pressed="false">上游 <span>6</span></button>
+      </div>
+      <p id="index-count">显示 14 / 14</p>
+    </div>
+    <div class="skill-grid" id="skill-grid"></div>
+  </section>
+
+  <section class="method" id="method" aria-labelledby="method-title">
+    <div class="section-head">
+      <p class="eyebrow">自我说明 / METHOD TRACE</p>
+      <h2 id="method-title">这页本身，<br>就是八个模块的练习。</h2>
+      <p class="section-lede">上游六个 Skill 用展台转述；本项目八个模块则直接参与这页的规划、视觉、状态、动效与审查。下面是它们各自做的决定。</p>
+    </div>
+    <ol class="method-list">
+      <li><span>01</span><div><strong>页面规划</strong><p>先决定这是一张“可操作的方法地图”，不是作品集：首屏给主张与数量，第二屏给六个展台，第三屏给完整索引。</p></div><a href="#stations">看展台</a></li>
+      <li><span>02</span><div><strong>视觉方向</strong><p>暖纸、墨黑、橙色行动与紫色数据标记；实验室网格与等宽标签建立“正在运行”的语感。</p></div><a href="#top">看首屏</a></li>
+      <li><span>03</span><div><strong>交互规格</strong><p>每个展台只回答一个问题，输入后立即反馈；切换、抽取、审查、修复都有明确的结果状态。</p></div><a href="#stations">试交互</a></li>
+      <li><span>04</span><div><strong>设计系统</strong><p>颜色、间距、圆角、字号和状态全部走语义 token；深色主题只换角色，不换结构。</p></div><a href="#index">看系统</a></li>
+      <li><span>05</span><div><strong>组件工程</strong><p>展台、结果卡、过滤器和索引条目来自同一套数据结构；切换只看状态，不重建页面。</p></div><a href="#index">看索引</a></li>
+      <li><span>06</span><div><strong>动效工程</strong><p>只在数据变化时给短过渡；不排队、不阻塞结果；减少动态时直接到最终状态。</p></div><a href="#station-taste">抽方向</a></li>
+      <li><span>07</span><div><strong>无障碍审查</strong><p>键盘可完成 tab、过滤、审查与修复；状态用 live region 播报；焦点始终可见；正文保持 4.5:1。</p></div><a href="#station-impeccable">跑审查</a></li>
+      <li><span>08</span><div><strong>移动模式</strong><p>手机端单列展台、横向可滚的筛选、44px 触控目标；不是把桌面缩窄，而是重排任务顺序。</p></div><a href="#stations">看窄屏</a></li>
+    </ol>
+  </section>
+
+  <section class="closing" aria-labelledby="closing-title">
+    <p class="eyebrow">END OF INDEX</p>
+    <h2 id="closing-title">方法不是标签，<br>是下一步的动作。</h2>
+    <div class="closing-links">
+      <a href="../../#experience" target="_top">回到六组实例 ↗</a>
+      <a href="https://github.com/harveyxiacn/uiux-intent-form-motion-lab/blob/main/skills/upstream/README.md" target="_blank" rel="noopener">上游收录与许可证 ↗</a>
+      <a href="https://github.com/harveyxiacn/uiux-intent-form-motion-lab/blob/main/SKILL-VALIDATION.md" target="_blank" rel="noopener">查看验收记录 ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div><span class="brand-mark">界面有意思<span aria-hidden="true">*</span></span><p>Skill Atlas · 14 个方法 · 6 个实时展台</p></div>
+  <p>词库、风格、配色与字体为上游 MIT 资料的节选；界面与交互为本项目原创。示例数据仅用于演示。</p>
+</footer>
+
+<p class="sr-only" id="atlas-status" role="status"></p>
+</body>
+</html>
