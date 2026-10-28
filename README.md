@@ -1,10 +1,20 @@
 # Intent / Form / Motion
 
-八个可复用的 UI/UX Skill，以及官网网页、Dashboard Web UI 和手机 App 三类浏览器演示。工作流：**明确页面目标 → 提炼视觉方向 → 定义交互与动效**。
+八个可复用的 UI/UX Skill，以及官网、Dashboard、手机 App、组合工作台、组件动效五组浏览器演示。工作流：**明确页面目标 → 提炼视觉方向 → 定义交互与动效**。
 
 [在线演示](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/) · [设计指南](DESIGN-GUIDE.md) · [验证记录](REVIEW.md)
 
-展台提供「官网网页」「Dashboard Web UI」「手机 App」三个标签，默认显示官网；支持键盘左右方向键、Home / End，并可独立打开每个演示。
+展台提供「官网网页」「Dashboard Web UI」「手机 App」「组合工作台」「组件动效」五个标签，默认显示官网；支持键盘左右方向键、Home / End，并可独立打开每个演示。
+
+## 组合实例
+
+[组合工作台](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#studio)把页面任务规划、视觉层级、token 主题、筛选与编辑、动效与焦点策略组合为一个工作场景。[组件动效实验室](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#components)提供可单独检验的 tabs、展开、对话框、面板和表单。
+
+![组合工作台桌面](docs/screenshots/studio-desktop.png)
+
+![组件动效实验室](docs/screenshots/components-desktop.png)
+
+[八项 Skill 实例验收](SKILL-VALIDATION.md)逐一列出它们在哪个界面产生作用、具体检查及限制。验证涵盖运行行为，不以格式检查代替实例测试；无障碍检查不等于 WCAG 认证。
 
 ## 演示
 
@@ -32,6 +42,14 @@ App 是可交互的浏览器原型，没有后端或真实账户服务。演示�
 ![Dashboard 手机适配截图](docs/screenshots/dashboard-mobile.png)
 
 ![App 手机截图](docs/screenshots/app-mobile.png)
+
+![组合工作台手机适配](docs/screenshots/studio-mobile.png)
+
+![组件动效手机适配](docs/screenshots/components-mobile.png)
+
+![组合工作台深色](docs/screenshots/studio-dark.png)
+
+![组件动效深色](docs/screenshots/components-dark.png)
 
 ![展台手机截图](docs/screenshots/showcase-mobile.png)
 

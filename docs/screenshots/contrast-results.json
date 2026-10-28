@@ -1,0 +1,214 @@
+[
+  {
+    "label": "components light",
+    "rows": [
+      {
+        "selector": "#panel-form .stage-title h3",
+        "text": "让反馈清楚，让修正简单。",
+        "foreground": [
+          28,
+          44,
+          36
+        ],
+        "background": [
+          249,
+          250,
+          245
+        ],
+        "ratio": 13.95,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": "#panel-form .stage-title p",
+        "text": "试着提交空值或无效邮箱，再修改并提交。",
+        "foreground": [
+          89,
+          107,
+          96
+        ],
+        "background": [
+          249,
+          250,
+          245
+        ],
+        "ratio": 5.42,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": "#demo-form button[type=submit]",
+        "text": "加入名单 →",
+        "foreground": [
+          249,
+          250,
+          245
+        ],
+        "background": [
+          28,
+          44,
+          36
+        ],
+        "ratio": 13.95,
+        "backgroundImage": "none"
+      }
+    ]
+  },
+  {
+    "label": "components dark",
+    "rows": [
+      {
+        "selector": "#panel-form .stage-title h3",
+        "text": "让反馈清楚，让修正简单。",
+        "foreground": [
+          240,
+          245,
+          233
+        ],
+        "background": [
+          30,
+          43,
+          35
+        ],
+        "ratio": 13.29,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": "#panel-form .stage-title p",
+        "text": "试着提交空值或无效邮箱，再修改并提交。",
+        "foreground": [
+          186,
+          203,
+          189
+        ],
+        "background": [
+          30,
+          43,
+          35
+        ],
+        "ratio": 8.68,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": "#demo-form button[type=submit]",
+        "text": "加入名单 →",
+        "foreground": [
+          30,
+          43,
+          35
+        ],
+        "background": [
+          240,
+          245,
+          233
+        ],
+        "ratio": 13.29,
+        "backgroundImage": "none"
+      }
+    ]
+  },
+  {
+    "label": "studio light",
+    "rows": [
+      {
+        "selector": "h1",
+        "text": "让好想法，向前一步。",
+        "foreground": [
+          37,
+          44,
+          44
+        ],
+        "background": [
+          245,
+          244,
+          239
+        ],
+        "ratio": 12.93,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".page-heading p:not(.date)",
+        "text": "所有项目的进展、下一步与值得关注的细节，都在这里。",
+        "foreground": [
+          102,
+          111,
+          109
+        ],
+        "background": [
+          245,
+          244,
+          239
+        ],
+        "ratio": 4.7,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": "#new-project",
+        "text": "＋ 新建项目",
+        "foreground": [
+          37,
+          44,
+          44
+        ],
+        "background": [
+          241,
+          189,
+          100
+        ],
+        "ratio": 8.27,
+        "backgroundImage": "none"
+      }
+    ]
+  },
+  {
+    "label": "studio dark",
+    "rows": [
+      {
+        "selector": "h1",
+        "text": "让好想法，向前一步。",
+        "foreground": [
+          243,
+          242,
+          234
+        ],
+        "background": [
+          24,
+          34,
+          34
+        ],
+        "ratio": 14.49,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".page-heading p:not(.date)",
+        "text": "所有项目的进展、下一步与值得关注的细节，都在这里。",
+        "foreground": [
+          177,
+          190,
+          184
+        ],
+        "background": [
+          24,
+          34,
+          34
+        ],
+        "ratio": 8.47,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": "#new-project",
+        "text": "＋ 新建项目",
+        "foreground": [
+          37,
+          44,
+          44
+        ],
+        "background": [
+          241,
+          189,
+          100
+        ],
+        "ratio": 8.27,
+        "backgroundImage": "none"
+      }
+    ]
+  }
+]
