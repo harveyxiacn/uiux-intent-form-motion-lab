@@ -18,6 +18,19 @@
 
 App 是可交互的浏览器原型，没有后端或真实账户服务。演示内容和数值为示例，不代表实际业务。
 
+<details>
+<summary>查看展台与手机端截图</summary>
+
+![展台桌面截图](docs/screenshots/showcase-desktop.png)
+
+![网页手机截图](docs/screenshots/web-mobile.png)
+
+![App 手机截图](docs/screenshots/app-mobile.png)
+
+![展台手机截图](docs/screenshots/showcase-mobile.png)
+
+</details>
+
 ## 三个 Skill
 
 | Skill | 职责 |
@@ -43,3 +56,4 @@ App 是可交互的浏览器原型，没有后端或真实账户服务。演示�
 无需构建：在仓库根目录运行 `python -m http.server 4173`，打开 `http://localhost:4173/docs/`。浏览器验证脚本为 [scripts/verify.cjs](scripts/verify.cjs)，需要 Node.js、Playwright 和可用的 Chromium / Edge。将 `PLAYWRIGHT_MODULE` 指向已安装的 Playwright 模块路径后执行 `node scripts/verify.cjs`。
 
 GitHub Pages 从 `main` 分支的 `docs/` 目录发布。
+
