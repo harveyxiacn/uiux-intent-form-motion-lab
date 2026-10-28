@@ -10,4 +10,4 @@ Read the user's requested product, reference, task, navigation and input context
 
 These are routing aids, not fixed templates. A product can contain more than one surface: classify each requested part and preserve the user's scope. A mobile website is still a website when its goal is content exploration; a browser-hosted phone prototype can demonstrate a mobile app flow without being a native app. If a reference is ambiguous, inspect its surrounding screens and describe the assumption rather than silently choosing a category.
 
-For the studied recordings, clips 1 and 2 show mobile App / miniprogram components and layouts; clip 3 shows dashboard web-app layouts; clip 4 shows a website design workflow. Adapt a pattern only after checking that it supports the destination surface.
+Adapt a pattern only after checking that it supports the destination surface. Dashboard examples belong to Web UI, while mobile app examples should demonstrate handheld task flows.

@@ -1,8 +1,8 @@
 # Intent / Form / Motion
 
-从录屏研究重建的三个 UI/UX Skill，以及官网网页、Dashboard Web UI 和手机 App 三类浏览器演示。工作流：**明确页面目标 → 提炼视觉方向 → 定义交互与动效**。
+三个可复用的 UI/UX Skill，以及官网网页、Dashboard Web UI 和手机 App 三类浏览器演示。工作流：**明确页面目标 → 提炼视觉方向 → 定义交互与动效**。
 
-[在线演示](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/) · [研究报告](UIUX研究报告.md) · [验证记录](REVIEW.md)
+[在线演示](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/) · [设计指南](DESIGN-GUIDE.md) · [验证记录](REVIEW.md)
 
 展台提供「官网网页」「Dashboard Web UI」「手机 App」三个标签，默认显示官网；支持键盘左右方向键、Home / End，并可独立打开每个演示。
 
@@ -53,15 +53,13 @@ App 是可交互的浏览器原型，没有后端或真实账户服务。演示�
 
 ## 分类与使用范围
 
-四段录屏并非同一类页面：第 1、2 段是手机 App / 小程序组件与布局，第 3 段是 Dashboard / Web UI，第 4 段是官网 / 内容网站设计流程。官网、手机 App 和 Dashboard 应按用户任务、内容和输入方式区分；不能以有无交互或浏览器运行判断，也不能把所有 App 当作 Dashboard。
+官网、手机 App 和 Dashboard 按用户任务、内容和输入方式区分，不能仅凭有无交互或浏览器运行判断。Dashboard 属于网页 Web UI；手机 App 演示采用单列任务流、底部导航、详情返回和底部编辑面板。
 
-本次纠正了前版以桌面日程工作台代替手机 App 的分类错误。当前三套演示分别为官网网页、Dashboard Web UI 和手机 App。Dashboard 是网页 Web UI，保留桌面工作台，独立于手机 App 演示。三个 Skill 均附有 `references/surface-routing.md`，用于先判断界面类别，再选择布局和交互。
+三个 Skill 均附有 `references/surface-routing.md`，用于先判断界面类别，再选择布局和交互。
 
-## 来源与边界
+## 项目范围
 
-方法来自用户提供、画面标注为抖音作者 **@叨叨AI** 的四段录屏观察。没有可验证的原作品链接或原 Skill 文件，因此本仓库提供的是自行整理重建的操作说明，**不保证与视频中的原版相同**。名称为描述性命名，不能证明身份或来源。原录屏未随仓库发布。
-
-研究报告列出了相关公开工具及可访问来源，并明确区分相似功能与原版证据。演示用于检验这套流程能否产出可运行界面，不能证明其通用设计质量。
+本项目提供设计工作流、交互规格和可运行示例。演示用于帮助理解和实践，不代表适合所有产品的通用模板。相关公开工具见[设计指南](DESIGN-GUIDE.md)。
 
 ## 本地运行与验证
 

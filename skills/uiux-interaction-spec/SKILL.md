@@ -15,10 +15,10 @@ For each meaningful interaction, specify:
 
 - **Purpose and object:** what the user is doing and which element responds.
 - **Trigger and initial state:** click, tap, keyboard, hover, scroll or data change; describe the starting state.
-- **Sequence:** what moves or changes, its direction or path, order, and relationship to other elements. Add duration and easing when needed for implementation rather than inventing exact values from a video.
+- **Sequence:** what moves or changes, its direction or path, order, and relationship to other elements. Add duration and easing when needed for implementation and distinguish measured values from proposed defaults.
 - **Result and reversal:** final state, feedback, what happens on repeated activation or interruption, and whether state persists.
 - **Access and fallback:** keyboard and touch behavior, visible focus, reduced-motion alternative, and content or state availability without animation.
 
-Examples of descriptive patterns from the studied material include overlapping avatars that reveal names, progress fill that communicates status, expandable rows, a card tray, a magnifying row, and a pull-to-reveal summary. The same name may refer to different behavior elsewhere: describe the actual reference rather than assuming details.
+Examples of descriptive patterns include overlapping avatars that reveal names, progress fill that communicates status, expandable rows, a card tray, a magnifying row, and a pull-to-reveal summary. The same name may refer to different behavior elsewhere: describe the actual reference rather than assuming details.
 
 For a sticker-like interaction, a useful handoff could say: “on activation, the lower-right corner curls, the sticker lifts and rotates slightly, travels into the outlined area, then the corner settles flat.” Adapt this to the actual interface and specify accessible alternatives. If implementing, verify the real states and motion in the rendered UI; report any unverified behavior.
