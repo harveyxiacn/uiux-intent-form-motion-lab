@@ -20,3 +20,11 @@
 复现：运行 `python -m http.server 4173`，执行 [scripts/verify.cjs](scripts/verify.cjs)，它会调用 advanced / studio 验证和 [contrast.cjs](scripts/contrast.cjs)。对比明细在 [contrast-results.json](docs/screenshots/contrast-results.json)，截图见 README。支持 `PLAYWRIGHT_MODULE` 与 `DEMO_BASE` 环境变量。
 
 全部原型没有后端。App / Dashboard事项保存范围为本浏览器；新工作台为当前页面内存，刷新或reload会复位；组件表单仅验证，不发送邮箱。
+
+## 展台自身的设计与运行验收
+
+展台由嵌入式切换壳改为完整作品页面：两行巨幅标题、斜向丝带、四张错落的项目实图、可揭贴纸、五类项目索引、现场交互区和八项方法。页面目标是先看懂作品，再亲手体验；设计决策见 [SHOWCASE-DESIGN.md](docs/SHOWCASE-DESIGN.md)。
+
+测试 [verify-showcase.cjs](scripts/verify-showcase.cjs) 覆盖：四张预览图真实加载；五类别预览按钮选择对应标签、URL hash、iframe地址及焦点；深链与手机框；Enter/Space揭回贴纸；正常动效中间帧、反向和快速重复；减少动态时无动画但状态即时完成；双主题。结合首屏、整页、手机、暗色和中间帧截图目视，确认构图与行为分别成立。
+
+贴纸是使用角部三角折面、整体高度/旋转和位移表达揭起的浏览器近似，不是物理纸张模拟。没有运行性能trace或真机测试。展台代表对比：主标题与导语浅色15.60、深色14.32；贴纸文字7.41，两主题相同。只验证这些明确背景组合，不扩展为全页WCAG认证。明细见 [showcase-contrast-results.json](docs/screenshots/showcase-contrast-results.json)。

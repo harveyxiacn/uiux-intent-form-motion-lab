@@ -4,7 +4,17 @@
 
 [在线演示](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/) · [设计指南](DESIGN-GUIDE.md) · [验证记录](REVIEW.md)
 
+展台本身也是一个设计实例：巨幅排版、错落的真实项目截图与可揭开的贴纸组成作品入口，下方提供可直接操作的演示。
+
 展台提供「官网网页」「Dashboard Web UI」「手机 App」「组合工作台」「组件动效」五个标签，默认显示官网；支持键盘左右方向键、Home / End，并可独立打开每个演示。
+
+## 作品展台
+
+![作品展台桌面首屏](docs/screenshots/showcase-desktop.png)
+
+[桌面整页](docs/screenshots/showcase-desktop-full.png) · [手机整页](docs/screenshots/showcase-mobile-full.png) · [揭角中间帧](docs/screenshots/showcase-peel-mid.png) · [贴纸移位帧](docs/screenshots/showcase-peel-travel.png)
+
+[展台设计决策](docs/SHOWCASE-DESIGN.md)记录页面目标、构图、视觉语言与交互契约。预览卡可以切换对应实例；贴纸支持键盘、反向与减少动态效果。实际验收范围见[验证记录](REVIEW.md)。
 
 ## 组合实例
 

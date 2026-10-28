@@ -14,3 +14,5 @@ Identify the specific visual ingredients that produce the reference's effect: co
 Present a compact direction: intent, first-screen composition, color roles, typography, image treatment, reusable component characteristics and responsive adaptation. Explain which choices support the user's goal. When references disagree, select a coherent direction rather than merging every motif; preserve requested constraints.
 
 If the user requests implementation, use existing design tokens and components where appropriate, then inspect the rendered result at relevant viewport sizes and correct visible issues. If browser verification is unavailable, state that limitation. For planning-only work, provide the direction without modifying the interface.
+
+When a user supplies concrete visual prompts or says the output misses a reference, read [prompt-to-design](references/prompt-to-design.md) to turn each request into a visible decision and acceptance check.

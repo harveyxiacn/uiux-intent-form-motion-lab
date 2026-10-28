@@ -1,0 +1,108 @@
+[
+  {
+    "label": "showcase light",
+    "rows": [
+      {
+        "selector": "#hero-title",
+        "text": "让界面值得体验。",
+        "foreground": [
+          25,
+          26,
+          24
+        ],
+        "background": [
+          244,
+          242,
+          236
+        ],
+        "ratio": 15.6,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".intro-row p",
+        "text": "五组真实可操作的界面，八种把想法做好的设计方法。",
+        "foreground": [
+          25,
+          26,
+          24
+        ],
+        "background": [
+          244,
+          242,
+          236
+        ],
+        "ratio": 15.6,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": "#peel-sticker",
+        "text": "保持好奇动手试试 ↗",
+        "foreground": [
+          32,
+          29,
+          46
+        ],
+        "background": [
+          179,
+          162,
+          250
+        ],
+        "ratio": 7.41,
+        "backgroundImage": "none"
+      }
+    ]
+  },
+  {
+    "label": "showcase dark",
+    "rows": [
+      {
+        "selector": "#hero-title",
+        "text": "让界面值得体验。",
+        "foreground": [
+          244,
+          242,
+          236
+        ],
+        "background": [
+          32,
+          34,
+          31
+        ],
+        "ratio": 14.32,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".intro-row p",
+        "text": "五组真实可操作的界面，八种把想法做好的设计方法。",
+        "foreground": [
+          244,
+          242,
+          236
+        ],
+        "background": [
+          32,
+          34,
+          31
+        ],
+        "ratio": 14.32,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": "#peel-sticker",
+        "text": "保持好奇动手试试 ↗",
+        "foreground": [
+          32,
+          29,
+          46
+        ],
+        "background": [
+          179,
+          162,
+          250
+        ],
+        "ratio": 7.41,
+        "backgroundImage": "none"
+      }
+    ]
+  }
+]
