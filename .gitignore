@@ -1,0 +1,8 @@
+*.mp4
+*.webm
+node_modules/
+.taste-skill/
+**/.taste-skill/
+__pycache__/
+*.log
+**/.inspect/
