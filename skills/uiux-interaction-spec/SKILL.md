@@ -5,6 +5,8 @@ description: Describe or specify UI interaction and motion precisely from a refe
 
 # Name and specify the interaction
 
+Before selecting a layout, visual language or interaction, identify the intended surface: **marketing/content website**, **mobile app/miniprogram**, or **dashboard / Web UI**. Read [surface routing](references/surface-routing.md) when the request spans categories or the reference could be misclassified. Judge by the product's purpose, task and input context; browser hosting or interactivity does not make a site an app, and an app does not automatically mean a dashboard.
+
 Turn vague requests such as “make it feel lively” into observable behavior that serves a user goal. Inspect any provided reference or existing implementation before naming the pattern. A label is a convenient shorthand, not proof of a universally standardized term; describe the behavior even if no agreed name exists.
 
 For naming requests, return the best-fitting term and a short behavioral explanation. If multiple terms fit, distinguish plausible alternatives. The [Animation Vocabulary](https://animations.dev/vocabulary) is a useful reference when available; its names are a vocabulary, not an exhaustive standard. If the user only asks what an effect is called, answer that question without implementing it.

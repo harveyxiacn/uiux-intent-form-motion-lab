@@ -1,20 +1,24 @@
 # Intent / Form / Motion
 
-从录屏研究重建的三个 UI/UX Skill，以及一个网页和一个 App 浏览器演示。工作流：**明确页面目标 → 提炼视觉方向 → 定义交互与动效**。
+从录屏研究重建的三个 UI/UX Skill，以及官网网页、Dashboard Web UI 和手机 App 三类浏览器演示。工作流：**明确页面目标 → 提炼视觉方向 → 定义交互与动效**。
 
 [在线演示](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/) · [研究报告](UIUX研究报告.md) · [验证记录](REVIEW.md)
 
-展台默认显示网页，点击「App Demo」切换；支持键盘左右方向键、Home / End，并可独立打开每个演示。
+展台提供「官网网页」「Dashboard Web UI」「手机 App」三个标签，默认显示官网；支持键盘左右方向键、Home / End，并可独立打开每个演示。
 
 ## 演示
 
-### 网页
+### 官网
 
 ![网页桌面截图](docs/screenshots/web-desktop.png)
 
-### App
+### Dashboard Web UI
 
-![App 桌面截图](docs/screenshots/app-desktop.png)
+![Dashboard 桌面截图](docs/screenshots/dashboard-desktop.png)
+
+### 手机 App
+
+![手机 App 在桌面浏览器中的预览](docs/screenshots/app-desktop.png)
 
 App 是可交互的浏览器原型，没有后端或真实账户服务。演示内容和数值为示例，不代表实际业务。
 
@@ -24,6 +28,8 @@ App 是可交互的浏览器原型，没有后端或真实账户服务。演示�
 ![展台桌面截图](docs/screenshots/showcase-desktop.png)
 
 ![网页手机截图](docs/screenshots/web-mobile.png)
+
+![Dashboard 手机适配截图](docs/screenshots/dashboard-mobile.png)
 
 ![App 手机截图](docs/screenshots/app-mobile.png)
 
@@ -41,9 +47,15 @@ App 是可交互的浏览器原型，没有后端或真实账户服务。演示�
 
 ### 安装
 
-克隆此仓库后，将 `skills/` 内所需文件夹复制到你的 Codex skills 目录（通常为 `~/.codex/skills/`），保留 `SKILL.md` 与 `agents/openai.yaml`。重启或刷新 Codex 后，可分别调用 `$uiux-page-planning`、`$uiux-style-direction`、`$uiux-interaction-spec`。
+克隆此仓库后，将 `skills/` 内所需文件夹复制到你的 Codex skills 目录（通常为 `~/.codex/skills/`），保留 `SKILL.md`、`agents/openai.yaml` 和 `references/`。重启或刷新 Codex 后，可分别调用 `$uiux-page-planning`、`$uiux-style-direction`、`$uiux-interaction-spec`。
 
-示例：先用 `$uiux-page-planning` 规划互动场馆官网，再用 `$uiux-style-direction` 确定视觉语言，最后用 `$uiux-interaction-spec` 描述贴纸交互。它们可以独立使用，优先遵守用户需求和既有品牌。
+示例：先用 `$uiux-page-planning` 规划互动场馆官网，再用 `$uiux-style-direction` 确定视觉语言，最后用 `$uiux-interaction-spec` 描述官网 FAQ 展开，或手机 App 详情与新增面板的状态。它们可以独立使用，优先遵守用户需求和既有品牌。
+
+## 分类与使用范围
+
+四段录屏并非同一类页面：第 1、2 段是手机 App / 小程序组件与布局，第 3 段是 Dashboard / Web UI，第 4 段是官网 / 内容网站设计流程。官网、手机 App 和 Dashboard 应按用户任务、内容和输入方式区分；不能以有无交互或浏览器运行判断，也不能把所有 App 当作 Dashboard。
+
+本次纠正了前版以桌面日程工作台代替手机 App 的分类错误。当前三套演示分别为官网网页、Dashboard Web UI 和手机 App。Dashboard 是网页 Web UI，保留桌面工作台，独立于手机 App 演示。三个 Skill 均附有 `references/surface-routing.md`，用于先判断界面类别，再选择布局和交互。
 
 ## 来源与边界
 

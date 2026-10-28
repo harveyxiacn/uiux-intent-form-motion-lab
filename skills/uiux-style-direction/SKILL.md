@@ -5,6 +5,8 @@ description: Derive a concrete UI visual direction from a product brief or refer
 
 # Set the look
 
+Before selecting a layout, visual language or interaction, identify the intended surface: **marketing/content website**, **mobile app/miniprogram**, or **dashboard / Web UI**. Read [surface routing](references/surface-routing.md) when the request spans categories or the reference could be misclassified. Judge by the product's purpose, task and input context; browser hosting or interactivity does not make a site an app, and an app does not automatically mean a dashboard.
+
 Start from the page purpose, audience, content and the user's stated aesthetic. Inspect the existing interface when refining it. Treat references as evidence to analyze rather than assets to copy or a reason to replace an established identity.
 
 Identify the specific visual ingredients that produce the reference's effect: composition and hierarchy, type scale and character, color roles, imagery or material, spacing, shapes and depth. Translate observations into actionable choices for the actual content. For example, “an orange ribbon crossing four staggered photographs” specifies more than “creative and playful.” Avoid inventing claims or image rights.

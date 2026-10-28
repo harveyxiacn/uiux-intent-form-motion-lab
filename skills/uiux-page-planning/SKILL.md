@@ -5,6 +5,8 @@ description: Plan a web page or app screen before implementation by defining its
 
 # Plan the page
 
+Before selecting a layout, visual language or interaction, identify the intended surface: **marketing/content website**, **mobile app/miniprogram**, or **dashboard / Web UI**. Read [surface routing](references/surface-routing.md) when the request spans categories or the reference could be misclassified. Judge by the product's purpose, task and input context; browser hosting or interactivity does not make a site an app, and an app does not automatically mean a dashboard.
+
 Translate the user's idea into a usable page plan before choosing a visual treatment or writing code. Respect existing product facts, brand, content and scope. Inspect the existing screen and project context when revising one; distinguish an explicit constraint from an assumption.
 
 1. Identify the audience, their situation and the action or understanding the page should enable. If essential information is absent, make a reasonable labeled assumption or ask a focused question when it would change the outcome.
