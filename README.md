@@ -1,6 +1,6 @@
 # Intent / Form / Motion
 
-三个可复用的 UI/UX Skill，以及官网网页、Dashboard Web UI 和手机 App 三类浏览器演示。工作流：**明确页面目标 → 提炼视觉方向 → 定义交互与动效**。
+八个可复用的 UI/UX Skill，以及官网网页、Dashboard Web UI 和手机 App 三类浏览器演示。工作流：**明确页面目标 → 提炼视觉方向 → 定义交互与动效**。
 
 [在线演示](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/) · [设计指南](DESIGN-GUIDE.md) · [验证记录](REVIEW.md)
 
@@ -37,13 +37,18 @@ App 是可交互的浏览器原型，没有后端或真实账户服务。演示�
 
 </details>
 
-## 三个 Skill
+## 八个 Skill
 
 | Skill | 职责 |
 | --- | --- |
 | [uiux-page-planning](skills/uiux-page-planning/SKILL.md) | 受众、目标、首屏、信息层级与页面结构 |
 | [uiux-style-direction](skills/uiux-style-direction/SKILL.md) | 从参考提取构图、排版、配色和图像方向 |
 | [uiux-interaction-spec](skills/uiux-interaction-spec/SKILL.md) | 明确触发、状态、运动、结果与无障碍要求 |
+| [uiux-design-system](skills/uiux-design-system/SKILL.md) | 设计 token、主题、组件状态与一致性 |
+| [uiux-component-engineering](skills/uiux-component-engineering/SKILL.md) | 可复用组件 API、状态、语义和组合 |
+| [uiux-motion-engineering](skills/uiux-motion-engineering/SKILL.md) | 动效实现、中断恢复、降级和性能 |
+| [uiux-accessibility-review](skills/uiux-accessibility-review/SKILL.md) | 键盘、焦点、表单和无障碍证据审查 |
+| [uiux-mobile-patterns](skills/uiux-mobile-patterns/SKILL.md) | 手机导航、触摸、键盘与编辑面板 |
 
 ### 安装
 
@@ -55,7 +60,11 @@ App 是可交互的浏览器原型，没有后端或真实账户服务。演示�
 
 官网、手机 App 和 Dashboard 按用户任务、内容和输入方式区分，不能仅凭有无交互或浏览器运行判断。Dashboard 属于网页 Web UI；手机 App 演示采用单列任务流、底部导航、详情返回和底部编辑面板。
 
-三个 Skill 均附有 `references/surface-routing.md`，用于先判断界面类别，再选择布局和交互。
+三个基础 Skill 均附有 `references/surface-routing.md`，用于先判断界面类别，再选择布局和交互。
+
+## 外部 Skills 与组合
+
+[Skills 选型目录](SKILL-CATALOG.md)收集了 12 个相关 Skill / 项目的一手链接、许可证核对、适用范围及八个本地模块的组合方式。外部项目未自动安装，本项目提供独立工作流。
 
 ## 项目范围
 
