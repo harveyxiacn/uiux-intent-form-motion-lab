@@ -10,6 +10,8 @@
 
 141 条提示词来自对常用交互的逐条去重与整理，覆盖按钮、布局、选择器、菜单、弹层、卡片、手势、滚动、输入、图表、工作台与编辑式页面。21 个场景家族全部在浏览器里实现，使用 Pointer Events、CSS 过渡、Web Animations API、SVG 与原生焦点管理；拖动、吸附、橡皮筋、共享元素、3D 翻面等效果都可以直接试。演示不调用后端，不持久化数据。
 
+完整文本合集见 [UIUX-PROMPTS.md](UIUX-PROMPTS.md)：按网页 / App 分章，每条都带可复制提示词、关联 Skill、验收清单与在线预览入口。
+
 ![提示词实验室桌面首屏](docs/screenshots/lab-desktop.png)
 
 ![App 底栏胶囊场景](docs/screenshots/lab-scene-app.png) ![网页曲线图表场景](docs/screenshots/lab-scene-web.png)
