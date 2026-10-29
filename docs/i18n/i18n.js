@@ -243,9 +243,13 @@
   /* ---------- switcher ---------- */
   function setLang(l) {
     if (l === lang) return;
-    try { localStorage.setItem(KEY, l); } catch (e) { /* ignore */ }
+    var stored = false;
+    try { localStorage.setItem(KEY, l); stored = localStorage.getItem(KEY) === l; } catch (e) { /* storage unavailable */ }
     var u = new URL(location.href);
-    if (u.searchParams.has('lang')) u.searchParams.set('lang', l);
+    // Navigating to the same URL with a #hash only scrolls, so reload explicitly;
+    // without storage the choice has to travel in ?lang=.
+    if (stored && !u.searchParams.has('lang')) { location.reload(); return; }
+    u.searchParams.set('lang', l);
     location.replace(u.toString());
   }
   I18N.setLang = setLang;
