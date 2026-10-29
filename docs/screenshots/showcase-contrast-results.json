@@ -20,7 +20,7 @@
       },
       {
         "selector": ".intro-row p",
-        "text": "六组真实可操作的界面，十四个可复用的设计方法。",
+        "text": "六组真实可操作的界面，十五个可复用的设计方法。",
         "foreground": [
           25,
           26,
@@ -52,7 +52,7 @@
       },
       {
         "selector": ".atlas-kicker",
-        "text": "SKILL ATLAS / 14 SKILLS / 6 LIVE STATIONS",
+        "text": "SKILL ATLAS / 15 SKILLS / 6 LIVE STATIONS",
         "foreground": [
           255,
           113,
@@ -105,7 +105,7 @@
       },
       {
         "selector": ".intro-row p",
-        "text": "六组真实可操作的界面，十四个可复用的设计方法。",
+        "text": "六组真实可操作的界面，十五个可复用的设计方法。",
         "foreground": [
           244,
           242,
@@ -137,7 +137,7 @@
       },
       {
         "selector": ".atlas-kicker",
-        "text": "SKILL ATLAS / 14 SKILLS / 6 LIVE STATIONS",
+        "text": "SKILL ATLAS / 15 SKILLS / 6 LIVE STATIONS",
         "foreground": [
           154,
           52,

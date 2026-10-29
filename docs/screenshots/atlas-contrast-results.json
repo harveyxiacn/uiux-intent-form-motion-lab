@@ -4,7 +4,7 @@
     "rows": [
       {
         "selector": ".lede",
-        "text": "八个本项目模块把问题拆成阶段；六个上游 Skill 补上构建、检索与审查的手感。这里不是名词表——每个方法都有一处可以亲",
+        "text": "九个本项目模块把问题拆成阶段；六个上游 Skill 补上构建、检索与审查的手感。这里不是名词表——每个方法都有一处可以亲",
         "foreground": [
           23,
           24,
@@ -84,7 +84,7 @@
       },
       {
         "selector": ".site-footer p",
-        "text": "Skill Atlas · 14 个方法 · 6 个实时展台",
+        "text": "Skill Atlas · 15 个方法 · 6 个实时展台",
         "foreground": [
           85,
           87,
@@ -105,7 +105,7 @@
     "rows": [
       {
         "selector": ".lede",
-        "text": "八个本项目模块把问题拆成阶段；六个上游 Skill 补上构建、检索与审查的手感。这里不是名词表——每个方法都有一处可以亲",
+        "text": "九个本项目模块把问题拆成阶段；六个上游 Skill 补上构建、检索与审查的手感。这里不是名词表——每个方法都有一处可以亲",
         "foreground": [
           241,
           237,
@@ -185,7 +185,7 @@
       },
       {
         "selector": ".site-footer p",
-        "text": "Skill Atlas · 14 个方法 · 6 个实时展台",
+        "text": "Skill Atlas · 15 个方法 · 6 个实时展台",
         "foreground": [
           185,
           183,

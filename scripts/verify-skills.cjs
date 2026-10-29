@@ -8,7 +8,7 @@ module.exports = async (p, base) => {
   await p.goto(base + 'demos/skills/');
   await p.waitForSelector('.skill-card');
   await p.evaluate(() => { try { localStorage.removeItem('atlas-theme'); } catch { /* optional */ } });
-  assert.equal(await p.title(), '技能地图 — 十四个 UI/UX Skill 的现场');
+  assert.equal(await p.title(), '技能地图 — 十五个 UI/UX Skill 的现场');
 
   const headingLines = async (selector) => {
     const box = await p.locator(selector).evaluate((el) => {
@@ -92,15 +92,15 @@ module.exports = async (p, base) => {
   assert.equal(await p.locator('#audit-form').getAttribute('data-fixed'), 'false');
   assert.equal(await p.locator('#audit-error').getAttribute('role'), null);
 
-  assert.equal(await p.locator('.skill-card').count(), 14);
-  assert.equal(await p.locator('#index-count').innerText(), '显示 14 / 14');
+  assert.equal(await p.locator('.skill-card').count(), 15);
+  assert.equal(await p.locator('#index-count').innerText(), '显示 15 / 15');
   await p.locator('[data-filter=local]').click();
-  assert.equal(await p.locator('.skill-card:visible').count(), 8);
+  assert.equal(await p.locator('.skill-card:visible').count(), 9);
   await p.locator('[data-filter=upstream]').click();
   assert.equal(await p.locator('.skill-card:visible').count(), 6);
   await p.locator('[data-filter=all]').click();
-  assert.equal(await p.locator('.skill-card:visible').count(), 14);
-  assert.match(await p.locator('.skill-card').first().locator('.skill-links a').first().getAttribute('href'), /\.\.\/\.\.\/#/);
+  assert.equal(await p.locator('.skill-card:visible').count(), 15);
+  assert.match(await p.locator('.skill-card').first().locator('.skill-links a').first().getAttribute('href'), /\.\.\/\.\.\/showcase\.html#/);
 
   await p.locator('[data-stage-link="验证"]').click();
   assert.equal(await p.locator('.skill-card.stage-focus').count(), 2);

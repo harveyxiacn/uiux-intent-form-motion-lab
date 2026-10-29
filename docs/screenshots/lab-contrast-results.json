@@ -1,0 +1,140 @@
+[
+  {
+    "label": "lab light",
+    "rows": [
+      {
+        "selector": ".hero-lede",
+        "text": "把「想要高级一点」「动画顺一点」变成可执行的动作、参数与验收。按网页和 App / 小程序分成两大类，选一句提示词，右侧",
+        "foreground": [
+          21,
+          22,
+          18
+        ],
+        "background": [
+          243,
+          240,
+          231
+        ],
+        "ratio": 15.95,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".stage-caption",
+        "text": "深色从手指按下的位置圆形扩散，反向沿原路收回。可操作 · 键盘可用",
+        "foreground": [
+          107,
+          106,
+          96
+        ],
+        "background": [
+          243,
+          240,
+          231
+        ],
+        "ratio": 4.78,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".detail-summary",
+        "text": "深色从手指按下的位置圆形扩散，反向沿原路收回。",
+        "foreground": [
+          107,
+          106,
+          96
+        ],
+        "background": [
+          251,
+          249,
+          243
+        ],
+        "ratio": 5.17,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".prompt-row small",
+        "text": "点击后收缩成圆显示环形进度，完成后展开回按钮，文字切为打开。",
+        "foreground": [
+          107,
+          106,
+          96
+        ],
+        "background": [
+          251,
+          249,
+          243
+        ],
+        "ratio": 5.17,
+        "backgroundImage": "none"
+      }
+    ]
+  },
+  {
+    "label": "lab dark",
+    "rows": [
+      {
+        "selector": ".hero-lede",
+        "text": "把「想要高级一点」「动画顺一点」变成可执行的动作、参数与验收。按网页和 App / 小程序分成两大类，选一句提示词，右侧",
+        "foreground": [
+          241,
+          238,
+          227
+        ],
+        "background": [
+          22,
+          23,
+          18
+        ],
+        "ratio": 15.51,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".stage-caption",
+        "text": "深色从手指按下的位置圆形扩散，反向沿原路收回。可操作 · 键盘可用",
+        "foreground": [
+          168,
+          164,
+          151
+        ],
+        "background": [
+          22,
+          23,
+          18
+        ],
+        "ratio": 7.23,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".detail-summary",
+        "text": "深色从手指按下的位置圆形扩散，反向沿原路收回。",
+        "foreground": [
+          168,
+          164,
+          151
+        ],
+        "background": [
+          36,
+          38,
+          31
+        ],
+        "ratio": 6.14,
+        "backgroundImage": "none"
+      },
+      {
+        "selector": ".prompt-row small",
+        "text": "点击后收缩成圆显示环形进度，完成后展开回按钮，文字切为打开。",
+        "foreground": [
+          168,
+          164,
+          151
+        ],
+        "background": [
+          36,
+          38,
+          31
+        ],
+        "ratio": 6.14,
+        "backgroundImage": "none"
+      }
+    ]
+  }
+]

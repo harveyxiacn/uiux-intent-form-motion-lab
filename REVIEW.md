@@ -1,6 +1,6 @@
 # 审核与验证记录
 
-日期：2026-10-28。此记录对应分类纠正后的三类演示，取代前版两个演示的验证记录。
+日期：2026-10-29。此记录覆盖提示词实验室、作品展台、技能地图与六组演示；早前分类纠正的验证仍保留在下方。
 
 ## 界面分类
 
@@ -50,7 +50,7 @@ Edge / Playwright，1440 × 1000、390 × 844，减少动态效果模式。三�
 
 ## 技能地图与第六标签验证（2026-10-28）
 
-展台新增 `#atlas` 专题区和第六个体验标签「技能地图」，并单独发布 [Skill Atlas](docs/demos/skills/)。页面把六个上游 Skill 各做成一个实时展台，加上 14 条技能索引（8 本地 + 6 上游）与八个本地模块的自我说明。设计与取舍见 [SHOWCASE-DESIGN.md](docs/SHOWCASE-DESIGN.md)，展台契约、数据边界和逐项结果见 [ACCEPTANCE.md](docs/demos/skills/ACCEPTANCE.md)。
+展台新增 `#atlas` 专题区和第六个体验标签「技能地图」，并单独发布 [Skill Atlas](docs/demos/skills/)。页面把六个上游 Skill 各做成一个实时展台，加上 15 条技能索引（9 个本项目模块 + 6 上游）与八个设计模块的自我说明。设计与取舍见 [SHOWCASE-DESIGN.md](docs/SHOWCASE-DESIGN.md)，展台契约、数据边界和逐项结果见 [ACCEPTANCE.md](docs/demos/skills/ACCEPTANCE.md)。
 
 `node scripts/verify.cjs` 现在覆盖六个 Demo 的桌面/手机截图、六个标签的键盘顺序与深链、第六标签的 iframe/舞台/主题同步，以及 `#atlas` 截图与独立入口。新增 [verify-skills.cjs](scripts/verify-skills.cjs) 覆盖：
 
@@ -60,8 +60,26 @@ Edge / Playwright，1440 × 1000、390 × 844，减少动态效果模式。三�
 - 六个方向中抽三张、选择后预览变化、再次抽取不重复同一组。
 - 产品界面默认/设计后切换与四条决定。
 - 审查 4 条 → 修复（role=alert、aria-describedby、热区、焦点、对比度）→ 重置 → 重新审查。
-- 14 条索引、8/6/14 来源筛选、阶段定位、双主题、390 宽无横向溢出与两行标题。
+- 15 条索引、9/6/15 来源筛选、阶段定位、双主题、390 宽无横向溢出与两行标题。
 
 代表文本对比度写入 [atlas-contrast-results.json](docs/screenshots/atlas-contrast-results.json)：浅色 15.10 / 6.75 / 6.23 / 6.75 / 6.23 / 6.23，深色 14.82 / 7.78 / 8.59 / 7.78 / 8.59 / 8.59；展台内技能地图专题的 kicker 与正文为浅 6.39 / 15.60、深 6.53 / 14.32（深主题改用更深的专题强调色）。只覆盖这些明确背景，不据此声称全页 WCAG 认证。截图见 `skills-desktop.png`、`skills-fold.png`、`skills-mobile.png`、`skills-dark.png`、`showcase-atlas.png`。
 
 边界：六个上游展台是按公开输出形态手写的可操作证据，不执行上游脚本，不覆盖完整词库/风格库/24 个子命令，也不是独立模型行为评测。中途发现两个集成问题并修正：`#atlas` 使体验区下移后，深链验收需要先滚到现场才能触发 lazy iframe；技能地图的 `h1/h2` 使用 `ch` 上限导致中文标题多断一行，改为 `em` 并调整栏目比例。均为真实浏览器回归中发现，不是仅改静态截图。
+
+
+## 提示词实验室与自然语言生成（2026-10-29）
+
+首页从作品展台改为提示词实验室，展台保留在原地址 [showcase.html](docs/showcase.html)。实验室把 141 条提示词按网页（58）与 App / 小程序（83）分成两类，21 个场景家族全部有真实渲染器，选中即挂载。下方增加本地规则式生成器，把自然语言需求补成「场景 / 动作 / 手感 / 边界 / 验收」，支持复制和跳到匹配场景；它不是模型调用，也不上传输入。
+
+新增 [verify-lab.cjs](scripts/verify-lab.cjs) 覆盖：
+
+- 141/141 条逐条点选：详情标题、提示词正文、至少两条验收、场景节点、无回退文案、`#p/<id>` hash。
+- 58 / 83 分类计数、搜索、家族筛选、空态、重置、`/` 聚焦搜索、剪贴板复制。
+- 自然语言生成：3 个匹配、结构化输出、复制、预览跳转、空输入提示。
+- 主题切换与刷新持久化；浅色 / 深色代表文字对比度；桌面与 390 宽无横向溢出；全程无页面错误。
+
+场景实现中发现并修正的问题：移动端提示词横向列表把页面撑到 14,520px（加 `min-width:0` 与宽度约束）；选中提示词时 `scrollIntoView` 连带滚动整页（改为只滚动列表容器）；工作台排序使用闭包中的旧索引（改为拖动时重算）；仪表盘指针角度、曲线插值、选择器菜单裁切、重名 id、若干浅色按钮文字不可见，均在浏览器截图中定位后修复。修复后 141 条全部通过，页面无 JS 错误。
+
+证据：[lab-desktop.png](docs/screenshots/lab-desktop.png)、[lab-scene-app.png](docs/screenshots/lab-scene-app.png)、[lab-scene-web.png](docs/screenshots/lab-scene-web.png)、[lab-composer.png](docs/screenshots/lab-composer.png)、[lab-mobile.png](docs/screenshots/lab-mobile.png)、[lab-mobile-app.png](docs/screenshots/lab-mobile-app.png)、[lab-contrast-results.json](docs/screenshots/lab-contrast-results.json)。
+
+边界：逐条自动检查证明场景可挂载、详情契约完整，不等于每个手势、动画时序和错误状态都已人工操作；对比度只抽检明确纯色背景；没有真机、读屏或性能 trace。生成器依赖有限中文同义词与概念组，遇到新业务词可能匹配失败并返回澄清清单。

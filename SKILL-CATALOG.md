@@ -1,6 +1,6 @@
 # UI/UX Skills 选型目录
 
-核对日期：2026-10-28。本目录收集上游项目链接与用途。其中六个 Skill 已作为带许可证的快照收录在 [`skills/upstream/`](skills/upstream/README.md)，可通过 `scripts/install-skills.cjs` 安装；其余项目只记录链接，未打包。收录快照均完成源码与依赖审查，但尚未在本项目的演示页面中逐项运行验证。许可证记录仅用于说明核对结果，复用时仍应阅读具体文件及随附条款。
+核对日期：2026-10-29。本目录收集上游项目链接与用途。其中六个 Skill 已作为带许可证的快照收录在 [`skills/upstream/`](skills/upstream/README.md)，可通过 `scripts/install-skills.cjs` 安装；其余项目只记录链接，未打包。收录快照均完成源码与依赖审查，但尚未在本项目的演示页面中逐项运行验证。许可证记录仅用于说明核对结果，复用时仍应阅读具体文件及随附条款。
 
 ## 已收录快照
 
@@ -13,7 +13,7 @@
 | interface-design | [skills/upstream/interface-design](skills/upstream/interface-design/SKILL.md) | 2026.6.20 · `2f9be32` | MIT | 无 | 纯产品 UI：Dashboard、后台、SaaS、设置页 |
 | impeccable | [skills/upstream/impeccable](skills/upstream/impeccable/SKILL.md) | 4.8.0 · `8409a56` | Apache-2.0 | 自带启动器（首次运行下载引擎） | 审查、批评、打磨与修复 |
 
-安装与职责分工见 [skills/upstream/README.md](skills/upstream/README.md)。关键约束：同一任务只选一个主导构建者（`finesse-ui` 或 `interface-design`），艺术方向最多一个，`impeccable` 放在构建之后。`ui-ux-pro-max` 是资料库，`finesse-term` 是词汇层，这两者可以安全叠加。
+安装与职责分工见 [skills/upstream/README.md](skills/upstream/README.md)。加上本项目九个模块（含提示词手册），安装脚本当前共管理十五份 Skill。关键约束：同一任务只选一个主导构建者（`finesse-ui` 或 `interface-design`），艺术方向最多一个，`impeccable` 放在构建之后。`ui-ux-pro-max` 是资料库，`finesse-term` 是词汇层，这两者可以安全叠加。
 
 ## 上游 Skills
 
@@ -37,7 +37,7 @@
 
 Vercel 的[官方 Skills 目录](https://vercel.com/docs/agent-resources/skills)可作为继续发现组件和框架工具的入口。聚合站的安装量或星标不能代替源文件审查。
 
-## 本项目扩展：八个模块
+## 本项目扩展：九个模块
 
 | 阶段 | 本地 Skill | 核心产出与边界 |
 | --- | --- | --- |
@@ -49,8 +49,9 @@ Vercel 的[官方 Skills 目录](https://vercel.com/docs/agent-resources/skills)
 | 动效实现 | uiux-motion-engineering | 可中断动效、降级、清理和性能验证 |
 | 无障碍审查 | uiux-accessibility-review | 可复现问题、证据、修复及复测范围 |
 | 手机模式 | uiux-mobile-patterns | 手持任务流、导航、输入键盘、安全区与返回 |
+| 提示词与验收 | uiux-prompt-playbook | 141 条可执行提示词、21 个现场场景、自然语言生成器；不替代实现与运行验证 |
 
-新增模块是本项目的独立工作流说明，不是上述开源项目的镜像或改名版本。外部资料用作选型与参考，不是强制依赖。八份 Skill 无需每次全部加载。
+新增模块是本项目的独立工作流说明，不是上述开源项目的镜像或改名版本。外部资料用作选型与参考，不是强制依赖。九份 Skill 无需每次全部加载。
 
 ## 组合建议
 
@@ -63,13 +64,13 @@ Vercel 的[官方 Skills 目录](https://vercel.com/docs/agent-resources/skills)
 ## 安装与叠加
 
 ```bash
-node scripts/install-skills.cjs --list          # 查看十四份 Skill
+node scripts/install-skills.cjs --list          # 查看十五份 Skill
 node scripts/install-skills.cjs                 # 全部安装到 ./.claude/skills
 node scripts/install-skills.cjs --set upstream  # 只安装六个上游快照
 node scripts/install-skills.cjs --global        # 安装到 ~/.claude/skills
 ```
 
-上游 Skill 与本地八个模块可以按阶段组合，但同一任务不要同时启用两个“主导构建者”。具体路由、运行时依赖和已知限制见 [skills/upstream/README.md](skills/upstream/README.md)。
+上游 Skill 与本地九个模块可以按阶段组合，但同一任务不要同时启用两个“主导构建者”。具体路由、运行时依赖和已知限制见 [skills/upstream/README.md](skills/upstream/README.md)。
 
 ## 设计判断
 

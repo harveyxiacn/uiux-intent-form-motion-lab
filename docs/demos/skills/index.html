@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#efece3">
-  <title>技能地图 — 十四个 UI/UX Skill 的现场</title>
-  <meta name="description" content="十四个 UI/UX Skill 的可操作地图：术语翻译、register 切换、设计资料检索、方向抽样、产品层级与审查修复。">
+  <title>技能地图 — 十五个 UI/UX Skill 的现场</title>
+  <meta name="description" content="十五个 UI/UX Skill 的可操作地图：术语翻译、register 切换、设计资料检索、方向抽样、产品层级与审查修复。">
   <link rel="stylesheet" href="style.css">
   <script src="data.js" defer></script>
   <script src="app.js" defer></script>
@@ -14,12 +14,12 @@
 <a class="skip" href="#stations">跳到实时展台</a>
 
 <header class="topbar">
-  <a class="brand" href="../../#atlas"><span>界面有意思</span><small>SKILL ATLAS</small></a>
+  <a class="brand" href="../../showcase.html#atlas"><span>界面有意思</span><small>SKILL ATLAS</small></a>
   <nav aria-label="页面导航">
     <a href="#stations">实时展台</a>
-    <a href="#index">全部 14</a>
+    <a href="#index">全部 15</a>
     <a href="#method">这页怎么做</a>
-    <a href="../../#experience" target="_top">返回展台 ↗</a>
+    <a href="../../showcase.html#experience" target="_top">返回展台 ↗</a>
   </nav>
   <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">深色</button>
 </header>
@@ -28,21 +28,21 @@
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-top">
       <p class="eyebrow">技能地图 / SKILL ATLAS / 2026.10</p>
-      <p class="hero-index">14 / 14</p>
+      <p class="hero-index">15 / 15</p>
     </div>
-    <h1 id="hero-title">十四个方法，<br>一张可验证的地图。</h1>
+    <h1 id="hero-title">十五个方法，<br>一张可验证的地图。</h1>
     <div class="hero-bottom">
-      <p class="lede">八个本项目模块把问题拆成阶段；六个上游 Skill 补上构建、检索与审查的手感。这里不是名词表——每个方法都有一处可以亲手验证的效果。</p>
+      <p class="lede">九个本项目模块把问题拆成阶段；六个上游 Skill 补上构建、检索与审查的手感。这里不是名词表——每个方法都有一处可以亲手验证的效果。</p>
       <dl class="counts" aria-label="技能与展台数量">
-        <div><dt>14</dt><dd>Skills</dd></div>
+        <div><dt>15</dt><dd>Skills</dd></div>
         <div><dt>6</dt><dd>实时展台</dd></div>
-        <div><dt>8</dt><dd>实例入口</dd></div>
+        <div><dt>9</dt><dd>实例入口</dd></div>
       </dl>
     </div>
     <div class="rail" aria-label="技能阶段">
       <a href="#index" data-stage-link="定义"><span>01</span><strong>定义</strong><small>3 个 Skill</small></a>
       <a href="#index" data-stage-link="造型"><span>02</span><strong>造型</strong><small>6 个 Skill</small></a>
-      <a href="#index" data-stage-link="行动"><span>03</span><strong>行动</strong><small>3 个 Skill</small></a>
+      <a href="#index" data-stage-link="行动"><span>03</span><strong>行动</strong><small>4 个 Skill</small></a>
       <a href="#index" data-stage-link="验证"><span>04</span><strong>验证</strong><small>2 个 Skill</small></a>
     </div>
   </section>
@@ -272,16 +272,16 @@
   <section class="index-section" id="index" aria-labelledby="index-title">
     <div class="section-head">
       <p class="eyebrow">全部技能 / INDEX</p>
-      <h2 id="index-title">十四个 Skill，<br>各自负责什么。</h2>
+      <h2 id="index-title">十五个 Skill，<br>各自负责什么。</h2>
       <p class="section-lede">按阶段筛选，或按来源看。每个条目都指向一处真实实例；上游条目指向上面的展台。</p>
     </div>
     <div class="index-controls">
       <div class="filters" role="group" aria-label="按来源筛选">
-        <button type="button" class="filter" data-filter="all" aria-pressed="true">全部 <span>14</span></button>
-        <button type="button" class="filter" data-filter="local" aria-pressed="false">本项目 <span>8</span></button>
+        <button type="button" class="filter" data-filter="all" aria-pressed="true">全部 <span>15</span></button>
+        <button type="button" class="filter" data-filter="local" aria-pressed="false">本项目 <span>9</span></button>
         <button type="button" class="filter" data-filter="upstream" aria-pressed="false">上游 <span>6</span></button>
       </div>
-      <p id="index-count">显示 14 / 14</p>
+      <p id="index-count">显示 15 / 15</p>
     </div>
     <div class="skill-grid" id="skill-grid"></div>
   </section>
@@ -289,8 +289,8 @@
   <section class="method" id="method" aria-labelledby="method-title">
     <div class="section-head">
       <p class="eyebrow">自我说明 / METHOD TRACE</p>
-      <h2 id="method-title">这页本身，<br>就是八个模块的练习。</h2>
-      <p class="section-lede">上游六个 Skill 用展台转述；本项目八个模块则直接参与这页的规划、视觉、状态、动效与审查。下面是它们各自做的决定。</p>
+      <h2 id="method-title">这页本身，<br>就是八个设计模块的练习。</h2>
+      <p class="section-lede">上游六个 Skill 用展台转述；本项目八个设计模块与提示词手册直接参与这页的规划、视觉、状态、动效与审查。下面是它们各自做的决定。</p>
     </div>
     <ol class="method-list">
       <li><span>01</span><div><strong>页面规划</strong><p>先决定这是一张“可操作的方法地图”，不是作品集：首屏给主张与数量，第二屏给六个展台，第三屏给完整索引。</p></div><a href="#stations">看展台</a></li>
@@ -308,7 +308,7 @@
     <p class="eyebrow">END OF INDEX</p>
     <h2 id="closing-title">方法不是标签，<br>是下一步的动作。</h2>
     <div class="closing-links">
-      <a href="../../#experience" target="_top">回到六组实例 ↗</a>
+      <a href="../../showcase.html#experience" target="_top">回到六组实例 ↗</a>
       <a href="https://github.com/harveyxiacn/uiux-intent-form-motion-lab/blob/main/skills/upstream/README.md" target="_blank" rel="noopener">上游收录与许可证 ↗</a>
       <a href="https://github.com/harveyxiacn/uiux-intent-form-motion-lab/blob/main/SKILL-VALIDATION.md" target="_blank" rel="noopener">查看验收记录 ↗</a>
     </div>
@@ -316,7 +316,7 @@
 </main>
 
 <footer class="site-footer">
-  <div><span class="brand-mark">界面有意思<span aria-hidden="true">*</span></span><p>Skill Atlas · 14 个方法 · 6 个实时展台</p></div>
+  <div><span class="brand-mark">界面有意思<span aria-hidden="true">*</span></span><p>Skill Atlas · 15 个方法 · 6 个实时展台</p></div>
   <p>词库、风格、配色与字体为上游 MIT 资料的节选；界面与交互为本项目原创。示例数据仅用于演示。</p>
 </footer>
 

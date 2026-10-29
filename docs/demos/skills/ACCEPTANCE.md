@@ -1,13 +1,13 @@
 # 技能地图展台验收
 
-日期：2026-10-28。入口：[Skill Atlas](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/demos/skills/)，也可从展台第六个标签「技能地图」或 `#atlas` 区块进入。运行环境为 Windows / Edge / Playwright，桌面 1440×1000、手机仿真 390×844，并检查浅色与深色主题。
+日期：2026-10-29。入口：[Skill Atlas](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/demos/skills/)，也可从展台第六个标签「技能地图」或 `#atlas` 区块进入。运行环境为 Windows / Edge / Playwright，桌面 1440×1000、手机仿真 390×844，并检查浅色与深色主题。
 
 ## 这页展示什么
 
-技能地图把十四个 Skill 放进同一张可操作的地图，而不是再做一张名词卡片墙：
+技能地图把十五个 Skill 放进同一张可操作的地图，而不是再做一张名词卡片墙：
 
 - **六个实时展台**：finesse-term、finesse-ui、ui-ux-pro-max、design-taste-frontend、interface-design、impeccable。每个展台都来自一个上游 Skill 的实际输出形态，在这一页里可输入、切换、检索、抽取、审查和修复。
-- **十四个条目的索引**：八个本项目模块与六个上游快照各自指向一处实例。本地模块跳到官网、手机原型、工作台或组件实验室；上游条目跳到对应展台。
+- **十五个条目的索引**：九个本项目模块（含提示词手册）与六个上游快照各自指向一处实例。本地模块跳到官网、手机原型、工作台、组件实验室或提示词实验室；上游条目跳到对应展台。
 - **八个本地模块的自我说明**：页面自身如何被规划、造型、实现与审查。
 
 ## 六个展台的实际检查
@@ -23,7 +23,7 @@
 
 ## 索引与自我说明
 
-- 索引固定 14 条；按来源筛选得到 8 条本项目、6 条上游，计数同步更新。
+- 索引固定 15 条；按来源筛选得到 9 条本项目、6 条上游，计数同步更新。
 - 每个条目都有短效果、具体实例、目标链接与源 `SKILL.md` 链接。
 - 首屏四阶段栏可定位「定义 / 造型 / 行动 / 验证」；定位只做短暂高亮，不隐藏其他条目。
 - 页面自述的八条分别对应八个本地模块，并与实际实现互相指认，例如双主题 token、可中断结果、键盘入口和 44px 触控目标。
@@ -57,7 +57,7 @@ python -m http.server 4173
 PLAYWRIGHT_MODULE=<playwright 模块路径> node scripts/verify.cjs
 ```
 
-`verify-skills.cjs` 覆盖上述六类交互、14 条索引、来源筛选、阶段定位、双主题、390 宽溢出与标题行数。截图：
+`verify-skills.cjs` 覆盖上述六类交互、15 条索引、来源筛选、阶段定位、双主题、390 宽溢出与标题行数。截图：
 
 - [桌面整页](../../screenshots/skills-desktop.png)
 - [桌面首屏](../../screenshots/skills-fold.png)

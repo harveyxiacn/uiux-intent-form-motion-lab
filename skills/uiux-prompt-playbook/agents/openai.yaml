@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI/UX Prompt Playbook"
+  short_description: "141 testable web and App / mini-program UI prompts with live scenes"
+  default_prompt: "Use the UI/UX prompt playbook to turn my interface need into a structured, testable prompt with scene, action, feel, boundaries and acceptance checks."
