@@ -1,6 +1,6 @@
 ---
 name: uiux-style-direction
-description: Derive a concrete UI visual direction from a product brief or reference and translate it into composition, typography, color, imagery and layout decisions. Use when a user asks to define or interpret a visual style for a screen or page.
+description: Derive a concrete UI visual direction from a product brief or reference and translate it into composition, typography, color, imagery and layout decisions. Use when a user asks to define or interpret a visual style for a screen or page. Not for token architecture or interaction behavior.
 ---
 
 # Set the look
@@ -16,3 +16,9 @@ Present a compact direction: intent, first-screen composition, color roles, typo
 If the user requests implementation, use existing design tokens and components where appropriate, then inspect the rendered result at relevant viewport sizes and correct visible issues. If browser verification is unavailable, state that limitation. For planning-only work, provide the direction without modifying the interface.
 
 When a user supplies concrete visual prompts or says the output misses a reference, read [prompt-to-design](references/prompt-to-design.md) to turn each request into a visible decision and acceptance check.
+
+Example acceptance: every direction line maps to something visible in a first-screen screenshot at each target viewport; “premium” or “clean” never appears without the decision that produces it.
+
+## Handoff
+
+Receives the brief from `uiux-page-planning`, brand assets and references. Hands over a direction with a visible check per decision for `uiux-design-system`. Mark choices and assumptions separately from facts and carry anything unverified forward. When a request spans several stages, `uiux-workflow` decides the order.

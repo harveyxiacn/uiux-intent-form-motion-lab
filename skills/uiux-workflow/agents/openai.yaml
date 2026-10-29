@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI/UX Workflow"
+  short_description: "Route a request through the uiux-* stages with explicit handoffs"
+  default_prompt: "Use the UI/UX workflow to decide which uiux-* stages my request needs, run them in order, and report each handoff plus what remains unverified."

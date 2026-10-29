@@ -20,3 +20,7 @@ Show useful empty, loading, offline/error and completed states where relevant. K
 Validate the smallest supported viewport, long text, keyboard opening, back navigation and touch scrolling. Use real hardware when available; explicitly distinguish desktop emulation from device testing. Follow platform-specific documentation for native implementations instead of importing web CSS rules.
 
 Example acceptance: opening an item, editing it in a sheet and returning preserves the selected date and filter; the on-screen keyboard does not cover the save action or focused field.
+
+## Handoff
+
+Receives the brief and contracts for a handheld surface. Hands over a handheld check (reach, safe areas, keyboard, gesture alternatives, return path) for `uiux-accessibility-review`. Mark choices and assumptions separately from facts and carry anything unverified forward. When a request spans several stages, `uiux-workflow` decides the order.

@@ -1,6 +1,6 @@
 ---
 name: uiux-page-planning
-description: Plan a web page or app screen before implementation by defining its audience, goal, content hierarchy, sections, and user journey. Use for a page brief, content structure, or UI requirements.
+description: Plan a web page or app screen before implementation by defining its audience, goal, content hierarchy, sections, and user journey. Use for a page brief, content structure, or UI requirements. Not for choosing visual style or specifying motion.
 ---
 
 # Plan the page
@@ -15,3 +15,9 @@ Translate the user's idea into a usable page plan before choosing a visual treat
 4. Deliver a concise brief with audience, goal, primary action, ordered structure, required content, constraints, and open assumptions. If implementation is requested, use the plan to proceed; planning alone does not authorize inventing facts or changing unrelated pages.
 
 For handoff, describe what matters and why; avoid turning a request for planning into an unsolicited redesign. Verify the plan against actual content and the user's stated goals.
+
+Example acceptance: someone who did not attend the discussion can read the brief and name the surface, the primary action, the first-screen priority and which states (empty, loading, error) the screen must show.
+
+## Handoff
+
+Receives the user's request, existing screens and product facts. Hands over a brief (surface, audience, primary action, ordered regions, required states, assumptions) for `uiux-style-direction` and `uiux-interaction-spec`. Mark choices and assumptions separately from facts and carry anything unverified forward. When a request spans several stages, `uiux-workflow` decides the order.

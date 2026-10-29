@@ -20,3 +20,7 @@ Keep data fetching and domain rules outside reusable presentation primitives unl
 Deliver the component, a small usage example and tests for meaningful behavior. Validate keyboard interaction, long labels, empty content, state changes and mobile layout. For React-specific composition advice, verify the project's version before applying [Vercel composition patterns](https://github.com/vercel-labs/agent-skills/tree/main/skills/composition-patterns).
 
 Example acceptance: a dialog can open by keyboard, keeps focus appropriately while modal, closes with the defined action, and returns focus to the trigger or a sensible surviving element.
+
+## Handoff
+
+Receives the interaction contract and token map. Hands over a component contract (state owner, events, state matrix, focus policy) for `uiux-motion-engineering` and `uiux-accessibility-review`. Mark choices and assumptions separately from facts and carry anything unverified forward. When a request spans several stages, `uiux-workflow` decides the order.

@@ -22,3 +22,7 @@ Verify normal playback, rapid repeat, reversal, removal/unmount, reduced motion 
 Example acceptance: rapidly opening and closing a sheet never leaves a backdrop blocking the page; with reduced motion, the same form is accessible immediately and dismissal restores focus.
 
 Related specialist reference: [Emil Kowalski skills](https://github.com/emilkowalski/skills), including animate and animation-performance. These are optional resources, not runtime dependencies.
+
+## Handoff
+
+Receives the interaction and component contracts. Hands over proposed timings, an interruption policy, a reduced-motion variant and runtime evidence for `uiux-accessibility-review`. Mark choices and assumptions separately from facts and carry anything unverified forward. When a request spans several stages, `uiux-workflow` decides the order.

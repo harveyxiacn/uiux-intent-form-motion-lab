@@ -127,3 +127,7 @@ Before delivering:
 7. No claim of accessibility certification or performance measurement is made without evidence.
 
 Related skills: `uiux-interaction-spec`, `uiux-motion-engineering`, `uiux-mobile-patterns`, `uiux-accessibility-review`, `uiux-design-system`.
+
+## Handoff
+
+Receives artifacts from the earlier uiux-* stages, or a vague need when none exist. Hands over a scene / action / feel / boundary / acceptance prompt whose acceptance lines come from those artifacts. Mark choices and assumptions separately from facts and carry anything unverified forward. When a request spans several stages, `uiux-workflow` decides the order.

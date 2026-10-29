@@ -1,6 +1,6 @@
 ---
 name: uiux-interaction-spec
-description: Describe or specify UI interaction and motion precisely from a reference or user request, including trigger, states, movement and outcome. Use for interaction vocabulary, motion handoff, or implementation of a described interface behavior.
+description: Describe or specify UI interaction and motion precisely from a reference or user request, including trigger, states, movement and outcome. Use for interaction vocabulary, motion handoff, or implementation of a described interface behavior. Not for performance tuning of existing animation code.
 ---
 
 # Name and specify the interaction
@@ -22,3 +22,7 @@ For each meaningful interaction, specify:
 Examples of descriptive patterns include overlapping avatars that reveal names, progress fill that communicates status, expandable rows, a card tray, a magnifying row, and a pull-to-reveal summary. The same name may refer to different behavior elsewhere: describe the actual reference rather than assuming details.
 
 For a sticker-like interaction, a useful handoff could say: “on activation, the lower-right corner curls, the sticker lifts and rotates slightly, travels into the outlined area, then the corner settles flat.” Adapt this to the actual interface and specify accessible alternatives. If implementing, verify the real states and motion in the rendered UI; report any unverified behavior.
+
+## Handoff
+
+Receives the brief and existing behavior. Hands over an interaction contract (purpose, trigger, sequence, result/reversal, access/fallback) for `uiux-component-engineering` and `uiux-motion-engineering`. Mark choices and assumptions separately from facts and carry anything unverified forward. When a request spans several stages, `uiux-workflow` decides the order.

@@ -18,3 +18,7 @@ Inspect existing tokens, components and actual screens before introducing a syst
 Deliver a concise token map, usage rules, representative component variants and migration scope. Implement only when requested; validate the actual theme combinations, long content and relevant viewports. A token file alone does not establish visual consistency.
 
 Example acceptance: switching a supported theme preserves visible focus and text readability; website and Dashboard share brand roles while keeping their own layout density.
+
+## Handoff
+
+Receives the direction from `uiux-style-direction` and existing tokens. Hands over a token map with checked contrast pairs for components and motion. Mark choices and assumptions separately from facts and carry anything unverified forward. When a request spans several stages, `uiux-workflow` decides the order.

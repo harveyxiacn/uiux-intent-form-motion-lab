@@ -18,3 +18,7 @@ Inspect zoom/reflow, contrast for actual rendered combinations, target usability
 Report each finding with affected task, reproduction, evidence, severity, proposed remedy and retest result. Separate confirmed failures from questions requiring assistive technology or hardware. If asked only to audit, do not rewrite the interface; if fixes are requested, preserve appearance and behavior outside the defect.
 
 Example acceptance: a validation error identifies the field and problem, remains available to assistive technology, and can be corrected without losing the rest of the form.
+
+## Handoff
+
+Receives the rendered UI plus earlier contracts and the unverified list. Hands over findings with reproduction, severity, fix and retest, and the remaining untested scope. Mark choices and assumptions separately from facts and carry anything unverified forward. When a request spans several stages, `uiux-workflow` decides the order.

@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f3f3ef">
+  <meta name="description" content="工序版：同一句模糊需求，经过九个 UI/UX Skill 的接力，每一道都留下可检查的交接物。与原有提示词放映室、作品展台对比。">
+  <title>九道工序 · UI/UX 实验室</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%232741c8%22/%3E%3Ctext x=%2216%22 y=%2222%22 font-size=%2215%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-weight=%22700%22 fill=%22%23fff%22%3E09%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#line">跳到九道工序</a>
+
+<header class="bar">
+  <a class="mark" href="#top"><span class="mark-no">09</span>九道工序</a>
+  <nav aria-label="页面导航">
+    <a href="#line">流水线</a>
+    <a href="#prompt">交付提示词</a>
+    <a href="#skills">Skill 改动</a>
+    <a href="#compare">与原页对比</a>
+    <a class="nav-out" href="../index.html">原版放映室 ↗</a>
+  </nav>
+  <button id="theme" class="ghost" type="button" aria-pressed="false">深色</button>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="eyebrow">工序版 · 一份对这套 Skill 的理解 · 2026.10</p>
+    <h1 id="hero-title"><span class="quote">「卡片删除时飞走，<br>别太夸张。」</span></h1>
+    <div class="hero-row">
+      <p class="lede">原站把这句话交给生成器，匹配 141 条提示词里最像的一条。这里换一种读法：<strong>九个 Skill 不是九个工具，是一条流水线</strong>。同一句话依次经过意图、样子、令牌、行为、组件、动效、手持、证据、提示词九道工序，每道都留下一张别人能检查的交接单。旁边的手机原型会随工序一点点长出来，从头到尾都能真的删、真的撤销。</p>
+      <ol class="thesis" aria-label="三条理解">
+        <li><b>先任务，后样子。</b>不知道谁在删、为什么删之前，不讨论飞走的角度。</li>
+        <li><b>业务状态和动画分开。</b>动画被打断、被关掉、被跳过，数据都必须是对的。</li>
+        <li><b>证据大于声明。</b>每道工序写明已验证什么，没验证的列进清单往下传。</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="line" id="line" aria-labelledby="line-title">
+    <div class="line-head">
+      <h2 id="line-title">流水线</h2>
+      <p>滚动或点工序号，手机原型切换到这一工序的视角。每张交接单底部的<span class="tag ok">已验证</span><span class="tag no">未验证</span>是这页自己能证明和不能证明的范围。</p>
+    </div>
+
+    <div class="line-grid">
+      <ol class="rail" id="rail" aria-label="工序导航"></ol>
+
+      <div class="stages" id="stages">
+
+        <article class="stage" id="s1" data-stage="1" aria-labelledby="s1-t">
+          <header><span class="no">01</span><div><p class="skill">uiux-page-planning</p><h3 id="s1-t">意图：先看清谁在删</h3></div></header>
+          <p>“飞走”是结果，不是需求。先回答：这是 App 还是网页？删的人在什么情境？删错了怎么办？原型此刻只剩灰块和区域编号——还没到谈好不好看的时候。</p>
+          <dl class="sheet">
+            <dt>界面</dt><dd>手机 App（单手、通勤间隙清理清单）<i class="f">事实</i></dd>
+            <dt>主任务</dt><dd>划掉已完成或记错的任务，不打断节奏</dd>
+            <dt>区域顺序</dt><dd>① 今日进度 ② 任务列表 ③ 新建入口 ④ 底部导航</dd>
+            <dt>必须的状态</dt><dd>空清单 · 删除后可撤销 · 同步失败</dd>
+            <dt>假设</dt><dd>删除可撤销 5 秒，无需二次确认弹窗<i class="f a">假设</i></dd>
+          </dl>
+          <p class="proof"><span class="tag ok">已验证</span>原型包含空状态与撤销入口<br><span class="tag no">未验证</span>真实用户是否需要二次确认</p>
+        </article>
+
+        <article class="stage" id="s2" data-stage="2" aria-labelledby="s2-t">
+          <header><span class="no">02</span><div><p class="skill">uiux-style-direction</p><h3 id="s2-t">样子：把“别太夸张”翻成决定</h3></div></header>
+          <p>“别太夸张”不是形容词，是约束：动效要比内容安静。每一条方向都对应一个截图里看得见的东西。</p>
+          <dl class="sheet">
+            <dt>意图</dt><dd>安静的纸面清单，内容先于装饰</dd>
+            <dt>构图</dt><dd>大号日期 + 进度条压在首屏，列表行高 56px 以上</dd>
+            <dt>字</dt><dd>系统黑体；数字用等宽，进度跳动时不抖</dd>
+            <dt>颜色角色</dt><dd>强调色只给“新建”；红色只出现在删除露出的那一条</dd>
+            <dt>可见检查</dt><dd>首屏截图里只有一处强调色；红色在静止画面中不出现</dd>
+          </dl>
+          <p class="proof"><span class="tag ok">已验证</span>静止状态下没有红色元素<br><span class="tag no">未验证</span>品牌方是否认可这套方向</p>
+        </article>
+
+        <article class="stage" id="s3" data-stage="3" aria-labelledby="s3-t">
+          <header><span class="no">03</span><div><p class="skill">uiux-design-system</p><h3 id="s3-t">令牌：颜色有身份，不只是数值</h3></div></header>
+          <p>深色模式不是反色。下表的对比度是页面用 WCAG 公式<em>实时计算</em>的，切换主题后会重算。</p>
+          <div class="tokens-head">
+            <span>原型主题</span>
+            <div class="seg" role="group" aria-label="原型主题">
+              <button type="button" data-ptheme="light" aria-pressed="true">浅</button>
+              <button type="button" data-ptheme="dark" aria-pressed="false">深</button>
+            </div>
+          </div>
+          <table class="tokens" id="tokens">
+            <caption class="sr-only">原型语义令牌与对比度</caption>
+            <thead><tr><th scope="col">角色</th><th scope="col">值</th><th scope="col">用在</th><th scope="col">对比度</th></tr></thead>
+            <tbody></tbody>
+          </table>
+          <p class="proof"><span class="tag ok">已验证</span>四组文字/底色组合在两种主题下计算值 ≥ 4.5:1<br><span class="tag no">未验证</span>真机屏幕与色弱模拟</p>
+        </article>
+
+        <article class="stage" id="s4" data-stage="4" aria-labelledby="s4-t">
+          <header><span class="no">04</span><div><p class="skill">uiux-interaction-spec</p><h3 id="s4-t">行为：五段式交互契约</h3></div></header>
+          <p>把“飞走”拆成别人可以照着实现、也可以照着验收的五段。点下面的按钮，在原型上逐段回放。</p>
+          <ol class="contract" id="contract">
+            <li data-step="0"><b>目的与对象</b>移除一条任务；响应的是这一行。</li>
+            <li data-step="1"><b>触发</b>左滑超过行宽 40% · 行尾“⋯”菜单 · 聚焦时按 Delete。三条路径结果相同。</li>
+            <li data-step="2"><b>过程</b>行向左离开并轻微倾斜，随后下方行补位；撤销条从底部升起。</li>
+            <li data-step="3"><b>结果与反向</b>数据立即标记删除；5 秒内可撤销，撤销后回到原位置；未过阈值松手则弹回。</li>
+            <li data-step="4"><b>无障碍与降级</b>读屏播报“已删除，可撤销”；焦点移到下一行；减少动态效果时只淡出。</li>
+          </ol>
+          <button type="button" class="act" id="play-contract">在原型上逐段回放 ▶</button>
+          <p class="proof"><span class="tag ok">已验证</span>三条触发路径在原型中均可用<br><span class="tag no">未验证</span>40% 阈值是否符合目标用户手感（提议值）</p>
+        </article>
+
+        <article class="stage" id="s5" data-stage="5" aria-labelledby="s5-t">
+          <header><span class="no">05</span><div><p class="skill">uiux-component-engineering</p><h3 id="s5-t">组件：谁拥有状态</h3></div></header>
+          <p>列表拥有数据，行只拥有“拖到哪了”。把一行切到不同状态，看它是否每种都说得清楚。</p>
+          <div class="matrix" role="group" aria-label="任务行状态矩阵" id="matrix">
+            <button type="button" data-rs="idle" aria-pressed="true">默认</button>
+            <button type="button" data-rs="focus" aria-pressed="false">键盘聚焦</button>
+            <button type="button" data-rs="drag" aria-pressed="false">拖动中 20%</button>
+            <button type="button" data-rs="armed" aria-pressed="false">过阈值</button>
+            <button type="button" data-rs="busy" aria-pressed="false">同步中（禁用）</button>
+            <button type="button" data-rs="error" aria-pressed="false">删除失败</button>
+          </div>
+          <dl class="sheet">
+            <dt>状态归属</dt><dd><code>TaskList</code> 持有 items 与 pendingUndo；<code>TaskRow</code> 只持有 dragX</dd>
+            <dt>事件</dt><dd><code>onRemove(id, via)</code> · <code>onUndo(id)</code></dd>
+            <dt>焦点策略</dt><dd>删除后 → 下一行 → 上一行 → 空状态标题，永不落到 body</dd>
+          </dl>
+          <p class="proof"><span class="tag ok">已验证</span>删除后 <code>document.activeElement</code> 不是 body（页内自检）<br><span class="tag no">未验证</span>异步失败的真实网络行为（这里是模拟）</p>
+        </article>
+
+        <article class="stage" id="s6" data-stage="6" aria-labelledby="s6-t">
+          <header><span class="no">06</span><div><p class="skill">uiux-motion-engineering</p><h3 id="s6-t">动效：可以被打断</h3></div></header>
+          <p>右边的日志分两栏：<b>数据</b>在点击那一刻就变了，<b>画面</b>随后才追上。试试连续删、删一半撤销、开慢放。</p>
+          <div class="motion-tools">
+            <label class="switch"><input type="checkbox" id="slow"> 慢放 ×4</label>
+            <label class="switch"><input type="checkbox" id="reduce"> 减少动态效果</label>
+            <button type="button" class="act small" id="burst">连删三条</button>
+            <button type="button" class="act small" id="midundo">删一半就撤销</button>
+          </div>
+          <dl class="sheet compact">
+            <dt>离场</dt><dd>220ms · 倾斜 ≤ 3° · 无回弹<i class="f a">提议</i></dd>
+            <dt>补位</dt><dd>180ms · ease-out<i class="f a">提议</i></dd>
+            <dt>中断</dt><dd>撤销时动画原路反向，不重新开始</dd>
+            <dt>减少动态</dt><dd>无位移，120ms 淡出，状态与播报不变</dd>
+          </dl>
+          <div class="log" aria-label="数据与画面日志"><div><p>数据</p><ol id="log-data"></ol></div><div><p>画面</p><ol id="log-paint"></ol></div></div>
+          <p class="proof"><span class="tag ok">已验证</span>连删、反向、减少动态三种路径无残留遮挡<br><span class="tag no">未验证</span>低端机帧率（截图证明不了流畅）</p>
+        </article>
+
+        <article class="stage" id="s7" data-stage="7" aria-labelledby="s7-t">
+          <header><span class="no">07</span><div><p class="skill">uiux-mobile-patterns</p><h3 id="s7-t">手持：拇指够得着吗</h3></div></header>
+          <p>原型叠上了安全区和拇指热区。撤销条必须在底部导航和 Home 指示条之上，滑动必须有看得见的替代。</p>
+          <dl class="sheet">
+            <dt>可达</dt><dd>“⋯”和撤销都落在拇指舒适区</dd>
+            <dt>安全区</dt><dd>顶部状态栏、底部 34px 指示条不放可点元素</dd>
+            <dt>手势替代</dt><dd>“⋯” → 底部动作面板 → 删除；面板可 Esc / 点遮罩关闭，焦点回到“⋯”</dd>
+            <dt>返回路径</dt><dd>关闭面板保留滚动位置与筛选</dd>
+          </dl>
+          <p class="proof"><span class="tag ok">已验证</span>390×844 视口下撤销条不被遮挡<br><span class="tag no">未验证</span>真机、软键盘、系统返回手势</p>
+        </article>
+
+        <article class="stage" id="s8" data-stage="8" aria-labelledby="s8-t">
+          <header><span class="no">08</span><div><p class="skill">uiux-accessibility-review</p><h3 id="s8-t">证据：修复前后对照</h3></div></header>
+          <p>切到“修复前”，原型会退回一个常见的初版：只有滑动、删完焦点丢失、没有播报、灰字太浅。每条发现都写明怎么复现、怎么复测。</p>
+          <div class="seg wide" role="group" aria-label="审查对照">
+            <button type="button" data-audit="before" aria-pressed="false">修复前</button>
+            <button type="button" data-audit="after" aria-pressed="true">修复后</button>
+          </div>
+          <ol class="findings" id="findings"></ol>
+          <div class="sr-out"><p>读屏会听到</p><output id="sr-mirror">（还没有播报）</output></div>
+          <p class="proof"><span class="tag ok">已验证</span>播报文本、焦点去向、计算对比度<br><span class="tag no">未验证</span>NVDA / VoiceOver 实机朗读；这不是 WCAG 认证</p>
+        </article>
+
+        <article class="stage" id="s9" data-stage="9" aria-labelledby="s9-t">
+          <header><span class="no">09</span><div><p class="skill">uiux-prompt-playbook</p><h3 id="s9-t">提示词：前八道的合订本</h3></div></header>
+          <p>原站的提示词是从库里“挑”出来的；这里的提示词是从前八张交接单“装订”出来的——每一行都能指回它来自哪道工序。</p>
+          <p><a class="act" href="#prompt">看装订好的提示词 ↓</a></p>
+          <p class="proof"><span class="tag ok">已验证</span>验收项全部可在本页原型上执行<br><span class="tag no">未验证</span>交给其它 Agent 后的实现质量</p>
+        </article>
+      </div>
+
+      <aside class="device-col" aria-label="手机原型">
+        <div class="device-wrap">
+          <p class="device-cap"><span id="cap-no">01</span> <span id="cap-text">意图：灰块与区域编号</span></p>
+          <div class="phone" id="phone" data-stage="1" data-ptheme="light" data-audit="after">
+            <div class="safe-top" aria-hidden="true"><span>9:41</span><span>●●● ▮</span></div>
+            <div class="app" id="app">
+              <div class="app-head" data-region="①">
+                <p class="date">10月29日 · 周四</p>
+                <h4 id="list-title" tabindex="-1">今日清单</h4>
+                <div class="progress" role="img" id="progress" aria-label="已完成"><i></i></div>
+                <p class="count" id="count"></p>
+              </div>
+              <ul class="tasks" id="tasks" data-region="②" aria-labelledby="list-title"></ul>
+              <div class="empty" id="empty" hidden>
+                <p>清单空了。</p>
+                <button type="button" class="restore" id="restore">恢复示例任务</button>
+              </div>
+              <button type="button" class="fab" data-region="③" aria-label="新建任务">＋ 新建</button>
+            </div>
+            <nav class="tabbar" data-region="④" aria-label="原型底部导航"><span class="on">今日</span><span>计划</span><span>我的</span></nav>
+            <div class="toast" id="toast" hidden><span id="toast-text"></span><button type="button" id="undo">撤销</button></div>
+            <div class="sheet-back" id="sheet-back" hidden></div>
+            <div class="action-sheet" id="action-sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden>
+              <p id="sheet-title">任务操作</p>
+              <button type="button" data-sheet="done">标记完成</button>
+              <button type="button" data-sheet="delete" class="danger">删除</button>
+              <button type="button" data-sheet="cancel">取消</button>
+            </div>
+            <div class="overlay-safe" aria-hidden="true"><i class="o-top"></i><i class="o-thumb"></i><i class="o-bottom"></i></div>
+            <div class="home-ind" aria-hidden="true"></div>
+            <p class="sr-only" id="live" aria-live="polite"></p>
+          </div>
+          <p class="device-hint" id="device-hint">左滑一行、点“⋯”，或聚焦后按 Delete。</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="prompt" id="prompt" aria-labelledby="prompt-title">
+    <div class="sec-head">
+      <p class="eyebrow">交付</p>
+      <h2 id="prompt-title">装订好的提示词</h2>
+      <p>同一句需求，原站生成器输出的是“最接近的一条 + 通用手感/边界”；这里每一行带着来源工序号，边界与验收是这一个功能自己的。</p>
+    </div>
+    <div class="prompt-grid">
+      <pre class="prompt-text" id="prompt-text" tabindex="0"></pre>
+      <div class="prompt-side">
+        <button type="button" class="act" id="copy">复制提示词</button>
+        <p id="copy-status" role="status"></p>
+        <p class="note">行首 <code>[04]</code> 表示来自第 04 道工序的交接单。删掉这些标记就是可以直接发给 Agent 的文本。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills" aria-labelledby="skills-title">
+    <div class="sec-head">
+      <p class="eyebrow">Skill 改动</p>
+      <h2 id="skills-title">我对 Skill 做了什么</h2>
+      <p>原有九个模块各自写得清楚，但彼此之间没有“交接”的约定：README 写了“明确目标 → 视觉方向 → 交互动效 → 验收”，却没有一个 Skill 负责这条顺序。改动只补缺口，不重写原有内容。</p>
+    </div>
+    <ol class="changes">
+      <li><b>新增 <code>uiux-workflow</code></b><span>路由 Skill：判断请求需要哪几道工序、从哪道开始、什么时候跳过；规定交接单区分事实/选择/假设，未验证项必须向下传。附 <code>references/handoff-artifacts.md</code> 九张交接单模板。</span></li>
+      <li><b>九个模块各加「Handoff」段</b><span>写明接收什么、交出什么、交给谁。原来每个 Skill 独立可用，现在也能串起来用，且不依赖安装 workflow。</span></li>
+      <li><b>补两条示例验收</b><span><code>uiux-page-planning</code> 与 <code>uiux-style-direction</code> 原本是仅有的两个没有“Example acceptance”的模块。</span></li>
+      <li><b>三处描述加反向触发</b><span>page-planning / style-direction / interaction-spec 的 description 增加 “Not for …”，减少相邻 Skill 被误触发。</span></li>
+    </ol>
+    <p class="note">保留未动：三份重复的 <code>surface-routing.md</code>（安装脚本按目录复制，每个 Skill 需要自带一份）；提示词手册的 141 条数据与生成器（工作区里有未提交的改动，属于原作者）。</p>
+  </section>
+
+  <section class="compare" id="compare" aria-labelledby="compare-title">
+    <div class="sec-head">
+      <p class="eyebrow">对比</p>
+      <h2 id="compare-title">与原有页面对比</h2>
+      <p>两者不是谁替代谁：原站是<b>广度</b>——141 条、21 个场景、15 个 Skill 都能摸到；这一页是<b>深度</b>——只做一个功能，但走完全部工序。</p>
+    </div>
+    <div class="table-wrap">
+      <table class="cmp">
+        <thead><tr><th scope="col">维度</th><th scope="col"><a href="../index.html">原版 · 提示词放映室</a> / <a href="../showcase.html">作品展台</a> / <a href="../demos/skills/">技能地图</a></th><th scope="col">本版 · 九道工序</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">起点</th><td>从 141 条里挑一句，或让生成器匹配</td><td>从一句模糊需求出发，不预设答案</td></tr>
+          <tr><th scope="row">Skill 的形状</th><td>15 个并列的展台与索引，各自演示</td><td>9 道有顺序的工序，前一道的产出是后一道的输入</td></tr>
+          <tr><th scope="row">原型</th><td>21 个场景家族、6 组完整界面，每个独立</td><td>1 个原型贯穿全程，随工序切换视角</td></tr>
+          <tr><th scope="row">证据</th><td>每条提示词附验收点；REVIEW / SKILL-VALIDATION 文档另列</td><td>每道工序就地标出“已验证 / 未验证”，未验证项随页面向下传</td></tr>
+          <tr><th scope="row">提示词</th><td>库内条目 + 通用手感与边界模板</td><td>由交接单装订，每行可追溯来源工序</td></tr>
+          <tr><th scope="row">视觉</th><td>暖纸色、海报式巨字、橙色强调，三页同一套</td><td>冷白纸面、等宽工序号、单一钴蓝；红色只给删除</td></tr>
+          <tr><th scope="row">适合</th><td>找灵感、比较配方、快速拿走一句</td><td>理解方法、给团队做交接、复盘一个功能</td></tr>
+          <tr><th scope="row">代价</th><td>广而浅：单个场景不展示上下游</td><td>深而窄：只覆盖“删除 + 撤销”一个功能</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="shots">
+      <figure><img src="../screenshots/lab-desktop.png" alt="原版提示词放映室首屏：暖纸色背景、黑橙巨字标题与四个统计数字" loading="lazy" width="1440" height="1000"><figcaption>原版首屏：以数量（15 / 141 / 21 / 2）建立规模感</figcaption></figure>
+      <figure><img src="../screenshots/skills-fold.png" alt="原版技能地图首屏：十五个方法的巨幅标题与分组" loading="lazy" width="1440" height="1000"><figcaption>技能地图：15 个方法按阶段分组，但各自独立演示</figcaption></figure>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>九道工序 · 本页为浏览器原型：无后端、不持久化；“同步失败”为模拟。</p>
+  <p><a href="../index.html">原版放映室</a> · <a href="../showcase.html">作品展台</a> · <a href="https://github.com/harveyxiacn/uiux-intent-form-motion-lab/tree/main/skills/uiux-workflow">uiux-workflow 源文件 ↗</a></p>
+</footer>
+</body>
+</html>
