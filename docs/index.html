@@ -9,8 +9,10 @@
   <title>提示词放映室 · UI/UX 实验室</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23ff5a2b%22/%3E%3Ctext x=%2216%22 y=%2223%22 font-size=%2218%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22900%22 fill=%22%2320140d%22%3E%E7%95%8C%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="playground/lab.css">
+  <link rel="stylesheet" href="playground/motion.css">
   <script src="playground/prompts.js" defer></script>
   <script src="playground/scenes.js" defer></script>
+  <script src="playground/motion.js" defer></script>
   <script src="playground/app.js" defer></script>
 </head>
 <body>
@@ -44,7 +46,7 @@
     </div>
     <dl class="hero-stats">
       <div><dt>Skill</dt><dd>15</dd><p>九个本地模块 + 六个上游 Skill</p></div>
-      <div><dt>Prompts</dt><dd id="stat-prompts">141</dd><p>去重后的可执行提示词</p></div>
+      <div><dt>Prompts</dt><dd id="stat-prompts">148</dd><p>去重后的可执行提示词</p></div>
       <div><dt>Scenes</dt><dd id="stat-scenes">21</dd><p>可操作的效果家族</p></div>
       <div><dt>Categories</dt><dd>2</dd><p>网页 / App · 小程序</p></div>
     </dl>
@@ -84,7 +86,7 @@
             <span aria-hidden="true">⌕</span>
             <input id="lab-search" type="search" placeholder="搜「拖拽」「主题」「卡片」…" autocomplete="off">
           </label>
-          <p class="library-count" id="prompt-count">141 条</p>
+          <p class="library-count" id="prompt-count">148 条</p>
         </div>
         <div class="family-strip" id="family-list" role="group" aria-label="按效果家族筛选"></div>
         <ol class="prompt-list" id="prompt-list"></ol>
@@ -139,7 +141,7 @@
         <p class="kicker">02 / SAY IT PLAIN</p>
         <h2 id="composer-title">说不出术语<br>就直接说你的语言<br>表达你想的。</h2>
       </div>
-      <p>写下你想要的感受，系统会从 141 条提示词里找最接近的动作，补上状态、边界和验收，生成一句能直接发给 Agent 的提示词。规则在本页运行，不调用云端模型。</p>
+      <p>写下你想要的感受，系统会从 148 条提示词里找最接近的动作，补上状态、边界和验收，生成一句能直接发给 Agent 的提示词。规则在本页运行，不调用云端模型。</p>
     </div>
     <div class="composer-grid">
       <div class="composer-input">
@@ -217,7 +219,7 @@
 
 <footer class="site-footer">
   <a class="wordmark" href="#top">界面有意思<span aria-hidden="true">*</span></a>
-  <p>141 条提示词，21 个场景，15 个 Skill。<br>一个可以被操作、被复制、被验收的 UI/UX 实验室。</p>
+  <p>148 条提示词，22 个场景，15 个 Skill。<br>一个可以被操作、被复制、被验收的 UI/UX 实验室。</p>
   <a href="https://github.com/harveyxiacn/uiux-intent-form-motion-lab/blob/main/SKILL-VALIDATION.md" target="_blank" rel="noopener">查看验收记录 ↗</a>
 </footer>
 

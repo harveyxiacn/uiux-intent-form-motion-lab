@@ -1,6 +1,6 @@
 ---
 name: uiux-prompt-playbook
-description: A testable library of 141 Chinese UI/UX prompts for web and App / 小程序 surfaces, each mapped to a live interaction scene and explicit acceptance checks. Use when someone wants a concrete prompt for a UI effect, asks to turn a vague description such as “高级一点 / 顺一点 / 卡片飞走” into an implementable interaction, wants to compare interaction recipes, or needs a structured scene / action / feel / boundary / acceptance spec before building.
+description: A testable library of 148 Chinese UI/UX prompts for web and App / 小程序 surfaces, each mapped to a live interaction scene and explicit acceptance checks. Use when someone wants a concrete prompt for a UI effect, asks to turn a vague description such as “高级一点 / 顺一点 / 卡片飞走” into an implementable interaction, wants to compare interaction recipes, or needs a structured scene / action / feel / boundary / acceptance spec before building.
 ---
 
 # UI/UX Prompt Playbook
@@ -102,11 +102,11 @@ The prompt should preserve the user's intent while making the interaction falsif
 - Archive showcase: `docs/showcase.html` — the six full interface demos.
 - Atlas: `docs/demos/skills/` — all 15 skills.
 
-The playground renders 21 scene families with real pointer, keyboard and reduced-motion behavior. It is a prototype, not production code: no backend, accounts or persistence.
+The playground renders 22 scene families with real pointer, keyboard and reduced-motion behavior. It is a prototype, not production code: no backend, accounts or persistence.
 
 ## Files
 
-- `assets/prompts.json` — canonical catalogue (141 prompts, 21 families).
+- `assets/prompts.json` — canonical catalogue (148 prompts, 22 scenes).
 - `references/web-prompts.md` — generated web prompt reference.
 - `references/app-prompts.md` — generated App / 小程序 prompt reference.
 - `references/gesture-recipes.md` — gesture state machines and invariants.

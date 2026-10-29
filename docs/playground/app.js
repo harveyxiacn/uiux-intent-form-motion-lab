@@ -297,7 +297,7 @@
       ["design-taste-frontend", "Design Taste", "艺术方向、反模板化与真实浏览器检查。"],
       ["interface-design", "Interface Design", "产品 UI 的层级、token 与系统一致性。"],
       ["impeccable", "Impeccable", "审查、批评、打磨与修复。"],
-      ["uiux-prompt-playbook", "提示词手册", "141 条可执行提示词与按需组合的写法。"]
+      ["uiux-prompt-playbook", "提示词手册", "148 条可执行提示词与按需组合的写法。"]
     ];
     const counts = {};
     DATA.prompts.forEach((prompt) => {

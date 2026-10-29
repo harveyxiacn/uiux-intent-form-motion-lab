@@ -1,6 +1,6 @@
 # Intent / Form / Motion
 
-本项目提供十五个 UI/UX Skill（九个本项目模块、六个上游快照）、141 条可执行提示词与 21 个可操作场景，以及官网、Dashboard、手机 App、组合工作台、组件动效、技能地图六组完整界面演示。工作流：**明确页面目标 → 提炼视觉方向 → 定义交互与动效 → 现场验收**。
+本项目提供十五个 UI/UX Skill（九个本项目模块、六个上游快照）、148 条可执行提示词与 22 个可操作场景，以及官网、Dashboard、手机 App、组合工作台、组件动效、技能地图六组完整界面演示。工作流：**明确页面目标 → 提炼视觉方向 → 定义交互与动效 → 现场验收**。
 
 [在线提示词实验室](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/) · [作品展台](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/showcase.html) · [设计指南](DESIGN-GUIDE.md) · [验证记录](REVIEW.md)
 
@@ -8,7 +8,7 @@
 
 首页不是提示词清单，而是一个可以当场操作的放映室：按「网页」和「App / 小程序」分成两大类，选择任意提示词，中间舞台立即呈现对应的真实界面效果。每条提示词都带场景、动作、手感、边界、验收点和关联 Skill；右侧可一键复制，左侧可按家族筛选或搜索。
 
-141 条提示词来自对常用交互的逐条去重与整理，覆盖按钮、布局、选择器、菜单、弹层、卡片、手势、滚动、输入、图表、工作台与编辑式页面。21 个场景家族全部在浏览器里实现，使用 Pointer Events、CSS 过渡、Web Animations API、SVG 与原生焦点管理；拖动、吸附、橡皮筋、共享元素、3D 翻面等效果都可以直接试。演示不调用后端，不持久化数据。
+148 条提示词来自对常用交互的逐条去重与整理，覆盖按钮、布局、选择器、菜单、弹层、卡片、手势、滚动、输入、图表、工作台与编辑式页面。22 个场景家族全部在浏览器里实现，使用 Pointer Events、CSS 过渡、Web Animations API、SVG 与原生焦点管理；拖动、吸附、橡皮筋、共享元素、3D 翻面等效果都可以直接试。演示不调用后端，不持久化数据。
 
 完整文本合集见 [UIUX-PROMPTS.md](UIUX-PROMPTS.md)：按网页 / App 分章，每条都带可复制提示词、关联 Skill、验收清单与在线预览入口。
 
@@ -18,7 +18,7 @@
 
 ### 自然语言生成
 
-页面下半部分提供一个本地规则式生成器：写下自然语言需求（例如「底部导航精致一点，切换时背景块滑过去；卡片删除时飞走，别太夸张」），系统会从 141 条提示词中匹配最接近的效果，补全成「场景 / 动作 / 手感 / 边界 / 验收」结构，并提供复制与一键预览。它不调用云端模型，不理解任意新业务；匹配依据与边界写在 [prompt-composer.md](skills/uiux-prompt-playbook/references/prompt-composer.md)。
+页面下半部分提供一个本地规则式生成器：写下自然语言需求（例如「底部导航精致一点，切换时背景块滑过去；卡片删除时飞走，别太夸张」），系统会从 148 条提示词中匹配最接近的效果，补全成「场景 / 动作 / 手感 / 边界 / 验收」结构，并提供复制与一键预览。它不调用云端模型，不理解任意新业务；匹配依据与边界写在 [prompt-composer.md](skills/uiux-prompt-playbook/references/prompt-composer.md)。
 
 ![自然语言生成与预览](docs/screenshots/lab-composer.png)
 
@@ -118,7 +118,7 @@ App 是可交互的浏览器原型，没有后端或真实账户服务。演示�
 | [uiux-motion-engineering](skills/uiux-motion-engineering/SKILL.md) | 动效实现、中断恢复、降级和性能 |
 | [uiux-accessibility-review](skills/uiux-accessibility-review/SKILL.md) | 键盘、焦点、表单和无障碍证据审查 |
 | [uiux-mobile-patterns](skills/uiux-mobile-patterns/SKILL.md) | 手机导航、触摸、键盘与编辑面板 |
-| [uiux-prompt-playbook](skills/uiux-prompt-playbook/SKILL.md) | 141 条可执行提示词、21 个现场场景与自然语言生成 |
+| [uiux-prompt-playbook](skills/uiux-prompt-playbook/SKILL.md) | 148 条可执行提示词、22 个现场场景与自然语言生成 |
 
 ### 六个上游快照
 
@@ -162,7 +162,7 @@ node scripts/install-skills.cjs --target codex --global
 
 ## 本地运行与验证
 
-无需构建：在仓库根目录运行 `python -m http.server 4173`，打开 `http://localhost:4173/docs/`。浏览器验证脚本为 [scripts/verify-lab.cjs](scripts/verify-lab.cjs) 与 [scripts/verify.cjs](scripts/verify.cjs)：前者遍历 141 条提示词、分类切换、复制、主题与自然语言生成，后者回归作品展台、技能地图和对比度检查；需要 Node.js、Playwright 和可用的 Chromium / Edge。将 `PLAYWRIGHT_MODULE` 指向已安装的 Playwright 模块路径后执行 `node scripts/verify.cjs`。
+无需构建：在仓库根目录运行 `python -m http.server 4173`，打开 `http://localhost:4173/docs/`。浏览器验证脚本为 [scripts/verify-lab.cjs](scripts/verify-lab.cjs) 与 [scripts/verify.cjs](scripts/verify.cjs)：前者遍历 148 条提示词、分类切换、复制、主题与自然语言生成，后者回归作品展台、技能地图和对比度检查；需要 Node.js、Playwright 和可用的 Chromium / Edge。将 `PLAYWRIGHT_MODULE` 指向已安装的 Playwright 模块路径后执行 `node scripts/verify.cjs`。
 
 GitHub Pages 从 `main` 分支的 `docs/` 目录发布。
 

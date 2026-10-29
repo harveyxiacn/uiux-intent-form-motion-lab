@@ -9,7 +9,7 @@ const path = require('path');
 
 const ROOT = path.resolve(process.argv[2] || path.join(__dirname, '..'));
 const GROUPS = {
-  lab: ['docs/index.html', 'docs/playground/app.js', 'docs/playground/prompts.js', 'docs/playground/scenes.js'],
+  lab: ['docs/index.html', 'docs/playground/app.js', 'docs/playground/prompts.js', 'docs/playground/scenes.js', 'docs/playground/motion.js'],
   showcase: ['docs/showcase.html', 'docs/showcase.js'],
   skills: ['docs/demos/skills/index.html', 'docs/demos/skills/app.js', 'docs/demos/skills/data.js'],
   demos: ['docs/demos/web/index.html', 'docs/demos/web/script.js', 'docs/demos/app/index.html', 'docs/demos/app/app.js', 'docs/demos/dashboard/index.html', 'docs/demos/dashboard/app.js', 'docs/demos/studio/index.html', 'docs/demos/studio/app.js', 'docs/demos/components/index.html', 'docs/demos/components/app.js'],

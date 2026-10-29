@@ -126,7 +126,7 @@ window.ATLAS_DATA = {
   skills: [
     { id: "uiux-page-planning", label: "页面规划", source: "local", stage: "定义", effect: "先把受众、目标和信息层级排清楚，再谈布局。", target: "../../showcase.html#web", targetLabel: "看展览官网", detail: "五组演示的分类、首屏与阅读顺序" },
     { id: "uiux-mobile-patterns", label: "移动模式", source: "local", stage: "定义", effect: "手持任务流、返回路径、输入情境与安全区。", target: "../../showcase.html#app", targetLabel: "看手机原型", detail: "390px 单列任务流与底部导航" },
-    { id: "uiux-prompt-playbook", label: "提示词手册", source: "local", stage: "行动", effect: "141 条可执行提示词，每一条都能在场景舞台里当场操作。", target: "../../", targetLabel: "打开实验室", detail: "141 prompts · 21 scenes · 网页 / App 双分类" },
+    { id: "uiux-prompt-playbook", label: "提示词手册", source: "local", stage: "行动", effect: "148 条可执行提示词，每一条都能在场景舞台里当场操作。", target: "../../", targetLabel: "打开实验室", detail: "141 prompts · 21 scenes · 网页 / App 双分类" },
     { id: "finesse-term", label: "术语翻译", source: "upstream", stage: "定义", effect: "把「按钮被挡住」翻译成安全区、视口设置与吸底操作栏。", target: "#station-term", targetLabel: "跳到展台", detail: "finesse-term 0.3.0 · 142 条词库节选" },
     { id: "uiux-style-direction", label: "视觉方向", source: "local", stage: "造型", effect: "把「好看」拆成构图、字体、配色与图像方向。", target: "../../showcase.html#web", targetLabel: "看展览官网", detail: "大标题、丝带与原创插画的视觉语言" },
     { id: "uiux-design-system", label: "设计系统", source: "local", stage: "造型", effect: "语义 token 让双主题和组件说同一种语言。", target: "../../showcase.html#studio", targetLabel: "看工作台", detail: "浅/深主题与组件状态矩阵" },

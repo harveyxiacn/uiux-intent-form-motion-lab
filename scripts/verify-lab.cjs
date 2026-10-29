@@ -24,10 +24,10 @@ const base = process.env.DEMO_BASE || 'http://localhost:4173/docs/';
   await page.waitForSelector('.prompt-row');
   await page.evaluate(() => document.fonts && document.fonts.ready);
 
-  assert.equal(await page.locator('#stat-prompts').innerText(), '141');
-  assert.equal(await page.locator('#stat-scenes').innerText(), '21');
+  assert.equal(await page.locator('#stat-prompts').innerText(), '148');
+  assert.equal(await page.locator('#stat-scenes').innerText(), '22');
   assert.equal(await page.locator('#web-count').innerText(), '58');
-  assert.equal(await page.locator('#app-count').innerText(), '83');
+  assert.equal(await page.locator('#app-count').innerText(), '90');
   assert.equal(await page.locator('#prompt-list .prompt-row').count(), 58);
   assert.equal(await page.locator('#prompt-count').innerText(), '58 条');
 
@@ -41,7 +41,7 @@ const base = process.env.DEMO_BASE || 'http://localhost:4173/docs/';
     await page.locator(`.category-button[data-category="${category}"]`).click();
     const rows = page.locator('#prompt-list .prompt-row');
     const total = await rows.count();
-    assert.equal(total, category === 'web' ? 58 : 83, category + ' prompt count');
+    assert.equal(total, category === 'web' ? 58 : 90, category + ' prompt count');
     for (let index = 0; index < total; index += 1) {
       const row = rows.nth(index);
       const id = await row.getAttribute('data-id');
@@ -66,7 +66,7 @@ const base = process.env.DEMO_BASE || 'http://localhost:4173/docs/';
       coverage.push(id);
     }
   }
-  assert.equal(new Set(coverage).size, 141, 'all prompt ids covered exactly once');
+  assert.equal(new Set(coverage).size, 148, 'all prompt ids covered exactly once');
 
   // Search, family filtering and empty state.
   await page.locator('.category-button[data-category="web"]').click();
@@ -189,7 +189,7 @@ const base = process.env.DEMO_BASE || 'http://localhost:4173/docs/';
   await page.screenshot({ path: 'docs/screenshots/lab-mobile.png', fullPage: false });
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, 'lab mobile overflow');
   await page.locator('.category-button[data-category="app"]').click();
-  assert.equal(await page.locator('#prompt-list .prompt-row').count(), 83);
+  assert.equal(await page.locator('#prompt-list .prompt-row').count(), 90);
   await page.goto(base + '#p/app-nav-capsule');
   await page.waitForSelector('.prompt-row[data-id="app-nav-capsule"][aria-current="true"]');
   await page.waitForTimeout(400);
@@ -200,7 +200,7 @@ const base = process.env.DEMO_BASE || 'http://localhost:4173/docs/';
   await page.locator('.stage-column').screenshot({ path: 'docs/screenshots/lab-mobile-app.png' });
 
   assert.deepEqual(errors, []);
-  console.log('PASS: 141 prompts mount 21 real scenes (58 web / 83 app); search/family/empty states; deep links; reset; keyboard shortcut; copy; composer generate/copy/preview; theme persistence; contrast; desktop and 390px screenshots; no page errors');
+  console.log('PASS: 148 prompts mount 22 real scenes (58 web / 90 app); search/family/empty states; deep links; reset; keyboard shortcut; copy; composer generate/copy/preview; theme persistence; contrast; desktop and 390px screenshots; no page errors');
   await browser.close();
 })().catch((error) => {
   console.error(error);
