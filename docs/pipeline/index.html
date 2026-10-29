@@ -9,8 +9,10 @@
   <title>工序版 Playground · UI/UX 实验室</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%232741c8%22/%3E%3Ctext x=%2216%22 y=%2222%22 font-size=%2215%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-weight=%22700%22 fill=%22%23fff%22%3E09%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="lab.css">
+  <link rel="stylesheet" href="photo.css">
   <script src="effects.js" defer></script>
   <script src="scenes.js" defer></script>
+  <script src="photo-scenes.js" defer></script>
   <script src="lab.js" defer></script>
 </head>
 <body>
@@ -29,10 +31,10 @@
 
 <main id="top">
   <section class="hero" aria-labelledby="hero-title">
-    <p class="eyebrow">PIPELINE PLAYGROUND · 16 个可操作效果 · 2026.10</p>
+    <p class="eyebrow">PIPELINE PLAYGROUND · 23 个可操作效果 · 2026.10</p>
     <h1 id="hero-title">先亲手试，<br>再拿走一句<span>能执行</span>的提示词。</h1>
     <div class="hero-row">
-      <p class="lede">网页和 App 各 8 个效果，每个都能点、能拖、会给反馈。右边的提示词不是描述，是一份<strong>交给装了 uiux skills 的 Agent 就能开工</strong>的工单：开头调用 <code>uiux-workflow</code>，按交互契约、组件状态、动效、手持检查、验收的顺序写好每一段。</p>
+      <p class="lede">网页 8 个、App 15 个效果，每个都能点、能拖、会给反馈。右边的提示词不是描述，是一份<strong>交给装了 uiux skills 的 Agent 就能开工</strong>的工单：开头调用 <code>uiux-workflow</code>，按交互契约、组件状态、动效、手持检查、验收的顺序写好每一段。</p>
       <div class="install">
         <p>先在你的项目里安装 skills</p>
         <pre><code>git clone https://github.com/harveyxiacn/uiux-intent-form-motion-lab
@@ -99,7 +101,7 @@ node uiux-intent-form-motion-lab/scripts/install-skills.cjs --global</code></pre
     <div class="sec-head">
       <p class="eyebrow">自然语言生成</p>
       <h2 id="cmp-title">直接用你的语言说出你想的，拿到能执行的工单。</h2>
-      <p>写下你想要的效果和感觉。页面会识别界面类别、手感、技术栈和额外要求，从 16 个效果里找最接近的一到两个，把它们的交互契约、动效数值和验收合成一份提示词。规则在浏览器里运行，不调用任何模型；匹配不到时会生成一份让 Agent 先补全契约的工单，而不是硬凑。</p>
+      <p>写下你想要的效果和感觉。页面会识别界面类别、手感、技术栈和额外要求，从 23 个效果里找最接近的一到两个，把它们的交互契约、动效数值和验收合成一份提示词。规则在浏览器里运行，不调用任何模型；匹配不到时会生成一份让 Agent 先补全契约的工单，而不是硬凑。</p>
     </div>
     <div class="cmp-grid">
       <div class="cmp-in">
@@ -134,7 +136,7 @@ node uiux-intent-form-motion-lab/scripts/install-skills.cjs --global</code></pre
 
 <footer class="foot">
   <p>工序版 Playground · 浏览器原型，无后端、不持久化；“失败”“刷新”等为本地模拟。</p>
-  <p><a href="../showcase.html">作品展台</a> · <a href="../demos/skills/">技能地图</a></p>
+  <p><a href="../showcase.html">作品展台</a> · <a href="../demos/skills/">技能地图</a> · <a href="https://github.com/harveyxiacn/uiux-intent-form-motion-lab/blob/main/docs/assets/photos/CREDITS.md" target="_blank" rel="noopener">照片来自 Unsplash ↗</a></p>
 </footer>
 <p class="sr-only" id="live" aria-live="polite"></p>
 </body>

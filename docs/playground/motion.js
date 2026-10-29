@@ -80,12 +80,12 @@
   }
 
   const PHOTOS = [
-    { name: "海边的早晨", place: "青岛 · 05:40", cls: "mx-ph-1" },
-    { name: "旧书店", place: "苏州 · 14:10", cls: "mx-ph-2" },
-    { name: "雪线之上", place: "稻城 · 07:25", cls: "mx-ph-3" },
-    { name: "夜班电车", place: "大连 · 22:50", cls: "mx-ph-4" },
-    { name: "雨后的巷子", place: "厦门 · 17:05", cls: "mx-ph-5" },
-    { name: "向日葵田", place: "张掖 · 11:30", cls: "mx-ph-6" }
+    { name: "海边的早晨", place: "海岸 · 05:40", cls: "mx-ph-1" },
+    { name: "读到一半的书", place: "书房 · 14:10", cls: "mx-ph-2" },
+    { name: "雪线之上", place: "山谷 · 07:25", cls: "mx-ph-3" },
+    { name: "黄色电车", place: "老城 · 16:20", cls: "mx-ph-4" },
+    { name: "石板小巷", place: "老街 · 17:05", cls: "mx-ph-5" },
+    { name: "金色麦田", place: "平原 · 11:30", cls: "mx-ph-6" }
   ];
 
   S.motionLab = function (root, variant) {
@@ -262,7 +262,7 @@
           <button type="button" class="mx-back" data-back>← 照片</button>
           <div class="mx-cover" aria-hidden="true">${PHOTOS.slice(0, 3).map((p, i) => `<span class="mx-img ${p.cls}" style="--r:${[-7, 5, 0][i]}deg"></span>`).join("")}</div>
           <p class="mono mx-eyebrow">ALBUM · 6 PHOTOS</p><h5 tabindex="-1" data-album-title>十月 · 在路上</h5>
-          <p class="mx-copy">六个城市，从清晨到深夜。相册已按拍摄时间排好。</p>
+          <p class="mx-copy">六个地方，从清晨到傍晚。相册已按拍摄时间排好。</p>
         </section>
       </div>`;
       const gridPage = body.querySelector("[data-grid-page]");
@@ -322,6 +322,7 @@
         body.querySelector("[data-skip]").textContent = counts.skip;
         body.querySelector("[data-keep]").textContent = counts.keep;
         body.querySelector("[data-undo]").disabled = !history.length;
+        deck.setAttribute("aria-label", queue.length ? `当前「${T(queue[0].name)}」，左方向键跳过，右方向键保留` : "分拣完成");
       };
       const place = (x) => {
         dx = x;
@@ -345,7 +346,7 @@
         move(x) { if (!busy) place(x); },
         end(x, vx) {
           if (!top() || busy) return;
-          if (Math.abs(x) > deck.clientWidth * .35 || Math.abs(vx) > .7) return commit((Math.abs(vx) > .7 ? vx : x) > 0 ? "keep" : "skip");
+          if (Math.abs(x) > deck.clientWidth * .35 || (Math.abs(vx) > .7 && Math.abs(x) > 24)) return commit((Math.abs(vx) > .7 ? vx : x) > 0 ? "keep" : "skip");
           motion = spring(bag, { from: x, to: 0, velocity: vx * 1000 * .4, stiffness: 320, damping: 15, onUpdate: place });
           say(Math.abs(x) > 30 ? "没拖够，已弹回" : "向左跳过，向右保留");
         }
@@ -415,7 +416,7 @@
       body.innerHTML = `<div class="mx-screen mx-album-screen">
         <p class="mono mx-eyebrow">ALBUMS</p><h5>相册</h5>
         <div class="mx-albums" data-stack tabindex="0" aria-label="相册卡片，左右方向键切换">
-          ${items.map((p, i) => `<article class="mx-album-card" data-i="${i}"><span class="mx-img ${p.cls}"></span><b>${p.name}</b><small>${p.place} · ${12 + i * 7} 张</small></article>`).join("")}
+          ${items.map((p, i) => `<article class="mx-album-card" data-i="${i}"><span class="mx-img ${p.cls}"></span><b>${p.name}</b><small>${p.place}<span> · ${12 + i * 7} 张照片</span></small></article>`).join("")}
         </div>
         <div class="mx-dots" data-dots>${items.map((_, i) => `<i class="${i ? "" : "on"}"></i>`).join("")}</div>
         <div class="mx-row"><button type="button" class="stage-action ghost" data-prev>← 上一本</button><span class="mono mx-count" data-count>01 / 05</span><button type="button" class="stage-action accent" data-next>下一本 →</button></div>

@@ -234,7 +234,7 @@ ol,ul{padding:0;list-style:none}
 /* ---------- footer ---------- */
 .site-footer{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:36px var(--pad);border-top:1px solid var(--line-strong);font-size:12px;color:var(--muted)}
 .site-footer p{line-height:1.65}
-.site-footer>a:last-child{text-decoration:underline;text-underline-offset:5px;white-space:nowrap}
+.site-footer>a:not(.wordmark){text-decoration:underline;text-underline-offset:5px;white-space:nowrap}
 
 /* ---------- shared scene primitives ---------- */
 .scene{position:relative;min-height:100%;padding:18px;font-family:var(--sans);color:#ece9df}

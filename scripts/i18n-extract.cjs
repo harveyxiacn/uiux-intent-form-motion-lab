@@ -13,7 +13,7 @@ const GROUPS = {
   showcase: ['docs/showcase.html', 'docs/showcase.js'],
   skills: ['docs/demos/skills/index.html', 'docs/demos/skills/app.js', 'docs/demos/skills/data.js'],
   demos: ['docs/demos/web/index.html', 'docs/demos/web/script.js', 'docs/demos/app/index.html', 'docs/demos/app/app.js', 'docs/demos/dashboard/index.html', 'docs/demos/dashboard/app.js', 'docs/demos/studio/index.html', 'docs/demos/studio/app.js', 'docs/demos/components/index.html', 'docs/demos/components/app.js'],
-  pipeline: ['docs/pipeline/index.html', 'docs/pipeline/walkthrough.html', 'docs/pipeline/app.js', 'docs/pipeline/lab.js', 'docs/pipeline/effects.js', 'docs/pipeline/scenes.js']
+  pipeline: ['docs/pipeline/index.html', 'docs/pipeline/walkthrough.html', 'docs/pipeline/app.js', 'docs/pipeline/lab.js', 'docs/pipeline/effects.js', 'docs/pipeline/scenes.js', 'docs/pipeline/photo-scenes.js']
 };
 const HAN = /[㐀-鿿]/;
 const ATTR_RE = /\b(?:title|alt|aria-label|placeholder|aria-valuetext|aria-description|data-tip|content|value)\s*=\s*(?:"([^"]*)"|'([^']*)')/g;
