@@ -10,6 +10,8 @@
   const $$ = (s, r) => [...r.querySelectorAll(s)];
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   const rubber = (over, r) => Math.sign(over) * r * (1 - Math.exp(-Math.abs(over) / r));
+  const T = s => (window.I18N && I18N.t ? I18N.t(s) : s);
+  const EN = () => !!(window.I18N && I18N.lang === 'en');
   const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 
   /* ======================= WEB ======================= */
@@ -140,14 +142,14 @@
     const cats = ['全部', '品牌', '产品', '研究'];
     const data = [['春季品牌焕新', '品牌'], ['会员中心改版', '产品'], ['用户访谈 12 场', '研究'], ['海报系统', '品牌'], ['结算流程', '产品'], ['可用性测试', '研究'], ['包装插画', '品牌'], ['数据看板', '产品'], ['竞品分析', '研究']];
     root.innerHTML = `<div class="fg"><div class="fg-head"><div><p class="sc-kicker">作品集</p><h4>最近的项目</h4></div><p class="fg-count" aria-live="polite">显示 9 项</p></div>
-      <div class="fg-chips" role="group" aria-label="按分类筛选">${cats.map((c, i) => `<button type="button" aria-pressed="${i === 0}">${c}</button>`).join('')}</div>
+      <div class="fg-chips" role="group" aria-label="按分类筛选">${cats.map((c, i) => `<button type="button" data-cat="${c}" aria-pressed="${i === 0}">${c}</button>`).join('')}</div>
       <div class="fg-grid">${data.map(([t, c], i) => `<a href="#" class="fg-card" data-cat="${c}" style="--h:${(i * 47) % 360}"><span class="fg-art" aria-hidden="true"></span><b>${t}</b><small>${c}</small></a>`).join('')}</div></div>`;
     const grid = $('.fg-grid', root);
     grid.addEventListener('click', e => { if (e.target.closest('.fg-card')) { e.preventDefault(); ctx.log('卡片在动画中仍可点击'); } });
     $('.fg-chips', root).addEventListener('click', e => {
       const b = e.target.closest('button'); if (!b) return;
       $$('.fg-chips button', root).forEach(x => x.setAttribute('aria-pressed', String(x === b)));
-      const cat = b.textContent;
+      const cat = b.dataset.cat;
       const cards = $$('.fg-card', grid);
       const g = grid.getBoundingClientRect();
       const first = new Map(cards.filter(c => !c.hidden).map(c => [c, c.getBoundingClientRect()]));
@@ -226,11 +228,11 @@
     back.addEventListener('click', () => hide());
     $('.cp-clear', root).addEventListener('click', () => { input.value = ''; draw(); input.focus(); });
     input.addEventListener('input', () => { active = 0; draw(); });
-    list.addEventListener('click', e => { const li = e.target.closest('li'); if (li) hide('已执行：' + shown[$$('li', list).indexOf(li)]); });
+    list.addEventListener('click', e => { const li = e.target.closest('li'); if (li) hide(`已执行：${shown[$$('li', list).indexOf(li)]}`); });
     list.addEventListener('mousemove', e => { const li = e.target.closest('li'); if (!li) return; const i = $$('li', list).indexOf(li); if (i !== active) { active = i; draw(); } });
     panel.addEventListener('keydown', e => {
       if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); if (shown.length) { active = (active + (e.key === 'ArrowDown' ? 1 : shown.length - 1)) % shown.length; draw(); $('#cp-o' + active, root).scrollIntoView({ block: 'nearest' }); } }
-      else if (e.key === 'Enter') { e.preventDefault(); if (shown.length) hide('已执行：' + shown[active]); }
+      else if (e.key === 'Enter') { e.preventDefault(); if (shown.length) hide(`已执行：${shown[active]}`); }
       else if (e.key === 'Escape') { e.preventDefault(); hide(); }
       else if (e.key === 'Tab') { e.preventDefault(); }
     });
@@ -253,7 +255,8 @@
       b.setAttribute('aria-expanded', String(open));
       panel.hidden = false;
       const target = open ? panel.scrollHeight : 0;
-      ctx.log(`${open ? '展开' : '收起'}「${$('span', b).textContent}」${running ? '（从当前高度反向）' : ''}`);
+      const q = $('span', b).textContent;
+      ctx.log(running ? (open ? `展开「${q}」（从当前高度反向）` : `收起「${q}」（从当前高度反向）`) : (open ? `展开「${q}」` : `收起「${q}」`));
       if (ctx.reduced()) { panel.hidden = !open; return; }
       const a = panel.animate([{ height: cur + 'px' }, { height: target + 'px' }], { duration: ctx.d(open ? 260 : 200), easing: open ? ctx.ease : 'ease-in' });
       if (open) $('p', panel).animate([{ opacity: 0, transform: 'translateY(-4px)' }, { opacity: 1, transform: 'none' }], { duration: ctx.d(220), delay: ctx.d(60), fill: 'backwards' });
@@ -372,7 +375,7 @@
     form.addEventListener('submit', e => {
       e.preventDefault();
       const bad = [email, pw].filter(i => !check(i, true));
-      if (bad.length) { bad[0].focus(); ctx.announce(`有 ${bad.length} 处需要修改：${bad.map(b => $('#' + b.id + '-m', root).textContent).join('；')}`); ctx.log(`提交被拦下：${bad.length} 处错误，焦点移到第一个`); return; }
+      if (bad.length) { bad[0].focus(); ctx.announce(`有 ${bad.length} 处需要修改：${bad.map(b => T($('#' + b.id + '-m', root).textContent)).join(EN() ? '; ' : '；')}`); ctx.log(`提交被拦下：${bad.length} 处错误，焦点移到第一个`); return; }
       const b = $('.fv-submit', root); b.disabled = true; b.textContent = '注册中…';
       ctx.later(() => {
         $('.fv-mail', root).textContent = email.value.trim();
@@ -454,7 +457,7 @@
     const leaving = new Map(); let pending = null, openRow = null;
     function row(it) {
       const li = document.createElement('li'); li.className = 'sw-row'; li.dataset.id = it.id;
-      li.innerHTML = `<button type="button" class="sw-del" tabindex="-1">删除</button><div class="sw-body" tabindex="0" role="group" aria-label="${esc(it.who)}：${esc(it.text)}，${it.t}。按 Delete 删除"><span class="sw-av" aria-hidden="true">${esc(it.who[0])}</span><span class="sw-tx"><b>${esc(it.who)}</b><small>${esc(it.text)}</small></span><time>${it.t}</time></div>`;
+      li.innerHTML = `<button type="button" class="sw-del" tabindex="-1">删除</button><div class="sw-body" tabindex="0" role="group" aria-label="${esc(it.who)}：${esc(it.text)}，${it.t}。按 Delete 删除"><span class="sw-av" aria-hidden="true">${esc(T(it.who)[0])}</span><span class="sw-tx"><b>${esc(it.who)}</b><small>${esc(it.text)}</small></span><time>${it.t}</time></div>`;
       bind(li); return li;
     }
     const render = () => { list.textContent = ''; items.forEach(it => list.append(row(it))); refresh(); };
@@ -472,7 +475,7 @@
       let n = li.nextElementSibling; while (n && !alive(n)) n = n.nextElementSibling;
       let p = li.previousElementSibling; while (p && !alive(p)) p = p.previousElementSibling;
       const t = n || p;
-      if (t) { $('.sw-body', t).focus({ preventScroll: true }); return `${n ? '下' : '上'}一行`; }
+      if (t) { $('.sw-body', t).focus({ preventScroll: true }); return n ? '下一行' : '上一行'; }
       $('.sw-title', root).focus({ preventScroll: true }); return '标题';
     }
     function remove(li, via) {
@@ -664,7 +667,7 @@
       <div class="pr-ind" aria-hidden="true"><i>↓</i><span>下拉刷新</span></div>
       <div class="pr-scroll"><ul class="pr-list"></ul></div></div>`;
     const sc = $('.pr-scroll', root), list = $('.pr-list', root), ind = $('.pr-ind', root);
-    const item = (p, isNew) => `<li class="${isNew ? 'pr-new' : ''}"><span class="sw-av" aria-hidden="true">${esc(p[0][0])}</span><span><b>${esc(p[0])}</b><small>${esc(p[1])}</small></span></li>`;
+    const item = (p, isNew) => `<li class="${isNew ? 'pr-new' : ''}"><span class="sw-av" aria-hidden="true">${esc(T(p[0])[0])}</span><span><b>${esc(p[0])}</b><small>${esc(p[1])}</small></span></li>`;
     list.innerHTML = posts.map(p => item(p)).join('');
     let pull = null, busy = false, off = 0, fi = 0;
     const TH = 64;
@@ -716,7 +719,7 @@
     const deckEl = $('.ck-deck', root);
     function reset() { deck = DECK.slice(); hist = []; liked = 0; skipped = 0; draw(); }
     function draw(focusTop) {
-      deckEl.innerHTML = deck.slice(0, 3).map((c, i) => `<article class="ck-card" style="--h:${c[2]};--i:${i};z-index:${3 - i}" ${i ? 'aria-hidden="true"' : 'tabindex="0" aria-label="' + c[0] + '：' + c[1] + '。左右方向键选择"'}><div class="ck-art"></div><h5>${c[0]}</h5><p>${c[1]}</p><span class="ck-st ck-st-no">跳过</span><span class="ck-st ck-st-yes">收藏</span></article>`).join('');
+      deckEl.innerHTML = deck.slice(0, 3).map((c, i) => `<article class="ck-card" style="--h:${c[2]};--i:${i};z-index:${3 - i}" ${i ? 'aria-hidden="true"' : `tabindex="0" aria-label="${c[0]}：${c[1]}。左右方向键选择"`}><div class="ck-art"></div><h5>${c[0]}</h5><p>${c[1]}</p><span class="ck-st ck-st-no">跳过</span><span class="ck-st ck-st-yes">收藏</span></article>`).join('');
       $('.ck-empty', root).hidden = deck.length > 0;
       $('.ck-score', root).textContent = `收藏 ${liked} · 跳过 ${skipped}`;
       $('.ck-undo', root).disabled = !hist.length;
@@ -729,13 +732,13 @@
       const tx = from ? from.x : 0, ty = from ? from.y : 0, r = from ? from.r : 0;
       const keep = top;
       deckEl.append(keep);
-      ctx.announce(`${dir > 0 ? '收藏' : '跳过'}「${c[0]}」`); ctx.log(`${why}：${dir > 0 ? '收藏' : '跳过'}「${c[0]}」`);
+      ctx.announce(dir > 0 ? `收藏「${c[0]}」` : `跳过「${c[0]}」`); ctx.log(dir > 0 ? `${why}：收藏「${c[0]}」` : `${why}：跳过「${c[0]}」`);
       const done = () => keep.remove();
       if (ctx.reduced()) { keep.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 120 }).onfinish = done; }
       else keep.animate([{ transform: `translate(${tx}px,${ty}px) rotate(${r}deg)` }, { transform: `translate(${dir * 420}px,${ty + 40}px) rotate(${dir * 22}deg)`, opacity: 0.6 }], { duration: ctx.d(300), easing: 'cubic-bezier(.3,.6,.6,1)', fill: 'forwards' }).onfinish = done;
       const rest = $$('.ck-card', deckEl).filter(x => x !== keep);
       rest.forEach(x => x.remove());
-      deckEl.insertAdjacentHTML('afterbegin', deck.slice(0, 3).map((cc, i) => `<article class="ck-card" style="--h:${cc[2]};--i:${i + 1};z-index:${3 - i}" ${i ? 'aria-hidden="true"' : 'tabindex="0" aria-label="' + cc[0] + '：' + cc[1] + '。左右方向键选择"'}><div class="ck-art"></div><h5>${cc[0]}</h5><p>${cc[1]}</p><span class="ck-st ck-st-no">跳过</span><span class="ck-st ck-st-yes">收藏</span></article>`).join(''));
+      deckEl.insertAdjacentHTML('afterbegin', deck.slice(0, 3).map((cc, i) => `<article class="ck-card" style="--h:${cc[2]};--i:${i + 1};z-index:${3 - i}" ${i ? 'aria-hidden="true"' : `tabindex="0" aria-label="${cc[0]}：${cc[1]}。左右方向键选择"`}><div class="ck-art"></div><h5>${cc[0]}</h5><p>${cc[1]}</p><span class="ck-st ck-st-no">跳过</span><span class="ck-st ck-st-yes">收藏</span></article>`).join(''));
       const fresh = $$('.ck-card', deckEl).filter(x => x !== keep);
       deckEl.offsetWidth; fresh.forEach((x, i) => x.style.setProperty('--i', i));
       if (fresh[0]) { bindTop(fresh[0]); if (!from) fresh[0].focus({ preventScroll: true }); }

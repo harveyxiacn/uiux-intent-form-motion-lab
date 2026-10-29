@@ -34,3 +34,5 @@
 @media(max-width:1000px){.atlas-feature{grid-template-columns:1fr 1fr;gap:28px}.atlas-shot img{height:340px}}
 @media(max-width:600px){.atlas{padding-top:55px;padding-bottom:55px}.atlas-feature{grid-template-columns:1fr;gap:26px}.atlas-shot{border-width:4px}.atlas-shot img{height:260px}.atlas-read h3{font-size:36px}.atlas-list li{grid-template-columns:52px 1fr}.atlas-actions{align-items:stretch}.atlas-actions button{width:100%}.method-atlas{font-size:13px}}
 @media(max-width:600px){.demo-stage[data-surface=skills]{padding:7px}.demo-stage[data-surface=skills] #demo{height:760px}}
+/* English labels are longer: let the phone nav scroll instead of widening the page */
+@media(max-width:600px){html[lang="en"] .site-nav nav{min-width:0;flex:1;overflow-x:auto;scrollbar-width:none}html[lang="en"] .site-nav nav a{white-space:nowrap}}

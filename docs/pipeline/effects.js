@@ -332,56 +332,64 @@
     plain: { label: '通用', lead: '请按“意图 → 行为契约 → 组件状态 → 动效 → 验收”的顺序实现下面的界面效果。' }
   };
 
+  /* Every line goes through I18N.t, so the dictionaries translate whole lines
+     (patterns like "- 对象：{0}") and their captured data fields. */
+  const T = s => (window.I18N && I18N.t ? I18N.t(s) : s);
+  const isZh = () => !(window.I18N && I18N.lang === 'en');
+  const SEP = () => (isZh() ? '、' : ', ');
+
   function motionLine(e, feel) {
     const f = FEELS[feel] || FEELS.normal;
-    return e.motion.map(([n, ms]) => `${n} ≈ ${Math.round((ms * f.k) / 10) * 10}ms`).join('、') + `；${f.easeText}`;
+    const parts = e.motion.map(([n, ms]) => `${T(n)} ≈ ${Math.round((ms * f.k) / 10) * 10}ms`);
+    return parts.join(SEP()) + (isZh() ? '；' : '; ') + T(f.easeText);
   }
 
-  /* opts: { need, cat, feel, agent, stack, extras: [], secondary } */
+  /* opts: { need, cat, feel, agent, stack, extras: [] } */
   function buildPrompt(list, opts = {}) {
     const feel = opts.feel || 'normal';
     const f = FEELS[feel];
     const agent = AGENTS[opts.agent] || AGENTS.claude;
     const cat = opts.cat || (list[0] && list[0].cat) || 'web';
     const L = [];
+    const push = s => L.push(T(s));
     const skillName = s => (opts.agent === 'codex' ? '$' + s : s);
     const allSkills = [...new Set(list.flatMap(e => e.skills))];
     if (cat === 'app' && !allSkills.includes('uiux-mobile-patterns')) allSkills.splice(-1, 0, 'uiux-mobile-patterns');
-    L.push(agent.lead);
-    if (opts.agent !== 'plain') L.push(`涉及：${allSkills.map(skillName).join('、')}。没有安装这些 skill 时，直接按下面的字段执行。`);
+    push(agent.lead);
+    if (opts.agent !== 'plain') push(`涉及：${allSkills.map(skillName).join(SEP())}。没有安装这些 skill 时，直接按下面的字段执行。`);
     L.push('');
-    if (opts.need) L.push(`需求原话：「${opts.need}」`);
-    L.push(`界面：${SURFACE[cat]}`);
-    L.push(`技术栈：${opts.stack ? `${opts.stack}；` : ''}沿用项目现有框架、组件和设计令牌；项目里没有可用代码时，用原生 HTML/CSS/JS 写一个可直接打开的单文件演示。`);
-    L.push(`手感：${f.label}（${f.easeText}）`);
-    (opts.extras || []).forEach(x => L.push(x));
+    if (opts.need) push(`需求原话：「${opts.need}」`);
+    push(`界面：${SURFACE[cat]}`);
+    push(opts.stack ? `技术栈：${opts.stack}；沿用项目现有框架、组件和设计令牌。` : '技术栈：沿用项目现有框架、组件和设计令牌；项目里没有可用代码时，用原生 HTML/CSS/JS 写一个可直接打开的单文件演示。');
+    push(`手感：${f.label}（${f.easeText}）`);
+    (opts.extras || []).forEach(push);
 
     list.forEach((e, i) => {
       L.push('');
-      L.push(`${list.length > 1 ? `效果 ${i + 1}：` : '效果：'}${e.title} —— ${e.sum}`);
-      L.push(`【交互契约 · ${skillName('uiux-interaction-spec')}】`);
-      L.push(`- 对象：${e.c.obj}`);
-      L.push(`- 触发：${e.c.trig}`);
-      L.push(`- 过程：${e.c.seq}`);
-      L.push(`- 结果与反向：${e.c.res}`);
-      L.push(`- 无障碍与降级：${e.c.acc}`);
-      if (e.skills.includes('uiux-component-engineering')) L.push(`【组件状态 · ${skillName('uiux-component-engineering')}】${e.states}；业务数据由父级持有，组件只持有交互中的临时状态。`);
-      L.push(`【动效 · ${skillName('uiux-motion-engineering')}】${motionLine(e, feel)}。中断：${e.intr}。以上数值是提议值，可按项目令牌调整；业务状态不能依赖动画完成。`);
+      push(list.length > 1 ? `效果 ${i + 1}：${e.title} —— ${e.sum}` : `效果：${e.title} —— ${e.sum}`);
+      push(`【交互契约 · ${skillName('uiux-interaction-spec')}】`);
+      push(`- 对象：${e.c.obj}`);
+      push(`- 触发：${e.c.trig}`);
+      push(`- 过程：${e.c.seq}`);
+      push(`- 结果与反向：${e.c.res}`);
+      push(`- 无障碍与降级：${e.c.acc}`);
+      if (e.skills.includes('uiux-component-engineering')) push(`【组件状态 · ${skillName('uiux-component-engineering')}】${e.states}；业务数据由父级持有，组件只持有交互中的临时状态。`);
+      push(`【动效 · ${skillName('uiux-motion-engineering')}】${motionLine(e, feel)}。中断：${e.intr}。以上数值是提议值，可按项目令牌调整；业务状态不能依赖动画完成。`);
     });
 
     if (cat === 'app') {
       L.push('');
-      L.push(`【手持检查 · ${skillName('uiux-mobile-patterns')}】可点区域 ≥ 44px；每个手势都有可见按钮或键盘替代；浮层与提示条避开底部导航和安全区；在 390×844 视口检查。`);
+      push(`【手持检查 · ${skillName('uiux-mobile-patterns')}】可点区域 ≥ 44px；每个手势都有可见按钮或键盘替代；浮层与提示条避开底部导航和安全区；在 390×844 视口检查。`);
     }
     L.push('');
-    L.push(`【验收 · ${skillName('uiux-accessibility-review')}】`);
+    push(`【验收 · ${skillName('uiux-accessibility-review')}】`);
     const acc = [...new Set(list.flatMap(e => e.acc))];
     acc.push('开启系统“减少动态效果”后，状态与反馈仍然完整');
-    acc.forEach((a, i) => L.push(`${i + 1}. ${a}`));
+    acc.forEach((a, i) => L.push(`${i + 1}. ${T(a)}`));
     L.push('');
-    L.push('交付：可运行的代码；一句话说明每个字段如何落实；最后列出“已在浏览器验证”和“未验证（真机、读屏软件、低端设备帧率等）”两份清单。不要改动与本效果无关的页面或依赖。');
+    push('交付：可运行的代码；一句话说明每个字段如何落实；最后列出“已在浏览器验证”和“未验证（真机、读屏软件、低端设备帧率等）”两份清单。不要改动与本效果无关的页面或依赖。');
     return L.join('\n');
   }
 
-  window.PIPE = { FEELS, EFFECTS, AGENTS, SURFACE, buildPrompt, motionLine };
+  window.PIPE = { FEELS, EFFECTS, AGENTS, SURFACE, buildPrompt, motionLine, T };
 })();

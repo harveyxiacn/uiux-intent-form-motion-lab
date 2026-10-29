@@ -180,7 +180,6 @@ button { font: inherit; color: inherit; }
 .task .reveal { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: var(--p-on-danger); font-size: 13px; font-weight: 600; }
 .task.armed .reveal { font-weight: 800; }
 .task.busy .task-body { opacity: .55; }
-.task.busy .meta::after { content: " · 同步中…"; }
 .task.err .task-body { border-color: var(--p-danger); }
 .task.err .meta { color: var(--p-danger); }
 .phone[data-audit="before"] .task .more { display: none; }

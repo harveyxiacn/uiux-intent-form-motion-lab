@@ -50,6 +50,13 @@
     return String(value).toLowerCase().replace(/\s+/g, " ").trim();
   }
 
+  // When the page is shown in another language, search and matching also look at the translated text.
+  const I18N = window.I18N && window.I18N.lang !== "zh-CN" ? window.I18N : null;
+  function fieldsOf(prompt) {
+    const base = [prompt.title, prompt.summary, prompt.prompt, prompt.family, prompt.tags.join(" "), prompt.scene];
+    return I18N ? base.concat([prompt.title, prompt.summary, prompt.prompt, prompt.family, prompt.scene].map(I18N.t), prompt.tags.map(I18N.t)) : base;
+  }
+
   function promptNumber(prompt) {
     return String(DATA.prompts.indexOf(prompt) + 1).padStart(3, "0");
   }
@@ -60,7 +67,7 @@
       if (prompt.category !== state.category) return false;
       if (state.family !== "all" && prompt.family !== state.family) return false;
       if (!q) return true;
-      const haystack = normalize([prompt.title, prompt.summary, prompt.prompt, prompt.family, prompt.tags.join(" "), prompt.scene].join(" "));
+      const haystack = normalize(fieldsOf(prompt).join(" "));
       return q.split(" ").every((token) => haystack.includes(token));
     });
   }
@@ -88,7 +95,7 @@
 
   function renderList() {
     const prompts = filtered();
-    els.count.textContent = prompts.length + " 条";
+    els.count.textContent = `${prompts.length} 条`;
     els.list.innerHTML = "";
     const fragment = document.createDocumentFragment();
     prompts.forEach((prompt) => {
@@ -119,7 +126,7 @@
     const next = prompts.find((prompt) => prompt.id === state.selected?.id) || prompts[0];
     renderList();
     if (next) select(next, { updateHash: false });
-    announce((category === "web" ? "网页" : "App 与小程序") + "提示词，共 " + prompts.length + " 条");
+    announce(category === "web" ? `网页提示词，共 ${prompts.length} 条` : `App 与小程序提示词，共 ${prompts.length} 条`);
   }
 
   function setFamily(family) {
@@ -179,7 +186,7 @@
     els.detailSummary.textContent = prompt.summary;
     els.detailPrompt.textContent = prompt.prompt;
     els.stageTitle.textContent = prompt.title;
-    els.stageFamily.textContent = prompt.family + " / " + (prompt.category === "web" ? "网页" : "App · 小程序");
+    els.stageFamily.textContent = I18N ? `${I18N.t(prompt.family)} / ${I18N.t(prompt.category === "web" ? "网页" : "App · 小程序")}` : prompt.family + " / " + (prompt.category === "web" ? "网页" : "App · 小程序");
     els.stageEffect.textContent = prompt.summary;
     els.detailTags.innerHTML = prompt.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
     els.detailAccept.innerHTML = prompt.acceptance.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
@@ -238,7 +245,7 @@
         document.execCommand("copy");
         area.remove();
       }
-      announce((label || "提示词") + "已复制");
+      announce(`${label || "提示词"}已复制`);
       return true;
     } catch (error) {
       console.error(error);
@@ -300,7 +307,7 @@
       const meta = className === "upstream"
         ? "实时展台"
         : className === "prompt-playbook"
-          ? DATA.prompts.length + " 条"
+          ? `${DATA.prompts.length} 条`
           : (counts[skill] || 0) + " prompts";
       return `
       <a class="skill-card ${className}" href="https://github.com/harveyxiacn/uiux-intent-form-motion-lab/tree/main/skills/${skill}" target="_blank" rel="noopener">
@@ -402,10 +409,10 @@
   }
 
   function scorePrompt(prompt, text, inferredCategory) {
-    const haystack = normalize([prompt.title, prompt.summary, prompt.prompt, prompt.family, prompt.tags.join(" "), prompt.scene].join(" "));
+    const haystack = normalize(fieldsOf(prompt).join(" "));
     let score = 0;
     tokensOf(text).forEach((token) => {
-      if (haystack.includes(token)) score += token.length >= 3 ? 3 : 2;
+      if (haystack.includes(token) && !(I18N && /^[a-z]{1,2}$/.test(token))) score += token.length >= 3 ? 3 : 2;
     });
     CONCEPTS.forEach((concept) => {
       if (concept.keys.some((key) => normalize(text).includes(key))) {
@@ -421,8 +428,8 @@
 
   function inferCategory(text) {
     const value = normalize(text);
-    const appHits = ["app", "小程序", "手机", "移动", "手势", "触屏", "底部导航", "ios", "安卓"].filter((key) => value.includes(key)).length;
-    const webHits = ["网页", "网站", "后台", "dashboard", "工作台", "桌面", "官网", "浏览器", "表格"].filter((key) => value.includes(key)).length;
+    const appHits = ["app", "小程序", "手机", "移动", "手势", "触屏", "底部导航", "ios", "安卓", "mobile", "phone", "mini program", "gesture", "swipe", "android"].filter((key) => value.includes(key)).length;
+    const webHits = ["网页", "网站", "后台", "dashboard", "工作台", "桌面", "官网", "浏览器", "表格", "website", "web page", "admin", "desktop", "browser", "table"].filter((key) => value.includes(key)).length;
     if (appHits > webHits) return "app";
     if (webHits > appHits) return "web";
     return null;
@@ -431,16 +438,16 @@
   function buildComposed(text, matches) {
     const top = matches[0];
     if (!top) {
-      return "请设计一个界面效果，并先补齐以下信息：\n\n1. 场景：这是网页、App 还是小程序？用户在什么情境下使用？\n2. 动作：用户做什么，界面如何回应？\n3. 手感：入场时长、缓动、是否可中断，手指松开后落在哪里？\n4. 边界：空状态、失败、快速重复、反向操作、键盘或读屏如何完成？\n5. 验收：给出 3 条可以在浏览器里复现的检查。\n\n原始需求：" + text;
+      return `请设计一个界面效果，并先补齐以下信息：\n\n1. 场景：这是网页、App 还是小程序？用户在什么情境下使用？\n2. 动作：用户做什么，界面如何回应？\n3. 手感：入场时长、缓动、是否可中断，手指松开后落在哪里？\n4. 边界：空状态、失败、快速重复、反向操作、键盘或读屏如何完成？\n5. 验收：给出 3 条可以在浏览器里复现的检查。\n\n原始需求：${text}`;
     }
     const category = top.category === "web" ? "网页" : "App / 小程序";
     const second = matches[1];
     const lines = [
-      "请实现一个" + category + "界面效果，需求原话是：「" + text + "」。",
+      `请实现一个${category}界面效果，需求原话是：「${text}」。`,
       "",
-      "目标场景：" + category + " · " + top.family,
-      "核心效果：" + top.prompt,
-      second ? "可组合的第二个效果（" + second.title + "）：" + second.prompt : "",
+      `目标场景：${category} · ${top.family}`,
+      `核心效果：${top.prompt}`,
+      second ? `可组合的第二个效果（${second.title}）：${second.prompt}` : "",
       "",
       "手感：入场 320–560ms，使用缓动而非线性；拖动跟手，松手后吸附到可预测的位置；允许中途反向或取消，不能锁死。",
       "边界：必须保留空状态、失败状态和 reduced-motion 替代；只改变视觉，不改变业务状态；触摸、键盘和读屏都能完成同一件事。",
@@ -501,7 +508,7 @@
       title.textContent = matches.length ? "已经补成可执行的样子。" : "还需要一点信息。";
       empty.hidden = true;
       result.hidden = false;
-      label.textContent = matches.length ? "匹配到 " + matches.length + " 个效果 · 生成结果" : "没有匹配到具体效果 · 通用骨架";
+      label.textContent = matches.length ? `匹配到 ${matches.length} 个效果 · 生成结果` : "没有匹配到具体效果 · 通用骨架";
       textEl.textContent = composed;
       matchesEl.innerHTML = matches.map((prompt, index) => `
         <button type="button" class="compose-match" data-id="${prompt.id}">
@@ -509,7 +516,7 @@
           <span>${escapeHtml(prompt.title)} · ${escapeHtml(prompt.summary)}</span>
         </button>`).join("");
       output.dataset.top = matches[0]?.id || "";
-      announce(matches.length ? "已生成提示词，匹配到 " + matches.length + " 个效果" : "已生成通用提示词骨架");
+      announce(matches.length ? `已生成提示词，匹配到 ${matches.length} 个效果` : "已生成通用提示词骨架");
     });
 
     $("#compose-copy").addEventListener("click", () => copyText(textEl.textContent, "生成结果"));
@@ -540,7 +547,7 @@
     const initial = initialId && DATA.prompts.find((prompt) => prompt.id === decodeURIComponent(initialId));
     select(initial || DATA.prompts.find((prompt) => prompt.category === "web"), { force: true, updateHash: false });
     setupHash();
-    announce("提示词实验室已就绪，共 " + DATA.prompts.length + " 条提示词");
+    announce(`提示词实验室已就绪，共 ${DATA.prompts.length} 条提示词`);
   }
 
   if (document.readyState === "loading") {

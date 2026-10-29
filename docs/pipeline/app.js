@@ -1,5 +1,6 @@
 (() => {
   'use strict';
+  const main = () => {
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
@@ -50,7 +51,7 @@
   function log(which, text) {
     const ol = $(which === 'data' ? '#log-data' : '#log-paint');
     const li = document.createElement('li');
-    li.textContent = `${stamp()}  ${text}`;
+    li.textContent = `${stamp()}  ${window.I18N ? I18N.t(text) : text}`;
     li.title = li.textContent;
     ol.append(li);
     while (ol.children.length > 40) ol.firstElementChild.remove();
@@ -64,6 +65,10 @@
     setTimeout(() => { live.textContent = text; srMirror.textContent = text; }, 30);
   }
 
+  const T = s => (window.I18N && I18N.t ? I18N.t(s) : s);
+  const COMMA = window.I18N && I18N.lang === 'en' ? ', ' : '，';
+  const rowLabel = t => T(t.title) + COMMA + T(t.meta) + (t.done ? T('，已完成') : '');
+
   /* ---------- render ---------- */
   function rowEl(t) {
     const li = document.createElement('li');
@@ -76,7 +81,7 @@
         <button type="button" class="more" aria-haspopup="dialog">⋯</button>
       </div>`;
     $('.ttl', li).append(t.title, Object.assign(document.createElement('span'), { className: 'meta', textContent: t.meta }));
-    $('.task-body', li).setAttribute('aria-label', `${t.title}，${t.meta}${t.done ? '，已完成' : ''}`);
+    $('.task-body', li).setAttribute('aria-label', rowLabel(t));
     $('.more', li).setAttribute('aria-label', `「${t.title}」的更多操作`);
     bindRow(li);
     return li;
@@ -109,7 +114,7 @@
     let prev = li.previousElementSibling;
     while (prev && !alive(prev)) prev = prev.previousElementSibling;
     const target = next || prev;
-    if (target) { $('.task-body', target).focus({ preventScroll: true }); return `${next ? '下一' : '上一'}行「${$('.ttl', target).firstChild.textContent}」`; }
+    if (target) { $('.task-body', target).focus({ preventScroll: true }); const name = $('.ttl', target).firstChild.textContent; return next ? `下一行「${name}」` : `上一行「${name}」`; }
     const h = $('#list-title'); h.focus({ preventScroll: true }); return '空状态标题';
   }
 
@@ -166,7 +171,8 @@
     }).catch(() => { /* cancelled by undo */ });
 
     pending = { item, index, timer: setTimeout(commitPending, 5000) };
-    toastText.textContent = `已删除「${item.title.length > 8 ? item.title.slice(0, 8) + '…' : item.title}」`;
+    const shortName = T(item.title).length > 14 ? T(item.title).slice(0, 14) + '…' : T(item.title);
+    toastText.textContent = `已删除「${shortName}」`;
     toast.hidden = false;
     announce(`已删除「${item.title}」，可撤销`);
     refreshMeta();
@@ -214,7 +220,7 @@
     t.done = !t.done;
     const li = list.querySelector(`.task[data-id="${id}"]`);
     li.classList.toggle('done', t.done);
-    $('.task-body', li).setAttribute('aria-label', `${t.title}，${t.meta}${t.done ? '，已完成' : ''}`);
+    $('.task-body', li).setAttribute('aria-label', rowLabel(t));
     announce(t.done ? `「${t.title}」已完成` : `「${t.title}」标为未完成`);
     refreshMeta();
   }
@@ -375,7 +381,7 @@
     if (s === 'drag' || s === 'armed') li.classList.add('swiping');
     if (s === 'drag') body.style.transform = `translateX(${-body.offsetWidth * 0.2}px)`;
     if (s === 'armed') { body.style.transform = `translateX(${-body.offsetWidth * 0.45}px)`; li.classList.add('armed'); }
-    if (s === 'busy') { li.classList.add('busy'); li.setAttribute('aria-busy', 'true'); }
+    if (s === 'busy') { li.classList.add('busy'); li.setAttribute('aria-busy', 'true'); if (meta && t) meta.textContent = `${t.meta} · 同步中…`; }
     if (s === 'error') { li.classList.add('err'); if (meta) meta.textContent = '删除失败 · 已保留，可重试'; }
   }
   $$('#matrix button').forEach(b => b.addEventListener('click', () => setRowState(b.dataset.rs)));
@@ -501,4 +507,6 @@
   renderFindings();
   current = '';
   setStage('1');
+  };
+  if (window.I18N && I18N.ready) I18N.ready(main); else main();
 })();
