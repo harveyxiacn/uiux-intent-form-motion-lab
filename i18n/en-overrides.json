@@ -75,7 +75,10 @@
   "陈": "C",
   "方": "F",
   "按钮": "Button",
-  "网页": "Web"
+  "网页": "Web",
+  "说不出术语": "Can't name the term?",
+  "就直接说你的语言": "Just say what you mean",
+  "表达你想的。": "in your own words."
  },
  "skills": {},
  "demos": {

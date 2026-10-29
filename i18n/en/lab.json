@@ -1104,7 +1104,6 @@
  "少云": "Partly cloudy",
  "少量控件": "Few controls",
  "就不提交": "Then no submission",
- "就说人话。": "Just say it in plain language.",
  "层叠": "Layering",
  "层叠有层次": "Layering has depth",
  "层级": "Hierarchy",
@@ -2458,7 +2457,7 @@
  "详情已收回": "Details retracted",
  "语义 token、主题和组件状态矩阵。": "Semantic tokens, themes and component state matrix.",
  "语音备忘": "Voice memo",
- "说不出术语，": "Can't name the term,",
+ "说不出术语": "Can't name the term?",
  "说得清发生了什么": "Say clearly what happened",
  "请填写称呼，再继续。": "Please enter a form of address before continuing.",
  "请实现一个{0}界面效果，需求原话是：「{1}」。": "Please implement a {0} interface effect. The original request is: “{1}”.",
@@ -2884,5 +2883,7 @@
  "（尚未应用）": "(Not yet applied)",
  "＋ 新建": "+ New",
  "，已有记录": ", already has entries",
- "；另外 3 个状态未变": "; the other 3 states are unchanged"
+ "；另外 3 个状态未变": "; the other 3 states are unchanged",
+ "就直接说你的语言": "Just say what you mean",
+ "表达你想的。": "in your own words."
 }
