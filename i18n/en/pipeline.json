@@ -1091,7 +1091,6 @@
  "详情": "Details",
  "详情可滚动且返回按钮始终可见": "Details can scroll and the back button is always visible",
  "详情打开后焦点移到标题；减少动态效果时直接切换页面": "After details open, focus moves to the heading; with reduced motion, the page switches directly",
- "说人话，拿到能执行的工单。": "Say it in plain words and get an executable work order.",
  "说明文字写明“按住 1.2 秒”；读屏用户可通过“改用确认对话框”完成同一操作；减少动态效果时圆环改为百分比文字": "The caption says “Hold for 1.2 seconds”; screen reader users can complete the same action via “Use a confirmation dialog instead”; with reduced motion, the ring becomes percentage text",
  "请使用 uiux-workflow skill 统筹": "Please use the uiux-workflow skill to coordinate",
  "请使用 uiux-workflow skill 统筹这次实现，按它的工序调用下列 uiux-* skill。": "Please use the uiux-workflow skill to coordinate this implementation, and call the uiux-* skills below in its stage order.",
@@ -1260,5 +1259,6 @@
  "（还没有播报）": "(no announcement yet)",
  "＋ 新建": "+ New",
  "，已完成": ", done",
- "，按交互契约、组件状态、动效、手持检查、验收的顺序写好每一段。": ", writing each section in the order of interaction contract, component states, motion, handheld check, acceptance."
+ "，按交互契约、组件状态、动效、手持检查、验收的顺序写好每一段。": ", writing each section in the order of interaction contract, component states, motion, handheld check, acceptance.",
+ "直接用你的语言说出你想的，拿到能执行的工单。": "Say what you want in your own words, get a work order an agent can run."
 }

@@ -1104,6 +1104,7 @@
  "少云": "Partly cloudy",
  "少量控件": "Few controls",
  "就不提交": "Then no submission",
+ "就直接说你的语言": "Just say what you mean",
  "层叠": "Layering",
  "层叠有层次": "Layering has depth",
  "层级": "Hierarchy",
@@ -2386,6 +2387,7 @@
  "表单校验失败时，输入框轻晃一次，边框变红，错误提示从下方滑入；修正后提示收起。晃动不要循环，错误文字要与输入框通过 aria-describedby 关联。": "When form validation fails, the input shakes gently once, the border turns red, and the error message slides in from below; it collapses after correction. The shake must not loop, and the error text must be linked to the input via aria-describedby.",
  "表单错误轻晃滑入": "Form error: gentle shake and slide-in",
  "表格": "Table",
+ "表达你想的。": "in your own words.",
  "被选中的": "Selected",
  "装饰": "Decoration",
  "西安": "Xi'an",
@@ -2883,7 +2885,5 @@
  "（尚未应用）": "(Not yet applied)",
  "＋ 新建": "+ New",
  "，已有记录": ", already has entries",
- "；另外 3 个状态未变": "; the other 3 states are unchanged",
- "就直接说你的语言": "Just say what you mean",
- "表达你想的。": "in your own words."
+ "；另外 3 个状态未变": "; the other 3 states are unchanged"
 }

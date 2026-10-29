@@ -11,7 +11,8 @@
   "收藏「{0}」": "Saved “{0}”",
   "收起「{0}」": "Collapsed “{0}”",
   "收起「{0}」（从当前高度反向）": "Collapsed “{0}” (reversed from the current height)",
-  "跳过「{0}」": "Skipped “{0}”"
+  "跳过「{0}」": "Skipped “{0}”",
+  "直接用你的语言说出你想的，拿到能执行的工单。": "Say what you want in your own words, get a work order an agent can run."
  },
  "lab": {
   "{0} 月 {1} 日": "{0}/{1}",
