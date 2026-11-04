@@ -2,8 +2,6 @@
  "01 / 立场": "01 / Stance",
  "02 / 作品": "02 / Work",
  "03 / 联系": "03 / Contact",
- "141 prompts · 21 scenes · 网页 / App 双分类": "141 prompts · 21 scenes · Web / App categories",
- "148 条可执行提示词，每一条都能在场景舞台里当场操作。": "148 executable prompts, each one you can try on the spot on a scene stage.",
  "2 个 Skill": "2 skills",
  "24 个子命令 · 代码、对比度、响应式与原生平台": "24 subcommands · code, contrast ratio, responsive and native platforms",
  "3 个 Skill": "3 skills",
@@ -490,5 +488,8 @@
  "鼠标停在元素上时它变成的样子。只有鼠标有，手指没有。": "How an element looks while the mouse rests on it. Only a mouse has it; a finger does not.",
  "鼠标放上去": "Mouse over it",
  "鼠标放上去变个色": "Change color when the mouse is over it",
- "鼠标移上去": "Mouse moves over it"
+ "鼠标移上去": "Mouse moves over it",
+ "148 条可执行提示词，每一条都能在场景舞台里当场操作。": "148 executable prompts, each one you can try on the spot on a scene stage.",
+ "168 条可执行提示词，每一条都能在场景舞台里当场操作。": "168 executable prompts, each one you can try on the spot on a scene stage.",
+ "168 prompts · 25 scenes · 网页 / App 双分类": "168 prompts · 25 scenes · Web / App categories"
 }

@@ -83,3 +83,17 @@ Edge / Playwright，1440 × 1000、390 × 844，减少动态效果模式。三�
 证据：[lab-desktop.png](docs/screenshots/lab-desktop.png)、[lab-scene-app.png](docs/screenshots/lab-scene-app.png)、[lab-scene-web.png](docs/screenshots/lab-scene-web.png)、[lab-composer.png](docs/screenshots/lab-composer.png)、[lab-mobile.png](docs/screenshots/lab-mobile.png)、[lab-mobile-app.png](docs/screenshots/lab-mobile-app.png)、[lab-contrast-results.json](docs/screenshots/lab-contrast-results.json)。
 
 边界：逐条自动检查证明场景可挂载、详情契约完整，不等于每个手势、动画时序和错误状态都已人工操作；对比度只抽检明确纯色背景；没有真机、读屏或性能 trace。生成器依赖有限中文同义词与概念组，遇到新业务词可能匹配失败并返回澄清清单。
+
+## 三个新家族：状态与回应 / 新拟态组件 / 看板菜单（2026-11-04）
+
+新增 20 条提示词（App 8 条、网页 12 条），提示词总数 168 条（网页 70 / App 98），场景 25 个。三组新场景分别在 `docs/playground/states.js`、`neu.js`、`menu.js`，每组的通用收尾句已并入对应提示词。
+
+验证（Windows / Edge / Playwright，本地 `http.server`）：
+
+- `scripts/verify-lab.cjs`：168 条逐条挂载、分类计数 70 / 98、搜索、筛选、深链、复制、生成器、主题与 390px，无页面错误。
+- `scripts/verify.cjs`：展台、技能地图与对比度回归通过。
+- `scripts/verify-interactions.cjs`（新增）：20 条提示词各做一次真实操作并断言结果，分「减少动态效果」和「正常动效」两遍，共 40 项，另有 9 个场景在 390px 下检查页面和舞台都没有横向溢出。覆盖重复点击不重复发送、失败与重试、长按与键盘菜单、手风琴单开与 inert、多选计数与操作栏收回、步进器下限、翻面 aria 与背面隐藏、筛选快速连点、步骤处理中锁定、温控边界与底部死区、播放进度、上传复位、已满时段禁用、数量边界，以及六种菜单的唯一 `aria-current`、返回总览恢复高亮和品牌色。
+
+截图人工查看后修正的问题：`lab.css` 的 `.scene button{color:inherit}` 覆盖了单类名按钮的文字色（步骤条主按钮文字不可见、失败按钮文字发黑），改为带场景前缀；预约时段的新拟态阴影被展开容器裁切，加了留白。减少动态效果时原先把状态停留时间也缩成 0，成功态一闪而过，现在只去掉位移，保留「发送中 / 处理中 / 上传完成」的停留时长。
+
+边界：新拟态以同色阴影表达层次，对比度天然偏低，因此状态同时用文字或图标表达；本次没有做真机触摸、读屏软件实测或性能剖析；英文翻译为批量生成后抽查。

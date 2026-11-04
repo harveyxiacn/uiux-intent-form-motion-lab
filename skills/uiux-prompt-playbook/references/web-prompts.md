@@ -1,6 +1,6 @@
 # Web prompts
 
-Generated from `assets/prompts.json`. 58 prompts in 9 families. Each prompt names its live scene, related skills and acceptance checks.
+Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt names its live scene, related skills and acceptance checks.
 
 | Family | Prompts |
 | --- | --- |
@@ -13,6 +13,8 @@ Generated from `assets/prompts.json`. 58 prompts in 9 families. Each prompt name
 | 面板与弹层 | 3 |
 | 数据可视化 | 7 |
 | 网站与组件 | 4 |
+| 新拟态组件 | 6 |
+| 看板菜单 | 6 |
 
 ## 按钮
 
@@ -1191,3 +1193,259 @@ Generated from `assets/prompts.json`. 58 prompts in 9 families. Each prompt name
 - 模式与滑块联动
 - 重置可逆
 - 数值实时
+
+## 新拟态组件
+
+### 059 · 新拟态灯光开关
+
+`web-neu-light` · scene `neuLab` / `light`
+
+按下时按钮下沉、滑块平移，松开回弹并切换灯光，显示 On / Off。
+
+**Prompt**
+
+> 设计浅色新拟态灯光开关，用柔和高光和阴影塑造质感。按下时按钮下沉、滑块平移，松开后回弹并切换灯光状态，显示「On / Off」。开关使用 role=switch 与 aria-checked。整体为浅色新拟态：浅灰白背景、同色系亮部与暗部柔和阴影、圆角卡片、无强边框；用凸起、凹陷、按压回弹、平滑位移和状态动画即时反馈，600ms 缓动，含 hover / focus / active 状态，响应式并适配移动端，不硬编码图片；状态同时用文字或图标表达，不只靠阴影深浅。
+
+**Skills** `uiux-style-direction` · `uiux-motion-engineering` · `uiux-component-engineering`
+
+**Tags** 新拟态 · 开关 · 下沉 · 回弹
+
+**Acceptance**
+
+- 按下时滑块下沉
+- 松开后切换并显示 On / Off
+- aria-checked 同步
+- 键盘空格可切换
+
+### 060 · 新拟态温控旋钮
+
+`web-neu-thermo` · scene `neuLab` / `thermo`
+
+拖动时指示点、进度圆弧和温度数字同步变化，范围 16–30℃。
+
+**Prompt**
+
+> 设计新拟态温控旋钮，加入柔和阴影与细小刻度。拖动时指示点、进度圆弧和温度数字同步变化，范围 16–30℃。旋钮是 role=slider，方向键 ±1℃、Home / End 到两端，并提供加减按钮。整体为浅色新拟态：浅灰白背景、同色系亮部与暗部柔和阴影、圆角卡片、无强边框；用凸起、凹陷、按压回弹、平滑位移和状态动画即时反馈，600ms 缓动，含 hover / focus / active 状态，响应式并适配移动端，不硬编码图片；状态同时用文字或图标表达，不只靠阴影深浅。
+
+**Skills** `uiux-motion-engineering` · `uiux-component-engineering` · `uiux-accessibility-review`
+
+**Tags** 新拟态 · 旋钮 · 温度 · 圆弧 · 拖动
+
+**Acceptance**
+
+- 温度不超出 16–30℃
+- 指示点、圆弧、数字同步
+- 方向键可调节
+- 底部死区不会跳到另一端
+
+### 061 · 新拟态播放器
+
+`web-neu-player` · scene `neuLab` / `player`
+
+凸起播放键切换播放与暂停，播放时频谱和进度动起来，暂停时频谱收回。
+
+**Prompt**
+
+> 设计浅色新拟态播放器，使用凸起播放按钮。点击切换播放与暂停，播放时频谱和进度条动态变化，暂停时频谱收回。播放键的 aria-label 随状态在「播放 / 暂停」之间切换。整体为浅色新拟态：浅灰白背景、同色系亮部与暗部柔和阴影、圆角卡片、无强边框；用凸起、凹陷、按压回弹、平滑位移和状态动画即时反馈，600ms 缓动，含 hover / focus / active 状态，响应式并适配移动端，不硬编码图片；状态同时用文字或图标表达，不只靠阴影深浅。
+
+**Skills** `uiux-motion-engineering` · `uiux-component-engineering` · `uiux-style-direction`
+
+**Tags** 新拟态 · 播放器 · 频谱 · 进度条
+
+**Acceptance**
+
+- 播放时频谱与进度变化
+- 暂停时频谱收回
+- 按钮标签随状态切换
+- 播放结束自动停止
+
+### 062 · 新拟态文件上传
+
+`web-neu-upload` · scene `neuLab` / `upload`
+
+按下内凹入口，文件卡片依次收拢、进度条填充，完成后显示勾选再回弹复位。
+
+**Prompt**
+
+> 设计带内凹入口的新拟态上传组件。按下按钮后文件卡片依次收拢，进度条填充；完成后显示勾选，再回弹复位。上传中入口不可重复触发，进度条使用 role=progressbar 并更新数值。整体为浅色新拟态：浅灰白背景、同色系亮部与暗部柔和阴影、圆角卡片、无强边框；用凸起、凹陷、按压回弹、平滑位移和状态动画即时反馈，600ms 缓动，含 hover / focus / active 状态，响应式并适配移动端，不硬编码图片；状态同时用文字或图标表达，不只靠阴影深浅。
+
+**Skills** `uiux-motion-engineering` · `uiux-interaction-spec` · `uiux-component-engineering`
+
+**Tags** 新拟态 · 上传 · 进度 · 收拢 · 复位
+
+**Acceptance**
+
+- 卡片依次收拢
+- 进度从 0 填到 100%
+- 完成显示勾选后复位
+- 上传中不能重复触发
+
+### 063 · 新拟态预约组件
+
+`web-neu-booking` · scene `neuLab` / `booking`
+
+选日期后展开时段，选中时段显示预约结果，选中态用阴影区分。
+
+**Prompt**
+
+> 设计浅色新拟态预约组件，柔和阴影区分选中状态。选择日期后展开时段，选中时显示预约结果，用流畅缩放 / 收放动画。已满的时段禁用并写明「已满」；可以取消预约；选中项同时用颜色和 aria-pressed 标出。整体为浅色新拟态：浅灰白背景、同色系亮部与暗部柔和阴影、圆角卡片、无强边框；用凸起、凹陷、按压回弹、平滑位移和状态动画即时反馈，600ms 缓动，含 hover / focus / active 状态，响应式并适配移动端，不硬编码图片；状态同时用文字或图标表达，不只靠阴影深浅。
+
+**Skills** `uiux-interaction-spec` · `uiux-component-engineering` · `uiux-accessibility-review`
+
+**Tags** 新拟态 · 预约 · 日期 · 时段 · 展开
+
+**Acceptance**
+
+- 选日期后才出现时段
+- 选中时段显示结果
+- 已满时段不可选
+- 取消后结果收起
+
+### 064 · 新拟态数量调节
+
+`web-neu-quantity` · scene `neuLab` / `quantity`
+
+凸起加减按钮按下下沉回弹，数量与金额同步，到边界禁用。
+
+**Prompt**
+
+> 设计新拟态数量组件，使用凸起的加减按钮。点击时按钮下沉回弹，数量与金额同步变化，到达边界时禁用对应按钮。整体为浅色新拟态：浅灰白背景、同色系亮部与暗部柔和阴影、圆角卡片、无强边框；用凸起、凹陷、按压回弹、平滑位移和状态动画即时反馈，600ms 缓动，含 hover / focus / active 状态，响应式并适配移动端，不硬编码图片；状态同时用文字或图标表达，不只靠阴影深浅。
+
+**Skills** `uiux-component-engineering` · `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**Tags** 新拟态 · 数量 · 金额 · 边界禁用
+
+**Acceptance**
+
+- 数量与金额同步
+- 到下限 / 上限时对应按钮禁用
+- 按下有下沉回弹
+- 禁用按钮有不同外观
+
+## 看板菜单
+
+### 065 · 图文侧栏菜单
+
+`web-menu-sidebar` · scene `menuLab` / `sidebar`
+
+左侧图标加文字的侧栏，选中高亮，右侧内容同步切换，返回总览时高亮恢复。
+
+**Prompt**
+
+> 做 Dashboard 左侧图文组合侧栏菜单：图标+文字，选中高亮，点击后右侧内容同步切换，返回总览时菜单高亮恢复；现代高级 UI，浅灰 / 白色背景，柔和阴影，圆角卡片。生成可交互的 Dashboard UI 原型，含选中态、hover、点击反馈和内容联动；使用指定品牌色、统一圆角、一致间距、清晰排版，不要冗余装饰。菜单高亮与右侧内容由同一个选中状态驱动，键盘可达，当前项用 aria-current 标出。
+
+**Skills** `uiux-page-planning` · `uiux-component-engineering` · `uiux-interaction-spec`
+
+**Tags** 侧栏 · 图文菜单 · 选中高亮 · 内容联动
+
+**Acceptance**
+
+- 高亮与右侧内容一致
+- 返回总览后高亮回到总览
+- hover 有反馈
+- 窄屏时侧栏收成图标
+
+### 066 · 内容分组菜单
+
+`web-menu-groups` · scene `menuLab` / `groups`
+
+按业务模块分组的左侧菜单，选中用浅品牌底色，右侧列表同步更新。
+
+**Prompt**
+
+> 做 Dashboard 左侧内容分组菜单：按业务模块组织入口，选中用浅色 / 品牌底色，点击节目 / 发现等入口后右侧列表与菜单状态同步更新；清晰层级，hover 反馈。生成可交互的 Dashboard UI 原型，含选中态、hover、点击反馈和内容联动；使用指定品牌色、统一圆角、一致间距、清晰排版，不要冗余装饰。菜单高亮与右侧内容由同一个选中状态驱动，键盘可达，当前项用 aria-current 标出。
+
+**Skills** `uiux-page-planning` · `uiux-interaction-spec` · `uiux-design-system`
+
+**Tags** 分组菜单 · 业务模块 · 品牌底色 · 层级
+
+**Acceptance**
+
+- 分组标题与入口层级清楚
+- 点击入口后列表更新
+- 面包屑与选中项一致
+- hover 有反馈
+
+### 067 · 顶部胶囊菜单
+
+`web-menu-capsule` · scene `menuLab` / `capsule`
+
+顶部胶囊式横向菜单，深色圆角底块滑到当前项，内容区更宽。
+
+**Prompt**
+
+> 做 Dashboard 顶部胶囊式横向菜单：深色圆角容器突出当前选项，深浅对比，轻量选中反馈；无厚重侧栏，内容区更宽，简洁现代。生成可交互的 Dashboard UI 原型，含选中态、hover、点击反馈和内容联动；使用指定品牌色、统一圆角、一致间距、清晰排版，不要冗余装饰。菜单高亮与右侧内容由同一个选中状态驱动，键盘可达，当前项用 aria-current 标出。
+
+**Skills** `uiux-interaction-spec` · `uiux-motion-engineering` · `uiux-component-engineering`
+
+**Tags** 胶囊菜单 · 顶部导航 · 滑动底块 · 宽内容区
+
+**Acceptance**
+
+- 深色底块停在当前项
+- 切换时内容同步
+- 窗口变化后底块仍对齐
+- 没有侧栏占位
+
+### 068 · 极简图标侧栏
+
+`web-menu-rail` · scene `menuLab` / `rail`
+
+浅色窄图标轨，业务入口在上、通知与头像在底，当前页高对比底色。
+
+**Prompt**
+
+> 做浅色页面左侧窄图标轨：纵向排列线性图标，业务入口在上，通知 / 头像在底部，图标尺寸与间距一致，高对比底色标记当前页；极简、省空间。每个图标按钮有可读名称，悬停或聚焦时显示文字提示，上下方向键可在图标间移动。生成可交互的 Dashboard UI 原型，含选中态、hover、点击反馈和内容联动；使用指定品牌色、统一圆角、一致间距、清晰排版，不要冗余装饰。菜单高亮与右侧内容由同一个选中状态驱动，键盘可达，当前项用 aria-current 标出。
+
+**Skills** `uiux-component-engineering` · `uiux-accessibility-review` · `uiux-design-system`
+
+**Tags** 图标侧栏 · 窄导航 · 工具提示 · 极简
+
+**Acceptance**
+
+- 图标尺寸与间距一致
+- 当前页高对比标记
+- 每个图标有名称与提示
+- 底部入口固定在下方
+
+### 069 · 品牌色图标侧栏
+
+`web-menu-brand` · scene `menuLab` / `brand`
+
+深色看板左侧图标侧栏，珊瑚橙选中底色，提醒 / 设置 / 账户在底部。
+
+**Prompt**
+
+> 做深色 Dashboard 左侧极简图标侧栏：品牌色（如珊瑚橙）选中底色，统一圆角，主功能依次排列，提醒 / 设置 / 账户在底部；品牌感强，醒目不杂乱。生成可交互的 Dashboard UI 原型，含选中态、hover、点击反馈和内容联动；使用指定品牌色、统一圆角、一致间距、清晰排版，不要冗余装饰。菜单高亮与右侧内容由同一个选中状态驱动，键盘可达，当前项用 aria-current 标出。
+
+**Skills** `uiux-style-direction` · `uiux-design-system` · `uiux-component-engineering`
+
+**Tags** 品牌色 · 深色看板 · 图标侧栏 · 珊瑚橙
+
+**Acceptance**
+
+- 选中底色使用品牌色
+- 深色下文字对比足够
+- 底部三项固定
+- 内容随选中切换
+
+### 070 · 分组标签顶栏
+
+`web-menu-tabs` · scene `menuLab` / `tabs`
+
+白色顶栏中部四个分组标签，深色圆角底加小圆点标出当前项，数据同步更新。
+
+**Prompt**
+
+> 做白色顶栏：左侧品牌，中部四个分组标签，深色圆角底 + 小圆点标记当前选项；点击不同标签高亮切换，产量 / 种植阶段等数据同步更新；适合多维度数据看板。生成可交互的 Dashboard UI 原型，含选中态、hover、点击反馈和内容联动；使用指定品牌色、统一圆角、一致间距、清晰排版，不要冗余装饰。菜单高亮与右侧内容由同一个选中状态驱动，键盘可达，当前项用 aria-current 标出。
+
+**Skills** `uiux-page-planning` · `uiux-interaction-spec` · `uiux-component-engineering`
+
+**Tags** 分组标签 · 顶栏 · 多维看板 · 数据联动
+
+**Acceptance**
+
+- 小圆点只出现在当前标签
+- 产量与阶段随标签更新
+- 窄屏时标签可完整点击
+- 切换反馈轻量

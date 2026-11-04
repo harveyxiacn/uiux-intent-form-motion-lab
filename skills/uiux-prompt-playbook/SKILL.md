@@ -1,6 +1,6 @@
 ---
 name: uiux-prompt-playbook
-description: A testable library of 148 Chinese UI/UX prompts for web and App / 小程序 surfaces, each mapped to a live interaction scene and explicit acceptance checks. Use when someone wants a concrete prompt for a UI effect, asks to turn a vague description such as “高级一点 / 顺一点 / 卡片飞走” into an implementable interaction, wants to compare interaction recipes, or needs a structured scene / action / feel / boundary / acceptance spec before building.
+description: A testable library of 168 Chinese UI/UX prompts for web and App / 小程序 surfaces, each mapped to a live interaction scene and explicit acceptance checks. Use when someone wants a concrete prompt for a UI effect, asks to turn a vague description such as “高级一点 / 顺一点 / 卡片飞走” into an implementable interaction, wants to compare interaction recipes, or needs a structured scene / action / feel / boundary / acceptance spec before building.
 ---
 
 # UI/UX Prompt Playbook
@@ -25,8 +25,8 @@ Choose one primary surface before choosing effects:
 
 | Surface | Typical concerns | Catalogue |
 | --- | --- | --- |
-| Web | Pointer, hover, keyboard, dense layouts, dashboards, data, editorial pages | 58 prompts |
-| App / 小程序 | Touch, gestures, safe areas, bottom sheets, one-handed reach, platform back | 83 prompts |
+| Web | Pointer, hover, keyboard, dense layouts, dashboards, data, editorial pages | 70 prompts |
+| App / 小程序 | Touch, gestures, safe areas, bottom sheets, one-handed reach, platform back | 98 prompts |
 
 The split is about the user's task and input model, not the browser. A dashboard is web even when viewed on a phone. A mini program is app even when it runs in a webview.
 
@@ -45,8 +45,15 @@ Families are navigation aids, not folders of interchangeable tricks:
 - 网站与组件 · 按钮与确认 · 标签与选择 · 导航与悬浮
 - 滚动与动效 · 卡片 · 控件 · 排序与拖拽
 - 手势 · 输入与反馈 · 页面场景 · 移动组件 · 主题与状态
+- 照片与转场 · 状态与回应（App）· 新拟态组件 · 看板菜单（网页）
 
 Search `assets/prompts.json` by `title`, `tags`, `summary`, `scene` or `variant`. Read the full prompt, skills and acceptance rather than only the title.
+
+Three newer families end every prompt with a shared closing line, kept verbatim so a copied prompt carries its quality bar:
+
+- 状态与回应 — soft easing, 200–350ms, explicit loading / success / error states; design the states first, then connect them with motion.
+- 新拟态组件 — light neumorphism (one surface colour, paired light and dark shadows, no hard borders), 600ms easing, hover / focus / active states, responsive. State is also written as text or an icon, because soft same-colour shadows alone are too faint to carry it.
+- 看板菜单 — interactive Dashboard prototype; one selected key drives both the menu highlight and the content, marked with `aria-current`.
 
 ### 3. Copy the prompt, then adapt it
 
@@ -102,11 +109,11 @@ The prompt should preserve the user's intent while making the interaction falsif
 - Archive showcase: `docs/showcase.html` — the six full interface demos.
 - Atlas: `docs/demos/skills/` — all 15 skills.
 
-The playground renders 22 scene families with real pointer, keyboard and reduced-motion behavior. It is a prototype, not production code: no backend, accounts or persistence.
+The playground renders 25 scene families with real pointer, keyboard and reduced-motion behavior. It is a prototype, not production code: no backend, accounts or persistence.
 
 ## Files
 
-- `assets/prompts.json` — canonical catalogue (148 prompts, 22 scenes).
+- `assets/prompts.json` — canonical catalogue (168 prompts, 25 scenes).
 - `references/web-prompts.md` — generated web prompt reference.
 - `references/app-prompts.md` — generated App / 小程序 prompt reference.
 - `references/gesture-recipes.md` — gesture state machines and invariants.

@@ -24,12 +24,12 @@ const base = process.env.DEMO_BASE || 'http://localhost:4173/docs/';
   await page.waitForSelector('.prompt-row');
   await page.evaluate(() => document.fonts && document.fonts.ready);
 
-  assert.equal(await page.locator('#stat-prompts').innerText(), '148');
-  assert.equal(await page.locator('#stat-scenes').innerText(), '22');
-  assert.equal(await page.locator('#web-count').innerText(), '58');
-  assert.equal(await page.locator('#app-count').innerText(), '90');
-  assert.equal(await page.locator('#prompt-list .prompt-row').count(), 58);
-  assert.equal(await page.locator('#prompt-count').innerText(), '58 条');
+  assert.equal(await page.locator('#stat-prompts').innerText(), '168');
+  assert.equal(await page.locator('#stat-scenes').innerText(), '25');
+  assert.equal(await page.locator('#web-count').innerText(), '70');
+  assert.equal(await page.locator('#app-count').innerText(), '98');
+  assert.equal(await page.locator('#prompt-list .prompt-row').count(), 70);
+  assert.equal(await page.locator('#prompt-count').innerText(), '70 条');
 
   const families = await page.locator('#family-list .family-chip').evaluateAll((nodes) => nodes.map((node) => node.textContent));
   assert.ok(families.length >= 8, 'family filters should be populated');
@@ -41,7 +41,7 @@ const base = process.env.DEMO_BASE || 'http://localhost:4173/docs/';
     await page.locator(`.category-button[data-category="${category}"]`).click();
     const rows = page.locator('#prompt-list .prompt-row');
     const total = await rows.count();
-    assert.equal(total, category === 'web' ? 58 : 90, category + ' prompt count');
+    assert.equal(total, category === 'web' ? 70 : 98, category + ' prompt count');
     for (let index = 0; index < total; index += 1) {
       const row = rows.nth(index);
       const id = await row.getAttribute('data-id');
@@ -66,13 +66,13 @@ const base = process.env.DEMO_BASE || 'http://localhost:4173/docs/';
       coverage.push(id);
     }
   }
-  assert.equal(new Set(coverage).size, 148, 'all prompt ids covered exactly once');
+  assert.equal(new Set(coverage).size, 168, 'all prompt ids covered exactly once');
 
   // Search, family filtering and empty state.
   await page.locator('.category-button[data-category="web"]').click();
   await page.locator('#lab-search').fill('拖拽');
   const dragged = await page.locator('#prompt-list .prompt-row').count();
-  assert.ok(dragged >= 1 && dragged < 58, 'search narrows results');
+  assert.ok(dragged >= 1 && dragged < 70, 'search narrows results');
   await page.locator('#lab-search').fill('完全不存在的一个效果');
   assert.equal(await page.locator('#prompt-list .prompt-row').count(), 0);
   assert.equal(await page.locator('#library-empty').isVisible(), true);
@@ -189,7 +189,7 @@ const base = process.env.DEMO_BASE || 'http://localhost:4173/docs/';
   await page.screenshot({ path: 'docs/screenshots/lab-mobile.png', fullPage: false });
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, 'lab mobile overflow');
   await page.locator('.category-button[data-category="app"]').click();
-  assert.equal(await page.locator('#prompt-list .prompt-row').count(), 90);
+  assert.equal(await page.locator('#prompt-list .prompt-row').count(), 98);
   await page.goto(base + '#p/app-nav-capsule');
   await page.waitForSelector('.prompt-row[data-id="app-nav-capsule"][aria-current="true"]');
   await page.waitForTimeout(400);
@@ -200,7 +200,7 @@ const base = process.env.DEMO_BASE || 'http://localhost:4173/docs/';
   await page.locator('.stage-column').screenshot({ path: 'docs/screenshots/lab-mobile-app.png' });
 
   assert.deepEqual(errors, []);
-  console.log('PASS: 148 prompts mount 22 real scenes (58 web / 90 app); search/family/empty states; deep links; reset; keyboard shortcut; copy; composer generate/copy/preview; theme persistence; contrast; desktop and 390px screenshots; no page errors');
+  console.log('PASS: 168 prompts mount 25 real scenes (70 web / 98 app); search/family/empty states; deep links; reset; keyboard shortcut; copy; composer generate/copy/preview; theme persistence; contrast; desktop and 390px screenshots; no page errors');
   await browser.close();
 })().catch((error) => {
   console.error(error);

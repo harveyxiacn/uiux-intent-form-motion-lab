@@ -1,6 +1,6 @@
 # App / 小程序 prompts
 
-Generated from `assets/prompts.json`. 90 prompts in 14 families. Each prompt names its live scene, related skills and acceptance checks.
+Generated from `assets/prompts.json`. 98 prompts in 15 families. Each prompt names its live scene, related skills and acceptance checks.
 
 | Family | Prompts |
 | --- | --- |
@@ -18,6 +18,7 @@ Generated from `assets/prompts.json`. 90 prompts in 14 families. Each prompt nam
 | 移动组件 | 6 |
 | 主题与状态 | 7 |
 | 照片与转场 | 7 |
+| 状态与回应 | 8 |
 
 ## 按钮与确认
 
@@ -1853,3 +1854,173 @@ Generated from `assets/prompts.json`. 90 prompts in 14 families. Each prompt nam
 - 返回落回原位置
 - 模糊撤销干净
 - 焦点进出正确
+
+## 状态与回应
+
+### 091 · 纸飞机发送按钮
+
+`app-state-plane` · scene `stateLab` / `plane`
+
+点击分享，按钮轻压，纸飞机从按钮里飞出，显示发送中后切换为已分享；失败时可重试。
+
+**Prompt**
+
+> 做一个分享行程按钮：点击时按钮轻微按压，纸飞机从按钮内飞出并显示「发送中」，随后切换为「已分享」状态；网络失败时显示「发送失败，点此重试」。发送中和已分享时重复点击不会重复发送。整体使用柔和缓动、200–350ms 动画，并设计清晰的加载 / 成功 / 错误状态：先设计状态，再用动画连接，保持「点了有回应、完成有结果」。
+
+**Skills** `uiux-interaction-spec` · `uiux-motion-engineering` · `uiux-component-engineering`
+
+**Tags** 纸飞机 · 发送 · 按钮状态 · 加载 · 失败重试
+
+**Acceptance**
+
+- 发送中不能重复触发
+- 成功与失败都有明确文字
+- 飞机只是装饰，状态以按钮为准
+- 减少动态效果时没有飞行
+
+### 092 · 长按浮起快捷菜单
+
+`app-state-press` · scene `stateLab` / `press`
+
+按住卡片轻微浮起，旁边展开操作菜单；选中后菜单收起、卡片回位。
+
+**Prompt**
+
+> 做一个可长按的卡片：按住时卡片轻微浮起，旁边展开一组操作菜单；选中操作后菜单收起，卡片回到原位。按住约 0.45 秒触发，手指移动超过 10px 取消；键盘用 Enter 或菜单键打开、方向键选择、Esc 关闭并把焦点还给卡片；点菜单外收起。整体使用柔和缓动、200–350ms 动画，并设计清晰的加载 / 成功 / 错误状态：先设计状态，再用动画连接，保持「点了有回应、完成有结果」。
+
+**Skills** `uiux-interaction-spec` · `uiux-mobile-patterns` · `uiux-accessibility-review`
+
+**Tags** 长按 · 快捷菜单 · 浮起 · 上下文菜单
+
+**Acceptance**
+
+- 短按不会打开菜单
+- 移动手指取消长按
+- 选择后菜单收起、卡片回位
+- 键盘可打开并操作菜单
+
+### 093 · 手风琴问答列表
+
+`app-state-accordion` · scene `stateLab` / `accordion`
+
+点击问题平滑展开答案，下方内容让位；点另一个时旧答案收起。
+
+**Prompt**
+
+> 做手风琴式问答列表：点击问题时答案平滑展开，下方内容自动让位；点击另一个问题时收起旧答案、展开新答案。问题是带 aria-expanded 的按钮，收起的答案不可被 Tab 聚焦，箭头随展开翻转。整体使用柔和缓动、200–350ms 动画，并设计清晰的加载 / 成功 / 错误状态：先设计状态，再用动画连接，保持「点了有回应、完成有结果」。
+
+**Skills** `uiux-interaction-spec` · `uiux-component-engineering` · `uiux-accessibility-review`
+
+**Tags** 手风琴 · FAQ · 展开收起 · 让位
+
+**Acceptance**
+
+- 同一时间只展开一个
+- 下方内容跟着平滑移动
+- aria-expanded 与视觉一致
+- 收起的答案不可聚焦
+
+### 094 · 多选与底部操作栏
+
+`app-state-multi` · scene `stateLab` / `multi`
+
+勾选时选择框依次亮起，底部操作栏升起并显示数量；全部取消后收回。
+
+**Prompt**
+
+> 做列表多选组件：勾选时选择框依次亮起，底部操作栏从下方升起并显示选中数量；取消全部选择后操作栏收回。提供全选 / 全不选；删除后列表与数量同步，删空时显示空状态；操作栏收起时其中按钮不可聚焦。整体使用柔和缓动、200–350ms 动画，并设计清晰的加载 / 成功 / 错误状态：先设计状态，再用动画连接，保持「点了有回应、完成有结果」。
+
+**Skills** `uiux-interaction-spec` · `uiux-component-engineering` · `uiux-mobile-patterns`
+
+**Tags** 多选 · 批量操作 · 底部操作栏 · 全选
+
+**Acceptance**
+
+- 数量与勾选一致
+- 全选时选择框依次亮起
+- 全部取消后操作栏收回
+- 删除后计数正确并有空状态
+
+### 095 · 数量步进器数字滚动
+
+`app-state-stepper` · scene `stateLab` / `stepper`
+
+点加减时数字纵向滚动切换，按钮轻微回弹，数量不小于 0。
+
+**Prompt**
+
+> 做数量步进器：点击加减时数字纵向滚动切换（加时向上、减时向下），按钮轻微回弹，数量不能小于 0；到达上下限时禁用对应按钮并把焦点留在可用按钮上，合计金额同步更新并播报。整体使用柔和缓动、200–350ms 动画，并设计清晰的加载 / 成功 / 错误状态：先设计状态，再用动画连接，保持「点了有回应、完成有结果」。
+
+**Skills** `uiux-motion-engineering` · `uiux-component-engineering` · `uiux-accessibility-review`
+
+**Tags** 步进器 · 数量 · 数字滚动 · 回弹
+
+**Acceptance**
+
+- 数量不会小于 0
+- 到边界时对应按钮禁用
+- 快速连点数字不重叠
+- 合计与数量一致
+
+### 096 · 点击翻面卡片
+
+`app-state-flip` · scene `stateLab` / `flip`
+
+沿竖轴旋转切换正反两面，旋转中隐藏背面镜像，再点翻回。
+
+**Prompt**
+
+> 做可点击翻面卡片：沿竖轴旋转切换正反两面，旋转中隐藏背面镜像（backface-visibility），再次点击翻回。卡片是一个按钮，Enter / 空格同样可翻，读屏只读当前朝上的一面；减少动态效果时改为淡入淡出。整体使用柔和缓动、200–350ms 动画，并设计清晰的加载 / 成功 / 错误状态：先设计状态，再用动画连接，保持「点了有回应、完成有结果」。
+
+**Skills** `uiux-motion-engineering` · `uiux-interaction-spec` · `uiux-accessibility-review`
+
+**Tags** 翻面 · 3D · 卡片 · backface
+
+**Acceptance**
+
+- 旋转中看不到镜像文字
+- 再次点击翻回
+- 键盘可翻面
+- 读屏只读当前面
+
+### 097 · 搜索筛选标签栏
+
+`app-state-chips` · scene `stateLab` / `chips`
+
+点击标签时选中底色平滑移动，结果卡片淡出后依次出现。
+
+**Prompt**
+
+> 做搜索筛选标签栏：点击标签时选中底色平滑移动到新标签，结果卡片淡出并依次显示对应内容；搜索框输入时同样过滤。快速连点时取消上一轮动画，只显示最后一次的结果；无结果时显示空状态。整体使用柔和缓动、200–350ms 动画，并设计清晰的加载 / 成功 / 错误状态：先设计状态，再用动画连接，保持「点了有回应、完成有结果」。
+
+**Skills** `uiux-interaction-spec` · `uiux-motion-engineering` · `uiux-component-engineering`
+
+**Tags** 筛选 · 标签 · 滑块底色 · 错峰出现 · 搜索
+
+**Acceptance**
+
+- 底色停在当前标签下
+- 快速连点不残留旧结果
+- 结果数量与筛选一致
+- 无结果有空状态
+
+### 098 · 步骤进度条对勾与连线
+
+`app-state-steps` · scene `stateLab` / `steps`
+
+完成一步后圆点变对勾、连接线填满、下一步亮起，说明同步切换。
+
+**Prompt**
+
+> 做步骤进度条：完成一步后当前圆点变对勾、连接线填满、下一步圆点亮起，下方说明同步切换。点击完成时先显示短暂的「处理中」，再进入下一步；可返回上一步；全部完成后显示成功并可重新开始；当前步骤用 aria-current=step 标出。整体使用柔和缓动、200–350ms 动画，并设计清晰的加载 / 成功 / 错误状态：先设计状态，再用动画连接，保持「点了有回应、完成有结果」。
+
+**Skills** `uiux-interaction-spec` · `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**Tags** 步骤条 · 进度 · 对勾 · 连接线
+
+**Acceptance**
+
+- 对勾、连线、下一步同时更新
+- 说明与当前步骤一致
+- 处理中时按钮不可重复点击
+- 可返回上一步

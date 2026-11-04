@@ -1,6 +1,6 @@
 {
-  "version": "1.1.0",
-  "updated": "2026-10-29",
+  "version": "1.2.0",
+  "updated": "2026-11-04",
   "categories": [
     {
       "id": "web",
@@ -1465,6 +1465,333 @@
         "模式与滑块联动",
         "重置可逆",
         "数值实时"
+      ]
+    },
+    {
+      "id": "web-neu-light",
+      "category": "web",
+      "family": "新拟态组件",
+      "title": "新拟态灯光开关",
+      "summary": "按下时按钮下沉、滑块平移，松开回弹并切换灯光，显示 On / Off。",
+      "prompt": "设计浅色新拟态灯光开关，用柔和高光和阴影塑造质感。按下时按钮下沉、滑块平移，松开后回弹并切换灯光状态，显示「On / Off」。开关使用 role=switch 与 aria-checked。整体为浅色新拟态：浅灰白背景、同色系亮部与暗部柔和阴影、圆角卡片、无强边框；用凸起、凹陷、按压回弹、平滑位移和状态动画即时反馈，600ms 缓动，含 hover / focus / active 状态，响应式并适配移动端，不硬编码图片；状态同时用文字或图标表达，不只靠阴影深浅。",
+      "scene": "neuLab",
+      "variant": "light",
+      "skills": [
+        "uiux-style-direction",
+        "uiux-motion-engineering",
+        "uiux-component-engineering"
+      ],
+      "tags": [
+        "新拟态",
+        "开关",
+        "下沉",
+        "回弹"
+      ],
+      "acceptance": [
+        "按下时滑块下沉",
+        "松开后切换并显示 On / Off",
+        "aria-checked 同步",
+        "键盘空格可切换"
+      ]
+    },
+    {
+      "id": "web-neu-thermo",
+      "category": "web",
+      "family": "新拟态组件",
+      "title": "新拟态温控旋钮",
+      "summary": "拖动时指示点、进度圆弧和温度数字同步变化，范围 16–30℃。",
+      "prompt": "设计新拟态温控旋钮，加入柔和阴影与细小刻度。拖动时指示点、进度圆弧和温度数字同步变化，范围 16–30℃。旋钮是 role=slider，方向键 ±1℃、Home / End 到两端，并提供加减按钮。整体为浅色新拟态：浅灰白背景、同色系亮部与暗部柔和阴影、圆角卡片、无强边框；用凸起、凹陷、按压回弹、平滑位移和状态动画即时反馈，600ms 缓动，含 hover / focus / active 状态，响应式并适配移动端，不硬编码图片；状态同时用文字或图标表达，不只靠阴影深浅。",
+      "scene": "neuLab",
+      "variant": "thermo",
+      "skills": [
+        "uiux-motion-engineering",
+        "uiux-component-engineering",
+        "uiux-accessibility-review"
+      ],
+      "tags": [
+        "新拟态",
+        "旋钮",
+        "温度",
+        "圆弧",
+        "拖动"
+      ],
+      "acceptance": [
+        "温度不超出 16–30℃",
+        "指示点、圆弧、数字同步",
+        "方向键可调节",
+        "底部死区不会跳到另一端"
+      ]
+    },
+    {
+      "id": "web-neu-player",
+      "category": "web",
+      "family": "新拟态组件",
+      "title": "新拟态播放器",
+      "summary": "凸起播放键切换播放与暂停，播放时频谱和进度动起来，暂停时频谱收回。",
+      "prompt": "设计浅色新拟态播放器，使用凸起播放按钮。点击切换播放与暂停，播放时频谱和进度条动态变化，暂停时频谱收回。播放键的 aria-label 随状态在「播放 / 暂停」之间切换。整体为浅色新拟态：浅灰白背景、同色系亮部与暗部柔和阴影、圆角卡片、无强边框；用凸起、凹陷、按压回弹、平滑位移和状态动画即时反馈，600ms 缓动，含 hover / focus / active 状态，响应式并适配移动端，不硬编码图片；状态同时用文字或图标表达，不只靠阴影深浅。",
+      "scene": "neuLab",
+      "variant": "player",
+      "skills": [
+        "uiux-motion-engineering",
+        "uiux-component-engineering",
+        "uiux-style-direction"
+      ],
+      "tags": [
+        "新拟态",
+        "播放器",
+        "频谱",
+        "进度条"
+      ],
+      "acceptance": [
+        "播放时频谱与进度变化",
+        "暂停时频谱收回",
+        "按钮标签随状态切换",
+        "播放结束自动停止"
+      ]
+    },
+    {
+      "id": "web-neu-upload",
+      "category": "web",
+      "family": "新拟态组件",
+      "title": "新拟态文件上传",
+      "summary": "按下内凹入口，文件卡片依次收拢、进度条填充，完成后显示勾选再回弹复位。",
+      "prompt": "设计带内凹入口的新拟态上传组件。按下按钮后文件卡片依次收拢，进度条填充；完成后显示勾选，再回弹复位。上传中入口不可重复触发，进度条使用 role=progressbar 并更新数值。整体为浅色新拟态：浅灰白背景、同色系亮部与暗部柔和阴影、圆角卡片、无强边框；用凸起、凹陷、按压回弹、平滑位移和状态动画即时反馈，600ms 缓动，含 hover / focus / active 状态，响应式并适配移动端，不硬编码图片；状态同时用文字或图标表达，不只靠阴影深浅。",
+      "scene": "neuLab",
+      "variant": "upload",
+      "skills": [
+        "uiux-motion-engineering",
+        "uiux-interaction-spec",
+        "uiux-component-engineering"
+      ],
+      "tags": [
+        "新拟态",
+        "上传",
+        "进度",
+        "收拢",
+        "复位"
+      ],
+      "acceptance": [
+        "卡片依次收拢",
+        "进度从 0 填到 100%",
+        "完成显示勾选后复位",
+        "上传中不能重复触发"
+      ]
+    },
+    {
+      "id": "web-neu-booking",
+      "category": "web",
+      "family": "新拟态组件",
+      "title": "新拟态预约组件",
+      "summary": "选日期后展开时段，选中时段显示预约结果，选中态用阴影区分。",
+      "prompt": "设计浅色新拟态预约组件，柔和阴影区分选中状态。选择日期后展开时段，选中时显示预约结果，用流畅缩放 / 收放动画。已满的时段禁用并写明「已满」；可以取消预约；选中项同时用颜色和 aria-pressed 标出。整体为浅色新拟态：浅灰白背景、同色系亮部与暗部柔和阴影、圆角卡片、无强边框；用凸起、凹陷、按压回弹、平滑位移和状态动画即时反馈，600ms 缓动，含 hover / focus / active 状态，响应式并适配移动端，不硬编码图片；状态同时用文字或图标表达，不只靠阴影深浅。",
+      "scene": "neuLab",
+      "variant": "booking",
+      "skills": [
+        "uiux-interaction-spec",
+        "uiux-component-engineering",
+        "uiux-accessibility-review"
+      ],
+      "tags": [
+        "新拟态",
+        "预约",
+        "日期",
+        "时段",
+        "展开"
+      ],
+      "acceptance": [
+        "选日期后才出现时段",
+        "选中时段显示结果",
+        "已满时段不可选",
+        "取消后结果收起"
+      ]
+    },
+    {
+      "id": "web-neu-quantity",
+      "category": "web",
+      "family": "新拟态组件",
+      "title": "新拟态数量调节",
+      "summary": "凸起加减按钮按下下沉回弹，数量与金额同步，到边界禁用。",
+      "prompt": "设计新拟态数量组件，使用凸起的加减按钮。点击时按钮下沉回弹，数量与金额同步变化，到达边界时禁用对应按钮。整体为浅色新拟态：浅灰白背景、同色系亮部与暗部柔和阴影、圆角卡片、无强边框；用凸起、凹陷、按压回弹、平滑位移和状态动画即时反馈，600ms 缓动，含 hover / focus / active 状态，响应式并适配移动端，不硬编码图片；状态同时用文字或图标表达，不只靠阴影深浅。",
+      "scene": "neuLab",
+      "variant": "quantity",
+      "skills": [
+        "uiux-component-engineering",
+        "uiux-motion-engineering",
+        "uiux-accessibility-review"
+      ],
+      "tags": [
+        "新拟态",
+        "数量",
+        "金额",
+        "边界禁用"
+      ],
+      "acceptance": [
+        "数量与金额同步",
+        "到下限 / 上限时对应按钮禁用",
+        "按下有下沉回弹",
+        "禁用按钮有不同外观"
+      ]
+    },
+    {
+      "id": "web-menu-sidebar",
+      "category": "web",
+      "family": "看板菜单",
+      "title": "图文侧栏菜单",
+      "summary": "左侧图标加文字的侧栏，选中高亮，右侧内容同步切换，返回总览时高亮恢复。",
+      "prompt": "做 Dashboard 左侧图文组合侧栏菜单：图标+文字，选中高亮，点击后右侧内容同步切换，返回总览时菜单高亮恢复；现代高级 UI，浅灰 / 白色背景，柔和阴影，圆角卡片。生成可交互的 Dashboard UI 原型，含选中态、hover、点击反馈和内容联动；使用指定品牌色、统一圆角、一致间距、清晰排版，不要冗余装饰。菜单高亮与右侧内容由同一个选中状态驱动，键盘可达，当前项用 aria-current 标出。",
+      "scene": "menuLab",
+      "variant": "sidebar",
+      "skills": [
+        "uiux-page-planning",
+        "uiux-component-engineering",
+        "uiux-interaction-spec"
+      ],
+      "tags": [
+        "侧栏",
+        "图文菜单",
+        "选中高亮",
+        "内容联动"
+      ],
+      "acceptance": [
+        "高亮与右侧内容一致",
+        "返回总览后高亮回到总览",
+        "hover 有反馈",
+        "窄屏时侧栏收成图标"
+      ]
+    },
+    {
+      "id": "web-menu-groups",
+      "category": "web",
+      "family": "看板菜单",
+      "title": "内容分组菜单",
+      "summary": "按业务模块分组的左侧菜单，选中用浅品牌底色，右侧列表同步更新。",
+      "prompt": "做 Dashboard 左侧内容分组菜单：按业务模块组织入口，选中用浅色 / 品牌底色，点击节目 / 发现等入口后右侧列表与菜单状态同步更新；清晰层级，hover 反馈。生成可交互的 Dashboard UI 原型，含选中态、hover、点击反馈和内容联动；使用指定品牌色、统一圆角、一致间距、清晰排版，不要冗余装饰。菜单高亮与右侧内容由同一个选中状态驱动，键盘可达，当前项用 aria-current 标出。",
+      "scene": "menuLab",
+      "variant": "groups",
+      "skills": [
+        "uiux-page-planning",
+        "uiux-interaction-spec",
+        "uiux-design-system"
+      ],
+      "tags": [
+        "分组菜单",
+        "业务模块",
+        "品牌底色",
+        "层级"
+      ],
+      "acceptance": [
+        "分组标题与入口层级清楚",
+        "点击入口后列表更新",
+        "面包屑与选中项一致",
+        "hover 有反馈"
+      ]
+    },
+    {
+      "id": "web-menu-capsule",
+      "category": "web",
+      "family": "看板菜单",
+      "title": "顶部胶囊菜单",
+      "summary": "顶部胶囊式横向菜单，深色圆角底块滑到当前项，内容区更宽。",
+      "prompt": "做 Dashboard 顶部胶囊式横向菜单：深色圆角容器突出当前选项，深浅对比，轻量选中反馈；无厚重侧栏，内容区更宽，简洁现代。生成可交互的 Dashboard UI 原型，含选中态、hover、点击反馈和内容联动；使用指定品牌色、统一圆角、一致间距、清晰排版，不要冗余装饰。菜单高亮与右侧内容由同一个选中状态驱动，键盘可达，当前项用 aria-current 标出。",
+      "scene": "menuLab",
+      "variant": "capsule",
+      "skills": [
+        "uiux-interaction-spec",
+        "uiux-motion-engineering",
+        "uiux-component-engineering"
+      ],
+      "tags": [
+        "胶囊菜单",
+        "顶部导航",
+        "滑动底块",
+        "宽内容区"
+      ],
+      "acceptance": [
+        "深色底块停在当前项",
+        "切换时内容同步",
+        "窗口变化后底块仍对齐",
+        "没有侧栏占位"
+      ]
+    },
+    {
+      "id": "web-menu-rail",
+      "category": "web",
+      "family": "看板菜单",
+      "title": "极简图标侧栏",
+      "summary": "浅色窄图标轨，业务入口在上、通知与头像在底，当前页高对比底色。",
+      "prompt": "做浅色页面左侧窄图标轨：纵向排列线性图标，业务入口在上，通知 / 头像在底部，图标尺寸与间距一致，高对比底色标记当前页；极简、省空间。每个图标按钮有可读名称，悬停或聚焦时显示文字提示，上下方向键可在图标间移动。生成可交互的 Dashboard UI 原型，含选中态、hover、点击反馈和内容联动；使用指定品牌色、统一圆角、一致间距、清晰排版，不要冗余装饰。菜单高亮与右侧内容由同一个选中状态驱动，键盘可达，当前项用 aria-current 标出。",
+      "scene": "menuLab",
+      "variant": "rail",
+      "skills": [
+        "uiux-component-engineering",
+        "uiux-accessibility-review",
+        "uiux-design-system"
+      ],
+      "tags": [
+        "图标侧栏",
+        "窄导航",
+        "工具提示",
+        "极简"
+      ],
+      "acceptance": [
+        "图标尺寸与间距一致",
+        "当前页高对比标记",
+        "每个图标有名称与提示",
+        "底部入口固定在下方"
+      ]
+    },
+    {
+      "id": "web-menu-brand",
+      "category": "web",
+      "family": "看板菜单",
+      "title": "品牌色图标侧栏",
+      "summary": "深色看板左侧图标侧栏，珊瑚橙选中底色，提醒 / 设置 / 账户在底部。",
+      "prompt": "做深色 Dashboard 左侧极简图标侧栏：品牌色（如珊瑚橙）选中底色，统一圆角，主功能依次排列，提醒 / 设置 / 账户在底部；品牌感强，醒目不杂乱。生成可交互的 Dashboard UI 原型，含选中态、hover、点击反馈和内容联动；使用指定品牌色、统一圆角、一致间距、清晰排版，不要冗余装饰。菜单高亮与右侧内容由同一个选中状态驱动，键盘可达，当前项用 aria-current 标出。",
+      "scene": "menuLab",
+      "variant": "brand",
+      "skills": [
+        "uiux-style-direction",
+        "uiux-design-system",
+        "uiux-component-engineering"
+      ],
+      "tags": [
+        "品牌色",
+        "深色看板",
+        "图标侧栏",
+        "珊瑚橙"
+      ],
+      "acceptance": [
+        "选中底色使用品牌色",
+        "深色下文字对比足够",
+        "底部三项固定",
+        "内容随选中切换"
+      ]
+    },
+    {
+      "id": "web-menu-tabs",
+      "category": "web",
+      "family": "看板菜单",
+      "title": "分组标签顶栏",
+      "summary": "白色顶栏中部四个分组标签，深色圆角底加小圆点标出当前项，数据同步更新。",
+      "prompt": "做白色顶栏：左侧品牌，中部四个分组标签，深色圆角底 + 小圆点标记当前选项；点击不同标签高亮切换，产量 / 种植阶段等数据同步更新；适合多维度数据看板。生成可交互的 Dashboard UI 原型，含选中态、hover、点击反馈和内容联动；使用指定品牌色、统一圆角、一致间距、清晰排版，不要冗余装饰。菜单高亮与右侧内容由同一个选中状态驱动，键盘可达，当前项用 aria-current 标出。",
+      "scene": "menuLab",
+      "variant": "tabs",
+      "skills": [
+        "uiux-page-planning",
+        "uiux-interaction-spec",
+        "uiux-component-engineering"
+      ],
+      "tags": [
+        "分组标签",
+        "顶栏",
+        "多维看板",
+        "数据联动"
+      ],
+      "acceptance": [
+        "小圆点只出现在当前标签",
+        "产量与阶段随标签更新",
+        "窄屏时标签可完整点击",
+        "切换反馈轻量"
       ]
     },
     {
@@ -3741,6 +4068,224 @@
         "返回落回原位置",
         "模糊撤销干净",
         "焦点进出正确"
+      ]
+    },
+    {
+      "id": "app-state-plane",
+      "category": "app",
+      "family": "状态与回应",
+      "title": "纸飞机发送按钮",
+      "summary": "点击分享，按钮轻压，纸飞机从按钮里飞出，显示发送中后切换为已分享；失败时可重试。",
+      "prompt": "做一个分享行程按钮：点击时按钮轻微按压，纸飞机从按钮内飞出并显示「发送中」，随后切换为「已分享」状态；网络失败时显示「发送失败，点此重试」。发送中和已分享时重复点击不会重复发送。整体使用柔和缓动、200–350ms 动画，并设计清晰的加载 / 成功 / 错误状态：先设计状态，再用动画连接，保持「点了有回应、完成有结果」。",
+      "scene": "stateLab",
+      "variant": "plane",
+      "skills": [
+        "uiux-interaction-spec",
+        "uiux-motion-engineering",
+        "uiux-component-engineering"
+      ],
+      "tags": [
+        "纸飞机",
+        "发送",
+        "按钮状态",
+        "加载",
+        "失败重试"
+      ],
+      "acceptance": [
+        "发送中不能重复触发",
+        "成功与失败都有明确文字",
+        "飞机只是装饰，状态以按钮为准",
+        "减少动态效果时没有飞行"
+      ]
+    },
+    {
+      "id": "app-state-press",
+      "category": "app",
+      "family": "状态与回应",
+      "title": "长按浮起快捷菜单",
+      "summary": "按住卡片轻微浮起，旁边展开操作菜单；选中后菜单收起、卡片回位。",
+      "prompt": "做一个可长按的卡片：按住时卡片轻微浮起，旁边展开一组操作菜单；选中操作后菜单收起，卡片回到原位。按住约 0.45 秒触发，手指移动超过 10px 取消；键盘用 Enter 或菜单键打开、方向键选择、Esc 关闭并把焦点还给卡片；点菜单外收起。整体使用柔和缓动、200–350ms 动画，并设计清晰的加载 / 成功 / 错误状态：先设计状态，再用动画连接，保持「点了有回应、完成有结果」。",
+      "scene": "stateLab",
+      "variant": "press",
+      "skills": [
+        "uiux-interaction-spec",
+        "uiux-mobile-patterns",
+        "uiux-accessibility-review"
+      ],
+      "tags": [
+        "长按",
+        "快捷菜单",
+        "浮起",
+        "上下文菜单"
+      ],
+      "acceptance": [
+        "短按不会打开菜单",
+        "移动手指取消长按",
+        "选择后菜单收起、卡片回位",
+        "键盘可打开并操作菜单"
+      ]
+    },
+    {
+      "id": "app-state-accordion",
+      "category": "app",
+      "family": "状态与回应",
+      "title": "手风琴问答列表",
+      "summary": "点击问题平滑展开答案，下方内容让位；点另一个时旧答案收起。",
+      "prompt": "做手风琴式问答列表：点击问题时答案平滑展开，下方内容自动让位；点击另一个问题时收起旧答案、展开新答案。问题是带 aria-expanded 的按钮，收起的答案不可被 Tab 聚焦，箭头随展开翻转。整体使用柔和缓动、200–350ms 动画，并设计清晰的加载 / 成功 / 错误状态：先设计状态，再用动画连接，保持「点了有回应、完成有结果」。",
+      "scene": "stateLab",
+      "variant": "accordion",
+      "skills": [
+        "uiux-interaction-spec",
+        "uiux-component-engineering",
+        "uiux-accessibility-review"
+      ],
+      "tags": [
+        "手风琴",
+        "FAQ",
+        "展开收起",
+        "让位"
+      ],
+      "acceptance": [
+        "同一时间只展开一个",
+        "下方内容跟着平滑移动",
+        "aria-expanded 与视觉一致",
+        "收起的答案不可聚焦"
+      ]
+    },
+    {
+      "id": "app-state-multi",
+      "category": "app",
+      "family": "状态与回应",
+      "title": "多选与底部操作栏",
+      "summary": "勾选时选择框依次亮起，底部操作栏升起并显示数量；全部取消后收回。",
+      "prompt": "做列表多选组件：勾选时选择框依次亮起，底部操作栏从下方升起并显示选中数量；取消全部选择后操作栏收回。提供全选 / 全不选；删除后列表与数量同步，删空时显示空状态；操作栏收起时其中按钮不可聚焦。整体使用柔和缓动、200–350ms 动画，并设计清晰的加载 / 成功 / 错误状态：先设计状态，再用动画连接，保持「点了有回应、完成有结果」。",
+      "scene": "stateLab",
+      "variant": "multi",
+      "skills": [
+        "uiux-interaction-spec",
+        "uiux-component-engineering",
+        "uiux-mobile-patterns"
+      ],
+      "tags": [
+        "多选",
+        "批量操作",
+        "底部操作栏",
+        "全选"
+      ],
+      "acceptance": [
+        "数量与勾选一致",
+        "全选时选择框依次亮起",
+        "全部取消后操作栏收回",
+        "删除后计数正确并有空状态"
+      ]
+    },
+    {
+      "id": "app-state-stepper",
+      "category": "app",
+      "family": "状态与回应",
+      "title": "数量步进器数字滚动",
+      "summary": "点加减时数字纵向滚动切换，按钮轻微回弹，数量不小于 0。",
+      "prompt": "做数量步进器：点击加减时数字纵向滚动切换（加时向上、减时向下），按钮轻微回弹，数量不能小于 0；到达上下限时禁用对应按钮并把焦点留在可用按钮上，合计金额同步更新并播报。整体使用柔和缓动、200–350ms 动画，并设计清晰的加载 / 成功 / 错误状态：先设计状态，再用动画连接，保持「点了有回应、完成有结果」。",
+      "scene": "stateLab",
+      "variant": "stepper",
+      "skills": [
+        "uiux-motion-engineering",
+        "uiux-component-engineering",
+        "uiux-accessibility-review"
+      ],
+      "tags": [
+        "步进器",
+        "数量",
+        "数字滚动",
+        "回弹"
+      ],
+      "acceptance": [
+        "数量不会小于 0",
+        "到边界时对应按钮禁用",
+        "快速连点数字不重叠",
+        "合计与数量一致"
+      ]
+    },
+    {
+      "id": "app-state-flip",
+      "category": "app",
+      "family": "状态与回应",
+      "title": "点击翻面卡片",
+      "summary": "沿竖轴旋转切换正反两面，旋转中隐藏背面镜像，再点翻回。",
+      "prompt": "做可点击翻面卡片：沿竖轴旋转切换正反两面，旋转中隐藏背面镜像（backface-visibility），再次点击翻回。卡片是一个按钮，Enter / 空格同样可翻，读屏只读当前朝上的一面；减少动态效果时改为淡入淡出。整体使用柔和缓动、200–350ms 动画，并设计清晰的加载 / 成功 / 错误状态：先设计状态，再用动画连接，保持「点了有回应、完成有结果」。",
+      "scene": "stateLab",
+      "variant": "flip",
+      "skills": [
+        "uiux-motion-engineering",
+        "uiux-interaction-spec",
+        "uiux-accessibility-review"
+      ],
+      "tags": [
+        "翻面",
+        "3D",
+        "卡片",
+        "backface"
+      ],
+      "acceptance": [
+        "旋转中看不到镜像文字",
+        "再次点击翻回",
+        "键盘可翻面",
+        "读屏只读当前面"
+      ]
+    },
+    {
+      "id": "app-state-chips",
+      "category": "app",
+      "family": "状态与回应",
+      "title": "搜索筛选标签栏",
+      "summary": "点击标签时选中底色平滑移动，结果卡片淡出后依次出现。",
+      "prompt": "做搜索筛选标签栏：点击标签时选中底色平滑移动到新标签，结果卡片淡出并依次显示对应内容；搜索框输入时同样过滤。快速连点时取消上一轮动画，只显示最后一次的结果；无结果时显示空状态。整体使用柔和缓动、200–350ms 动画，并设计清晰的加载 / 成功 / 错误状态：先设计状态，再用动画连接，保持「点了有回应、完成有结果」。",
+      "scene": "stateLab",
+      "variant": "chips",
+      "skills": [
+        "uiux-interaction-spec",
+        "uiux-motion-engineering",
+        "uiux-component-engineering"
+      ],
+      "tags": [
+        "筛选",
+        "标签",
+        "滑块底色",
+        "错峰出现",
+        "搜索"
+      ],
+      "acceptance": [
+        "底色停在当前标签下",
+        "快速连点不残留旧结果",
+        "结果数量与筛选一致",
+        "无结果有空状态"
+      ]
+    },
+    {
+      "id": "app-state-steps",
+      "category": "app",
+      "family": "状态与回应",
+      "title": "步骤进度条对勾与连线",
+      "summary": "完成一步后圆点变对勾、连接线填满、下一步亮起，说明同步切换。",
+      "prompt": "做步骤进度条：完成一步后当前圆点变对勾、连接线填满、下一步圆点亮起，下方说明同步切换。点击完成时先显示短暂的「处理中」，再进入下一步；可返回上一步；全部完成后显示成功并可重新开始；当前步骤用 aria-current=step 标出。整体使用柔和缓动、200–350ms 动画，并设计清晰的加载 / 成功 / 错误状态：先设计状态，再用动画连接，保持「点了有回应、完成有结果」。",
+      "scene": "stateLab",
+      "variant": "steps",
+      "skills": [
+        "uiux-interaction-spec",
+        "uiux-motion-engineering",
+        "uiux-accessibility-review"
+      ],
+      "tags": [
+        "步骤条",
+        "进度",
+        "对勾",
+        "连接线"
+      ],
+      "acceptance": [
+        "对勾、连线、下一步同时更新",
+        "说明与当前步骤一致",
+        "处理中时按钮不可重复点击",
+        "可返回上一步"
       ]
     }
   ]
