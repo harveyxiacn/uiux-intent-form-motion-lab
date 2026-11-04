@@ -166,6 +166,237 @@
       acc: ['键盘可以把分割线移到 0% 与 100%', '拖动时不选中文本', '标签在边缘时不遮挡内容', '读屏读出“前后对比，显示修图后 60%”之类的值']
     },
 
+    /* ---- 新拟态组件 (scenes from ../playground/neu.js via bridge-scenes.js) ---- */
+    {
+      id: 'w-neu-light', cat: 'web', fam: '新拟态组件', scene: 'nuLight',
+      title: '新拟态灯光开关：下沉、平移、回弹',
+      sum: '按下时滑块下沉，松开后平移到另一端并回弹，灯光和 On / Off 文字同步切换。',
+      hint: '点开关，或聚焦后按空格。',
+      keys: ['新拟态', 'neumorphism', '拟物', '开关', 'switch', '灯光', '下沉', '凹陷', '凸起', '回弹', 'on off', '软阴影'],
+      skills: ['uiux-style-direction', 'uiux-interaction-spec', 'uiux-component-engineering', 'uiux-motion-engineering', 'uiux-accessibility-review'],
+      c: {
+        obj: '浅灰白底上的新拟态开关：内凹轨道、凸起滑块、灯泡和 On / Off 文字',
+        trig: '指针按下与松开；键盘空格或回车',
+        seq: '按下时滑块由凸起变为内凹并缩小到 0.94 → 松开后滑块平移到另一端 → 越过终点约 3% 再回弹 → 灯泡亮起或熄灭，文字切换',
+        res: '每次点击只切换一次；按住拖出开关区域再松开不切换',
+        acc: 'role=switch 与 aria-checked 同步；On / Off 用文字表达，不只靠阴影；减少动态效果时直接切换'
+      },
+      states: 'off · pressed · on · focus',
+      intr: '回弹途中再次点击，从当前位置直接走向新状态',
+      motion: [['按下下沉', 120], ['平移', 600], ['回弹', 600]],
+      acc: ['按下有可见下沉，松开后切换', 'aria-checked 与 On / Off 文字一致', '只用空格可以切换', '焦点框在浅色底上清晰可见']
+    },
+    {
+      id: 'w-neu-thermo', cat: 'web', fam: '新拟态组件', scene: 'nuThermo',
+      title: '新拟态温控旋钮：刻度、圆弧、数字同步',
+      sum: '拖动旋钮时指示点、进度圆弧和温度数字同步变化，范围 16–30℃，底部有死区。',
+      hint: '拖动旋钮；或聚焦后用方向键、Home / End，也可点加减。',
+      keys: ['旋钮', '温控', '温度', '刻度', '圆弧', 'dial', 'knob', 'slider', '拖动调节', '新拟态', '16-30'],
+      skills: ['uiux-interaction-spec', 'uiux-component-engineering', 'uiux-motion-engineering', 'uiux-accessibility-review'],
+      c: {
+        obj: '凸起的圆形旋钮、外圈细刻度、270° 进度圆弧、中心温度数字和加减按钮',
+        trig: '指针按住旋钮拖动（按角度取值）；方向键 ±1℃、PageUp / PageDown ±3℃、Home / End；加减按钮',
+        seq: '指针角度换算成温度并取整 → 指示点转到对应角度 → 圆弧长度跟着变化 → 数字与「凉爽 / 舒适 / 温暖」同步更新',
+        res: '温度始终在 16–30℃；拖到底部死区时停在最近的一端，不会从 30 跳到 16',
+        acc: 'role=slider，带 aria-valuemin / max / now 和 aria-valuetext「n℃」；减少动态效果时圆弧不做过渡'
+      },
+      states: 'idle · dragging · focus · min · max',
+      intr: '拖动时取消按键带来的过渡，直接跟手',
+      motion: [['圆弧跟随', 120], ['指示点', 120], ['按钮回弹', 600]],
+      acc: ['温度不会超出 16–30℃', '指示点、圆弧和数字始终一致', '方向键与 Home / End 可完成全部调节', '底部死区不会跳到另一端']
+    },
+    {
+      id: 'w-neu-player', cat: 'web', fam: '新拟态组件', scene: 'nuPlayer',
+      title: '新拟态播放器：频谱随播放起落',
+      sum: '凸起的播放键切换播放与暂停；播放时频谱跳动、进度前进，暂停时频谱收回。',
+      hint: '点中间的播放键；两侧可前进 / 后退 10 秒。',
+      keys: ['播放器', '音乐', '播放', '暂停', '频谱', '进度条', 'player', 'audio', '新拟态', '凸起按钮'],
+      skills: ['uiux-interaction-spec', 'uiux-component-engineering', 'uiux-motion-engineering', 'uiux-accessibility-review'],
+      c: {
+        obj: '封面、曲目信息、频谱条、内凹进度槽、播放 / 前进 / 后退按钮',
+        trig: '点击或空格切换播放；前进 / 后退按钮',
+        seq: '播放：按钮由凸起变内凹，图标换成暂停 → 频谱条按不同节奏起落，进度条与时间前进 → 暂停：频谱在 600ms 内收回到底，进度停住',
+        res: '播放到结尾自动停止；暂停后再播放从当前位置继续',
+        acc: '播放键 aria-label 在「播放 / 暂停」之间切换；频谱是装饰（aria-hidden）；减少动态效果时频谱不跳动，只显示进度'
+      },
+      states: 'paused · playing · ended',
+      intr: '频谱收回途中再次播放，从当前高度重新起跳',
+      motion: [['按钮按压', 120], ['频谱收回', 600], ['进度刷新', 250]],
+      acc: ['播放时进度和时间前进', '暂停后频谱收回', '按钮名称随状态切换', '播放结束自动停止']
+    },
+    {
+      id: 'w-neu-upload', cat: 'web', fam: '新拟态组件', scene: 'nuUpload',
+      title: '新拟态上传：文件收拢、进度、勾选复位',
+      sum: '按下内凹入口后文件卡片依次收拢进入口，进度条填满，完成显示勾选，再回弹复位。',
+      hint: '点「点这里上传」，上传中再点不会重复触发。',
+      keys: ['上传', '文件', 'upload', '进度', '进度条', '收拢', '完成', '对勾', '复位', '新拟态', '内凹'],
+      skills: ['uiux-interaction-spec', 'uiux-component-engineering', 'uiux-motion-engineering', 'uiux-accessibility-review'],
+      c: {
+        obj: '三张待上传文件卡、内凹上传入口、进度槽和百分比',
+        trig: '点击或回车上传入口',
+        seq: '入口按下回弹 → 文件卡依次（间隔约 110ms）飞向入口并缩小淡出 → 进度从 0 填到 100% → 入口图标变为绿色对勾、文案「上传完成」→ 停留约 1.6s 后文件卡回弹出现，进度归零',
+        res: '上传中入口 aria-disabled，重复点击无效；完成后可再次上传',
+        acc: '进度条 role=progressbar 并更新 aria-valuenow；状态通过 polite 播报；减少动态效果时没有飞行，只更新进度和文案'
+      },
+      states: 'idle · uploading · done · resetting',
+      intr: '上传中忽略再次点击；复位不打断尚未完成的进度',
+      motion: [['依次收拢', 600], ['进度填充', 1400], ['完成停留', 1600], ['回弹复位', 600]],
+      acc: ['文件卡依次收拢', '进度从 0 到 100%', '完成后显示勾选再复位', '上传中不能重复触发']
+    },
+    {
+      id: 'w-neu-booking', cat: 'web', fam: '新拟态组件', scene: 'nuBooking',
+      title: '新拟态预约：选日期展开时段，选中显示结果',
+      sum: '先选日期，时段区平滑展开；选中时段后结果卡缩放出现，可以取消。已满的时段禁用。',
+      hint: '先点一天，再点一个时段；结果里可以取消。',
+      keys: ['预约', '日期', '时段', '日历', '展开', '收起', 'booking', '选择', '已满', '新拟态', '缩放'],
+      skills: ['uiux-interaction-spec', 'uiux-component-engineering', 'uiux-motion-engineering', 'uiux-accessibility-review'],
+      c: {
+        obj: '五个日期按钮、时段网格、预约结果卡',
+        trig: '点击日期、时段与「取消」',
+        seq: '选日期：该日由凸起变内凹并变为品牌色 → 时段区高度从 0 展开 → 选时段：结果卡从 0.9 缩放淡入 → 取消：结果卡收起，焦点回到第一个可选时段',
+        res: '再点同一天收起时段并清空选择；换一天时清空已选时段',
+        acc: '选中项同时用颜色和 aria-pressed 表达；已满时段 disabled 并写明「已满」；收起的区域 inert；减少动态效果时直接显示'
+      },
+      states: 'no-date · date-picked · slot-picked · cancelled',
+      intr: '展开途中换日期，直接从当前高度走向新内容',
+      motion: [['展开时段', 600], ['结果缩放', 600], ['按压回弹', 600]],
+      acc: ['没选日期时看不到时段', '已满时段不可选', '选中时段后显示完整预约信息', '取消后结果收起']
+    },
+    {
+      id: 'w-neu-qty', cat: 'web', fam: '新拟态组件', scene: 'nuQty',
+      title: '新拟态数量调节：边界禁用',
+      sum: '凸起加减按钮按下下沉回弹，数量和金额同步变化，到达 1 或 9 时禁用对应按钮。',
+      hint: '点加减按钮，试试到达上下限。',
+      keys: ['数量', '加减', '步进', 'stepper', '金额', '合计', '边界', '禁用', '购物车', '新拟态'],
+      skills: ['uiux-interaction-spec', 'uiux-component-engineering', 'uiux-motion-engineering', 'uiux-accessibility-review'],
+      c: {
+        obj: '商品信息、凸起的加减按钮、内凹数量框和合计金额',
+        trig: '点击加减按钮',
+        seq: '按钮下沉到 0.93 → 回弹到 1.03 → 落定 → 数量变化，合计金额轻微放大后复原',
+        res: '数量在 1–9 之间；到边界时对应按钮禁用，焦点移到另一个按钮',
+        acc: '按钮有「增加一袋 / 减少一袋」名称；到边界时 polite 播报「已到上限 / 下限」；减少动态效果时没有缩放'
+      },
+      states: 'min · normal · max',
+      intr: '连点时每次都从当前缩放重新开始，不排队',
+      motion: [['下沉回弹', 600], ['金额强调', 360]],
+      acc: ['数量与金额始终一致', '到边界时对应按钮禁用', '禁用按钮外观不同', '焦点不会停在禁用按钮上']
+    },
+    /* ---- 看板菜单 (scenes from ../playground/menu.js via bridge-scenes.js) ---- */
+    {
+      id: 'w-menu-sidebar', cat: 'web', fam: '看板菜单', scene: 'mnSidebar',
+      title: '图文侧栏菜单：返回总览时高亮恢复',
+      sum: '左侧图标加文字的侧栏，选中高亮，右侧内容同步切换；点「返回总览」时高亮回到总览。',
+      hint: '点左侧入口；进入子页面后点右上角「返回总览」。',
+      keys: ['侧栏', '侧边栏', 'sidebar', '菜单', '导航', '图标', '高亮', '选中', '总览', '返回', '看板', 'dashboard'],
+      skills: ['uiux-page-planning', 'uiux-interaction-spec', 'uiux-component-engineering', 'uiux-accessibility-review'],
+      c: {
+        obj: '左侧品牌与五个图文入口，右侧标题、返回按钮和内容区',
+        trig: '点击或回车菜单入口；点击「返回总览」',
+        seq: '选中项变为深色圆角底 → 右侧内容淡出 120ms → 新内容上移淡入 240ms → 非总览页显示「返回总览」',
+        res: '菜单高亮和右侧内容由同一个选中值决定；返回总览后高亮回到总览，焦点回到总览入口',
+        acc: '当前项 aria-current=page；窄屏时侧栏收为图标，文字保留给读屏；减少动态效果时直接替换内容'
+      },
+      states: 'overview · page · hover · focus',
+      intr: '快速连点时只渲染最后一次的内容',
+      motion: [['内容淡出', 120], ['内容进入', 240], ['高亮切换', 200]],
+      acc: ['任何时候只有一个当前项', '返回总览后高亮恢复', '内容与高亮一致', '窄屏下侧栏收成图标仍可操作']
+    },
+    {
+      id: 'w-menu-groups', cat: 'web', fam: '看板菜单', scene: 'mnGroups',
+      title: '内容分组菜单：按业务模块组织入口',
+      sum: '左侧按「内容 / 运营 / 数据」分组，选中用浅品牌底色；点节目、发现等入口后列表与面包屑同步。',
+      hint: '点不同分组里的入口。',
+      keys: ['分组', '菜单', '模块', '业务', '品牌色', '浅色底', '节目', '发现', '面包屑', '层级', '侧栏', 'dashboard'],
+      skills: ['uiux-page-planning', 'uiux-interaction-spec', 'uiux-design-system', 'uiux-component-engineering'],
+      c: {
+        obj: '三个带标题的入口分组、右侧面包屑、标题和列表',
+        trig: '点击或回车入口',
+        seq: '选中项变为浅品牌底色并带左侧色条 → 面包屑「分组 / 入口」更新 → 列表淡出后替换',
+        res: '分组标题只做层级，不可点击；切换不改变其他分组的展开状态',
+        acc: '分组标题与入口在视觉和结构上分层；当前项 aria-current=page；hover 有底色反馈'
+      },
+      states: 'selected · hover · focus',
+      intr: '快速切换时只保留最后一次的列表',
+      motion: [['内容淡出', 120], ['内容进入', 240], ['底色切换', 200]],
+      acc: ['分组与入口层级清楚', '面包屑与当前项一致', '列表随入口更新', 'hover 和焦点都有反馈']
+    },
+    {
+      id: 'w-menu-capsule', cat: 'web', fam: '看板菜单', scene: 'mnCapsule',
+      title: '顶部胶囊菜单：深色底块滑到当前项',
+      sum: '没有侧栏，顶部胶囊容器里的深色底块滑到当前选项，内容区更宽。',
+      hint: '点顶部的「概览 / 流量 / 转化 / 留存」。',
+      keys: ['胶囊', '顶部菜单', '顶栏', '横向菜单', '分段', 'segmented', 'pill', '滑块', '底块', '无侧栏', 'dashboard'],
+      skills: ['uiux-interaction-spec', 'uiux-component-engineering', 'uiux-motion-engineering', 'uiux-accessibility-review'],
+      c: {
+        obj: '顶栏中部的胶囊容器、四个选项、深色底块和下方宽内容区',
+        trig: '点击或回车选项',
+        seq: '深色底块的位置和宽度过渡到新选项（300ms）→ 选项文字变白 → 内容淡出后替换',
+        res: '窗口尺寸变化后底块重新对齐；内容区占满宽度',
+        acc: '当前项 aria-current=page；深浅对比 ≥ 4.5:1；减少动态效果时底块直接跳到新位置'
+      },
+      states: 'selected · hover · focus',
+      intr: '底块移动途中再次点击，从当前位置直接走向新选项',
+      motion: [['底块滑动', 300], ['内容淡出', 120], ['内容进入', 240]],
+      acc: ['底块始终停在当前项下', '窗口变化后不偏位', '内容与当前项一致', '窄屏下选项仍可完整点击']
+    },
+    {
+      id: 'w-menu-rail', cat: 'web', fam: '看板菜单', scene: 'mnRail',
+      title: '极简图标侧栏：窄轨与文字提示',
+      sum: '浅色页面左侧窄图标轨，业务入口在上、通知和头像在底，当前页用高对比底色；悬停或聚焦显示名称。',
+      hint: '点图标；聚焦后可用 ↑↓ 在图标间移动。',
+      keys: ['图标', '图标栏', '窄侧栏', 'rail', '极简', '线性图标', '提示', 'tooltip', '通知', '头像', '省空间'],
+      skills: ['uiux-component-engineering', 'uiux-design-system', 'uiux-accessibility-review'],
+      c: {
+        obj: '64px 宽的图标轨：顶部 logo、四个业务图标、底部通知和账户',
+        trig: '点击或回车图标；↑↓ 在图标间移动焦点',
+        seq: '当前图标变为深色圆角底 → 悬停或聚焦时右侧出现文字提示 → 内容区切换',
+        res: '底部两项固定在底部；提示不遮挡点击',
+        acc: '每个图标按钮有 aria-label；提示对鼠标和键盘都出现；当前项 aria-current=page'
+      },
+      states: 'selected · hover · focus · tooltip',
+      intr: '提示随焦点立即切换，不排队',
+      motion: [['提示出现', 150], ['底色切换', 200], ['内容进入', 240]],
+      acc: ['图标尺寸与间距一致', '当前页高对比标记', '键盘聚焦也显示名称', '底部入口固定在下方']
+    },
+    {
+      id: 'w-menu-brand', cat: 'web', fam: '看板菜单', scene: 'mnBrand',
+      title: '品牌色图标侧栏：深色看板',
+      sum: '深色 Dashboard 左侧图标侧栏，当前项用珊瑚橙底色，提醒 / 设置 / 账户在底部。',
+      hint: '点侧栏图标，悬停查看名称。',
+      keys: ['品牌色', '珊瑚橙', '深色', 'dark', '侧栏', '图标', '提醒', '设置', '账户', '看板', 'dashboard'],
+      skills: ['uiux-style-direction', 'uiux-design-system', 'uiux-component-engineering', 'uiux-accessibility-review'],
+      c: {
+        obj: '深色看板、图标侧栏（品牌 logo、四个主功能、底部三项）和内容区',
+        trig: '点击或回车图标',
+        seq: '当前图标底色变为品牌色并带柔和投影 → 内容淡出后替换',
+        res: '品牌色只用于当前项和 logo，不扩散到其他装饰',
+        acc: '深色下文字与图标对比足够；当前项 aria-current=page；提示用浅底深字'
+      },
+      states: 'selected · hover · focus',
+      intr: '快速切换时只渲染最后一次的内容',
+      motion: [['底色切换', 200], ['内容淡出', 120], ['内容进入', 240]],
+      acc: ['只有当前项使用品牌色', '深色下文字清晰', '底部三项固定', '内容随选中切换']
+    },
+    {
+      id: 'w-menu-tabs', cat: 'web', fam: '看板菜单', scene: 'mnTabs',
+      title: '分组标签顶栏：多维数据联动',
+      sum: '白色顶栏左侧品牌，中部四个分组标签，深色圆角底加小圆点标出当前项；切换后产量与种植阶段同步更新。',
+      hint: '点「小麦 / 玉米 / 水稻 / 大豆」。',
+      keys: ['分组标签', '标签', 'tab', '顶栏', '小圆点', '数据联动', '产量', '种植', '阶段', '多维', '看板'],
+      skills: ['uiux-page-planning', 'uiux-interaction-spec', 'uiux-component-engineering'],
+      c: {
+        obj: '白色顶栏（品牌、四个分组标签、头像）和下方的 KPI、阶段条与长势图',
+        trig: '点击或回车分组标签',
+        seq: '当前标签变为深色圆角底，左侧小圆点亮起 → 数据区淡出 → 亩产、面积、当前阶段、阶段条和长势柱同步换成该作物的数据',
+        res: '只有当前标签显示小圆点；数据全部来自同一个选中值',
+        acc: '当前项 aria-current=page；阶段用文字标出，不只靠颜色；窄屏时标签占满一行'
+      },
+      states: 'selected · hover · focus',
+      intr: '快速切换时只保留最后一次的数据',
+      motion: [['底色切换', 200], ['数据淡出', 120], ['数据进入', 240]],
+      acc: ['小圆点只在当前标签', '产量与阶段随标签更新', '阶段有文字说明', '窄屏下标签可完整点击']
+    },
+
     /* ---------------- app ---------------- */
     {
       id: 'a-swipe', cat: 'app', fam: '手势', scene: 'swipeDelete',
@@ -451,6 +682,159 @@
       intr: '转场进行中忽略新的点击；返回总是落回被点的那张卡片',
       motion: [['上浮', 190], ['展开', 380], ['正文淡入', 420], ['回弹落位', 440]],
       acc: ['展开从被点的那张卡片开始', '返回后落回原位置', '模糊和变淡在返回后完全撤掉', '焦点进出正确']
+    },
+    /* ---- 状态与回应 (scenes from ../playground/states.js via bridge-scenes.js) ---- */
+    {
+      id: 'a-plane', cat: 'app', fam: '状态与回应', scene: 'stPlane',
+      title: '纸飞机发送：发送中 → 已分享 / 失败重试',
+      sum: '点分享，按钮轻压，纸飞机从按钮里飞出并显示「发送中」，随后变为「已分享」；失败时可重试。',
+      hint: '点「分享行程」；勾选「模拟网络失败」看错误态。',
+      keys: ['纸飞机', '发送', '分享', 'send', 'share', '发送中', '已分享', '加载', '成功', '失败', '重试', '按钮状态'],
+      skills: ['uiux-interaction-spec', 'uiux-component-engineering', 'uiux-motion-engineering', 'uiux-accessibility-review'],
+      c: {
+        obj: '行程页底部的「分享行程」主按钮',
+        trig: '点击或回车',
+        seq: '按下缩放到 0.92 再回弹 → 纸飞机从按钮内向右上飞出并淡出 → 按钮显示转圈和「发送中…」→ 约 0.9s 后变为绿色「已分享 ✓」或红色「发送失败，点此重试」',
+        res: '发送中和已分享时再次点击无效；失败后点按钮重试；重置回到初始态',
+        acc: '发送中 aria-busy=true；结果通过 polite 播报；纸飞机是装饰（aria-hidden）；减少动态效果时不飞行，只切换文字和颜色'
+      },
+      states: 'idle · sending · done · error',
+      intr: '发送中忽略点击；纸飞机动画不影响结果状态',
+      motion: [['按压回弹', 300], ['纸飞机飞出', 720], ['发送中停留', 900], ['成功强调', 320]],
+      acc: ['发送中不能重复触发', '成功与失败都有明确文字', '失败后可以重试', '减少动态效果时没有飞行']
+    },
+    {
+      id: 'a-press', cat: 'app', fam: '状态与回应', scene: 'stPress',
+      title: '长按快捷菜单：卡片浮起，菜单展开',
+      sum: '按住卡片约 0.45 秒，卡片轻微浮起，旁边展开操作菜单；选中操作后菜单收起、卡片回位。',
+      hint: '按住卡片不放；或聚焦卡片按 Enter，方向键选择，Esc 关闭。',
+      keys: ['长按', 'long press', '按住', '快捷菜单', '上下文菜单', 'context menu', '浮起', '操作菜单', '置顶', '分享'],
+      skills: ['uiux-interaction-spec', 'uiux-component-engineering', 'uiux-mobile-patterns', 'uiux-accessibility-review'],
+      c: {
+        obj: '笔记卡片与它的四项操作菜单',
+        trig: '按住 450ms；键盘 Enter、菜单键或 Shift+F10',
+        seq: '按下时卡片缩到 0.98 → 满 450ms 后上浮 6px 并放大到 1.02，加深投影 → 菜单从右上角缩放展开，菜单项错开 30ms 出现，焦点进入第一项 → 选择后菜单淡出，卡片回位',
+        res: '短按不触发；手指移动超过 10px 取消；点菜单外或 Esc 关闭',
+        acc: '卡片 aria-haspopup=menu 与 aria-expanded；菜单 role=menu，方向键循环；关闭后焦点回到卡片；减少动态效果时不缩放'
+      },
+      states: 'idle · pressing · open · closing',
+      intr: '按住过程中移动或松手立即取消，不留下浮起状态',
+      motion: [['按住触发', 450], ['卡片浮起', 300], ['菜单展开', 260], ['菜单收起', 200]],
+      acc: ['短按不会打开菜单', '移动手指取消长按', '选择后菜单收起、卡片回位', '键盘可以打开并操作菜单']
+    },
+    {
+      id: 'a-accordion', cat: 'app', fam: '状态与回应', scene: 'stAccordion',
+      title: '手风琴问答：只开一个，下方让位',
+      sum: '点问题时答案平滑展开，下方内容自动让位；点另一个问题时旧答案收起、新答案展开。',
+      hint: '依次点不同的问题。',
+      keys: ['手风琴', 'accordion', '问答', 'faq', '展开', '收起', '折叠', '让位', '常见问题'],
+      skills: ['uiux-interaction-spec', 'uiux-component-engineering', 'uiux-accessibility-review'],
+      c: {
+        obj: '四条问答和列表下方的一行说明',
+        trig: '点击或回车问题按钮',
+        seq: '答案高度从 0 展开（grid 行 0fr → 1fr，约 320ms），文字延迟 80ms 淡入，箭头翻转 180° → 下方内容随高度变化平滑下移 → 同时收起之前打开的答案',
+        res: '同一时间只展开一个；再点已展开的问题则全部收起',
+        acc: '问题按钮 aria-expanded 与 aria-controls；收起的答案 inert，不可 Tab 聚焦；减少动态效果时直接展开'
+      },
+      states: 'collapsed · expanded',
+      intr: '展开途中点另一个问题，两者从当前高度同时反向',
+      motion: [['展开', 320], ['文字淡入', 220], ['箭头翻转', 300]],
+      acc: ['同一时间只展开一个', '下方内容平滑让位', 'aria-expanded 与视觉一致', '收起的答案不可聚焦']
+    },
+    {
+      id: 'a-multi', cat: 'app', fam: '状态与回应', scene: 'stMulti',
+      title: '多选操作栏：选择框依次亮起，底栏升起',
+      sum: '勾选时选择框亮起并描出对勾，底部操作栏升起显示选中数量；全选时依次亮起，全部取消后操作栏收回。',
+      hint: '勾选几张照片，或点「全选」。',
+      keys: ['多选', '批量', '勾选', '选择框', 'checkbox', '全选', '操作栏', '底部栏', '已选', '删除'],
+      skills: ['uiux-interaction-spec', 'uiux-component-engineering', 'uiux-mobile-patterns', 'uiux-accessibility-review'],
+      c: {
+        obj: '六项照片列表、每项的选择框、底部浮起的操作栏',
+        trig: '点击列表项；「全选 / 全不选」；操作栏的「取消」「删除」',
+        seq: '勾选：选择框填色并描出对勾（260ms），轻微回弹 → 选中数从 0 变为 1 时操作栏从下方升起（320ms）→ 全选时选择框间隔 45ms 依次亮起 → 数量回到 0 时操作栏收回',
+        res: '删除后列表与计数同步；删空时显示空状态和「恢复示例」',
+        acc: '列表项 role=checkbox 与 aria-checked；操作栏收起时 aria-hidden 且按钮不可聚焦；数量通过 polite 播报'
+      },
+      states: 'none-selected · some-selected · all-selected · empty',
+      intr: '依次亮起途中取消，只影响画面，选中数据立即生效',
+      motion: [['对勾描画', 260], ['操作栏升起', 320], ['依次亮起', 45]],
+      acc: ['数量与勾选一致', '全选时选择框依次亮起', '全部取消后操作栏收回', '删除后计数正确并有空状态']
+    },
+    {
+      id: 'a-stepper', cat: 'app', fam: '状态与回应', scene: 'stStepper',
+      title: '数量步进器：数字纵向滚动',
+      sum: '点加减时数字纵向滚动切换（加向上、减向下），按钮轻微回弹，数量不能小于 0。',
+      hint: '点加减，试试减到 0。',
+      keys: ['步进器', 'stepper', '数量', '加减', '数字滚动', '翻牌', '回弹', '下限', '购物车'],
+      skills: ['uiux-interaction-spec', 'uiux-component-engineering', 'uiux-motion-engineering', 'uiux-accessibility-review'],
+      c: {
+        obj: '商品图、单价、加减按钮、遮罩里的数字和合计',
+        trig: '点击加减按钮',
+        seq: '按钮缩到 0.92 再回弹 → 旧数字向上（加）或向下（减）移出遮罩 → 新数字从另一侧进入（300ms）→ 合计更新',
+        res: '数量在 0–20 之间；到边界时对应按钮禁用，焦点移到另一个按钮',
+        acc: '按钮有「增加一件 / 减少一件」名称；合计 output 通过 polite 播报；减少动态效果时数字直接替换'
+      },
+      states: 'zero · normal · max',
+      intr: '快速连点时先移除上一轮的旧数字，不重叠',
+      motion: [['按钮回弹', 300], ['数字滚动', 300]],
+      acc: ['数量不会小于 0', '到边界时对应按钮禁用', '快速连点数字不重叠', '合计与数量一致']
+    },
+    {
+      id: 'a-flip', cat: 'app', fam: '状态与回应', scene: 'stFlip',
+      title: '卡片翻面：隐藏背面镜像',
+      sum: '点卡片沿竖轴旋转到背面，旋转中看不到镜像文字；再点翻回。',
+      hint: '点会员卡，或聚焦后按 Enter / 空格。',
+      keys: ['翻面', '翻转', 'flip', '3d', '卡片', '正反面', '背面', 'backface', '会员卡'],
+      skills: ['uiux-interaction-spec', 'uiux-motion-engineering', 'uiux-accessibility-review'],
+      c: {
+        obj: '一张会员卡的正面和背面',
+        trig: '点击、回车或空格',
+        seq: '卡片沿 Y 轴旋转 180°（350ms）→ 两面都设 backface-visibility: hidden，过半前只看到正面，过半后只看到背面',
+        res: '再次点击翻回；状态只有正面和背面两种',
+        acc: '卡片是按钮，aria-pressed 表示翻面；当前不朝上的一面 aria-hidden；减少动态效果时不旋转，直接切换'
+      },
+      states: 'front · back',
+      intr: '旋转途中再次点击，从当前角度反向转回',
+      motion: [['翻面', 350]],
+      acc: ['旋转中看不到镜像文字', '再次点击翻回', '键盘可以翻面', '读屏只读当前朝上的一面']
+    },
+    {
+      id: 'a-chips', cat: 'app', fam: '状态与回应', scene: 'stChips',
+      title: '搜索筛选标签：底色滑动，结果错峰出现',
+      sum: '点标签时选中底色平滑移动，结果卡先淡出再依次出现；搜索框输入同样过滤，无结果显示空状态。',
+      hint: '点「景点 / 美食 / 住宿」，或在搜索框输入。',
+      keys: ['筛选', '标签', 'chips', '搜索', '过滤', '分类', '底色滑动', '错峰', 'stagger', '空状态'],
+      skills: ['uiux-interaction-spec', 'uiux-component-engineering', 'uiux-motion-engineering', 'uiux-accessibility-review'],
+      c: {
+        obj: '搜索框、四个筛选标签与滑动底色、结果卡网格',
+        trig: '点击标签；在搜索框输入（停顿 180ms 后生效）',
+        seq: '深色底色的位置和宽度过渡到新标签（300ms）→ 结果区淡出 150ms → 新结果按 40ms 间隔从下方依次淡入',
+        res: '只显示最后一次筛选的结果；无结果时显示「没有找到」',
+        acc: '标签 aria-pressed；结果数量通过 polite 播报；减少动态效果时底色直接跳到新位置、结果直接出现'
+      },
+      states: 'all · filtered · searching · empty',
+      intr: '快速连点时取消上一轮的错峰动画，只显示最后一次',
+      motion: [['底色滑动', 300], ['结果淡出', 150], ['依次出现', 260]],
+      acc: ['底色停在当前标签下', '快速连点不残留旧结果', '结果数量与筛选一致', '无结果有空状态']
+    },
+    {
+      id: 'a-steps', cat: 'app', fam: '状态与回应', scene: 'stSteps',
+      title: '步骤进度条：对勾、连线、下一步亮起',
+      sum: '完成一步后当前圆点变对勾、连接线填满、下一步圆点亮起，下方说明同步切换；完成前有短暂的「处理中」。',
+      hint: '点「完成这一步」，也可以返回上一步。',
+      keys: ['步骤', '步骤条', 'steps', 'stepper', '进度', '对勾', '连线', '流程', '向导', 'wizard', '下一步'],
+      skills: ['uiux-interaction-spec', 'uiux-component-engineering', 'uiux-motion-engineering', 'uiux-accessibility-review'],
+      c: {
+        obj: '四步进度条（圆点、连接线、步骤名）、说明卡和上一步 / 下一步按钮',
+        trig: '点击「完成这一步」或「上一步」',
+        seq: '按钮显示「处理中…」约 420ms → 当前圆点变绿并描出对勾 → 连接线从左向右填满（320ms）→ 下一步圆点加光环亮起 → 说明卡左移淡出、新说明右侧进入',
+        res: '可以返回上一步；全部完成后显示成功并可「重新开始」',
+        acc: '当前步骤 aria-current=step；处理中按钮禁用；说明卡内容随步骤更新；减少动态效果时不位移'
+      },
+      states: 'step-1 · step-2 · step-3 · processing · done',
+      intr: '处理中忽略点击；返回上一步时连线立即退回',
+      motion: [['处理中', 420], ['对勾描画', 300], ['连线填满', 320], ['说明切换', 240]],
+      acc: ['对勾、连线、下一步同时更新', '说明与当前步骤一致', '处理中时按钮不可重复点击', '可以返回上一步']
     }
   ];
 

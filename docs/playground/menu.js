@@ -6,7 +6,12 @@
   "use strict";
 
   const S = (window.LAB_SCENES = window.LAB_SCENES || {});
-  const prefersReduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+  /* Host context. The pipeline playground passes ctx.reduced() (its own switch), ctx.d(ms) (feel scaling)
+     and ctx.log(); the prompt lab passes neither, so the system setting and the written durations apply. */
+  const MQ = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let host = null;
+  const prefersReduced = () => (host && typeof host.reduced === "function" ? host.reduced() : MQ());
+  const dur = (ms) => (host && typeof host.d === "function" && !prefersReduced() ? host.d(ms) : ms);
 
   const P = {
     home: '<path d="M4 11l8-7 8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"/>',
@@ -37,11 +42,11 @@
     return (html) => {
       const mine = ++token;
       if (prefersReduced() || !panel.animate) { panel.innerHTML = html; return; }
-      const out = panel.animate([{ opacity: 1, transform: "none" }, { opacity: 0, transform: "translateY(6px)" }], { duration: 120, easing: "ease-in", fill: "forwards" });
+      const out = panel.animate([{ opacity: 1, transform: "none" }, { opacity: 0, transform: "translateY(6px)" }], { duration: dur(120), easing: "ease-in", fill: "forwards" });
       out.finished.then(() => {
         if (mine !== token) return;
         panel.innerHTML = html; out.cancel();
-        panel.animate([{ opacity: 0, transform: "translateY(8px)" }, { opacity: 1, transform: "none" }], { duration: 240, easing: "cubic-bezier(.22,.75,.25,1)" });
+        panel.animate([{ opacity: 0, transform: "translateY(8px)" }, { opacity: 1, transform: "none" }], { duration: dur(240), easing: "cubic-bezier(.22,.75,.25,1)" });
       }, () => {});
     };
   }
@@ -50,7 +55,8 @@
   const rows = (list) => `<ul class="mn-list">${list.map((r) => `<li><span>${r[0]}</span><small>${r[1]}</small><b>${r[2]}</b></li>`).join("")}</ul>`;
   const bars = (vals) => `<div class="mn-bars" aria-hidden="true">${vals.map((v) => `<i style="height:${v}%"></i>`).join("")}</div>`;
 
-  S.menuLab = function (root, variant) {
+  S.menuLab = function (root, variant, ctx) {
+    host = ctx || null;
     const bag = [];
     const meta = {
       sidebar: ["WEB / SIDEBAR", "图文侧栏菜单", "点左侧入口<br>右侧内容同步切换"],
@@ -135,7 +141,7 @@
       </div>`;
     const app = root.querySelector(".mn-app");
     const status = root.querySelector("[data-status]");
-    const say = (text) => { status.textContent = text; };
+    const say = (text) => { status.textContent = text; if (host && typeof host.log === "function") host.log(text); };
 
     /* Shared wiring: buttons carry data-key; aria-current marks the one selected page. */
     const wire = (container, render) => {

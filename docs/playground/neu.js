@@ -6,7 +6,12 @@
   "use strict";
 
   const S = (window.LAB_SCENES = window.LAB_SCENES || {});
-  const prefersReduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+  /* Host context. The pipeline playground passes ctx.reduced() (its own switch), ctx.d(ms) (feel scaling)
+     and ctx.log(); the prompt lab passes neither, so the system setting and the written durations apply. */
+  const MQ = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let host = null;
+  const prefersReduced = () => (host && typeof host.reduced === "function" ? host.reduced() : MQ());
+  const dur = (ms) => (host && typeof host.d === "function" && !prefersReduced() ? host.d(ms) : ms);
   const EASE = "cubic-bezier(.25,.8,.25,1)";
   const DUR = 600;
 
@@ -32,13 +37,15 @@
   function later(bag, fn, ms) {
     // state holds (sending, processing, success) keep their timing under reduced motion;
     // only the movement is removed, so every state stays readable
-    const id = setTimeout(fn, ms);
+    const id = setTimeout(fn, dur(ms));
     bag.push(() => clearTimeout(id));
   }
 
   function animate(el, frames, options) {
     if (!el || prefersReduced()) return { finished: Promise.resolve(), cancel() {} };
-    return el.animate(frames, Object.assign({ duration: DUR, easing: EASE }, options));
+    const o = Object.assign({ duration: DUR, easing: EASE }, options);
+    o.duration = dur(o.duration); if (o.delay) o.delay = dur(o.delay);
+    return el.animate(frames, o);
   }
 
   /* Press = sink into the surface, then rebound past flat and settle. */
@@ -50,7 +57,8 @@
 
   const CHECK = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
-  S.neuLab = function (root, variant) {
+  S.neuLab = function (root, variant, ctx) {
+    host = ctx || null;
     const bag = [];
     const meta = {
       light: ["WEB / NEUMORPHISM", "灯光开关", "按下滑块下沉<br>松开回弹并切换灯光", "灯光 Off"],
@@ -62,7 +70,7 @@
     }[variant] || ["WEB / NEUMORPHISM", "新拟态组件", "", ""];
     const ui = shell(root, { kicker: meta[0], title: meta[1], note: meta[2], status: meta[3] });
     const body = ui.body;
-    const say = (text) => { ui.status.textContent = text; };
+    const say = (text) => { ui.status.textContent = text; if (host && typeof host.log === "function") host.log(text); };
 
     /* 1. Light switch: the knob sinks while held, slides on release ----------------------- */
     if (variant === "light") {

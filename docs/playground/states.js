@@ -6,7 +6,12 @@
   "use strict";
 
   const S = (window.LAB_SCENES = window.LAB_SCENES || {});
-  const prefersReduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+  /* Host context. The pipeline playground passes ctx.reduced() (its own switch), ctx.d(ms) (feel scaling)
+     and ctx.log(); the prompt lab passes neither, so the system setting and the written durations apply. */
+  const MQ = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let host = null;
+  const prefersReduced = () => (host && typeof host.reduced === "function" ? host.reduced() : MQ());
+  const dur = (ms) => (host && typeof host.d === "function" && !prefersReduced() ? host.d(ms) : ms);
   const EASE = "cubic-bezier(.22,.75,.25,1)";
 
   function shell(root, o) {
@@ -31,14 +36,16 @@
   function later(bag, fn, ms) {
     // state holds (sending, processing, success) keep their timing under reduced motion;
     // only the movement is removed, so every state stays readable
-    const id = setTimeout(fn, ms);
+    const id = setTimeout(fn, dur(ms));
     bag.push(() => clearTimeout(id));
     return id;
   }
 
   function animate(el, frames, options) {
     if (!el || prefersReduced()) return { finished: Promise.resolve(), cancel() {} };
-    return el.animate(frames, Object.assign({ fill: "none", easing: EASE }, options));
+    const o = Object.assign({ fill: "none", easing: EASE, duration: 300 }, options);
+    o.duration = dur(o.duration); if (o.delay) o.delay = dur(o.delay);
+    return el.animate(frames, o);
   }
 
   /* Short press-and-rebound used by every button in this family. */
@@ -49,7 +56,8 @@
   const CHECK = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
   const PLANE = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.2L20.5 3.5l-4.2 17-5-5.2-3.6 3 .7-5.1L3 11.2z" fill="currentColor"/><path d="M8.4 13.2l12.1-9.7" stroke="#1a1b16" stroke-opacity=".35" stroke-width="1.2"/></svg>`;
 
-  S.stateLab = function (root, variant) {
+  S.stateLab = function (root, variant, ctx) {
+    host = ctx || null;
     const bag = [];
     const meta = {
       plane: ["MOBILE / SEND", "纸飞机发送", "点分享行程<br>纸飞机从按钮里飞出去", "行程未分享"],
@@ -63,7 +71,7 @@
     }[variant] || ["MOBILE / STATE", "状态与回应", "", ""];
     const ui = shell(root, { kicker: meta[0], title: meta[1], note: meta[2], status: meta[3] });
     const body = ui.body;
-    const say = (text) => { ui.status.textContent = text; };
+    const say = (text) => { ui.status.textContent = text; if (host && typeof host.log === "function") host.log(text); };
 
     /* 1. Paper-plane send button: idle -> sending -> shared / failed ------------------ */
     if (variant === "plane") {

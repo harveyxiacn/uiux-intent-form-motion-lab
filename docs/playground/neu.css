@@ -1,6 +1,6 @@
 /* Light neumorphism scenes for the web family 「新拟态组件」 (neu.js).
    One surface colour; depth comes from a light shadow (top-left) and a dark shadow (bottom-right). 600ms ease. */
-.nu-scene{--nu-bg:#e4e8ee;--nu-hi:#ffffff;--nu-lo:#bec4cf;--nu-ink:#2b3140;--nu-muted:#566070;--nu-accent:#ff6a3d;--nu-ok:#2f9d62;--nu-ease:cubic-bezier(.25,.8,.25,1);--nu-dur:.6s;
+.nu-scene{--nu-bg:#e4e8ee;--nu-hi:#ffffff;--nu-lo:#bec4cf;--nu-ink:#2b3140;--nu-muted:#566070;--nu-accent:#ff6a3d;--nu-ok:#2f9d62;--nu-ease:cubic-bezier(.25,.8,.25,1);--nu-dur:calc(.6s*var(--k,1));
   --nu-raised:8px 8px 18px var(--nu-lo),-8px -8px 18px var(--nu-hi);
   --nu-raised-sm:4px 4px 10px var(--nu-lo),-4px -4px 10px var(--nu-hi);
   --nu-inset:inset 5px 5px 12px var(--nu-lo),inset -5px -5px 12px var(--nu-hi);
@@ -13,7 +13,7 @@
 .nu-scene .mono{font-family:var(--mono)}
 .nu-row{display:flex;align-items:center;justify-content:center;gap:18px}
 /* scene buttons below are prefixed with the scene class: lab.css sets .scene button{color:inherit} */
-.nu-scene .nu-btn{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--nu-bg);color:var(--nu-ink);font-size:20px;font-weight:800;box-shadow:var(--nu-raised-sm);transition:box-shadow var(--nu-dur) var(--nu-ease),transform var(--nu-dur) var(--nu-ease),color .3s}
+.nu-scene .nu-btn{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--nu-bg);color:var(--nu-ink);font-size:20px;font-weight:800;box-shadow:var(--nu-raised-sm);transition:box-shadow var(--nu-dur) var(--nu-ease),transform var(--nu-dur) var(--nu-ease),color calc(.3s*var(--k,1))}
 .nu-btn:hover{color:var(--nu-accent)}
 .nu-btn:active{box-shadow:var(--nu-inset-sm);transform:scale(.96);transition-duration:.12s}
 .nu-btn:disabled{color:#9aa1ad;box-shadow:var(--nu-inset-sm);cursor:not-allowed}
@@ -29,7 +29,7 @@
 .nu-bulb::after{content:"";position:absolute;inset:22px;border-radius:50%;background:#c9ced8;transition:background var(--nu-dur) var(--nu-ease),box-shadow var(--nu-dur) var(--nu-ease)}
 .nu-light.on .nu-bulb::after{background:#ffd27a;box-shadow:0 0 26px 10px rgba(255,190,90,.55)}
 .nu-switch{position:relative;width:132px;height:62px;border-radius:999px;background:var(--nu-bg);box-shadow:var(--nu-inset)}
-.nu-knob{position:absolute;left:7px;top:7px;width:48px;height:48px;border-radius:50%;background:var(--nu-bg);box-shadow:var(--nu-raised-sm);transition:transform var(--nu-dur) var(--nu-ease),box-shadow .2s var(--nu-ease),background var(--nu-dur)}
+.nu-knob{position:absolute;left:7px;top:7px;width:48px;height:48px;border-radius:50%;background:var(--nu-bg);box-shadow:var(--nu-raised-sm);transition:transform var(--nu-dur) var(--nu-ease),box-shadow calc(.2s*var(--k,1)) var(--nu-ease),background var(--nu-dur)}
 .nu-switch.held .nu-knob{box-shadow:var(--nu-inset-sm);transform:scale(.94)}
 .nu-switch[aria-checked=true] .nu-knob{transform:translateX(70px);background:linear-gradient(145deg,#ff8a5f,#ff5a2b)}
 .nu-switch[aria-checked=true].held .nu-knob{transform:translateX(70px) scale(.94)}
@@ -42,7 +42,7 @@
 .nu-dial svg{position:absolute;inset:0;width:100%;height:100%;fill:none}
 .nu-ticks line{stroke:#8f97a4;stroke-width:1.5;stroke-linecap:round}
 .nu-track{stroke:#cfd4dc;stroke-width:6;stroke-linecap:round}
-.nu-arc{stroke:var(--nu-accent);stroke-width:6;stroke-linecap:round;transition:stroke-dasharray .12s linear}
+.nu-arc{stroke:var(--nu-accent);stroke-width:6;stroke-linecap:round;transition:stroke-dasharray calc(.12s*var(--k,1)) linear}
 .nu-knob-face{position:absolute;inset:40px;border-radius:50%;background:var(--nu-bg);box-shadow:var(--nu-raised)}
 .nu-dot{position:absolute;left:50%;top:12px;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--nu-accent);box-shadow:0 0 8px rgba(255,106,61,.6)}
 .nu-temp{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
@@ -57,7 +57,7 @@
 .nu-spectrum i{width:6px;height:100%;border-radius:3px;background:var(--nu-accent);transform:scaleY(.08);transform-origin:bottom;opacity:.85;transition:transform var(--nu-dur) var(--nu-ease)}
 .nu-spectrum.live i{transition:none}
 .nu-progress{width:100%;height:10px;border-radius:999px;background:var(--nu-bg);box-shadow:var(--nu-inset-sm);overflow:hidden}
-.nu-progress i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#ff8a5f,#ff5a2b);transform:scaleX(0);transform-origin:left;transition:transform .25s linear}
+.nu-progress i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#ff8a5f,#ff5a2b);transform:scaleX(0);transform-origin:left;transition:transform calc(.25s*var(--k,1)) linear}
 .nu-times{display:flex;justify-content:space-between;width:100%;margin-top:-8px;font-size:10px;color:var(--nu-muted)}
 .nu-scene .nu-play{width:68px;height:68px;font-size:20px;color:var(--nu-accent)}
 .nu-play.pressed{box-shadow:var(--nu-inset)}
@@ -66,7 +66,7 @@
 .nu-files{display:grid;gap:8px;width:100%}
 .nu-file{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-radius:14px;background:var(--nu-bg);box-shadow:var(--nu-raised-sm);font-size:12px}
 .nu-file small{color:var(--nu-muted)}
-.nu-well{display:grid;justify-items:center;gap:6px;width:100%;padding:20px 12px;border-radius:20px;background:var(--nu-bg);color:var(--nu-ink);font-size:13px;font-weight:700;box-shadow:var(--nu-inset);transition:box-shadow var(--nu-dur) var(--nu-ease),color .3s}
+.nu-well{display:grid;justify-items:center;gap:6px;width:100%;padding:20px 12px;border-radius:20px;background:var(--nu-bg);color:var(--nu-ink);font-size:13px;font-weight:700;box-shadow:var(--nu-inset);transition:box-shadow var(--nu-dur) var(--nu-ease),color calc(.3s*var(--k,1))}
 .nu-well:hover{color:var(--nu-accent)}
 .nu-well[aria-disabled=true]{cursor:progress}
 .nu-well-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--nu-bg);box-shadow:var(--nu-raised-sm);font-size:18px;transition:background var(--nu-dur) var(--nu-ease),color var(--nu-dur)}
@@ -78,7 +78,7 @@
 /* 5. booking */
 .nu-booking{justify-items:stretch;text-align:left}
 .nu-days{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
-.nu-day,.nu-slot{display:grid;justify-items:center;gap:2px;padding:10px 0;border-radius:16px;background:var(--nu-bg);color:var(--nu-ink);box-shadow:var(--nu-raised-sm);transition:box-shadow var(--nu-dur) var(--nu-ease),color .3s}
+.nu-day,.nu-slot{display:grid;justify-items:center;gap:2px;padding:10px 0;border-radius:16px;background:var(--nu-bg);color:var(--nu-ink);box-shadow:var(--nu-raised-sm);transition:box-shadow var(--nu-dur) var(--nu-ease),color calc(.3s*var(--k,1))}
 .nu-day small{font-size:10px;color:var(--nu-muted)}
 .nu-day b{font:900 18px/1 var(--display)}
 .nu-day:hover,.nu-slot:hover:not(:disabled){color:var(--nu-accent)}

@@ -1,0 +1,20 @@
+/* Fit the prompt lab's scenes (states / neu / menu) into the pipeline frames.
+   The pipeline already shows the title and hint above the stage and logs every status line,
+   so the scene's own head is hidden and its live status is kept for screen readers only. */
+.pl-bridge{--display:"Arial Black","PingFang SC","Microsoft YaHei",sans-serif;--focus:#2f5fcc;--spring:cubic-bezier(.16,1.3,.3,1)}
+.pl-bridge>.scene{position:relative;min-height:100%;padding:0;color:inherit}
+.pl-bridge>.scene>.scene-head{display:none}
+.pl-bridge>.scene>.scene-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.pl-bridge>.scene>.scene-body{min-height:100%}
+/* app frame: the scene is the phone screen itself */
+.phone .pl-bridge .st-screen{max-width:none;min-height:100%;height:100%;border-radius:0;padding:14px 18px 22px}
+.phone .pl-bridge>.scene,.phone .pl-bridge>.scene>.scene-body{height:100%}
+.phone .pl-bridge>.scene>.scene-body{display:block}
+/* web frame: fill the browser viewport */
+.browser .pl-bridge{display:flex;flex-direction:column}
+.browser .pl-bridge>.scene{flex:1;display:flex;flex-direction:column}
+.browser .pl-bridge>.scene>.scene-body{flex:1;display:flex;align-items:stretch;justify-content:stretch;place-items:stretch}
+.browser .pl-bridge .nu-board,.browser .pl-bridge .mn-app{flex:1;width:100%;min-height:0;border-radius:0;box-shadow:none}
+.phone .pl-bridge>.scene{position:relative;inset:auto;overflow:visible}
+/* the prompt lab's base reset for buttons, at zero specificity so every scene rule still wins */
+:where(.pl-bridge) button{border:0;background:none;cursor:pointer}
