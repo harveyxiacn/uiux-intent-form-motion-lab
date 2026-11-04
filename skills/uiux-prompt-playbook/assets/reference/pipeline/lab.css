@@ -65,7 +65,7 @@ code, kbd { font-family: var(--mono); font-size: .88em; }
 .search svg { color: var(--ink-2); flex: none; }
 .search { display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 8px; padding: 0 12px; background: var(--sheet); }
 .search input { border: 0; background: none; padding: 10px 0; width: 100%; outline: none; }
-.search:focus-within { border-color: var(--accent); }
+.search:focus-within { border-color: var(--accent); outline: 2px solid var(--accent); outline-offset: 2px; }
 .fams { display: flex; flex-wrap: wrap; gap: 6px; }
 .fams button, .examples button { border: 1px solid var(--line); background: none; border-radius: 999px; padding: 4px 11px; font-size: 13px; cursor: pointer; }
 .fams button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }

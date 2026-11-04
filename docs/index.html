@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <script src="i18n/i18n.js" data-groups="lab"></script>
   <meta name="theme-color" content="#f3f0e7">
-  <meta name="description" content="UI/UX 提示词实验室：按网页与 App / 小程序分类，选择提示词即可看到真实可操作的界面效果，并可用自然语言生成提示词。">
+  <meta name="description" content="UI/UX 提示词实验室：按网页与 App / 小程序分类，选择提示词即可看到真实可操作的界面效果，并可用自然语言生成提示词。"><meta property="og:type" content="website"><meta property="og:site_name" content="UI/UX 实验室"><meta property="og:title" content="提示词放映室 · UI/UX 实验室"><meta property="og:description" content="UI/UX 提示词实验室：按网页与 App / 小程序分类，选择提示词即可看到真实可操作的界面效果，并可用自然语言生成提示词。"><meta property="og:url" content="https://harveyxiacn.github.io/uiux-intent-form-motion-lab/"><meta property="og:image" content="https://harveyxiacn.github.io/uiux-intent-form-motion-lab/og/lab.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://harveyxiacn.github.io/uiux-intent-form-motion-lab/">
   <title>提示词放映室 · UI/UX 实验室</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23ff5a2b%22/%3E%3Ctext x=%2216%22 y=%2223%22 font-size=%2218%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22900%22 fill=%22%2320140d%22%3E%E7%95%8C%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="playground/lab.css">
@@ -51,10 +51,10 @@
       <a class="hero-cta" href="#playground">开始挑一句 <span aria-hidden="true">↓</span></a>
     </div>
     <dl class="hero-stats">
-      <div><dt>Skill</dt><dd>16</dd><p>十个本地模块 + 六个上游 Skill</p></div>
-      <div><dt>Prompts</dt><dd id="stat-prompts">168</dd><p>去重后的可执行提示词</p></div>
-      <div><dt>Scenes</dt><dd id="stat-scenes">25</dd><p>可操作的效果家族</p></div>
-      <div><dt>Categories</dt><dd>2</dd><p>网页 / App · 小程序</p></div>
+      <div><dt>Skill</dt><dd>16</dd><dd class="stat-note">十个本地模块 + 六个上游 Skill</dd></div>
+      <div><dt>Prompts</dt><dd id="stat-prompts">168</dd><dd class="stat-note">去重后的可执行提示词</dd></div>
+      <div><dt>Scenes</dt><dd id="stat-scenes">25</dd><dd class="stat-note">可操作的效果家族</dd></div>
+      <div><dt>Categories</dt><dd>2</dd><dd class="stat-note">网页 / App · 小程序</dd></div>
     </dl>
     <div class="hero-tape" aria-hidden="true">
       <span>圆形扩散</span><i>✳</i><span>拖拽让位</span><i>✳</i><span>共享元素</span><i>✳</i><span>橡皮筋</span><i>✳</i><span>弧形菜单</span><i>✳</i><span>3D 翻面</span><i>✳</i><span>滚动驱动</span><i>✳</i>
@@ -86,7 +86,7 @@
     </div>
 
     <div class="playground-grid">
-      <aside class="library" aria-label="提示词库">
+      <section class="library" aria-label="提示词库">
         <div class="library-head">
           <label class="search-field" for="lab-search">
             <span aria-hidden="true">⌕</span>
@@ -97,7 +97,7 @@
         <div class="family-strip" id="family-list" role="group" aria-label="按效果家族筛选"></div>
         <ol class="prompt-list" id="prompt-list"></ol>
         <p class="library-empty" id="library-empty" hidden>没有匹配的提示词。试试「卡片」「拖动」或「主题」。</p>
-      </aside>
+      </section>
 
       <div class="stage-column">
         <div class="stage-head">
@@ -118,7 +118,7 @@
         <p class="stage-caption"><span id="stage-effect">点击手机里的任意位置，深色从触点圆形扩散。</span><span id="stage-hint">可操作 · 键盘可用</span></p>
       </div>
 
-      <aside class="detail" aria-label="当前提示词">
+      <section class="detail" aria-label="当前提示词">
         <p class="detail-kicker">PROMPT <span id="detail-number">001</span></p>
         <h3 id="detail-title">触点扩散换主题</h3>
         <p class="detail-summary" id="detail-summary">深色从手指按下的位置圆形扩散，反向沿原路收回。</p>
@@ -136,7 +136,7 @@
           <ul id="detail-accept"></ul>
         </div>
         <div class="skill-chips" id="detail-skills" aria-label="相关 Skill"></div>
-      </aside>
+      </section>
     </div>
     <p class="playground-foot">同一句提示词，在这里是可操作的原型；在真实项目里仍需接入你的内容、状态和后端。每个场景都标出了能验证什么，也标出了不能声称什么。</p>
   </section>

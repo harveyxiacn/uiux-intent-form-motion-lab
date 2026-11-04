@@ -105,7 +105,9 @@
       button.dataset.id = prompt.id;
       button.setAttribute("aria-current", String(state.selected && state.selected.id === prompt.id));
       button.innerHTML = `<span class="pr-index">${escapeHtml(promptNumber(prompt))}</span><span><strong>${escapeHtml(prompt.title)}</strong><small>${escapeHtml(prompt.summary)}</small></span>`;
-      fragment.append(button);
+      const item = document.createElement("li");
+      item.append(button);
+      fragment.append(item);
     });
     els.list.append(fragment);
     els.empty.hidden = prompts.length > 0;

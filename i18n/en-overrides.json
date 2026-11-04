@@ -1076,7 +1076,9 @@
   "【参考实现】uiux-prompt-playbook › {0} · {1}：先读这段可运行代码，再按项目技术栈移植。": "[Reference implementation] uiux-prompt-playbook › {0} · {1}: read this working code first, then port it to the project’s stack.",
   "——168 条、25 个场景、16 个 Skill 都能摸到；这一页是": "— all 168 prompts, 25 scenes and 16 skills are within reach; this page is the",
   "两者不是谁替代谁：原站是<0>广度</0>——168 条、25 个场景、16 个 Skill 都能摸到；这一页是<1>深度</1>——只做一个功能，但走完全部工序。": "Neither replaces the other: the original site is about <0>breadth</0>—168 prompts, 25 scenes and 16 skills all within reach; this page is about <1>depth</1>—a single feature, taken through every stage.",
-  "原版技能地图首屏：十六个方法的巨幅标题与分组": "Original Skill Atlas first screen: huge headings and groupings of sixteen methods"
+  "原版技能地图首屏：十六个方法的巨幅标题与分组": "Original Skill Atlas first screen: huge headings and groupings of sixteen methods",
+  "UI/UX 实验室": "UI/UX Lab",
+  "安装命令": "Install commands"
  },
  "lab": {
   "{0} 月 {1} 日": "{0}/{1}",
@@ -1892,7 +1894,8 @@
   "十六个 Skill，": "Sixteen skills,",
   "十六个方法的地图": "A map of sixteen methods",
   "工序统筹": "Stage routing",
-  "跨阶段的需求先定工序，再把交接单逐道传下去；工序版的每份工单都从它开始。": "A request that spans stages gets its route first, then the handoff sheets pass from stage to stage; every work order in the pipeline edition starts here."
+  "跨阶段的需求先定工序，再把交接单逐道传下去；工序版的每份工单都从它开始。": "A request that spans stages gets its route first, then the handoff sheets pass from stage to stage; every work order in the pipeline edition starts here.",
+  "UI/UX 实验室": "UI/UX Lab"
  },
  "skills": {
   "148 条可执行提示词，每一条都能在场景舞台里当场操作。": "148 executable prompts, each one you can try on the spot on a scene stage.",
@@ -1913,7 +1916,8 @@
   "显示 16 / 16": "Showing 16 / 16",
   "本项目 <0>10</0>": "In-house <0>10</0>",
   "看工序版": "See the pipeline edition",
-  "跨阶段的需求先定工序：该走哪几道、按什么顺序、每道交出什么。": "A request that spans stages gets its route first: which stages apply, in what order, and what each one hands over."
+  "跨阶段的需求先定工序：该走哪几道、按什么顺序、每道交出什么。": "A request that spans stages gets its route first: which stages apply, in what order, and what each one hands over.",
+  "UI/UX 实验室": "UI/UX Lab"
  },
  "demos": {
   "标记未完成 {0}": "Mark as not done: {0}",
@@ -1921,7 +1925,12 @@
   "还有 {0} 件事等你完成": "{0} things left to do",
   "重要优先": "High priority",
   "紧急优先": "Urgent priority",
-  "常规优先": "Normal priority"
+  "常规优先": "Normal priority",
+  "「间」日程 App 示例：今日事项、详情编辑、日历与目标，手机尺寸下的完整任务流程。": "Room planner app demo: today’s tasks, detail editing, calendar and goals — a complete task flow at phone size.",
+  "「间」日程与目标看板示例：任务筛选、新建与完成，桌面与窄屏下保持同一套状态。": "Room schedule and goals dashboard demo: filter, add and complete tasks, with the same state on desktop and narrow screens.",
+  "光谱 Spectrum 创意项目工作台示例：项目进展、筛选与下一步，浅色与深色主题。": "Spectrum creative project workspace demo: project progress, filters and next steps, in light and dark themes.",
+  "慢半拍互动展览馆的官网示例：三间展室、参观计划与常见问题，键盘与触屏都能完整操作。": "Website demo for Offbeat, an interactive exhibition: three galleries, visit planning and FAQ, fully usable by keyboard and touch.",
+  "组件交互实验室示例：选择、展开与提交的细节，支持键盘、触摸与浅深两种主题。": "Component interaction lab demo: the details of selecting, expanding and submitting, with keyboard, touch and light/dark themes."
  },
  "showcase": {
   "工序版 Playground · 新": "Pipeline Playground · New",
@@ -1939,6 +1948,8 @@
   "工序版": "pipeline edition",
   "提示词手册把这些动作写成可复制、带参考实现的提示词，工序统筹决定它们按什么顺序接力（见": "The prompt handbook turns these actions into copyable prompts with reference code, and stage routing decides the order in which they hand off (see the ",
   "）；六个上游展台在": "); the six upstream showcases are in the",
-  "提示词手册把这些动作写成可复制、带参考实现的提示词，工序统筹决定它们按什么顺序接力（见<0>工序版</0>）；六个上游展台在 <1>技能地图</1> 里，可输入、检索、抽取和审查。": "The prompt handbook turns these actions into copyable prompts with reference code, and stage routing decides the order in which they hand off (see the <0>pipeline edition</0>); the six upstream showcases are in the <1>Skill Atlas</1>, where you can enter, search, extract and review."
+  "提示词手册把这些动作写成可复制、带参考实现的提示词，工序统筹决定它们按什么顺序接力（见<0>工序版</0>）；六个上游展台在 <1>技能地图</1> 里，可输入、检索、抽取和审查。": "The prompt handbook turns these actions into copyable prompts with reference code, and stage routing decides the order in which they hand off (see the <0>pipeline edition</0>); the six upstream showcases are in the <1>Skill Atlas</1>, where you can enter, search, extract and review.",
+  "UI/UX 实验室": "UI/UX Lab",
+  "六个可操作的界面作品与十六个 UI/UX 方法：展览官网、日程 App、看板、组件实验室、创意工作台与技能地图。": "Six working interface pieces and sixteen UI/UX methods: an exhibition website, a planner app, a dashboard, a component lab, a creative workspace and a skill atlas."
  }
 }

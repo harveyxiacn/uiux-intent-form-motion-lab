@@ -255,7 +255,7 @@
     if (searchDomain === "style") {
       searchResults.innerHTML = entries.map((entry) => `
         <article class="search-card">
-          <h5>${entry.name}</h5>
+          <h4>${entry.name}</h4>
           <p class="search-meta">${entry.type} · ${entry.colors}</p>
           <p><b>关键词</b> ${entry.keywords}</p>
           <p><b>适合</b> ${entry.bestFor}</p>
@@ -264,7 +264,7 @@
     } else if (searchDomain === "palette") {
       searchResults.innerHTML = entries.map((entry) => `
         <article class="search-card">
-          <h5>${entry.product}</h5>
+          <h4>${entry.product}</h4>
           <div class="swatches" aria-hidden="true">
             <span style="background:${entry.primary}"></span>
             <span style="background:${entry.accent}"></span>
@@ -281,7 +281,7 @@
         const headingStyle = serif ? "font-family:var(--serif)" : mono ? "font-family:var(--mono)" : "font-family:var(--sans)";
         return `
         <article class="search-card">
-          <h5>${entry.name}</h5>
+          <h4>${entry.name}</h4>
           <div class="font-pair"><strong style="${headingStyle}">${entry.heading}</strong><em>+ ${entry.body}</em></div>
           <p class="search-meta">${entry.category}</p>
           <p><b>情绪</b> ${entry.mood}</p>
@@ -369,7 +369,7 @@
   function renderDirections() {
     cardsRoot.innerHTML = dealt.map((direction) => `
       <button type="button" class="direction-card" data-direction="${direction.id}" aria-pressed="${direction.id === selectedDirection.id}">
-        <h5>${direction.name}</h5>
+        <h4>${direction.name}</h4>
         <span class="zh">${direction.zh} · ${direction.tones.join(" / ")}</span>
         <p>${direction.idea}</p>
         <span class="tags">${direction.type}</span>

@@ -128,16 +128,16 @@
         "selector": ".page-heading p:not(.date)",
         "text": "所有项目的进展、下一步与值得关注的细节，都在这里。",
         "foreground": [
-          102,
-          111,
-          109
+          97,
+          106,
+          104
         ],
         "background": [
           245,
           244,
           239
         ],
-        "ratio": 4.7,
+        "ratio": 5.06,
         "backgroundImage": "none"
       },
       {

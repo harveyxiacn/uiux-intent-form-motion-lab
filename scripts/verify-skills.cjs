@@ -51,13 +51,13 @@ module.exports = async (p, base) => {
   await p.locator('#search-input').fill('fintech dashboard');
   await p.locator('#search-form button[type=submit]').click();
   assert.match(await p.locator('#search-note').innerText(), /命中 3 条风格资料/);
-  const styles = await p.locator('#search-results h5').allInnerTexts();
+  const styles = await p.locator('#search-results h4').allInnerTexts();
   assert.ok(styles.includes('Data-Dense Dashboard'), 'fintech dashboard should surface the data-dense style');
   await p.locator('#domain-palette').click();
-  assert.equal(await p.locator('#search-results h5').first().innerText(), 'Fintech / Crypto');
+  assert.equal(await p.locator('#search-results h4').first().innerText(), 'Fintech / Crypto');
   assert.equal(await p.locator('.swatches').first().locator('span').count(), 4);
   await p.locator('#domain-font').click();
-  const fonts = await p.locator('#search-results h5').allInnerTexts();
+  const fonts = await p.locator('#search-results h4').allInnerTexts();
   assert.ok(fonts.includes('Modern Professional') || fonts.includes('Tech Startup'), 'fintech should surface a professional or tech pairing');
 
   assert.equal(await p.locator('.direction-card').count(), 3);

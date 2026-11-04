@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <script src="../i18n/i18n.js" data-groups="pipeline"></script>
   <meta name="theme-color" content="#f3f3ef">
-  <meta name="description" content="工序版 Playground：网页与 App 两类可点击、可拖动的界面效果，提示词选择器，以及能直接交给安装了 uiux skills 的 AI Agent 执行的自然语言提示词生成。">
+  <meta name="description" content="工序版 Playground：网页与 App 两类可点击、可拖动的界面效果，提示词选择器，以及能直接交给安装了 uiux skills 的 AI Agent 执行的自然语言提示词生成。"><meta property="og:type" content="website"><meta property="og:site_name" content="UI/UX 实验室"><meta property="og:title" content="工序版 Playground · UI/UX 实验室"><meta property="og:description" content="工序版 Playground：网页与 App 两类可点击、可拖动的界面效果，提示词选择器，以及能直接交给安装了 uiux skills 的 AI Agent 执行的自然语言提示词生成。"><meta property="og:url" content="https://harveyxiacn.github.io/uiux-intent-form-motion-lab/pipeline/"><meta property="og:image" content="https://harveyxiacn.github.io/uiux-intent-form-motion-lab/og/pipeline.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://harveyxiacn.github.io/uiux-intent-form-motion-lab/pipeline/">
   <title>工序版 Playground · UI/UX 实验室</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%232741c8%22/%3E%3Ctext x=%2216%22 y=%2222%22 font-size=%2215%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-weight=%22700%22 fill=%22%23fff%22%3E09%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="lab.css">
@@ -46,7 +46,7 @@
       <p class="lede">网页 20 个、App 23 个效果，每个都能点、能拖、会给反馈。右边的提示词不是描述，是一份<strong>交给装了 uiux skills 的 Agent 就能开工</strong>的工单：开头调用 <code>uiux-workflow</code>，按交互契约、组件状态、动效、手持检查、验收的顺序写好每一段。</p>
       <div class="install">
         <p>先在你的项目里安装 skills</p>
-        <pre><code>git clone https://github.com/harveyxiacn/uiux-intent-form-motion-lab
+        <pre tabindex="0" aria-label="安装命令"><code>git clone https://github.com/harveyxiacn/uiux-intent-form-motion-lab
 node uiux-intent-form-motion-lab/scripts/install-skills.cjs --global</code></pre>
         <p class="small">Codex 加 <code>--target codex</code>。装好后重启 Agent，再粘贴提示词。</p>
       </div>
@@ -62,12 +62,12 @@ node uiux-intent-form-motion-lab/scripts/install-skills.cjs --global</code></pre
     </div>
 
     <div class="pg-grid">
-      <aside class="lib" aria-label="效果选择器">
+      <section class="lib" aria-label="效果选择器">
         <label class="search"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input id="q" type="search" placeholder="搜「拖」「弹层」「点赞」…" autocomplete="off"><span class="sr-only">搜索效果</span></label>
         <div class="fams" id="fams" role="group" aria-label="按家族筛选"></div>
         <ol class="list" id="list"></ol>
         <p class="list-empty" id="list-empty" hidden>没有匹配的效果，换个词试试。</p>
-      </aside>
+      </section>
 
       <div class="stage-col">
         <div class="stage-head">
@@ -86,7 +86,7 @@ node uiux-intent-form-motion-lab/scripts/install-skills.cjs --global</code></pre
         <div class="feed" aria-label="操作反馈"><p class="feed-hint" id="st-hint"></p><ol id="feed"></ol></div>
       </div>
 
-      <aside class="detail" aria-label="当前效果的提示词">
+      <section class="detail" aria-label="当前效果的提示词">
         <p class="eyebrow">PROMPT <span id="d-no"></span></p>
         <h3 id="d-title"></h3>
         <p class="d-sum" id="d-sum"></p>
@@ -102,7 +102,7 @@ node uiux-intent-form-motion-lab/scripts/install-skills.cjs --global</code></pre
         <pre class="prompt" id="d-prompt" tabindex="0" aria-label="可复制的提示词"></pre>
         <button type="button" class="copy" id="d-copy"><span class="copy-a">复制提示词</span><span class="copy-b" aria-hidden="true">已复制 ✓</span></button>
         <details class="acc"><summary>验收点</summary><ol id="d-acc"></ol></details>
-      </aside>
+      </section>
     </div>
   </section>
 
