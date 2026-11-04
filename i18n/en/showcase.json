@@ -1,6 +1,5 @@
 {
  "<0>01–06</0><1>六个上游展台：术语翻译、register 切换、资料检索、方向抽样、产品层级、审查修复。</1>": "<0>01–06</0><1>Six upstream showcases: term translation, register switching, reference retrieval, direction sampling, product hierarchy, review and repair.</1>",
- "<0>07–15</0><1>八个本地模块与提示词手册：在官网、工作台、手机原型与组件实验室里接力。</1>": "<0>07–15</0><1>Eight in-house modules and the prompt handbook: handing off across the website, workspace, phone prototype and component lab.</1>",
  "<0>交互规格</0><1>触发、过程、结果与反向操作 ↗</1>": "<0>Interaction spec</0><1>Trigger, sequence, result and reversal ↗</1>",
  "<0>保持好奇<br>动手试试 ↗</0><1></1>": "<0>Stay curious,<br>try it out ↗</0><1></1>",
  "<0>动效工程</0><1>时序、中断、减少动态效果 ↗</1>": "<0>Motion engineering</0><1>Timing, interruption, reduced motion ↗</1>",
@@ -32,7 +31,6 @@
  "不是读完，": "Don't just read it,",
  "专注工作台": "Focus Workspace",
  "专注数据工作台": "Focus data workspace",
- "九个本地模块（含提示词手册），六个上游 Skill。": "Nine in-house modules (including the prompt handbook), six upstream skills.",
  "九个本地模块，加上六个上游 Skill。": "Nine in-house modules, plus six upstream skills.",
  "交互": "Motion",
  "交互规格": "Interaction spec",
@@ -49,7 +47,6 @@
  "光谱 / 创意工作台": "Spectrum / Creative studio",
  "光谱创意工作台": "Spectrum creative studio",
  "光谱深色创意工作台截图，项目表格与琥珀色操作按钮": "Spectrum dark creative studio screenshot: project table and amber action buttons",
- "八个本地模块与提示词手册：在官网、工作台、手机原型与组件实验室里接力。": "Eight in-house modules and the prompt handbook, working in relay across the website, workspace, mobile prototype and component lab.",
  "六个上游展台在": "The six upstream stations are in",
  "六个上游展台在 <0>技能地图</0> 里，可输入、检索、抽取和审查。": "The six upstream showcases are in the <0>Skill Atlas</0>, where you can enter, search, extract and review.",
  "六个上游展台：术语翻译、register 切换、资料检索、方向抽样、产品层级、审查修复。": "Six upstream stations: term translation, register switching, reference search, direction sampling, product hierarchy, review and fix.",
@@ -66,7 +63,6 @@
  "十五个 Skill 的实时地图：术语翻译、register 切换、资料检索、方向抽样、产品层级、审查修复与提示词实验。": "A live map of fifteen skills: term translation, register switching, reference search, direction sampling, product hierarchy, review and fix, and prompt experiments.",
  "十五个可复用的设计方法。": "Fifteen reusable design methods.",
  "十五个方法": "Fifteen methods",
- "十五个方法，": "Fifteen methods,",
  "受众、目标、信息层级 ↗": "Audience, goals, information hierarchy ↗",
  "品牌与内容": "Brand and content",
  "回到现场 ↗": "Back to the live view ↗",
@@ -95,7 +91,6 @@
  "打开 Skill Atlas": "Open Skill Atlas",
  "技能地图": "Skill Atlas",
  "技能地图 / Skill Atlas": "Skill Atlas / Skill Atlas",
- "技能地图首屏截图，巨幅标题、15 个方法计数与六类技能入口": "Skill Atlas first-screen screenshot: giant headline, count of 15 methods and six skill entry points",
  "把「想要好看」拆成具体选择。": "Break “I want it to look good” into concrete choices.",
  "把探索感留在阅读里。": "Keep the sense of exploration inside the reading.",
  "把趋势、任务与待办放进同一工作视野，让信息服务下一步决策。": "Put trends, tasks and to-dos into one working view so information serves the next decision.",
@@ -163,5 +158,10 @@
  "预览一刻手机应用": "Preview the Moment mobile app",
  "预览光谱创意工作台": "Preview the Spectrum creative studio",
  "预览慢半拍展览官网": "Preview the Offbeat exhibition website",
- "预览组件动效实验室": "Preview the Component Motion Lab"
+ "预览组件动效实验室": "Preview the Component Motion Lab",
+ "<0>07–16</0><1>八个本地模块、提示词手册与工序统筹：在官网、工作台、手机原型、组件实验室与工序版里接力。</1>": "<0>07–16</0><1>Eight in-house modules, the prompt handbook and stage routing: handing off across the website, workspace, phone prototype, component lab and pipeline edition.</1>",
+ "八个本地模块、提示词手册与工序统筹：在官网、工作台、手机原型、组件实验室与工序版里接力。": "Eight in-house modules, the prompt handbook and stage routing: handing off across the website, workspace, phone prototype, component lab and pipeline edition.",
+ "十个本地模块（含提示词手册与工序统筹），六个上游 Skill。": "Ten in-house modules (including the prompt handbook and stage routing), six upstream skills.",
+ "十六个方法，": "Sixteen methods,",
+ "技能地图首屏截图，巨幅标题、16 个方法计数与六类技能入口": "Skill Atlas first-screen screenshot: giant headline, count of 16 methods and six skill entry points"
 }

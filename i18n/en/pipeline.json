@@ -208,6 +208,7 @@
  "「卡片删除时飞走，": "“Cards fly away when deleted,",
  "【交互契约 · {0}】": "[Interaction contract · {0}]",
  "【动效 · {0}】{1}。中断：{2}。以上数值是提议值，可按项目令牌调整；业务状态不能依赖动画完成。": "[Motion · {0}] {1}. Interruption: {2}. The values above are proposals and can be adjusted to the project’s tokens; business state must not depend on the animation finishing.",
+ "【参考实现】uiux-prompt-playbook › {0} · {1}：先读这段可运行代码，再按项目技术栈移植。": "[Reference implementation] uiux-prompt-playbook › {0} · {1}: read this working code first, then port it to the project’s stack.",
  "【手持检查 · {0}】可点区域 ≥ 44px；每个手势都有可见按钮或键盘替代；浮层与提示条避开底部导航和安全区；在 390×844 视口检查。": "[Handheld check · {0}] Tap targets ≥ 44px; every gesture has a visible button or keyboard alternative; overlays and toasts stay clear of the bottom tab bar and safe area; check at a 390×844 viewport.",
  "【组件状态 · {0}】{1}；业务数据由父级持有，组件只持有交互中的临时状态。": "[Component states · {0}] {1}; business data is owned by the parent, and the component owns only transient in-interaction state.",
  "【验收 · {0}】": "[Acceptance · {0}]",
@@ -2323,6 +2324,5 @@
  "PIPELINE PLAYGROUND · 23 个可操作效果 · 2026.10": "PIPELINE PLAYGROUND · 23 interactive effects · 2026.10",
  "写下你想要的效果和感觉。页面会识别界面类别、手感、技术栈和额外要求，从 23 个效果里找最接近的一到两个，把它们的交互契约、动效数值和验收合成一份提示词。规则在浏览器里运行，不调用任何模型；匹配不到时会生成一份让 Agent 先补全契约的工单，而不是硬凑。": "Write the effect and feel you want. The page recognises the interface type, feel, stack and extra requirements, finds the closest one or two of the 23 effects, and combines their interaction contracts, motion values and acceptance checks into one prompt. The rules run in the browser and call no model; when nothing matches, it generates a work order asking the agent to complete the contract first instead of forcing a match.",
  "网页 8 个、App 15 个效果，每个都能点、能拖、会给反馈。右边的提示词不是描述，是一份": "8 Web and 15 App effects; every one can be clicked, dragged and gives feedback. The prompt on the right is not a description but a",
- "网页 8 个、App 15 个效果，每个都能点、能拖、会给反馈。右边的提示词不是描述，是一份<0>交给装了 uiux skills 的 Agent 就能开工</0>的工单：开头调用 <1>uiux-workflow</1>，按交互契约、组件状态、动效、手持检查、验收的顺序写好每一段。": "8 Web and 15 App effects; every one can be clicked, dragged and gives feedback. The prompt on the right is not a description but a work order that <0>an agent with the uiux skills installed can start on right away</0>: it opens by invoking <1>uiux-workflow</1>, then writes each section in the order of interaction contract, component states, motion, handheld check and acceptance.",
- "【参考实现】uiux-prompt-playbook › {0} · {1}：先读这段可运行代码，再按项目技术栈移植。": "[Reference implementation] uiux-prompt-playbook › {0} · {1}: read this working code first, then port it to the project’s stack."
+ "网页 8 个、App 15 个效果，每个都能点、能拖、会给反馈。右边的提示词不是描述，是一份<0>交给装了 uiux skills 的 Agent 就能开工</0>的工单：开头调用 <1>uiux-workflow</1>，按交互契约、组件状态、动效、手持检查、验收的顺序写好每一段。": "8 Web and 15 App effects; every one can be clicked, dragged and gives feedback. The prompt on the right is not a description but a work order that <0>an agent with the uiux skills installed can start on right away</0>: it opens by invoking <1>uiux-workflow</1>, then writes each section in the order of interaction contract, component states, motion, handheld check and acceptance."
 }

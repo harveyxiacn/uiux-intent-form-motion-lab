@@ -8,7 +8,7 @@ module.exports = async (p, base) => {
   await p.goto(base + 'demos/skills/');
   await p.waitForSelector('.skill-card');
   await p.evaluate(() => { try { localStorage.removeItem('atlas-theme'); } catch { /* optional */ } });
-  assert.equal(await p.title(), '技能地图 — 十五个 UI/UX Skill 的现场');
+  assert.equal(await p.title(), '技能地图 — 十六个 UI/UX Skill 的现场');
 
   const headingLines = async (selector) => {
     const box = await p.locator(selector).evaluate((el) => {
@@ -92,15 +92,20 @@ module.exports = async (p, base) => {
   assert.equal(await p.locator('#audit-form').getAttribute('data-fixed'), 'false');
   assert.equal(await p.locator('#audit-error').getAttribute('role'), null);
 
-  assert.equal(await p.locator('.skill-card').count(), 15);
-  assert.equal(await p.locator('#index-count').innerText(), '显示 15 / 15');
+  assert.equal(await p.locator('.skill-card').count(), 16);
+  assert.equal(await p.locator('#index-count').innerText(), '显示 16 / 16');
+  assert.equal(await p.locator('.skill-card h3 small', { hasText: 'uiux-workflow' }).count(), 1, 'workflow card listed');
+  assert.equal(await p.locator('.skill-card', { hasText: 'uiux-workflow' }).locator('a').first().getAttribute('href'), '../../pipeline/');
   await p.locator('[data-filter=local]').click();
-  assert.equal(await p.locator('.skill-card:visible').count(), 9);
+  assert.equal(await p.locator('.skill-card:visible').count(), 10);
   await p.locator('[data-filter=upstream]').click();
   assert.equal(await p.locator('.skill-card:visible').count(), 6);
   await p.locator('[data-filter=all]').click();
-  assert.equal(await p.locator('.skill-card:visible').count(), 15);
-  assert.match(await p.locator('.skill-card').first().locator('.skill-links a').first().getAttribute('href'), /\.\.\/\.\.\/showcase\.html#/);
+  assert.equal(await p.locator('.skill-card:visible').count(), 16);
+  // every in-house card points at a live example: a showcase demo, the prompt lab, or (uiux-workflow) the pipeline edition
+  const localLinks = await p.locator('.skill-card[data-source="local"] .skill-links a:first-child').evaluateAll((links) => links.map((a) => a.getAttribute('href')));
+  assert.equal(localLinks.length, 10);
+  for (const href of localLinks) assert.match(href, /^\.\.\/\.\.\/(showcase\.html#|pipeline\/$|$)/, 'local card link ' + href);
 
   await p.locator('[data-stage-link="验证"]').click();
   assert.equal(await p.locator('.skill-card.stage-focus').count(), 2);

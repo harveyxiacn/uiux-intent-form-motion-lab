@@ -1,8 +1,8 @@
-# 十五项 Skill 的实例与展台验收
+# 十六项 Skill 的实例与展台验收
 
-日期：2026-10-29。运行环境为 Windows / Edge / Playwright，桌面 1440×1000、手机仿真 390×844。入口：[六组在线演示](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/)。此表以实际源码、交互及截图证据为依据，不把格式通过等同于实例验收。
+日期：2026-10-29；第 9 行（提示词手册）与第 10 行（工序统筹）更新于 2026-11-04。运行环境为 Windows / Edge / Playwright，桌面 1440×1000、手机仿真 390×844。入口：[六组在线演示](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/)。此表以实际源码、交互及截图证据为依据，不把格式通过等同于实例验收。
 
-本表第 1–9 行覆盖本项目的九个模块。[`skills/upstream/`](skills/upstream/README.md) 收录的六个上游快照完成了源码、许可证与依赖审查，并另做了展台级效果验收（见下节）；展台验收不等于完整 Skill 回归或独立模型行为评测。
+本表第 1–10 行覆盖本项目的十个模块。[`skills/upstream/`](skills/upstream/README.md) 收录的六个上游快照完成了源码、许可证与依赖审查，并另做了展台级效果验收（见下节）；展台验收不等于完整 Skill 回归或独立模型行为评测。
 
 | Skill | 具体实例与产出 | 实际验收与结果 | 边界 |
 | --- | --- | --- | --- |
@@ -14,7 +14,8 @@
 | [motion-engineering](skills/uiux-motion-engineering/SKILL.md) | 展开使用可反向CSS transition；工作台WAAPI进入、关闭取消；系统和模拟减少动态保留状态 | 常规动态9次展开反向、工作台10次快速开关通过；无遗留modal；减少动态时CSS transition为0，工作台运行中的animation为0，仍可开关/保存 | 没有性能trace/帧率或低端设备数据，不能声称性能或流畅度认证 |
 | [accessibility-review](skills/uiux-accessibility-review/SKILL.md) | 有名称的原生dialog、label/error关联、状态文本、键盘焦点、双主题对比 | 键盘tabs/表单错误焦点与纠正、modal焦点约束/返回、代表文本对比通过；修复实验室dialog缺少aria-labelledby后复验；手机导航与详情返回补测通过 | 这是限定范围审查，不等于WCAG认证；未做屏幕阅读器、200%缩放全流程或真实辅助硬件测试 |
 | [mobile-patterns](skills/uiux-mobile-patterns/SKILL.md) | 间App底导航→日历/详情→编辑面板→返回；光谱手机布局与全屏编辑 | 390仿真下导航Enter后focus main；新增Escape回add；详情返回原条目；新增/编辑/完成/日期与保存通过；光谱390编辑带引号/尖括号名称、关闭返回通过 | 桌面浏览器手机仿真，不是真机；软键盘遮挡、iOS/Android系统返回和手势未实测 |
-| [prompt-playbook](skills/uiux-prompt-playbook/SKILL.md) | [提示词实验室](docs/index.html)把 141 条提示词、21 个场景与自然语言生成器放在同一页 | 141/141 条逐条点选并确认场景挂载、详情、验收与 hash；分类/搜索/家族筛选、空态、复制、主题、390 宽无横向溢出通过；生成器可复制与预览；无页面错误 | 每条只自动验证挂载与静态契约，未逐条手测全部手势；生成器是规则匹配，不是 LLM；不证明任何实际实现可访问或高性能 |
+| [prompt-playbook](skills/uiux-prompt-playbook/SKILL.md) | [提示词实验室](docs/index.html)把 168 条提示词、25 个场景与自然语言生成器放在同一页；`assets/reference/` 随 Skill 安装每条提示词背后的可运行代码与按 id 查找的索引 | 168/168 条逐条点选并确认场景挂载、详情、验收与 hash；分类/搜索/家族筛选、空态、复制、主题、390 宽无横向溢出通过；新增 20 条另做真实操作并断言结果（正常与减少动态效果各一遍，共 40 项）；复制的提示词与生成结果带「参考实现」行；安装到 Claude Code 与 Codex 后索引覆盖 168 条提示词与 43 个工序版效果；无页面错误 | 旧的 148 条只自动验证挂载与静态契约，未逐条手测全部手势；生成器是规则匹配，不是 LLM；参考实现是演示代码，不是组件库；不证明任何实际实现可访问或高性能 |
+| [workflow](skills/uiux-workflow/SKILL.md) | [工序版 Playground](docs/pipeline/)生成的工单都以 uiux-workflow 开头，再按交互契约、组件状态、动效、手持检查、验收、参考实现分段；[九道工序讲解](docs/pipeline/walkthrough.html)把同一句需求走完全部工序 | `verify-pipeline.cjs`：Claude Code 与 Codex 两种写法的工单分别以 `uiux-workflow skill` 和 `$uiux-workflow` 开头且各段齐全；43 个效果逐个生成工单并能被生成器匹配；Skill 安装到两种 Agent 的临时目录后文件与索引齐全 | 只验证工单的结构与安装内容；没有评测某个 Agent 是否真的按工序执行，也没有对比有无此 Skill 的实现质量 |
 
 ## 六个上游 Skill 的展台级验收（2026-10-29）
 
@@ -29,7 +30,7 @@
 | interface-design 2026.6.20 | 产品 UI 的差别在层级、间距、状态与焦点，而非装饰 | 默认/设计后切换同时改变标题层级、间距、状态标签、按钮和焦点规则 | 同一条模拟工作台的两种呈现，不是自动生成 |
 | impeccable 4.8.0 | 审查定位到具体元素，再逐条修复，而不是给一个分数 | 4 条问题可修复与重置；对比度、热区、焦点、错误播报的状态确实改变 | 4 条固定示例；未下载或调用上游引擎，不代表 24 个子命令的实际执行 |
 
-技能地图还提供 15 条索引（9 个本项目模块 + 6 个上游）、来源筛选、阶段定位、双主题与 390 宽响应式。索引把每个上游条目指回展台，把每个本项目模块指回已有实例；页面自述的八条则记录本项目设计模块如何参与这页本身。
+技能地图还提供 16 条索引（10 个本项目模块 + 6 个上游）、来源筛选、阶段定位、双主题与 390 宽响应式。索引把每个上游条目指回展台，把每个本项目模块指回已有实例；页面自述的八条则记录本项目设计模块如何参与这页本身。
 
 
 ## 提示词实验室验收（2026-10-29）

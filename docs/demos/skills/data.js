@@ -124,6 +124,7 @@ window.ATLAS_DATA = {
   ],
 
   skills: [
+    { id: "uiux-workflow", label: "工序统筹", source: "local", stage: "定义", effect: "跨阶段的需求先定工序：该走哪几道、按什么顺序、每道交出什么。", target: "../../pipeline/", targetLabel: "看工序版", detail: "九道工序 · 交接单 · 43 个效果的工单" },
     { id: "uiux-page-planning", label: "页面规划", source: "local", stage: "定义", effect: "先把受众、目标和信息层级排清楚，再谈布局。", target: "../../showcase.html#web", targetLabel: "看展览官网", detail: "五组演示的分类、首屏与阅读顺序" },
     { id: "uiux-mobile-patterns", label: "移动模式", source: "local", stage: "定义", effect: "手持任务流、返回路径、输入情境与安全区。", target: "../../showcase.html#app", targetLabel: "看手机原型", detail: "390px 单列任务流与底部导航" },
     { id: "uiux-prompt-playbook", label: "提示词手册", source: "local", stage: "行动", effect: "168 条可执行提示词，每一条都能在场景舞台里当场操作。", target: "../../", targetLabel: "打开实验室", detail: "168 prompts · 25 scenes · 网页 / App 双分类" },

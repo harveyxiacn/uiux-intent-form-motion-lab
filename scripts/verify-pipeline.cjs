@@ -40,6 +40,18 @@ const shots = process.env.SHOTS || '';
     assert.ok(st.prompt.includes('【参考实现】uiux-prompt-playbook › ' + e.id + ' · '), e.id + ' prompt names its reference implementation');
   }
 
+  // Work orders are routed by uiux-workflow: Claude Code names the skill, Codex uses $-invocation, and
+  // every effect carries the stage-labelled fields that the workflow skill maps to its stages.
+  for (const [agent, lead] of [['claude', '请使用 uiux-workflow skill 统筹这次实现'], ['codex', '$uiux-workflow 请按工序统筹这次实现']]) {
+    await page.goto(base + '#a-plane');
+    await page.waitForFunction(() => /纸飞机/.test(document.querySelector('#d-title')?.textContent || ''));
+    await page.locator(`[data-agent="${agent}"]`).click();
+    const text = await page.locator('#d-prompt').innerText();
+    assert.ok(text.startsWith(lead), agent + ' work order opens with uiux-workflow');
+    for (const field of ['【交互契约', '【组件状态', '【动效', '【手持检查', '【验收', '【参考实现】']) assert.ok(text.includes(field), agent + ' has ' + field);
+  }
+  await page.locator('[data-agent="claude"]').click();
+
   // Bridged effects: one real interaction each must change state and write to the feed.
   const act = {
     'a-plane': async (s) => s.locator('[data-send]').click(),

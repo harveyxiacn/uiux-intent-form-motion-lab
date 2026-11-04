@@ -964,6 +964,7 @@
  "去重": "Deduplicate",
  "去重后的可执行提示词": "Deduplicated, actionable prompt",
  "去重提示": "Duplicate notice",
+ "参考实现：uiux-prompt-playbook › {0}（{1} / {2}）": "Reference implementation: uiux-prompt-playbook › {0} ({1} / {2})",
  "参考线": "Guide line",
  "双 11 会员月": "Singles' Day member month",
  "双列": "Two columns",
@@ -3624,6 +3625,5 @@
  "稻城 · 07:25": "Daocheng · 07:25",
  "苏州 · 14:10": "Suzhou · 14:10",
  "雨后的巷子": "Alley after rain",
- "青岛 · 05:40": "Qingdao · 05:40",
- "参考实现：uiux-prompt-playbook › {0}（{1} / {2}）": "Reference implementation: uiux-prompt-playbook › {0} ({1} / {2})"
+ "青岛 · 05:40": "Qingdao · 05:40"
 }

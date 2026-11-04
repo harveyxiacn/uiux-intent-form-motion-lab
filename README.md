@@ -38,11 +38,11 @@
 
 ![组件动效实验室](docs/screenshots/components-desktop.png)
 
-[十五项 Skill 的实例与展台验收](SKILL-VALIDATION.md)逐一列出它们在哪个界面产生作用、具体检查及限制。验证涵盖运行行为，不以格式检查代替实例测试；无障碍检查不等于 WCAG 认证。
+[十六项 Skill 的实例与展台验收](SKILL-VALIDATION.md)逐一列出它们在哪个界面产生作用、具体检查及限制。验证涵盖运行行为，不以格式检查代替实例测试；无障碍检查不等于 WCAG 认证。
 
 ## 技能地图
 
-[技能地图](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/demos/skills/)是第六组实例，也是十五个 Skill 的可操作索引。六个上游 Skill 各有一个实时展台：
+[技能地图](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/demos/skills/)是第六组实例，也是十六个 Skill 的可操作索引。六个上游 Skill 各有一个实时展台：
 
 - **finesse-term**：把「按钮被黑杠挡住了」翻译成安全区、视口设置与吸底操作栏。
 - **finesse-ui**：同一任务在 brand / product / H5 三种 register 下改变构图、密度与文案。
@@ -51,7 +51,7 @@
 - **interface-design**：同一条产品工作台，在默认生成与设计后之间切换层级、间距、状态和焦点。
 - **impeccable**：运行审查、逐条修复对比度/热区/焦点/错误播报，再重置。
 
-下方还有 15 条技能索引（9 个本项目模块 + 6 个上游快照）、来源筛选和九个本项目模块的自我说明。
+下方还有 16 条技能索引（10 个本项目模块 + 6 个上游快照）、来源筛选和本项目设计模块的自我说明。
 
 ![技能地图首屏](docs/screenshots/skills-fold.png)
 

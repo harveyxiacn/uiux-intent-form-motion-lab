@@ -1884,7 +1884,23 @@
  "skills": {
   "148 条可执行提示词，每一条都能在场景舞台里当场操作。": "148 executable prompts, each one you can try on the spot on a scene stage.",
   "168 条可执行提示词，每一条都能在场景舞台里当场操作。": "168 executable prompts, each one you can try on the spot on a scene stage.",
-  "168 prompts · 25 scenes · 网页 / App 双分类": "168 prompts · 25 scenes · Web / App categories"
+  "168 prompts · 25 scenes · 网页 / App 双分类": "168 prompts · 25 scenes · Web / App categories",
+  "<0>01</0><1>定义</1><2>4 个 Skill</2>": "<0>01</0><1>Define</1><2>4 skills</2>",
+  "Skill Atlas · 16 个方法 · 6 个实时展台": "Skill Atlas · 16 methods · 6 live stations",
+  "九道工序 · 交接单 · 43 个效果的工单": "Nine stages · handoff sheets · work orders for 43 effects",
+  "全部 16": "All 16",
+  "全部 <0>16</0>": "All <0>16</0>",
+  "十个本项目模块把问题拆成阶段、按顺序交接；六个上游 Skill 补上构建、检索与审查的手感。这里不是名词表——每个方法都有一处可以亲手验证的效果。": "Ten in-house modules break the problem into stages and hand off in order; six upstream skills add the feel of building, searching and reviewing. This is not a glossary: every method has an effect you can verify by hand.",
+  "十六个 Skill，": "Sixteen skills,",
+  "十六个 UI/UX Skill 的可操作地图：术语翻译、register 切换、设计资料检索、方向抽样、产品层级与审查修复。": "An operable map of sixteen UI/UX skills: term translation, register switching, design reference search, direction sampling, product hierarchy and review-and-fix.",
+  "十六个方法，": "Sixteen methods,",
+  "工序统筹": "Stage routing",
+  "技能地图 / SKILL ATLAS / 2026.11": "Skill Atlas / SKILL ATLAS / 2026.11",
+  "技能地图 — 十六个 UI/UX Skill 的现场": "Skill Atlas: sixteen UI/UX skills, live",
+  "显示 16 / 16": "Showing 16 / 16",
+  "本项目 <0>10</0>": "In-house <0>10</0>",
+  "看工序版": "See the pipeline edition",
+  "跨阶段的需求先定工序：该走哪几道、按什么顺序、每道交出什么。": "A request that spans stages gets its route first: which stages apply, in what order, and what each one hands over."
  },
  "demos": {
   "标记未完成 {0}": "Mark as not done: {0}",
@@ -1895,6 +1911,11 @@
   "常规优先": "Normal priority"
  },
  "showcase": {
-  "工序版 Playground · 新": "Pipeline Playground · New"
+  "工序版 Playground · 新": "Pipeline Playground · New",
+  "<0>07–16</0><1>八个本地模块、提示词手册与工序统筹：在官网、工作台、手机原型、组件实验室与工序版里接力。</1>": "<0>07–16</0><1>Eight in-house modules, the prompt handbook and stage routing: handing off across the website, workspace, phone prototype, component lab and pipeline edition.</1>",
+  "八个本地模块、提示词手册与工序统筹：在官网、工作台、手机原型、组件实验室与工序版里接力。": "Eight in-house modules, the prompt handbook and stage routing: handing off across the website, workspace, phone prototype, component lab and pipeline edition.",
+  "十个本地模块（含提示词手册与工序统筹），六个上游 Skill。": "Ten in-house modules (including the prompt handbook and stage routing), six upstream skills.",
+  "十六个方法，": "Sixteen methods,",
+  "技能地图首屏截图，巨幅标题、16 个方法计数与六类技能入口": "Skill Atlas first-screen screenshot: giant headline, count of 16 methods and six skill entry points"
  }
 }
