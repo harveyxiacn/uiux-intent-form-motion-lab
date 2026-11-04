@@ -1,6 +1,6 @@
 # Intent / Form / Motion
 
-本项目提供十五个 UI/UX Skill（九个本项目模块、六个上游快照）、168 条可执行提示词与 25 个可操作场景，以及官网、Dashboard、手机 App、组合工作台、组件动效、技能地图六组完整界面演示。工作流：**明确页面目标 → 提炼视觉方向 → 定义交互与动效 → 现场验收**。
+本项目提供十六个 UI/UX Skill（十个本项目模块、六个上游快照）、168 条可执行提示词与 25 个可操作场景，以及官网、Dashboard、手机 App、组合工作台、组件动效、技能地图六组完整界面演示。工作流：**明确页面目标 → 提炼视觉方向 → 定义交互与动效 → 现场验收**。
 
 [在线提示词实验室](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/) · [作品展台](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/showcase.html) · [设计指南](DESIGN-GUIDE.md) · [验证记录](REVIEW.md)
 
@@ -106,7 +106,7 @@ App 是可交互的浏览器原型，没有后端或真实账户服务。演示�
 
 ## Skills
 
-### 本项目九个模块
+### 本项目十个模块
 
 | Skill | 职责 |
 | --- | --- |
@@ -119,6 +119,7 @@ App 是可交互的浏览器原型，没有后端或真实账户服务。演示�
 | [uiux-accessibility-review](skills/uiux-accessibility-review/SKILL.md) | 键盘、焦点、表单和无障碍证据审查 |
 | [uiux-mobile-patterns](skills/uiux-mobile-patterns/SKILL.md) | 手机导航、触摸、键盘与编辑面板 |
 | [uiux-prompt-playbook](skills/uiux-prompt-playbook/SKILL.md) | 168 条可执行提示词、25 个现场场景与自然语言生成；内附每个效果的参考实现 |
+| [uiux-workflow](skills/uiux-workflow/SKILL.md) | 把跨阶段的需求按顺序分派给上面九个模块，并在各阶段之间传递交接单 |
 
 ### 六个上游快照
 
@@ -136,7 +137,7 @@ App 是可交互的浏览器原型，没有后端或真实账户服务。演示�
 ### 安装
 
 ```bash
-node scripts/install-skills.cjs --list          # 列出十五份 Skill
+node scripts/install-skills.cjs --list          # 列出十六份 Skill
 node scripts/install-skills.cjs                 # 安装到本项目的 .claude/skills
 node scripts/install-skills.cjs --global        # 安装到 ~/.claude/skills
 node scripts/install-skills.cjs --target codex --global
