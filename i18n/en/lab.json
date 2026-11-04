@@ -3624,5 +3624,6 @@
  "稻城 · 07:25": "Daocheng · 07:25",
  "苏州 · 14:10": "Suzhou · 14:10",
  "雨后的巷子": "Alley after rain",
- "青岛 · 05:40": "Qingdao · 05:40"
+ "青岛 · 05:40": "Qingdao · 05:40",
+ "参考实现：uiux-prompt-playbook › {0}（{1} / {2}）": "Reference implementation: uiux-prompt-playbook › {0} ({1} / {2})"
 }

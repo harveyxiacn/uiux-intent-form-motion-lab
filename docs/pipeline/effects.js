@@ -855,6 +855,15 @@
   const isZh = () => !(window.I18N && I18N.lang === 'en');
   const SEP = () => (isZh() ? '、' : ', ');
 
+  /* Where the working code for an effect lives inside the installed uiux-prompt-playbook skill
+     (assets/reference/, see its index.json / INDEX.md). Bridged scenes live in the prompt lab's files. */
+  const BRIDGE_FILE = { stateLab: 'states.js', neuLab: 'neu.js', menuLab: 'menu.js' };
+  function refOf(e) {
+    const b = window.PIPE_BRIDGE && window.PIPE_BRIDGE[e.scene];
+    if (b) return `playground/${BRIDGE_FILE[b[0]]} · S.${b[0]} / ${b[1]}`;
+    return `${/^photo/.test(e.scene) ? 'pipeline/photo-scenes.js' : 'pipeline/scenes.js'} · S.${e.scene}`;
+  }
+
   function motionLine(e, feel) {
     const f = FEELS[feel] || FEELS.normal;
     const parts = e.motion.map(([n, ms]) => `${T(n)} ≈ ${Math.round((ms * f.k) / 10) * 10}ms`);
@@ -892,6 +901,7 @@
       push(`- 无障碍与降级：${e.c.acc}`);
       if (e.skills.includes('uiux-component-engineering')) push(`【组件状态 · ${skillName('uiux-component-engineering')}】${e.states}；业务数据由父级持有，组件只持有交互中的临时状态。`);
       push(`【动效 · ${skillName('uiux-motion-engineering')}】${motionLine(e, feel)}。中断：${e.intr}。以上数值是提议值，可按项目令牌调整；业务状态不能依赖动画完成。`);
+      push(`【参考实现】uiux-prompt-playbook › ${e.id} · ${refOf(e)}：先读这段可运行代码，再按项目技术栈移植。`);
     });
 
     if (cat === 'app') {

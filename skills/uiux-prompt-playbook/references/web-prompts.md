@@ -30,6 +30,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-component-engineering` · `uiux-motion-engineering`
 
+**Reference** `assets/reference/playground/scenes.js` line 3824 (`S.buttonLab` / `progress`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 上传 · 进度 · 成功 · 失败
 
 **Acceptance**
@@ -49,6 +51,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做按钮让位：点击主按钮后放大宽度并收窄次要按钮，切换为二次确认文案；再次点击完成并恢复布局。取消时恢复原状。
 
 **Skills** `uiux-interaction-spec` · `uiux-motion-engineering`
+
+**Reference** `assets/reference/playground/scenes.js` line 3998 (`S.buttonLab` / `yield`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 按钮 · 让位 · 二次确认 · 恢复
 
@@ -70,6 +74,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-motion-engineering` · `uiux-accessibility-review`
 
+**Reference** `assets/reference/playground/scenes.js` line 4037 (`S.buttonLab` / `panel`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 按钮 · 圆形裁剪 · 面板 · 焦点
 
 **Acceptance**
@@ -89,6 +95,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做磁吸按钮：按指针与按钮中心的距离计算轻微位移，离开交互区后用弹性动画复位；触屏和键盘不启用磁吸，避免误触。
 
 **Skills** `uiux-motion-engineering` · `uiux-mobile-patterns`
+
+**Reference** `assets/reference/playground/scenes.js` line 3967 (`S.buttonLab` / `magnet`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 磁吸 · 指针 · 复位 · 触屏
 
@@ -110,6 +118,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-motion-engineering` · `uiux-accessibility-review`
 
+**Reference** `assets/reference/playground/scenes.js` line 3754 (`S.buttonLab` / `liquid`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 按钮 · 液体 · 扩散 · 状态
 
 **Acceptance**
@@ -129,6 +139,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做向右滑动确认按钮：拖动时填充轨道，过阈值进入成功，没到就自动回弹；键盘可用方向键或 Enter 完成。拖动过程中显示进度文字。
 
 **Skills** `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**Reference** `assets/reference/playground/scenes.js` line 3907 (`S.buttonLab` / `slide`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 滑动确认 · 阈值 · 回弹 · 键盘
 
@@ -150,6 +162,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-motion-engineering` · `uiux-accessibility-review`
 
+**Reference** `assets/reference/playground/scenes.js` line 4021 (`S.buttonLab` / `roll`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 按钮 · 文案 · 滚动 · 状态
 
 **Acceptance**
@@ -169,6 +183,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做长按完成按钮：按住时环形进度条增长，到指定时长完成操作；中途松开就取消并复位。提供键盘长按替代和清晰的完成反馈。
 
 **Skills** `uiux-interaction-spec` · `uiux-accessibility-review`
+
+**Reference** `assets/reference/playground/scenes.js` line 3779 (`S.buttonLab` / `hold`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 长按 · 环形 · 确认 · 取消
 
@@ -192,6 +208,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-style-direction` · `uiux-component-engineering`
 
+**Reference** `assets/reference/playground/scenes.js` line 4089 (`S.layoutLab` / `inline`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 标题 · 内嵌图 · 展开 · 避让
 
 **Acceptance**
@@ -211,6 +229,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做档案夹标签页：多页内容层叠只露出顶部标签，点击标签时对应页到最上层，其余页依次后退；当前页有清晰标签和焦点，页面内容保持可读。
 
 **Skills** `uiux-motion-engineering` · `uiux-component-engineering`
+
+**Reference** `assets/reference/playground/scenes.js` line 4110 (`S.layoutLab` / `folder`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 档案夹 · 标签页 · 层叠 · 焦点
 
@@ -232,6 +252,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-motion-engineering` · `uiux-component-engineering`
 
+**Reference** `assets/reference/playground/scenes.js` line 4133 (`S.layoutLab` / `grid`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 网格 · 通栏 · 展开 · 焦点
 
 **Acceptance**
@@ -251,6 +273,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做镂空大标题版式：照片从大标题的镂空处透出，上滑文字放大、照片铺满全屏，下滑照片收缩回镂空内，带流畅动画。文字与照片的层叠关系在两端都正确。
 
 **Skills** `uiux-style-direction` · `uiux-motion-engineering`
+
+**Reference** `assets/reference/playground/scenes.js` line 4166 (`S.layoutLab` / `cutout`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 镂空 · 标题 · 照片 · 滚动
 
@@ -272,6 +296,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-motion-engineering` · `uiux-page-planning`
 
+**Reference** `assets/reference/playground/scenes.js` line 4189 (`S.layoutLab` / `parallax`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 版式 · 双列 · 视差 · 对齐
 
 **Acceptance**
@@ -291,6 +317,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做上下分屏：中间有可拖拽把手，拖动时两区大小同步变化，松手自动吸附到 30/50/70 预设比例；键盘上下键可调。
 
 **Skills** `uiux-component-engineering` · `uiux-accessibility-review`
+
+**Reference** `assets/reference/playground/scenes.js` line 4208 (`S.layoutLab` / `split`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 分屏 · 把手 · 吸附 · 键盘
 
@@ -312,6 +340,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-motion-engineering` · `uiux-style-direction`
 
+**Reference** `assets/reference/playground/scenes.js` line 4249 (`S.layoutLab` / `bubbles`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 圆泡 · 堆叠 · 选择 · 聚拢
 
 **Acceptance**
@@ -331,6 +361,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做左栏日期吸住版式：左侧窄栏放大号日期，右侧日程滚动；滚动时日期栏固定在顶部，下一日日期平滑推入切换，和右侧分组严格对齐。
 
 **Skills** `uiux-page-planning` · `uiux-motion-engineering`
+
+**Reference** `assets/reference/playground/scenes.js` line 4267 (`S.layoutLab` / `sticky`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 版式 · 吸顶 · 日期 · 日程
 
@@ -354,6 +386,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-component-engineering` · `uiux-accessibility-review`
 
+**Reference** `assets/reference/playground/scenes.js` line 4356 (`S.selectLab` / `local`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 下拉 · 搜索 · 筛选 · 空状态
 
 **Acceptance**
@@ -373,6 +407,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做拆分按钮：左侧点击执行主动作，右侧箭头展开次要动作；主次操作视觉区分明确，键盘可分别聚焦。
 
 **Skills** `uiux-component-engineering` · `uiux-design-system`
+
+**Reference** `assets/reference/playground/scenes.js` line 4627 (`S.selectLab` / `split`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 拆分按钮 · 主动作 · 次要动作 · 键盘
 
@@ -394,6 +430,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-component-engineering` · `uiux-accessibility-review`
 
+**Reference** `assets/reference/playground/scenes.js` line 4327 (`S.selectLab` / `single`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 下拉 · 单选 · 键盘 · 对勾
 
 **Acceptance**
@@ -413,6 +451,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做多选选择器：已选项以可删除块显示，超过三行后折叠并显示剩余数量；支持全选和清空，删除块要有可聚焦的按钮。
 
 **Skills** `uiux-component-engineering` · `uiux-accessibility-review`
+
+**Reference** `assets/reference/playground/scenes.js` line 4461 (`S.selectLab` / `multi`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 多选 · 折叠 · 删除 · 全选
 
@@ -434,6 +474,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-component-engineering` · `uiux-accessibility-review`
 
+**Reference** `assets/reference/playground/scenes.js` line 4390 (`S.selectLab` / `group`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 下拉 · 分组 · 吸顶 · aria-group
 
 **Acceptance**
@@ -453,6 +495,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做父子联动的树形选择器：勾选父级选中全部子级，子级部分选中时父级显示半选样式；只回传最上层选中节点，展开状态保持。
 
 **Skills** `uiux-component-engineering` · `uiux-accessibility-review`
+
+**Reference** `assets/reference/playground/scenes.js` line 4502 (`S.selectLab` / `tree`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 树形 · 半选 · 父子联动 · 回传
 
@@ -474,6 +518,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-component-engineering` · `uiux-interaction-spec`
 
+**Reference** `assets/reference/playground/scenes.js` line 4577 (`S.selectLab` / `creatable`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 新建 · 去重 · 空匹配 · 保留输入
 
 **Acceptance**
@@ -493,6 +539,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做日期区间选择器：选择起止日期时预览中间范围，两端日期可单独修改；起止不能颠倒，选择完成后回填触发器。
 
 **Skills** `uiux-component-engineering` · `uiux-accessibility-review`
+
+**Reference** `assets/reference/playground/scenes.js` line 4541 (`S.selectLab` / `date`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 日期区间 · 预览 · 起止 · 回填
 
@@ -514,6 +562,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-component-engineering` · `uiux-accessibility-review`
 
+**Reference** `assets/reference/playground/scenes.js` line 4649 (`S.selectLab` / `mega`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 多列导航 · 分组 · 斜移 · 键盘
 
 **Acceptance**
@@ -533,6 +583,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做远程搜索下拉：输入停止 300ms 再请求，旧请求不能覆盖新请求；显示加载、空结果和失败三种状态，失败可重试。
 
 **Skills** `uiux-component-engineering` · `uiux-accessibility-review`
+
+**Reference** `assets/reference/playground/scenes.js` line 4421 (`S.selectLab` / `remote`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 远程搜索 · 防抖 · 竞态 · 状态
 
@@ -556,6 +608,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-component-engineering` · `uiux-accessibility-review`
 
+**Reference** `assets/reference/playground/scenes.js` line 4842 (`S.dashboardMenu` / `search`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 菜单搜索 · 过滤 · 高亮 · 空状态
 
 **Acceptance**
@@ -575,6 +629,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 菜单项支持按住拖动排序：拖动时该项轻微放大，其余项平滑让位，松手吸附到新位置；拖到顶部分隔线以上固定为常用项。排序结果在当前会话保存。
 
 **Skills** `uiux-component-engineering` · `uiux-interaction-spec`
+
+**Reference** `assets/reference/playground/scenes.js` line 4755 (`S.dashboardMenu` / `sort`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 菜单 · 排序 · 常用 · 保存
 
@@ -596,6 +652,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-design-system` · `uiux-component-engineering`
 
+**Reference** `assets/reference/playground/scenes.js` line 4713 (`S.dashboardMenu` / `workspace`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 工作区 · 切换器 · 强调色 · 同步
 
 **Acceptance**
@@ -615,6 +673,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 页面右下角放圆形快捷按钮，点击后几个图标沿弧线依次弹出，按钮图标从加号旋转为叉号；再次点击沿原路收回。每个图标有文字标签，Esc 可收起。
 
 **Skills** `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**Reference** `assets/reference/playground/scenes.js` line 4937 (`S.dashboardMenu` / `arc`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 弧形菜单 · 快捷按钮 · 交错 · Esc
 
@@ -636,6 +696,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-component-engineering` · `uiux-interaction-spec`
 
+**Reference** `assets/reference/playground/scenes.js` line 4879 (`S.dashboardMenu` / `breadcrumb`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 面包屑 · 同级下拉 · 层级 · 滚动替换
 
 **Acceptance**
@@ -655,6 +717,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 一级菜单悬停时在右侧滑出二级面板；在一级项之间移动时面板保持打开，只切换内容；鼠标离开整个菜单区域后自动收起。键盘聚焦也要能打开。
 
 **Skills** `uiux-component-engineering` · `uiux-accessibility-review`
+
+**Reference** `assets/reference/playground/scenes.js` line 4907 (`S.dashboardMenu` / `flyout`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 二级菜单 · 悬停 · 保持打开 · 键盘
 
@@ -678,6 +742,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-interaction-spec` · `uiux-design-system`
 
+**Reference** `assets/reference/playground/scenes.js` line 4991 (`S.dashboardMini` / `console`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 控制台 · 场景 · 联动 · 可中断
 
 **Acceptance**
@@ -697,6 +763,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做能量面板：切换能量、睡眠和活动指标，数字滚动过渡，柱高和颜色错峰变化，柱顶逐个显示数值。切换时保留上一指标的对比残影。
 
 **Skills** `uiux-motion-engineering` · `uiux-design-system`
+
+**Reference** `assets/reference/playground/scenes.js` line 5018 (`S.dashboardMini` / `energy`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 能量 · 柱状 · 数字滚动 · 对比
 
@@ -718,6 +786,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-motion-engineering` · `uiux-page-planning`
 
+**Reference** `assets/reference/playground/scenes.js` line 5037 (`S.dashboardMini` / `schedule`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 日程 · 轨道 · 展开 · 让位
 
 **Acceptance**
@@ -737,6 +807,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做文件收纳盒：文件沿弧线移动并缩小淡出，目标文件夹抬起展开，数量增加，停留后沿原路恢复并循环演示；也支持手动拖放。
 
 **Skills** `uiux-motion-engineering` · `uiux-interaction-spec`
+
+**Reference** `assets/reference/playground/scenes.js` line 5057 (`S.dashboardMini` / `files`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 文件 · 弧线 · 文件夹 · 拖放
 
@@ -758,6 +830,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-motion-engineering` · `uiux-design-system`
 
+**Reference** `assets/reference/playground/scenes.js` line 5086 (`S.dashboardMini` / `habit`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 打卡 · 圆周 · 路径 · 完成
 
 **Acceptance**
@@ -777,6 +851,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做一个专注仪表：拖动滑块调节时长，圆环和数字联动；开始后倒计时，完成时圆环变绿并显示对勾，再自动复位。支持暂停和提前结束。
 
 **Skills** `uiux-motion-engineering` · `uiux-component-engineering`
+
+**Reference** `assets/reference/playground/scenes.js` line 5110 (`S.dashboardMini` / `focus`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 专注 · 倒计时 · 圆环 · 暂停
 
@@ -800,6 +876,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-page-planning` · `uiux-design-system`
 
+**Reference** `assets/reference/playground/scenes.js` line 5191 (`S.dashboardLayout` / `map`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 地图 · 物流 · 浮动面板 · 筛选
 
 **Acceptance**
@@ -819,6 +897,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 设计一个目标导向的工作台布局：首屏突出一个核心目标、当前进度和三个快捷操作；次要信息下沉到第二屏，主操作在视线终点。给出桌面与 1024 宽的响应式规则。
 
 **Skills** `uiux-page-planning` · `uiux-design-system`
+
+**Reference** `assets/reference/playground/scenes.js` line 5210 (`S.dashboardLayout` / `goal`) · styles `assets/reference/playground/lab.css`
 
 **Tags** Dashboard · 目标 · 快捷操作 · 层级
 
@@ -840,6 +920,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-page-planning` · `uiux-style-direction`
 
+**Reference** `assets/reference/playground/scenes.js` line 5239 (`S.dashboardLayout` / `content`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 内容 · 封面 · 媒体 · 联动
 
 **Acceptance**
@@ -859,6 +941,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 设计趋势主导的 Dashboard：核心区域放趋势图，上方给结论和变化幅度，明细表格放在下方；图表与表格共享同一时间范围筛选。
 
 **Skills** `uiux-page-planning` · `uiux-design-system`
+
+**Reference** `assets/reference/playground/scenes.js` line 5262 (`S.dashboardLayout` / `trend`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 趋势 · 图表 · 明细 · 时间范围
 
@@ -880,6 +964,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-page-planning` · `uiux-component-engineering`
 
+**Reference** `assets/reference/playground/scenes.js` line 5281 (`S.dashboardLayout` / `three`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 三栏 · 列表 · 详情 · 权重
 
 **Acceptance**
@@ -899,6 +985,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 设计数据与日程分栏布局：左侧数据概览，右侧今日日程，中间用一条分隔线而不是卡片堆叠；两栏各自滚动，顶部共享项目切换。
 
 **Skills** `uiux-page-planning` · `uiux-component-engineering`
+
+**Reference** `assets/reference/playground/scenes.js` line 5294 (`S.dashboardLayout` / `split`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 分栏 · 数据 · 日程 · 项目
 
@@ -922,6 +1010,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-component-engineering` · `uiux-accessibility-review`
 
+**Reference** `assets/reference/playground/scenes.js` line 2022 (`S.overlayLab` / `buttonMenu`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 菜单 · 弹出 · 原点 · 键盘
 
 **Acceptance**
@@ -942,6 +1032,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-motion-engineering` · `uiux-accessibility-review`
 
+**Reference** `assets/reference/playground/scenes.js` line 2083 (`S.overlayLab` / `drawer`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 抽屉 · 左滑 · 主页面 · 焦点
 
 **Acceptance**
@@ -961,6 +1053,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做卡片弹出详情：点击卡片后从原位置放大为居中面板，背景变暗；关闭时缩回原卡片位置。焦点进入面板并循环，关闭后回到卡片。
 
 **Skills** `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**Reference** `assets/reference/playground/scenes.js` line 2045 (`S.overlayLab` / `cardDetail`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 卡片 · 详情 · 原位 · 焦点
 
@@ -984,6 +1078,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-motion-engineering` · `uiux-design-system`
 
+**Reference** `assets/reference/playground/scenes.js` line 5342 (`S.chartLab` / `bars`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 柱状图 · 错峰 · 排序 · 换位
 
 **Acceptance**
@@ -1003,6 +1099,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做 Apple 风格数据统计卡：顶部分段选择器，选中背景平滑移动；切换选项时数字和趋势图同步更新；悬停图表显示月份数值与高亮。统一圆角、留白、字体层级和动效节奏。
 
 **Skills** `uiux-design-system` · `uiux-component-engineering`
+
+**Reference** `assets/reference/playground/scenes.js` line 5369 (`S.chartLab` / `segmented`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 分段控件 · 统计卡 · 图表 · 悬停
 
@@ -1024,6 +1122,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-design-system` · `uiux-motion-engineering`
 
+**Reference** `assets/reference/playground/scenes.js` line 5398 (`S.chartLab` / `donut`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 环形图 · 比例 · 图例 · 联动
 
 **Acceptance**
@@ -1043,6 +1143,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做活动热力矩阵：二十八个格子按波纹顺序亮起，点击时向四周让位，中心详情卡放大出现，停留后恢复并循环演示。每个格子有日期与数值的可读标签。
 
 **Skills** `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**Reference** `assets/reference/playground/scenes.js` line 5422 (`S.chartLab` / `heat`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 热力图 · 波纹 · 详情卡 · 循环
 
@@ -1064,6 +1166,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-motion-engineering` · `uiux-design-system`
 
+**Reference** `assets/reference/playground/scenes.js` line 5448 (`S.chartLab` / `curve`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 曲线 · 探针 · 浮层 · 拖动
 
 **Acceptance**
@@ -1084,6 +1188,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-design-system` · `uiux-motion-engineering`
 
+**Reference** `assets/reference/playground/scenes.js` line 5491 (`S.chartLab` / `share`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 占比 · 条形 · 总计 · 循环
 
 **Acceptance**
@@ -1103,6 +1209,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做一个双针目标仪表：半圆刻度逐段点亮，实际指针弹性追随目标，弧形进度与百分比同步变化，支持切换目标。目标与实际用不同颜色和形状区分。
 
 **Skills** `uiux-design-system` · `uiux-motion-engineering`
+
+**Reference** `assets/reference/playground/scenes.js` line 5515 (`S.chartLab` / `gauge`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 仪表 · 双针 · 目标 · 弹性
 
@@ -1126,6 +1234,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-style-direction` · `uiux-design-system`
 
+**Reference** `assets/reference/playground/scenes.js` line 5560 (`S.appleLab` / `arch`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 建筑 · 全屏图 · 玻璃导航 · 光线
 
 **Acceptance**
@@ -1145,6 +1255,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做图片取色组件：上方展示建筑照片，下方提取 5 种代表色块；点击色块同步更新颜色预览和 HEX/RGB，提供一键复制与成功反馈；支持上传或切换示例图。
 
 **Skills** `uiux-component-engineering` · `uiux-design-system`
+
+**Reference** `assets/reference/playground/scenes.js` line 5618 (`S.appleLab` / `palette`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 取色 · 色板 · HEX · 复制
 
@@ -1166,6 +1278,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-style-direction` · `uiux-motion-engineering` · `uiux-page-planning`
 
+**Reference** `assets/reference/playground/scenes.js` line 5588 (`S.appleLab` / `art`) · styles `assets/reference/playground/lab.css`
+
 **Tags** 作品集 · 扇形卡 · 台阶 · 主题
 
 **Acceptance**
@@ -1185,6 +1299,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做 Apple 风音效调节面板：顶部耳机产品图，下方三种音效模式与低/中/高频滑块；切换模式时滑块与参数联动，拖动实时显示数值与进行状态；提供重置按钮。
 
 **Skills** `uiux-component-engineering` · `uiux-design-system`
+
+**Reference** `assets/reference/playground/scenes.js` line 5673 (`S.appleLab` / `audio`) · styles `assets/reference/playground/lab.css`
 
 **Tags** 音效 · 滑块 · 模式 · 重置
 
@@ -1208,6 +1324,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-style-direction` · `uiux-motion-engineering` · `uiux-component-engineering`
 
+**Reference** `assets/reference/playground/neu.js` line 76 (`S.neuLab` / `light`) · styles `assets/reference/playground/neu.css`
+
 **Tags** 新拟态 · 开关 · 下沉 · 回弹
 
 **Acceptance**
@@ -1228,6 +1346,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 设计新拟态温控旋钮，加入柔和阴影与细小刻度。拖动时指示点、进度圆弧和温度数字同步变化，范围 16–30℃。旋钮是 role=slider，方向键 ±1℃、Home / End 到两端，并提供加减按钮。整体为浅色新拟态：浅灰白背景、同色系亮部与暗部柔和阴影、圆角卡片、无强边框；用凸起、凹陷、按压回弹、平滑位移和状态动画即时反馈，600ms 缓动，含 hover / focus / active 状态，响应式并适配移动端，不硬编码图片；状态同时用文字或图标表达，不只靠阴影深浅。
 
 **Skills** `uiux-motion-engineering` · `uiux-component-engineering` · `uiux-accessibility-review`
+
+**Reference** `assets/reference/playground/neu.js` line 97 (`S.neuLab` / `thermo`) · styles `assets/reference/playground/neu.css`
 
 **Tags** 新拟态 · 旋钮 · 温度 · 圆弧 · 拖动
 
@@ -1250,6 +1370,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-motion-engineering` · `uiux-component-engineering` · `uiux-style-direction`
 
+**Reference** `assets/reference/playground/neu.js` line 153 (`S.neuLab` / `player`) · styles `assets/reference/playground/neu.css`
+
 **Tags** 新拟态 · 播放器 · 频谱 · 进度条
 
 **Acceptance**
@@ -1270,6 +1392,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 设计带内凹入口的新拟态上传组件。按下按钮后文件卡片依次收拢，进度条填充；完成后显示勾选，再回弹复位。上传中入口不可重复触发，进度条使用 role=progressbar 并更新数值。整体为浅色新拟态：浅灰白背景、同色系亮部与暗部柔和阴影、圆角卡片、无强边框；用凸起、凹陷、按压回弹、平滑位移和状态动画即时反馈，600ms 缓动，含 hover / focus / active 状态，响应式并适配移动端，不硬编码图片；状态同时用文字或图标表达，不只靠阴影深浅。
 
 **Skills** `uiux-motion-engineering` · `uiux-interaction-spec` · `uiux-component-engineering`
+
+**Reference** `assets/reference/playground/neu.js` line 202 (`S.neuLab` / `upload`) · styles `assets/reference/playground/neu.css`
 
 **Tags** 新拟态 · 上传 · 进度 · 收拢 · 复位
 
@@ -1292,6 +1416,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-interaction-spec` · `uiux-component-engineering` · `uiux-accessibility-review`
 
+**Reference** `assets/reference/playground/neu.js` line 253 (`S.neuLab` / `booking`) · styles `assets/reference/playground/neu.css`
+
 **Tags** 新拟态 · 预约 · 日期 · 时段 · 展开
 
 **Acceptance**
@@ -1312,6 +1438,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 设计新拟态数量组件，使用凸起的加减按钮。点击时按钮下沉回弹，数量与金额同步变化，到达边界时禁用对应按钮。整体为浅色新拟态：浅灰白背景、同色系亮部与暗部柔和阴影、圆角卡片、无强边框；用凸起、凹陷、按压回弹、平滑位移和状态动画即时反馈，600ms 缓动，含 hover / focus / active 状态，响应式并适配移动端，不硬编码图片；状态同时用文字或图标表达，不只靠阴影深浅。
 
 **Skills** `uiux-component-engineering` · `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**Reference** `assets/reference/playground/neu.js` line 313 (`S.neuLab` / `quantity`) · styles `assets/reference/playground/neu.css`
 
 **Tags** 新拟态 · 数量 · 金额 · 边界禁用
 
@@ -1336,6 +1464,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-page-planning` · `uiux-component-engineering` · `uiux-interaction-spec`
 
+**Reference** `assets/reference/playground/menu.js` line 158 (`S.menuLab` / `sidebar`) · styles `assets/reference/playground/menu.css`
+
 **Tags** 侧栏 · 图文菜单 · 选中高亮 · 内容联动
 
 **Acceptance**
@@ -1356,6 +1486,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做 Dashboard 左侧内容分组菜单：按业务模块组织入口，选中用浅色 / 品牌底色，点击节目 / 发现等入口后右侧列表与菜单状态同步更新；清晰层级，hover 反馈。生成可交互的 Dashboard UI 原型，含选中态、hover、点击反馈和内容联动；使用指定品牌色、统一圆角、一致间距、清晰排版，不要冗余装饰。菜单高亮与右侧内容由同一个选中状态驱动，键盘可达，当前项用 aria-current 标出。
 
 **Skills** `uiux-page-planning` · `uiux-interaction-spec` · `uiux-design-system`
+
+**Reference** `assets/reference/playground/menu.js` line 175 (`S.menuLab` / `groups`) · styles `assets/reference/playground/menu.css`
 
 **Tags** 分组菜单 · 业务模块 · 品牌底色 · 层级
 
@@ -1378,6 +1510,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-interaction-spec` · `uiux-motion-engineering` · `uiux-component-engineering`
 
+**Reference** `assets/reference/playground/menu.js` line 193 (`S.menuLab` / `capsule`) · styles `assets/reference/playground/menu.css`
+
 **Tags** 胶囊菜单 · 顶部导航 · 滑动底块 · 宽内容区
 
 **Acceptance**
@@ -1398,6 +1532,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做浅色页面左侧窄图标轨：纵向排列线性图标，业务入口在上，通知 / 头像在底部，图标尺寸与间距一致，高对比底色标记当前页；极简、省空间。每个图标按钮有可读名称，悬停或聚焦时显示文字提示，上下方向键可在图标间移动。生成可交互的 Dashboard UI 原型，含选中态、hover、点击反馈和内容联动；使用指定品牌色、统一圆角、一致间距、清晰排版，不要冗余装饰。菜单高亮与右侧内容由同一个选中状态驱动，键盘可达，当前项用 aria-current 标出。
 
 **Skills** `uiux-component-engineering` · `uiux-accessibility-review` · `uiux-design-system`
+
+**Reference** `assets/reference/playground/menu.js` line 221 (`S.menuLab` / `rail`) · styles `assets/reference/playground/menu.css`
 
 **Tags** 图标侧栏 · 窄导航 · 工具提示 · 极简
 
@@ -1420,6 +1556,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 
 **Skills** `uiux-style-direction` · `uiux-design-system` · `uiux-component-engineering`
 
+**Reference** `assets/reference/playground/menu.js` line 221 (`S.menuLab` / `brand`) · styles `assets/reference/playground/menu.css`
+
 **Tags** 品牌色 · 深色看板 · 图标侧栏 · 珊瑚橙
 
 **Acceptance**
@@ -1440,6 +1578,8 @@ Generated from `assets/prompts.json`. 70 prompts in 11 families. Each prompt nam
 > 做白色顶栏：左侧品牌，中部四个分组标签，深色圆角底 + 小圆点标记当前选项；点击不同标签高亮切换，产量 / 种植阶段等数据同步更新；适合多维度数据看板。生成可交互的 Dashboard UI 原型，含选中态、hover、点击反馈和内容联动；使用指定品牌色、统一圆角、一致间距、清晰排版，不要冗余装饰。菜单高亮与右侧内容由同一个选中状态驱动，键盘可达，当前项用 aria-current 标出。
 
 **Skills** `uiux-page-planning` · `uiux-interaction-spec` · `uiux-component-engineering`
+
+**Reference** `assets/reference/playground/menu.js` line 247 (`S.menuLab` / `tabs`) · styles `assets/reference/playground/menu.css`
 
 **Tags** 分组标签 · 顶栏 · 多维看板 · 数据联动
 

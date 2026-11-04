@@ -104,6 +104,7 @@ const base = process.env.DEMO_BASE || 'http://localhost:4173/docs/';
   let copied = '';
   try { copied = await page.evaluate(() => navigator.clipboard.readText()); } catch (error) { /* permission optional */ }
   if (copied) assert.ok(copied.includes('卡片'), 'clipboard receives the prompt');
+  if (copied) assert.ok(copied.includes('参考实现：uiux-prompt-playbook › app-card-delete'), 'copied prompt names its reference implementation');
 
   // Natural-language composer: generate, copy, preview.
   await page.locator('#need-input').fill('我想让底部导航更精致，切换的时候有个背景块滑过去；还想让卡片删除时有个飞走的动画，别太夸张。');
@@ -116,6 +117,7 @@ const base = process.env.DEMO_BASE || 'http://localhost:4173/docs/';
   assert.match(composed, /核心效果/);
   assert.match(composed, /边界/);
   assert.match(composed, /验收/);
+  assert.match(composed, /参考实现：uiux-prompt-playbook › [a-z0-9-]+/);
   await page.locator('#compose-copy').click();
   await page.waitForFunction(() => document.querySelector('#lab-status')?.textContent.includes('已复制'));
   const top = await page.locator('#compose-output').getAttribute('data-top');

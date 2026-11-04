@@ -356,7 +356,7 @@
       announce("随机换了一条提示词");
     });
     $("#detail-copy").addEventListener("click", () => {
-      if (state.selected) copyText(state.selected.prompt, "提示词");
+      if (state.selected) copyText(withReference(state.selected), "提示词");
     });
     document.addEventListener("keydown", (event) => {
       if (event.key === "/" && !/input|textarea/i.test(document.activeElement.tagName)) {
@@ -435,6 +435,16 @@
     return null;
   }
 
+  /* The copied prompt names its bundled reference implementation, so Claude Code / Codex with the
+     uiux-prompt-playbook skill can open assets/reference/index.json and port working code. */
+  function referenceLine(prompt) {
+    return `参考实现：uiux-prompt-playbook › ${prompt.id}（${prompt.scene} / ${prompt.variant}）`;
+  }
+
+  function withReference(prompt) {
+    return prompt.prompt + "\n\n" + referenceLine(prompt);
+  }
+
   function buildComposed(text, matches) {
     const top = matches[0];
     if (!top) {
@@ -452,7 +462,9 @@
       "手感：入场 320–560ms，使用缓动而非线性；拖动跟手，松手后吸附到可预测的位置；允许中途反向或取消，不能锁死。",
       "边界：必须保留空状态、失败状态和 reduced-motion 替代；只改变视觉，不改变业务状态；触摸、键盘和读屏都能完成同一件事。",
       "验收：",
-      ...top.acceptance.map((item, index) => (index + 1) + ". " + item)
+      ...top.acceptance.map((item, index) => (index + 1) + ". " + item),
+      referenceLine(top),
+      second ? referenceLine(second) : ""
     ].filter(Boolean);
     return lines.join("\n");
   }

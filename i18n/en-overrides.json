@@ -1072,7 +1072,8 @@
   "顶部菜单": "Top menu",
   "频谱收回": "Spectrum retracts",
   "频谱收回途中再次播放，从当前高度重新起跳": "Playing again mid-retract restarts from the current height",
-  "高亮切换": "Highlight switch"
+  "高亮切换": "Highlight switch",
+  "【参考实现】uiux-prompt-playbook › {0} · {1}：先读这段可运行代码，再按项目技术栈移植。": "[Reference implementation] uiux-prompt-playbook › {0} · {1}: read this working code first, then port it to the project’s stack."
  },
  "lab": {
   "{0} 月 {1} 日": "{0}/{1}",
@@ -1877,7 +1878,8 @@
   "首页": "Home",
   "高": "High",
   "高亮与右侧内容一致": "Highlight matches the content on the right",
-  "麦田民宿": "Wheat Field Guesthouse"
+  "麦田民宿": "Wheat Field Guesthouse",
+  "参考实现：uiux-prompt-playbook › {0}（{1} / {2}）": "Reference implementation: uiux-prompt-playbook › {0} ({1} / {2})"
  },
  "skills": {
   "148 条可执行提示词，每一条都能在场景舞台里当场操作。": "148 executable prompts, each one you can try on the spot on a scene stage.",

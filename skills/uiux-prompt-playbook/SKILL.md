@@ -1,6 +1,6 @@
 ---
 name: uiux-prompt-playbook
-description: A testable library of 168 Chinese UI/UX prompts for web and App / 小程序 surfaces, each mapped to a live interaction scene and explicit acceptance checks. Use when someone wants a concrete prompt for a UI effect, asks to turn a vague description such as “高级一点 / 顺一点 / 卡片飞走” into an implementable interaction, wants to compare interaction recipes, or needs a structured scene / action / feel / boundary / acceptance spec before building.
+description: A testable library of 168 Chinese UI/UX prompts for web and App / 小程序 surfaces, each mapped to a live interaction scene and explicit acceptance checks. Use when someone wants a concrete prompt for a UI effect, asks to turn a vague description such as “高级一点 / 顺一点 / 卡片飞走” into an implementable interaction, wants to compare interaction recipes, or needs a structured scene / action / feel / boundary / acceptance spec before building. Also use it when implementing one of these effects in code: every prompt and pipeline-playground effect ships with working reference code in assets/reference/ to port into the project.
 ---
 
 # UI/UX Prompt Playbook
@@ -111,6 +111,17 @@ The prompt should preserve the user's intent while making the interaction falsif
 
 The playground renders 25 scene families with real pointer, keyboard and reduced-motion behavior. It is a prototype, not production code: no backend, accounts or persistence.
 
+## Reference implementations
+
+Every catalogue prompt and every pipeline-playground effect has working browser code bundled with this skill in `assets/reference/`. When you build one of these effects for a user (in Claude Code or Codex), read the reference first; do not reinvent it from the prompt text alone.
+
+1. **Identify the effect.** Use the prompt id when the request contains one (copied prompts end with a `参考实现：uiux-prompt-playbook › <id>` line). Otherwise match the request against `assets/prompts.json` by title, tags and prompt text; pipeline work orders name the effect title, which is listed in `assets/reference/INDEX.md`.
+2. **Open the code.** `assets/reference/index.json` maps each prompt id (`prompts`) and pipeline effect id (`pipeline`) to `js`, `css`, `symbol`, `variant`, `variantLine` and `sceneLines`. Read the JS from `variantLine` (or the scene start) to the end of that branch. Grep its class names in the listed CSS file. For pipeline effects, the full contract (object, trigger, sequence, result, accessibility, states, interruption, timings, acceptance) is the matching entry in `assets/reference/pipeline/effects.js`.
+3. **Port, don't paste.** Keep the behaviour: state machine, business state changing before animation, interruption rules, timings, keyboard and touch paths, reduced-motion handling, ARIA. Rewrite it idiomatically in the project's stack (framework components, existing tokens, its animation library if it has one). Leave out the demo shell (`shell()`, `.scene-head`, status line), the sample data and the photos.
+4. **Check against the acceptance list** of the prompt in the running project. Report what was verified in a browser and what was not (real devices, screen readers, frame rate).
+
+The references are demos, not a component library. They have no build step, no dependencies and no persistence. Mini programs lack some browser APIs they use (Pointer Events, Web Animations API, `inert`), so map those to the platform's equivalents and say so. `scripts/build.mjs` regenerates `assets/reference/` from the repository's `docs/`; never edit the copies.
+
 ## Files
 
 - `assets/prompts.json` — canonical catalogue (168 prompts, 25 scenes).
@@ -118,7 +129,8 @@ The playground renders 25 scene families with real pointer, keyboard and reduced
 - `references/app-prompts.md` — generated App / 小程序 prompt reference.
 - `references/gesture-recipes.md` — gesture state machines and invariants.
 - `references/prompt-composer.md` — how the natural-language composer works and where it stops.
-- `scripts/build.mjs` — regenerate `docs/playground/prompts.js` and both markdown references.
+- `assets/reference/` — bundled working code for every prompt and pipeline effect, with `index.json` and `INDEX.md` (generated).
+- `scripts/build.mjs` — regenerate `docs/playground/prompts.js`, both markdown references and `assets/reference/` (via `scripts/reference.mjs`).
 - `scripts/compose.mjs` — local command-line composer.
 
 ## Quality gate

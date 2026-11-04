@@ -2,6 +2,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildReference } from "./reference.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, "..", "..", "..");
@@ -16,6 +17,12 @@ for (const prompt of data.prompts) {
     if (!prompt[key]) throw new Error(prompt.id + " is missing " + key);
   }
 }
+
+const ref = buildReference(root, resolve(here, ".."), data);
+const refLine = (prompt, base = "assets/reference/") => {
+  const r = ref.prompts[prompt.id];
+  return "`" + base + r.js + "` line " + (r.variantLine || r.sceneLines[0]) + " (`" + r.symbol + "` / `" + r.variant + "`) · styles `" + base + r.css + "`";
+};
 
 const js = "/* Generated from skills/uiux-prompt-playbook/assets/prompts.json. Do not edit by hand. */\n"
   + "window.LAB_DATA = " + JSON.stringify(data, null, 2) + ";\n";
@@ -51,6 +58,8 @@ function markdown(category) {
         "> " + prompt.prompt,
         "",
         "**Skills** " + prompt.skills.map((skill) => "`" + skill + "`").join(" · "),
+        "",
+        "**Reference** " + refLine(prompt),
         "",
         "**Tags** " + prompt.tags.join(" · "),
         "",
@@ -128,6 +137,8 @@ function combinedMarkdown() {
           "",
           "**关联 Skill** " + prompt.skills.map((skill) => "`" + skill + "`").join(" · "),
           "",
+          "**参考实现** " + refLine(prompt, "skills/uiux-prompt-playbook/assets/reference/"),
+          "",
           "**标签** " + prompt.tags.join(" · "),
           "",
           "**验收**",
@@ -151,4 +162,5 @@ const counts = data.prompts.reduce((acc, prompt) => {
   return acc;
 }, {});
 console.log("Built " + data.prompts.length + " prompts (" + counts.web + " web / " + counts.app + " app), "
-  + new Set(data.prompts.map((prompt) => prompt.scene)).size + " scenes.");
+  + new Set(data.prompts.map((prompt) => prompt.scene)).size + " scenes; reference index for "
+  + Object.keys(ref.prompts).length + " prompts and " + Object.keys(ref.effects).length + " pipeline effects.");

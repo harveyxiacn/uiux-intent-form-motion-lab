@@ -118,7 +118,7 @@ App 是可交互的浏览器原型，没有后端或真实账户服务。演示�
 | [uiux-motion-engineering](skills/uiux-motion-engineering/SKILL.md) | 动效实现、中断恢复、降级和性能 |
 | [uiux-accessibility-review](skills/uiux-accessibility-review/SKILL.md) | 键盘、焦点、表单和无障碍证据审查 |
 | [uiux-mobile-patterns](skills/uiux-mobile-patterns/SKILL.md) | 手机导航、触摸、键盘与编辑面板 |
-| [uiux-prompt-playbook](skills/uiux-prompt-playbook/SKILL.md) | 168 条可执行提示词、25 个现场场景与自然语言生成 |
+| [uiux-prompt-playbook](skills/uiux-prompt-playbook/SKILL.md) | 168 条可执行提示词、25 个现场场景与自然语言生成；内附每个效果的参考实现 |
 
 ### 六个上游快照
 
@@ -141,6 +141,8 @@ node scripts/install-skills.cjs                 # 安装到本项目的 .claude/
 node scripts/install-skills.cjs --global        # 安装到 ~/.claude/skills
 node scripts/install-skills.cjs --target codex --global
 ```
+
+`uiux-prompt-playbook` 安装后自带 `assets/reference/`：168 条提示词和工序版 43 个效果背后的可运行代码，以及按提示词 id 查找文件、函数、变体与行号的 `index.json` / `INDEX.md`。在 Claude Code 或 Codex 里实现这些效果时，Skill 会先读对应代码，再按项目技术栈移植；从实验室复制的提示词末尾带有「参考实现」一行，指向这段代码。
 
 安装脚本只复制或链接目录，不执行上游脚本；已有同名 Skill 默认跳过，加 `--force` 覆盖。也可以手动把 `skills/` 内所需文件夹复制到 Codex 的 `~/.codex/skills/`，保留 `SKILL.md`、`agents/openai.yaml` 和 `references/`。重启或刷新后，可分别调用 `$uiux-page-planning`、`$finesse-ui` 等。
 

@@ -37,6 +37,7 @@ const shots = process.env.SHOTS || '';
     assert.ok(st.kids > 0 && !/场景加载失败/.test(st.text), e.id + ' scene mounted');
     assert.match(st.prompt, /交互契约/, e.id + ' prompt contract');
     assert.ok(st.prompt.includes(e.title), e.id + ' prompt names the effect');
+    assert.ok(st.prompt.includes('【参考实现】uiux-prompt-playbook › ' + e.id + ' · '), e.id + ' prompt names its reference implementation');
   }
 
   // Bridged effects: one real interaction each must change state and write to the feed.

@@ -73,6 +73,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-motion-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3824 (`S.buttonLab` / `progress`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 上传 · 进度 · 成功 · 失败
 
 **验收**
@@ -92,6 +94,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-button-yield) · `web-button-yield`
 
 **关联 Skill** `uiux-interaction-spec` · `uiux-motion-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3998 (`S.buttonLab` / `yield`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 按钮 · 让位 · 二次确认 · 恢复
 
@@ -113,6 +117,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4037 (`S.buttonLab` / `panel`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 按钮 · 圆形裁剪 · 面板 · 焦点
 
 **验收**
@@ -132,6 +138,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-button-magnet) · `web-button-magnet`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-mobile-patterns`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3967 (`S.buttonLab` / `magnet`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 磁吸 · 指针 · 复位 · 触屏
 
@@ -153,6 +161,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3754 (`S.buttonLab` / `liquid`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 按钮 · 液体 · 扩散 · 状态
 
 **验收**
@@ -172,6 +182,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-button-slide) · `web-button-slide`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3907 (`S.buttonLab` / `slide`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 滑动确认 · 阈值 · 回弹 · 键盘
 
@@ -193,6 +205,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4021 (`S.buttonLab` / `roll`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 按钮 · 文案 · 滚动 · 状态
 
 **验收**
@@ -212,6 +226,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-button-hold) · `web-button-hold`
 
 **关联 Skill** `uiux-interaction-spec` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3779 (`S.buttonLab` / `hold`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 长按 · 环形 · 确认 · 取消
 
@@ -237,6 +253,8 @@
 
 **关联 Skill** `uiux-style-direction` · `uiux-component-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4089 (`S.layoutLab` / `inline`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 标题 · 内嵌图 · 展开 · 避让
 
 **验收**
@@ -256,6 +274,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-layout-folder) · `web-layout-folder`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-component-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4110 (`S.layoutLab` / `folder`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 档案夹 · 标签页 · 层叠 · 焦点
 
@@ -277,6 +297,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-component-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4133 (`S.layoutLab` / `grid`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 网格 · 通栏 · 展开 · 焦点
 
 **验收**
@@ -296,6 +318,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-layout-cutout) · `web-layout-cutout`
 
 **关联 Skill** `uiux-style-direction` · `uiux-motion-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4166 (`S.layoutLab` / `cutout`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 镂空 · 标题 · 照片 · 滚动
 
@@ -317,6 +341,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-page-planning`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4189 (`S.layoutLab` / `parallax`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 版式 · 双列 · 视差 · 对齐
 
 **验收**
@@ -336,6 +362,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-layout-split) · `web-layout-split`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4208 (`S.layoutLab` / `split`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 分屏 · 把手 · 吸附 · 键盘
 
@@ -357,6 +385,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-style-direction`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4249 (`S.layoutLab` / `bubbles`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 圆泡 · 堆叠 · 选择 · 聚拢
 
 **验收**
@@ -376,6 +406,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-layout-sticky) · `web-layout-sticky`
 
 **关联 Skill** `uiux-page-planning` · `uiux-motion-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4267 (`S.layoutLab` / `sticky`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 版式 · 吸顶 · 日期 · 日程
 
@@ -401,6 +433,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4356 (`S.selectLab` / `local`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 下拉 · 搜索 · 筛选 · 空状态
 
 **验收**
@@ -420,6 +454,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-select-split) · `web-select-split`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-design-system`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4627 (`S.selectLab` / `split`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 拆分按钮 · 主动作 · 次要动作 · 键盘
 
@@ -441,6 +477,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4327 (`S.selectLab` / `single`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 下拉 · 单选 · 键盘 · 对勾
 
 **验收**
@@ -460,6 +498,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-select-multi) · `web-select-multi`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4461 (`S.selectLab` / `multi`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 多选 · 折叠 · 删除 · 全选
 
@@ -481,6 +521,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4390 (`S.selectLab` / `group`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 下拉 · 分组 · 吸顶 · aria-group
 
 **验收**
@@ -500,6 +542,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-select-tree) · `web-select-tree`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4502 (`S.selectLab` / `tree`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 树形 · 半选 · 父子联动 · 回传
 
@@ -521,6 +565,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-interaction-spec`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4577 (`S.selectLab` / `creatable`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 新建 · 去重 · 空匹配 · 保留输入
 
 **验收**
@@ -540,6 +586,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-select-date) · `web-select-date`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4541 (`S.selectLab` / `date`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 日期区间 · 预览 · 起止 · 回填
 
@@ -561,6 +609,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4649 (`S.selectLab` / `mega`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 多列导航 · 分组 · 斜移 · 键盘
 
 **验收**
@@ -580,6 +630,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-select-remote) · `web-select-remote`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4421 (`S.selectLab` / `remote`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 远程搜索 · 防抖 · 竞态 · 状态
 
@@ -605,6 +657,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4842 (`S.dashboardMenu` / `search`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 菜单搜索 · 过滤 · 高亮 · 空状态
 
 **验收**
@@ -624,6 +678,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-menu-sort) · `web-menu-sort`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-interaction-spec`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4755 (`S.dashboardMenu` / `sort`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 菜单 · 排序 · 常用 · 保存
 
@@ -645,6 +701,8 @@
 
 **关联 Skill** `uiux-design-system` · `uiux-component-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4713 (`S.dashboardMenu` / `workspace`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 工作区 · 切换器 · 强调色 · 同步
 
 **验收**
@@ -664,6 +722,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-menu-arc) · `web-menu-arc`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4937 (`S.dashboardMenu` / `arc`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 弧形菜单 · 快捷按钮 · 交错 · Esc
 
@@ -685,6 +745,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-interaction-spec`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4879 (`S.dashboardMenu` / `breadcrumb`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 面包屑 · 同级下拉 · 层级 · 滚动替换
 
 **验收**
@@ -704,6 +766,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-menu-flyout) · `web-menu-flyout`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4907 (`S.dashboardMenu` / `flyout`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 二级菜单 · 悬停 · 保持打开 · 键盘
 
@@ -729,6 +793,8 @@
 
 **关联 Skill** `uiux-interaction-spec` · `uiux-design-system`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4991 (`S.dashboardMini` / `console`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 控制台 · 场景 · 联动 · 可中断
 
 **验收**
@@ -748,6 +814,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-mini-energy) · `web-mini-energy`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-design-system`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5018 (`S.dashboardMini` / `energy`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 能量 · 柱状 · 数字滚动 · 对比
 
@@ -769,6 +837,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-page-planning`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5037 (`S.dashboardMini` / `schedule`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 日程 · 轨道 · 展开 · 让位
 
 **验收**
@@ -788,6 +858,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-mini-files) · `web-mini-files`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-interaction-spec`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5057 (`S.dashboardMini` / `files`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 文件 · 弧线 · 文件夹 · 拖放
 
@@ -809,6 +881,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-design-system`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5086 (`S.dashboardMini` / `habit`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 打卡 · 圆周 · 路径 · 完成
 
 **验收**
@@ -828,6 +902,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-mini-focus) · `web-mini-focus`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-component-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5110 (`S.dashboardMini` / `focus`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 专注 · 倒计时 · 圆环 · 暂停
 
@@ -853,6 +929,8 @@
 
 **关联 Skill** `uiux-page-planning` · `uiux-design-system`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5191 (`S.dashboardLayout` / `map`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 地图 · 物流 · 浮动面板 · 筛选
 
 **验收**
@@ -872,6 +950,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-layout-goal) · `web-layout-goal`
 
 **关联 Skill** `uiux-page-planning` · `uiux-design-system`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5210 (`S.dashboardLayout` / `goal`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** Dashboard · 目标 · 快捷操作 · 层级
 
@@ -893,6 +973,8 @@
 
 **关联 Skill** `uiux-page-planning` · `uiux-style-direction`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5239 (`S.dashboardLayout` / `content`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 内容 · 封面 · 媒体 · 联动
 
 **验收**
@@ -912,6 +994,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-layout-trend) · `web-layout-trend`
 
 **关联 Skill** `uiux-page-planning` · `uiux-design-system`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5262 (`S.dashboardLayout` / `trend`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 趋势 · 图表 · 明细 · 时间范围
 
@@ -933,6 +1017,8 @@
 
 **关联 Skill** `uiux-page-planning` · `uiux-component-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5281 (`S.dashboardLayout` / `three`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 三栏 · 列表 · 详情 · 权重
 
 **验收**
@@ -952,6 +1038,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-dash-split) · `web-dash-split`
 
 **关联 Skill** `uiux-page-planning` · `uiux-component-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5294 (`S.dashboardLayout` / `split`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 分栏 · 数据 · 日程 · 项目
 
@@ -977,6 +1065,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2022 (`S.overlayLab` / `buttonMenu`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 菜单 · 弹出 · 原点 · 键盘
 
 **验收**
@@ -997,6 +1087,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2083 (`S.overlayLab` / `drawer`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 抽屉 · 左滑 · 主页面 · 焦点
 
 **验收**
@@ -1016,6 +1108,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-overlay-card-detail) · `web-overlay-card-detail`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2045 (`S.overlayLab` / `cardDetail`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 卡片 · 详情 · 原位 · 焦点
 
@@ -1041,6 +1135,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-design-system`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5342 (`S.chartLab` / `bars`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 柱状图 · 错峰 · 排序 · 换位
 
 **验收**
@@ -1060,6 +1156,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-chart-segmented) · `web-chart-segmented`
 
 **关联 Skill** `uiux-design-system` · `uiux-component-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5369 (`S.chartLab` / `segmented`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 分段控件 · 统计卡 · 图表 · 悬停
 
@@ -1081,6 +1179,8 @@
 
 **关联 Skill** `uiux-design-system` · `uiux-motion-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5398 (`S.chartLab` / `donut`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 环形图 · 比例 · 图例 · 联动
 
 **验收**
@@ -1100,6 +1200,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-chart-heat) · `web-chart-heat`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5422 (`S.chartLab` / `heat`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 热力图 · 波纹 · 详情卡 · 循环
 
@@ -1121,6 +1223,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-design-system`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5448 (`S.chartLab` / `curve`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 曲线 · 探针 · 浮层 · 拖动
 
 **验收**
@@ -1141,6 +1245,8 @@
 
 **关联 Skill** `uiux-design-system` · `uiux-motion-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5491 (`S.chartLab` / `share`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 占比 · 条形 · 总计 · 循环
 
 **验收**
@@ -1160,6 +1266,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-chart-gauge) · `web-chart-gauge`
 
 **关联 Skill** `uiux-design-system` · `uiux-motion-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5515 (`S.chartLab` / `gauge`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 仪表 · 双针 · 目标 · 弹性
 
@@ -1185,6 +1293,8 @@
 
 **关联 Skill** `uiux-style-direction` · `uiux-design-system`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5560 (`S.appleLab` / `arch`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 建筑 · 全屏图 · 玻璃导航 · 光线
 
 **验收**
@@ -1204,6 +1314,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-palette) · `web-palette`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-design-system`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5618 (`S.appleLab` / `palette`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 取色 · 色板 · HEX · 复制
 
@@ -1225,6 +1337,8 @@
 
 **关联 Skill** `uiux-style-direction` · `uiux-motion-engineering` · `uiux-page-planning`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5588 (`S.appleLab` / `art`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 作品集 · 扇形卡 · 台阶 · 主题
 
 **验收**
@@ -1244,6 +1358,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-audio) · `web-audio`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-design-system`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 5673 (`S.appleLab` / `audio`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 音效 · 滑块 · 模式 · 重置
 
@@ -1269,6 +1385,8 @@
 
 **关联 Skill** `uiux-style-direction` · `uiux-motion-engineering` · `uiux-component-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/neu.js` line 76 (`S.neuLab` / `light`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/neu.css`
+
 **标签** 新拟态 · 开关 · 下沉 · 回弹
 
 **验收**
@@ -1289,6 +1407,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-neu-thermo) · `web-neu-thermo`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-component-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/neu.js` line 97 (`S.neuLab` / `thermo`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/neu.css`
 
 **标签** 新拟态 · 旋钮 · 温度 · 圆弧 · 拖动
 
@@ -1311,6 +1431,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-component-engineering` · `uiux-style-direction`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/neu.js` line 153 (`S.neuLab` / `player`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/neu.css`
+
 **标签** 新拟态 · 播放器 · 频谱 · 进度条
 
 **验收**
@@ -1331,6 +1453,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-neu-upload) · `web-neu-upload`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-interaction-spec` · `uiux-component-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/neu.js` line 202 (`S.neuLab` / `upload`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/neu.css`
 
 **标签** 新拟态 · 上传 · 进度 · 收拢 · 复位
 
@@ -1353,6 +1477,8 @@
 
 **关联 Skill** `uiux-interaction-spec` · `uiux-component-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/neu.js` line 253 (`S.neuLab` / `booking`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/neu.css`
+
 **标签** 新拟态 · 预约 · 日期 · 时段 · 展开
 
 **验收**
@@ -1373,6 +1499,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-neu-quantity) · `web-neu-quantity`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/neu.js` line 313 (`S.neuLab` / `quantity`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/neu.css`
 
 **标签** 新拟态 · 数量 · 金额 · 边界禁用
 
@@ -1399,6 +1527,8 @@
 
 **关联 Skill** `uiux-page-planning` · `uiux-component-engineering` · `uiux-interaction-spec`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/menu.js` line 158 (`S.menuLab` / `sidebar`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/menu.css`
+
 **标签** 侧栏 · 图文菜单 · 选中高亮 · 内容联动
 
 **验收**
@@ -1419,6 +1549,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-menu-groups) · `web-menu-groups`
 
 **关联 Skill** `uiux-page-planning` · `uiux-interaction-spec` · `uiux-design-system`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/menu.js` line 175 (`S.menuLab` / `groups`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/menu.css`
 
 **标签** 分组菜单 · 业务模块 · 品牌底色 · 层级
 
@@ -1441,6 +1573,8 @@
 
 **关联 Skill** `uiux-interaction-spec` · `uiux-motion-engineering` · `uiux-component-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/menu.js` line 193 (`S.menuLab` / `capsule`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/menu.css`
+
 **标签** 胶囊菜单 · 顶部导航 · 滑动底块 · 宽内容区
 
 **验收**
@@ -1461,6 +1595,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-menu-rail) · `web-menu-rail`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review` · `uiux-design-system`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/menu.js` line 221 (`S.menuLab` / `rail`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/menu.css`
 
 **标签** 图标侧栏 · 窄导航 · 工具提示 · 极简
 
@@ -1483,6 +1619,8 @@
 
 **关联 Skill** `uiux-style-direction` · `uiux-design-system` · `uiux-component-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/menu.js` line 221 (`S.menuLab` / `brand`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/menu.css`
+
 **标签** 品牌色 · 深色看板 · 图标侧栏 · 珊瑚橙
 
 **验收**
@@ -1503,6 +1641,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/web-menu-tabs) · `web-menu-tabs`
 
 **关联 Skill** `uiux-page-planning` · `uiux-interaction-spec` · `uiux-component-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/menu.js` line 247 (`S.menuLab` / `tabs`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/menu.css`
 
 **标签** 分组标签 · 顶栏 · 多维看板 · 数据联动
 
@@ -1531,6 +1671,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-component-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3824 (`S.buttonLab` / `progress`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 保存 · 进度环 · 完成 · 重试
 
 **验收**
@@ -1550,6 +1692,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-status-roll) · `app-status-roll`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 4021 (`S.buttonLab` / `roll`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 按钮 · 文字滚动 · 对勾 · 宽度
 
@@ -1575,6 +1719,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-design-system`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1154 (`S.tagLab` / `colors`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 颜色 · 滑动选择 · 放大 · 主题过渡
 
 **验收**
@@ -1594,6 +1740,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-tag-removable) · `app-tag-removable`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-motion-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1110 (`S.tagLab` / `removable`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 标签 · 删除 · 收缩 · 新增
 
@@ -1615,6 +1763,8 @@
 
 **关联 Skill** `uiux-mobile-patterns` · `uiux-component-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1080 (`S.tagLab` / `filter`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 标签 · 筛选 · 多选 · 横滚
 
 **验收**
@@ -1634,6 +1784,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-tag-yield) · `app-tag-yield`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-interaction-spec`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1204 (`S.tagLab` / `yield`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 标签 · 放大 · 让位 · 切换
 
@@ -1659,6 +1811,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-mobile-patterns`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2487 (`S.navLab` / `capsule`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 底栏 · 胶囊 · 标签 · 滚动保存
 
 **验收**
@@ -1678,6 +1832,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-nav-embedded) · `app-nav-embedded`
 
 **关联 Skill** `uiux-mobile-patterns` · `uiux-component-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2649 (`S.navLab` / `embedded`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 底栏 · 主按钮 · 回到首页 · 编辑
 
@@ -1699,6 +1855,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-mobile-patterns`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2620 (`S.navLab` / `week`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 周历 · 滑动 · 选中 · 月份
 
 **验收**
@@ -1718,6 +1876,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-nav-arc) · `app-nav-arc`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2540 (`S.navLab` / `arc`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 弧形菜单 · 悬浮按钮 · 交错 · 收回
 
@@ -1739,6 +1899,8 @@
 
 **关联 Skill** `uiux-mobile-patterns` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2569 (`S.navLab` / `edgeBall`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 悬浮球 · 吸边 · 半隐藏 · 安全区
 
 **验收**
@@ -1758,6 +1920,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-nav-fab) · `app-nav-fab`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-mobile-patterns`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2520 (`S.navLab` / `fab`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 悬浮按钮 · 滚动 · 收缩 · 点击区域
 
@@ -1783,6 +1947,8 @@
 
 **关联 Skill** `uiux-design-system` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3244 (`S.scrollLab` / `contrast`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 反色 · 对比度 · 滚动 · 连续
 
 **验收**
@@ -1802,6 +1968,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-weather-pull) · `app-weather-pull`
 
 **关联 Skill** `uiux-mobile-patterns` · `uiux-motion-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1985 (`S.overlayLab` / `weather`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 天气 · 下拉 · 逐小时 · 吸附
 
@@ -1823,6 +1991,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-interaction-spec`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3118 (`S.scrollLab` / `progress`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 滚动驱动 · 进度 · 可逆 · 停住
 
 **验收**
@@ -1842,6 +2012,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-scroll-blur) · `app-scroll-blur`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3141 (`S.scrollLab` / `blur`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 速度模糊 · 滚动 · 恢复 · 性能
 
@@ -1863,6 +2035,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-component-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3217 (`S.scrollLab` / `reflow`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** FLIP · 弧线 · 网格 · 错峰
 
 **验收**
@@ -1882,6 +2056,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-scroll-pinch) · `app-scroll-pinch`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-mobile-patterns`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3068 (`S.scrollLab` / `pinch`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 捏合 · 网格 · 密度 · 连续移动
 
@@ -1903,6 +2079,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-page-planning`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3285 (`S.scrollLab` / `parallax`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 视差 · 双列 · 错位 · 对齐
 
 **验收**
@@ -1922,6 +2100,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-scroll-pull) · `app-scroll-pull`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-mobile-patterns`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3172 (`S.scrollLab` / `pull`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 下拉 · 放大 · 刷新 · 阻尼
 
@@ -1943,6 +2123,8 @@
 
 **关联 Skill** `uiux-interaction-spec` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3271 (`S.scrollLab` / `focus`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 聚焦 · 降饱和 · 选中 · 可点击
 
 **验收**
@@ -1962,6 +2144,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-scroll-sticky) · `app-scroll-sticky`
 
 **关联 Skill** `uiux-page-planning` · `uiux-mobile-patterns`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3305 (`S.scrollLab` / `sticky`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 吸顶 · 日期 · 日程 · 分组
 
@@ -1987,6 +2171,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-mobile-patterns`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2391 (`S.cardLab` / `dragSheet`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 拖拽 · 卡片 · 吸附 · 取消
 
 **验收**
@@ -2006,6 +2192,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-card-shared) · `app-card-shared`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-interaction-spec`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2357 (`S.cardLab` / `shared`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 共享元素 · 转场 · 圆角 · 反向
 
@@ -2027,6 +2215,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-motion-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2322 (`S.cardLab` / `snap`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 横滑 · 吸附 · 卡片 · 页码
 
 **验收**
@@ -2046,6 +2236,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-card-flydock) · `app-card-flydock`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-component-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2427 (`S.cardLab` / `flyDock`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 飞入 · 底栏 · 角标 · 弧线
 
@@ -2067,6 +2259,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-component-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2178 (`S.cardLab` / `stack`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 卡片 · 堆叠 · 层级 · 上滑
 
 **验收**
@@ -2086,6 +2280,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-card-delete) · `app-card-delete`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-interaction-spec`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2222 (`S.cardLab` / `delete`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 删除 · 曲线 · 缩小 · 撤销
 
@@ -2107,6 +2303,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-mobile-patterns`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2267 (`S.cardLab` / `fullscreen`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 全屏详情 · 卡片 · 共享位置 · 下拉
 
 **验收**
@@ -2126,6 +2324,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-card-flip) · `app-card-flip`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2296 (`S.cardLab` / `flip`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 3D · 翻转 · 透视 · 高光
 
@@ -2151,6 +2351,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-component-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 852 (`S.sliderLab` / `snap`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 滑杆 · 刻度 · 过冲 · 手感
 
 **验收**
@@ -2170,6 +2372,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-ring-readout) · `app-ring-readout`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-design-system`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 642 (`S.feedbackLab` / `ring`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 环形 · 读数 · 数字滚动 · 停住
 
@@ -2191,6 +2395,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-design-system`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 955 (`S.sliderLab` / `linked`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 联动 · 滑杆 · 环形 · 同一状态
 
 **验收**
@@ -2210,6 +2416,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-carousel-dots) · `app-carousel-dots`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-component-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2322 (`S.cardLab` / `snap`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 轮播 · 指示点 · 连续 · 吸附
 
@@ -2231,6 +2439,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 888 (`S.sliderLab` / `dual`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 范围 · 双把手 · 实时数值 · 键盘
 
 **验收**
@@ -2250,6 +2460,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-time-range) · `app-time-range`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-mobile-patterns`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1004 (`S.sliderLab` / `timeRange`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 时间段 · 连选 · 合并 · 把手
 
@@ -2271,6 +2483,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 871 (`S.sliderLab` / `volume`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 音量 · 橡皮筋 · 端点 · 回弹
 
 **验收**
@@ -2290,6 +2504,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-font-slider) · `app-font-slider`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 984 (`S.sliderLab` / `font`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 字号 · 刻度 · 实时预览 · 键盘
 
@@ -2315,6 +2531,8 @@
 
 **关联 Skill** `uiux-interaction-spec` · `uiux-motion-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1589 (`S.overlayLab` / `sheet`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 底部面板 · 无遮罩 · 拖拽 · 焦点
 
 **验收**
@@ -2334,6 +2552,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-timer-bar) · `app-timer-bar`
 
 **关联 Skill** `uiux-interaction-spec` · `uiux-component-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1941 (`S.overlayLab` / `timer`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 计时 · 顶部条 · 自动收回 · 真实时间
 
@@ -2355,6 +2575,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-motion-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1685 (`S.overlayLab` / `stepSheet`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 分步 · 底部弹窗 · 高度 · 完成
 
 **验收**
@@ -2374,6 +2596,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-category-grid) · `app-category-grid`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-mobile-patterns`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1800 (`S.overlayLab` / `category`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 分类 · 网格 · 展开 · 居中
 
@@ -2395,6 +2619,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-interaction-spec`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1781 (`S.overlayLab` / `checkout`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 结算 · 清单 · 展开 · 合计
 
 **验收**
@@ -2414,6 +2640,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-tooltip-auto) · `app-tooltip-auto`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1915 (`S.overlayLab` / `tooltip`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 气泡 · 箭头 · 自动收回 · 暂停
 
@@ -2435,6 +2663,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1873 (`S.overlayLab` / `confirm`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 确认 · 回弹 · 完成态 · 焦点
 
 **验收**
@@ -2454,6 +2684,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-calendar-pop) · `app-calendar-pop`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1830 (`S.overlayLab` / `calendar`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 日期 · 日历 · 弹出 · 键盘
 
@@ -2475,6 +2707,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-interaction-spec`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1642 (`S.overlayLab` / `ticket`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 取票 · 撕线 · 下拉 · 回弹
 
 **验收**
@@ -2495,6 +2729,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-mobile-patterns`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2109 (`S.overlayLab` / `selectAlign`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 下拉 · 对齐 · 选中项 · 滚动
 
 **验收**
@@ -2514,6 +2750,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-photo-drawer) · `app-photo-drawer`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-mobile-patterns`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1740 (`S.overlayLab` / `photo`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 照片 · 抽屉 · 高度互补 · 拖拽
 
@@ -2539,6 +2777,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-component-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 173 (`S.sortLab` / `snap`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 吸附 · 参考线 · 拖拽 · 顿挫
 
 **验收**
@@ -2559,6 +2799,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-interaction-spec`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 173 (`S.sortLab` / `favorite`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 拖拽 · 常用项 · 分隔线 · 吸附
 
 **验收**
@@ -2578,6 +2820,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-sort-basic) · `app-sort-basic`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 173 (`S.sortLab` / `basic`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 拖拽 · 排序 · 弹簧 · 键盘
 
@@ -2603,6 +2847,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-mobile-patterns` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2699 (`S.gestureLab` / `edgeBack`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 手势 · 返回 · 速度 · 取消
 
 **验收**
@@ -2622,6 +2868,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-gesture-axis) · `app-gesture-axis`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-mobile-patterns`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2851 (`S.gestureLab` / `axis`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 方向锁定 · 横滑 · 竖滑 · 冲突
 
@@ -2643,6 +2891,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-interaction-spec`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2901 (`S.gestureLab` / `catch`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 惯性 · 接管 · 触摸 · 摩擦
 
 **验收**
@@ -2662,6 +2912,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-gesture-escape) · `app-gesture-escape`
 
 **关联 Skill** `uiux-interaction-spec` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2756 (`S.gestureLab` / `escape`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 手势 · 取消 · 热区 · 提交
 
@@ -2683,6 +2935,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-mobile-patterns`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3002 (`S.gestureLab` / `rubber`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 橡皮筋 · 边界 · 弹簧 · 下拉刷新
 
 **验收**
@@ -2703,6 +2957,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-mobile-patterns`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2953 (`S.gestureLab` / `project`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 预测 · 轮播 · 指示器 · 速度
 
 **验收**
@@ -2722,6 +2978,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-gesture-diff) · `app-gesture-diff`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-component-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 2810 (`S.gestureLab` / `diff`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 文字动画 · diff · 数字滚动 · 筛选
 
@@ -2747,6 +3005,8 @@
 
 **关联 Skill** `uiux-accessibility-review` · `uiux-motion-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1294 (`S.inputLab` / `error`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 表单 · 错误 · 晃动 · aria-describedby
 
 **验收**
@@ -2766,6 +3026,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-search-dynamic) · `app-search-dynamic`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-mobile-patterns`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1468 (`S.inputLab` / `search`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 搜索 · 聚焦 · 标签 · 清空
 
@@ -2787,6 +3049,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1256 (`S.inputLab` / `floating`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 输入框 · 浮动标签 · 焦点 · 错误
 
 **验收**
@@ -2806,6 +3070,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-copy-flip) · `app-copy-flip`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-motion-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 601 (`S.feedbackLab` / `copy`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 复制 · 翻转 · 成功反馈 · 失败状态
 
@@ -2827,6 +3093,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1337 (`S.inputLab` / `autocomplete`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 联想 · 高亮 · 键盘 · 空状态
 
 **验收**
@@ -2846,6 +3114,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-record-hold) · `app-record-hold`
 
 **关联 Skill** `uiux-mobile-patterns` · `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 1399 (`S.inputLab` / `record`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 录音 · 长按 · 滑动取消 · 计时
 
@@ -2871,6 +3141,8 @@
 
 **关联 Skill** `uiux-interaction-spec` · `uiux-mobile-patterns`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3348 (`S.diaryLab` / `sheet`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 日记 · 面板 · 无遮罩 · 保存
 
 **验收**
@@ -2890,6 +3162,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-diary-title) · `app-diary-title`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-page-planning`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3389 (`S.diaryLab` / `title`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 大标题 · 选项 · 逐行更新 · 不跳动
 
@@ -2911,6 +3185,8 @@
 
 **关联 Skill** `uiux-page-planning` · `uiux-mobile-patterns`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3421 (`S.diaryLab` / `numbers`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 头图 · 数字卡 · 负边距 · 吸顶
 
 **验收**
@@ -2931,6 +3207,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-mobile-patterns`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3436 (`S.diaryLab` / `swipe`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 横滑 · 翻篇 · 头图 · 边界
 
 **验收**
@@ -2950,6 +3228,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-diary-calendar) · `app-diary-calendar`
 
 **关联 Skill** `uiux-mobile-patterns` · `uiux-component-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3493 (`S.diaryLab` / `calendar`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 月历 · 空状态 · 编辑 · 即时更新
 
@@ -2975,6 +3255,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3568 (`S.mobileKit` / `switch`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 开关 · 弹性 · role=switch · 键盘
 
 **验收**
@@ -2994,6 +3276,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-kit-bottombar) · `app-kit-bottombar`
 
 **关联 Skill** `uiux-mobile-patterns` · `uiux-design-system`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3593 (`S.mobileKit` / `bottomBar`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 底部栏 · 安全区 · 主按钮 · 吸底
 
@@ -3015,6 +3299,8 @@
 
 **关联 Skill** `uiux-component-engineering` · `uiux-mobile-patterns`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3619 (`S.mobileKit` / `operation`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 操作卡 · 步进器 · 开关 · 滑块
 
 **验收**
@@ -3034,6 +3320,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-kit-segmented) · `app-kit-segmented`
 
 **关联 Skill** `uiux-component-engineering` · `uiux-motion-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3644 (`S.mobileKit` / `segmented`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 分段控件 · 滑块 · 拉长 · 联动
 
@@ -3055,6 +3343,8 @@
 
 **关联 Skill** `uiux-design-system` · `uiux-motion-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3670 (`S.mobileKit` / `ring`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 环形 · 滑杆 · 读数 · 目标
 
 **验收**
@@ -3074,6 +3364,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-kit-search) · `app-kit-search`
 
 **关联 Skill** `uiux-mobile-patterns` · `uiux-component-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 3693 (`S.mobileKit` / `search`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 搜索 · 筛选 · 合并 · 实时
 
@@ -3099,6 +3391,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 556 (`S.feedbackLab` / `press`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 按压 · 缩放 · 阴影 · 键盘
 
 **验收**
@@ -3118,6 +3412,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-step-overshoot) · `app-step-overshoot`
 
 **关联 Skill** `uiux-interaction-spec` · `uiux-motion-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 484 (`S.feedbackLab` / `steps`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 步骤 · 超调 · 回弹 · 确认
 
@@ -3139,6 +3435,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-design-system` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 61 (`S.themeReveal` / `tap`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 主题 · 圆形扩散 · 可逆 · 触控
 
 **验收**
@@ -3158,6 +3456,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-switch-group) · `app-switch-group`
 
 **关联 Skill** `uiux-accessibility-review` · `uiux-motion-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 528 (`S.feedbackLab` / `switchGroup`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 开关 · 联动 · 震动 · 状态诚实
 
@@ -3179,6 +3479,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-design-system`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 61 (`S.themeReveal` / `switch`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 深色模式 · 开关 · 圆形扩散
 
 **验收**
@@ -3199,6 +3501,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-component-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 441 (`S.feedbackLab` / `batch`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
+
 **标签** 批量选择 · 顺序 · 弹性 · 计数
 
 **验收**
@@ -3218,6 +3522,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-text-expand) · `app-text-expand`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-component-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/scenes.js` line 701 (`S.feedbackLab` / `expand`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/lab.css`
 
 **标签** 展开 · 高度 · 箭头 · 可逆
 
@@ -3243,6 +3549,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-interaction-spec` · `uiux-mobile-patterns`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/motion.js` line 107 (`S.motionLab` / `fan`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/motion.css`
+
 **标签** 扇形 · 照片 · 弹簧 · 分页点 · 滑动切换
 
 **验收**
@@ -3263,6 +3571,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-photo-ticket) · `app-photo-ticket`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-interaction-spec` · `uiux-component-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/motion.js` line 176 (`S.motionLab` / `ticket`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/motion.css`
 
 **标签** 共享元素 · 票根 · 缩略图 · 转场 · 页面切换
 
@@ -3285,6 +3595,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-interaction-spec` · `uiux-mobile-patterns`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/motion.js` line 254 (`S.motionLab` / `gather`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/motion.css`
+
 **标签** 收拢 · 聚合 · 照片 · 弹簧 · 相册
 
 **验收**
@@ -3305,6 +3617,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-photo-sort) · `app-photo-sort`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-interaction-spec` · `uiux-mobile-patterns`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/motion.js` line 307 (`S.motionLab` / `sort`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/motion.css`
 
 **标签** 分拣 · 滑动 · 倾斜 · 回弹 · 撤销
 
@@ -3327,6 +3641,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-interaction-spec` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/motion.js` line 369 (`S.motionLab` / `title`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/motion.css`
+
 **标签** 标题 · 逐行 · 遮罩 · 错峰 · 主视觉
 
 **验收**
@@ -3348,6 +3664,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-interaction-spec` · `uiux-mobile-patterns`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/motion.js` line 414 (`S.motionLab` / `album`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/motion.css`
+
 **标签** 相册 · 堆叠 · 旋转 · 重排 · 指示器
 
 **验收**
@@ -3368,6 +3686,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-list-lift) · `app-list-lift`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-interaction-spec` · `uiux-component-engineering`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/motion.js` line 478 (`S.motionLab` / `lift`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/motion.css`
 
 **标签** 列表 · 卡片 · 上浮 · 模糊 · 详情 · 回弹
 
@@ -3394,6 +3714,8 @@
 
 **关联 Skill** `uiux-interaction-spec` · `uiux-motion-engineering` · `uiux-component-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/states.js` line 77 (`S.stateLab` / `plane`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/states.css`
+
 **标签** 纸飞机 · 发送 · 按钮状态 · 加载 · 失败重试
 
 **验收**
@@ -3414,6 +3736,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-state-press) · `app-state-press`
 
 **关联 Skill** `uiux-interaction-spec` · `uiux-mobile-patterns` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/states.js` line 132 (`S.stateLab` / `press`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/states.css`
 
 **标签** 长按 · 快捷菜单 · 浮起 · 上下文菜单
 
@@ -3436,6 +3760,8 @@
 
 **关联 Skill** `uiux-interaction-spec` · `uiux-component-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/states.js` line 207 (`S.stateLab` / `accordion`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/states.css`
+
 **标签** 手风琴 · FAQ · 展开收起 · 让位
 
 **验收**
@@ -3456,6 +3782,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-state-multi) · `app-state-multi`
 
 **关联 Skill** `uiux-interaction-spec` · `uiux-component-engineering` · `uiux-mobile-patterns`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/states.js` line 243 (`S.stateLab` / `multi`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/states.css`
 
 **标签** 多选 · 批量操作 · 底部操作栏 · 全选
 
@@ -3478,6 +3806,8 @@
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-component-engineering` · `uiux-accessibility-review`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/states.js` line 310 (`S.stateLab` / `stepper`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/states.css`
+
 **标签** 步进器 · 数量 · 数字滚动 · 回弹
 
 **验收**
@@ -3498,6 +3828,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-state-flip) · `app-state-flip`
 
 **关联 Skill** `uiux-motion-engineering` · `uiux-interaction-spec` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/states.js` line 360 (`S.stateLab` / `flip`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/states.css`
 
 **标签** 翻面 · 3D · 卡片 · backface
 
@@ -3520,6 +3852,8 @@
 
 **关联 Skill** `uiux-interaction-spec` · `uiux-motion-engineering` · `uiux-component-engineering`
 
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/states.js` line 390 (`S.stateLab` / `chips`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/states.css`
+
 **标签** 筛选 · 标签 · 滑块底色 · 错峰出现 · 搜索
 
 **验收**
@@ -3540,6 +3874,8 @@
 **现场预览** [在提示词实验室打开](https://harveyxiacn.github.io/uiux-intent-form-motion-lab/#p/app-state-steps) · `app-state-steps`
 
 **关联 Skill** `uiux-interaction-spec` · `uiux-motion-engineering` · `uiux-accessibility-review`
+
+**参考实现** `skills/uiux-prompt-playbook/assets/reference/playground/states.js` line 446 (`S.stateLab` / `steps`) · styles `skills/uiux-prompt-playbook/assets/reference/playground/states.css`
 
 **标签** 步骤条 · 进度 · 对勾 · 连接线
 

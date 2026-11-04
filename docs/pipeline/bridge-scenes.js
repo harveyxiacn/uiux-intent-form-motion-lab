@@ -16,6 +16,7 @@
     mnSidebar: ['menuLab', 'sidebar'], mnGroups: ['menuLab', 'groups'], mnCapsule: ['menuLab', 'capsule'],
     mnRail: ['menuLab', 'rail'], mnBrand: ['menuLab', 'brand'], mnTabs: ['menuLab', 'tabs']
   };
+  window.PIPE_BRIDGE = MAP; // effects.js names the reference file for bridged scenes
   Object.keys(MAP).forEach((name) => {
     const [mod, variant] = MAP[name];
     S[name] = (root, ctx) => {
