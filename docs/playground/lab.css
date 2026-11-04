@@ -212,8 +212,8 @@ ol,ul{padding:0;list-style:none}
 .skill-card:hover p{color:color-mix(in srgb,var(--paper) 72%,transparent)}
 .skill-card .sc-count{margin-top:auto;font:10px/1 var(--mono);color:var(--accent)}
 .skill-card.upstream{background:var(--paper-2)}
-.skill-card.prompt-playbook{background:var(--lilac);color:#1e1830}
-.skill-card.prompt-playbook p,.skill-card.prompt-playbook .sc-top{color:#4a3f6b}
+.skill-card.prompt-playbook,.skill-card.workflow{background:var(--lilac);color:#1e1830}
+.skill-card.prompt-playbook p,.skill-card.prompt-playbook .sc-top,.skill-card.workflow p,.skill-card.workflow .sc-top{color:#4a3f6b}
 .coverage-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
 
 /* ---------- archive ---------- */

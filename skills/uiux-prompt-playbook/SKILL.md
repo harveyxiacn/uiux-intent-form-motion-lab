@@ -107,7 +107,7 @@ The prompt should preserve the user's intent while making the interaction falsif
 
 - Homepage: `docs/index.html` — library, scene stage, prompt detail, composer.
 - Archive showcase: `docs/showcase.html` — the six full interface demos.
-- Atlas: `docs/demos/skills/` — all 15 skills.
+- Atlas: `docs/demos/skills/` — all 16 skills.
 
 The playground renders 25 scene families with real pointer, keyboard and reduced-motion behavior. It is a prototype, not production code: no backend, accounts or persistence.
 

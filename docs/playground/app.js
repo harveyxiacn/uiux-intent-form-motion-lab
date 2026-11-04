@@ -308,10 +308,12 @@
         ? "实时展台"
         : className === "prompt-playbook"
           ? `${DATA.prompts.length} 条`
-          : (counts[skill] || 0) + " prompts";
+          : className === "workflow"
+            ? "43 份工单"
+            : (counts[skill] || 0) + " prompts";
       return `
       <a class="skill-card ${className}" href="https://github.com/harveyxiacn/uiux-intent-form-motion-lab/tree/main/skills/${skill}" target="_blank" rel="noopener">
-        <span class="sc-top"><span>${className === "upstream" ? "UPSTREAM" : className === "prompt-playbook" ? "NEW / 15" : "LOCAL"}</span><span>${meta}</span></span>
+        <span class="sc-top"><span>${className === "upstream" ? "UPSTREAM" : className === "prompt-playbook" ? "NEW / 15" : className === "workflow" ? "NEW / 16" : "LOCAL"}</span><span>${meta}</span></span>
         <h3>${escapeHtml(title)}</h3>
         <p>${escapeHtml(copy)}</p>
         <span class="sc-count">${escapeHtml(skill)} ↗</span>
@@ -320,6 +322,7 @@
     const playbook = upstream.pop();
     grid.innerHTML = local.map(([skill, title, copy]) => card(skill, title, copy, "local")).join("")
       + card(playbook[0], playbook[1], playbook[2], "prompt-playbook")
+      + card("uiux-workflow", "工序统筹", "跨阶段的需求先定工序，再把交接单逐道传下去；工序版的每份工单都从它开始。", "workflow")
       + upstream.map(([skill, title, copy]) => card(skill, title, copy, "upstream")).join("");
   }
 

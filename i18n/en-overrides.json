@@ -1073,7 +1073,10 @@
   "频谱收回": "Spectrum retracts",
   "频谱收回途中再次播放，从当前高度重新起跳": "Playing again mid-retract restarts from the current height",
   "高亮切换": "Highlight switch",
-  "【参考实现】uiux-prompt-playbook › {0} · {1}：先读这段可运行代码，再按项目技术栈移植。": "[Reference implementation] uiux-prompt-playbook › {0} · {1}: read this working code first, then port it to the project’s stack."
+  "【参考实现】uiux-prompt-playbook › {0} · {1}：先读这段可运行代码，再按项目技术栈移植。": "[Reference implementation] uiux-prompt-playbook › {0} · {1}: read this working code first, then port it to the project’s stack.",
+  "——168 条、25 个场景、16 个 Skill 都能摸到；这一页是": "— all 168 prompts, 25 scenes and 16 skills are within reach; this page is the",
+  "两者不是谁替代谁：原站是<0>广度</0>——168 条、25 个场景、16 个 Skill 都能摸到；这一页是<1>深度</1>——只做一个功能，但走完全部工序。": "Neither replaces the other: the original site is about <0>breadth</0>—168 prompts, 25 scenes and 16 skills all within reach; this page is about <1>depth</1>—a single feature, taken through every stage.",
+  "原版技能地图首屏：十六个方法的巨幅标题与分组": "Original Skill Atlas first screen: huge headings and groupings of sixteen methods"
  },
  "lab": {
   "{0} 月 {1} 日": "{0}/{1}",
@@ -1879,7 +1882,17 @@
   "高": "High",
   "高亮与右侧内容一致": "Highlight matches the content on the right",
   "麦田民宿": "Wheat Field Guesthouse",
-  "参考实现：uiux-prompt-playbook › {0}（{1} / {2}）": "Reference implementation: uiux-prompt-playbook › {0} ({1} / {2})"
+  "参考实现：uiux-prompt-playbook › {0}（{1} / {2}）": "Reference implementation: uiux-prompt-playbook › {0} ({1} / {2})",
+  "168 条提示词，25 个场景，16 个 Skill。": "168 prompts, 25 scenes, 16 skills.",
+  "43 份工单": "43 work orders",
+  "<0>SKILL ATLAS / 16 SKILLS</0> <1>十六个方法的地图</1> <2>术语翻译、register 切换、资料检索、方向抽样、层级修复与审查。</2> <3>打开技能地图 ↗</3>": "<0>SKILL ATLAS / 16 SKILLS</0> <1>A map of sixteen methods</1> <2>Term translation, register switching, reference retrieval, direction sampling, hierarchy repair and review.</2> <3>Open Skill Atlas ↗</3>",
+  "八个本项目模块、六个上游 Skill，加上这本提示词手册和把它们串成工序的工序统筹。这里的每句提示词都标注了它调用了哪些方法，不把「生成得好看」当作唯一证据。": "Eight in-house modules, six upstream skills, plus this prompt handbook and the stage routing that chains them into a pipeline. Every prompt here is labeled with the methods it invokes, so “looks good when generated” is not the only evidence.",
+  "十个本地模块 + 六个上游 Skill": "Ten in-house modules + six upstream skills",
+  "十六个 Skill": "Sixteen skills",
+  "十六个 Skill，": "Sixteen skills,",
+  "十六个方法的地图": "A map of sixteen methods",
+  "工序统筹": "Stage routing",
+  "跨阶段的需求先定工序，再把交接单逐道传下去；工序版的每份工单都从它开始。": "A request that spans stages gets its route first, then the handoff sheets pass from stage to stage; every work order in the pipeline edition starts here."
  },
  "skills": {
   "148 条可执行提示词，每一条都能在场景舞台里当场操作。": "148 executable prompts, each one you can try on the spot on a scene stage.",
@@ -1916,6 +1929,16 @@
   "八个本地模块、提示词手册与工序统筹：在官网、工作台、手机原型、组件实验室与工序版里接力。": "Eight in-house modules, the prompt handbook and stage routing: handing off across the website, workspace, phone prototype, component lab and pipeline edition.",
   "十个本地模块（含提示词手册与工序统筹），六个上游 Skill。": "Ten in-house modules (including the prompt handbook and stage routing), six upstream skills.",
   "十六个方法，": "Sixteen methods,",
-  "技能地图首屏截图，巨幅标题、16 个方法计数与六类技能入口": "Skill Atlas first-screen screenshot: giant headline, count of 16 methods and six skill entry points"
+  "技能地图首屏截图，巨幅标题、16 个方法计数与六类技能入口": "Skill Atlas first-screen screenshot: giant headline, count of 16 methods and six skill entry points",
+  "<0>十六个方法</0><1>技能地图</1><2>每个方法，都有一处可验证。<3>↗</3></2>": "<0>Sixteen methods</0><1>Skill Atlas</1><2>Every method has something you can verify.<3>↗</3></2>",
+  "六组实践，十六个方法。": "Six practices, sixteen methods.",
+  "十个本地模块，加上六个上游 Skill。": "Ten in-house modules, plus six upstream skills.",
+  "十六个 Skill 的实时地图：术语翻译、register 切换、资料检索、方向抽样、产品层级、审查修复与提示词实验。": "A live map of sixteen skills: term translation, register switching, reference search, direction sampling, product hierarchy, review and fix, and prompt experiments.",
+  "十六个可复用的设计方法。": "Sixteen reusable design methods.",
+  "十六个方法": "Sixteen methods",
+  "工序版": "pipeline edition",
+  "提示词手册把这些动作写成可复制、带参考实现的提示词，工序统筹决定它们按什么顺序接力（见": "The prompt handbook turns these actions into copyable prompts with reference code, and stage routing decides the order in which they hand off (see the ",
+  "）；六个上游展台在": "); the six upstream showcases are in the",
+  "提示词手册把这些动作写成可复制、带参考实现的提示词，工序统筹决定它们按什么顺序接力（见<0>工序版</0>）；六个上游展台在 <1>技能地图</1> 里，可输入、检索、抽取和审查。": "The prompt handbook turns these actions into copyable prompts with reference code, and stage routing decides the order in which they hand off (see the <0>pipeline edition</0>); the six upstream showcases are in the <1>Skill Atlas</1>, where you can enter, search, extract and review."
  }
 }

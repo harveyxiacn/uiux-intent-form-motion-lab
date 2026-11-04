@@ -26,6 +26,8 @@ const base = process.env.DEMO_BASE || 'http://localhost:4173/docs/';
 
   assert.equal(await page.locator('#stat-prompts').innerText(), '168');
   assert.equal(await page.locator('#stat-scenes').innerText(), '25');
+  assert.equal(await page.locator('#skill-grid .skill-card').count(), 16, 'coverage lists all sixteen skills');
+  assert.equal(await page.locator('#skill-grid .skill-card.workflow').count(), 1);
   assert.equal(await page.locator('#web-count').innerText(), '70');
   assert.equal(await page.locator('#app-count').innerText(), '98');
   assert.equal(await page.locator('#prompt-list .prompt-row').count(), 70);

@@ -157,7 +157,7 @@ node scripts/install-skills.cjs --target codex --global
 
 ## 外部 Skills 与组合
 
-[Skills 选型目录](SKILL-CATALOG.md)收集了相关上游项目的一手链接、许可证核对、适用范围及九个本项目模块的组合方式。其中六个已收录为快照并可通过安装脚本部署，其余只记录链接；收录不等于逐项验证，实际使用前应阅读各 Skill 的边界与限制。[上游收录说明](skills/upstream/README.md)给出主导 Skill 的选择、可安全叠加的组合与运行时依赖。
+[Skills 选型目录](SKILL-CATALOG.md)收集了相关上游项目的一手链接、许可证核对、适用范围及十个本项目模块的组合方式。其中六个已收录为快照并可通过安装脚本部署，其余只记录链接；收录不等于逐项验证，实际使用前应阅读各 Skill 的边界与限制。[上游收录说明](skills/upstream/README.md)给出主导 Skill 的选择、可安全叠加的组合与运行时依赖。
 
 ## 项目范围
 

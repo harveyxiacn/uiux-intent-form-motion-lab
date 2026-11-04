@@ -48,7 +48,7 @@
 
 ## 组合如何产生效果
 
-[光谱工作台](docs/demos/studio/)把规划、视觉、token、组件、交互、动态与无障碍策略放在同一“找到项目→修改→返回”的任务里；窄屏保持同一业务任务并调整信息密度。[组件实验室](docs/demos/components/)把相同的状态契约拆成可重复测试的控件。手机App单独覆盖手持导航任务；官网保留浏览与参观决策。技能地图作为第六组入口，把这些本地实例与六个上游 Skill 放进同一张可操作索引。它们共同覆盖十五项能力，而不是把每个surface硬套同一布局。
+[光谱工作台](docs/demos/studio/)把规划、视觉、token、组件、交互、动态与无障碍策略放在同一“找到项目→修改→返回”的任务里；窄屏保持同一业务任务并调整信息密度。[组件实验室](docs/demos/components/)把相同的状态契约拆成可重复测试的控件。手机App单独覆盖手持导航任务；官网保留浏览与参观决策。技能地图作为第六组入口，把这些本地实例与六个上游 Skill 放进同一张可操作索引。它们共同覆盖十六项能力，而不是把每个surface硬套同一布局。
 
 复现：运行 `python -m http.server 4173`，执行 [scripts/verify-lab.cjs](scripts/verify-lab.cjs) 与 [scripts/verify.cjs](scripts/verify.cjs)。前者遍历 141 条提示词并验证生成器、复制、主题与 390 宽响应式；后者调用 advanced / studio / showcase / skills 回归和 [contrast.cjs](scripts/contrast.cjs)。对比明细在 [contrast-results.json](docs/screenshots/contrast-results.json)、[showcase-contrast-results.json](docs/screenshots/showcase-contrast-results.json)、[atlas-contrast-results.json](docs/screenshots/atlas-contrast-results.json) 与 [lab-contrast-results.json](docs/screenshots/lab-contrast-results.json)，截图见 README。支持 `PLAYWRIGHT_MODULE` 与 `DEMO_BASE` 环境变量。
 
